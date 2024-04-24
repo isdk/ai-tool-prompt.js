@@ -1,0 +1,23 @@
+_id: Mistral
+templateFormat: hf
+type: system
+prompt:
+  system: ""
+template: |-
+  {%- for message in messages %}
+    {% if loop.first and messages[0]['role'] != 'system' %}
+      {{- system -}}
+    {% endif %}
+    {%- if message['role'] == 'system' -%}
+      {{- message['content'] -}}
+    {%- else -%}
+      {%- if message['role'] == 'user' -%}
+        {{-'[INST] ' + message['content'].strip() + ' [/INST]'-}}
+      {%- else -%}
+        {{-'' + message['content'] + '</s>' -}}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- if add_generation_prompt -%}
+    {{-''-}}
+  {%- endif -%}

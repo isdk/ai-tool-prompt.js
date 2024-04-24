@@ -1,0 +1,29 @@
+_id: Llama-v2
+templateFormat: hf
+type: system
+prompt:
+  system: Answer the questions.
+template: |-
+  {%- if not ns.found -%}
+  {%- endif %}
+  {%- for message in messages %}
+    {% if loop.first and messages[0]['role'] != 'system' %}
+      {{- '[INST] <<SYS>>\n' + system + '\n<</SYS>>\n\n' -}}
+    {% endif %}
+    {%- if message['role'] == 'system' -%}
+      {{- '[INST] <<SYS>>\n' + message['content'] + '\n<</SYS>>\n\n' -}}
+    {%- else -%}
+      {%- if message['role'] == 'user' -%}
+        {{-'' + message['content'] + ' [/INST] '-}}
+      {%- else -%}
+        {{-'' + message['content'] + ' </s><s>[INST] ' -}}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- if add_generation_prompt -%}
+      {{-''-}}
+  {%- endif -%}
+rule:
+  - !re /^airoboros-.*-3[.]1[.]2$/i
+  - !re /^airoboros-.*-3[.]3$/i
+  - !re /^bagel-/i

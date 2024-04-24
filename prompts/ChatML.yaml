@@ -1,0 +1,18 @@
+_id: ChatML
+templateFormat: hf
+type: system
+prompt:
+  system: You are a helpful assistant
+template: |-
+  {% for message in messages %}
+    {% if loop.first and messages[0]['role'] != 'system' %}
+      {{- '<|im_start|>system\n' -}}
+      {{ system }}<|im_end|>
+    {% endif %}
+    {{- '<|im_start|>' + message['role'] + '\n' -}}
+  {{message['content']}}<|im_end|>
+  {% endfor %}
+  {% if add_generation_prompt %}<|im_start|>assistant
+  {% endif %}
+rule:
+  - !re /qwen/i
