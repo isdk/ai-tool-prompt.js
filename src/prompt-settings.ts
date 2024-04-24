@@ -25,7 +25,7 @@ export interface AIPromptSettings {
   template: string
   type: AIPromptType
   description?: string
-  rule?: {[ver: string]: AIModelNameRules}
+  rule?: {[ver: string]: AIModelNameRules} | AIModelNameRules
   templateFormat?: string
   // the default system prompt if any
   prompt?: DefaultPrompt
@@ -39,7 +39,7 @@ export const AIPromptSchema = {
   template: {type: 'string', required: true},
   type: {type: 'string', required: true},
   description: {type: 'string'},
-  rule: {type: ['string', 'RegExp', 'function', 'array']},
+  rule: {type: 'any'},
   templateFormat: {type: 'string'},
   prompt: {type: 'any'},
   version: {type: 'any'},

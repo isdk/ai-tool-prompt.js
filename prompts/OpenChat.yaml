@@ -61,8 +61,8 @@ template: |-
       {{-ai-}}
   {%- endif -%}
 rule:
-  - "3.2": !re /^openchat_v3[.]2/i
-  - "3.5-gemma": !re /^openchat-3[.]5-\d+-gemma/i
-  - "3.5": !re /^openchat-3[.]5-/i
-  - "opencoder": !re /(?:[-_]|^)opencoderplus(?:[-_]|$)/i
-  - "8192": !re /(?:[-_]|^)OpenChat[-_]8192/i
+  "3.2": !re /^openchat_v3[.]2/i
+  "3.5-gemma": !re /^openchat-3[.]5-\d+-gemma/i
+  "3.5": !re /^openchat-3[.]5-/i
+  "opencoder": !re /(?:[-_]|^)opencoderplus(?:[-_]|$)/i
+  "8192": !re /(?:[-_]|^)OpenChat[-_]8192/i
