@@ -21,7 +21,8 @@ export interface Signatures {
 
 type DefaultPrompt = Record<string, string> | {system?: string, ai?: string, human?: string, end_of_turn?: string, begin_of_turn?: string}
 export interface AIPromptSettings {
-  _id: string
+  _id?: string
+  id?:string
   template: string
   type: AIPromptType
   description?: string

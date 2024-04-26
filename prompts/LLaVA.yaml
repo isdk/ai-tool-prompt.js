@@ -8,14 +8,6 @@ prompt:
     language. Follow the instructions carefully and explain your answers in
     detail.### Human: Hi!### Assistant: Hi there! How can I help you today?"
 template: |-
-  {%- set ns = namespace(found=false) -%}
-  {%- for message in messages -%}
-      {%- if message['role'] == 'system' -%}
-          {%- set ns.found = true -%}
-      {%- endif -%}
-  {%- endfor -%}
-  {%- if not ns.found -%}
-  {%- endif %}
   {%- for message in messages %}
     {% if loop.first and messages[0]['role'] != 'system' %}
       {{- system + '\n' -}}

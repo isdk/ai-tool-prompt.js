@@ -23,7 +23,10 @@
   "dependencies": {
     "@isdk/ai-tool": "workspace:*",
     "@isdk/ai-tool-sqlite": "workspace:*",
-    "property-manager": "2.0.0-alpha.5"
+    "load-config-file": "2.0.0-alpha.2",
+    "property-manager": "2.0.0-alpha.5",
+    "yaml": "^2.4.1",
+    "yaml-types": "^0.3.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.15.0",
@@ -34,7 +37,7 @@
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-tsdoc": "^0.2.17",
-    "load-config-file": "2.0.0-alpha.2",
+    "fastify": "^4.26.2",
     "prettier": "^3.2.5",
     "tsup": "^8.0.2",
     "tsx": "^4.7.2",
@@ -42,9 +45,7 @@
     "typedoc-plugin-markdown": "^3.17.1",
     "typescript": "^5.4.5",
     "vite": "^5.2.9",
-    "vitest": "^1.5.0",
-    "yaml": "^2.4.1",
-    "yaml-types": "^0.3.0"
+    "vitest": "^1.5.0"
   },
   "files": [
     "docs",
@@ -63,6 +64,5 @@
   "engines": {
     "node": ">=20.11.1"
   },
-  "packageManager": "pnpm@9.0.5",
   "types": "./dist/index.d.ts"
 }

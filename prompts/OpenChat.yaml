@@ -4,43 +4,43 @@ type: system
 version:
   "8192":
     prompt:
-      human: 'Human: '
-      ai: 'Assistant: '
+      human: "Human: "
+      ai: "Assistant: "
       end_of_turn: <|end_of_turn|>
-  "opencoder":
+  opencoder:
     prompt:
-      human: 'User:'
-      ai: 'Assistant:'
+      human: "User:"
+      ai: "Assistant:"
       end_of_turn: <|end_of_turn|>
   "3.1":
     prompt:
-      system: 'Assistant is GPT4'
-      human: 'User: '
-      ai: 'Assistant: '
+      system: Assistant is GPT4
+      human: "User: "
+      ai: "Assistant: "
       end_of_turn: <|end_of_turn|>
   "3.2":
     prompt:
-      human: 'GPT4 User: '
-      ai: 'GPT4 Assistant: '
+      human: "GPT4 User: "
+      ai: "GPT4 Assistant: "
       end_of_turn: <|end_of_turn|>
-  "3.5-gemma":
+  3.5-gemma:
     prompt:
-      human: 'GPT4 Correct User: '
-      ai: 'GPT4 Correct Assistant: '
+      human: "GPT4 Correct User: "
+      ai: "GPT4 Correct Assistant: "
       end_of_turn: <end_of_turn>
   "3.5":
     prompt:
-      human: 'GPT4 Correct User: '
-      ai: 'GPT4 Correct Assistant: '
+      human: "GPT4 Correct User: "
+      ai: "GPT4 Correct Assistant: "
       end_of_turn: <|end_of_turn|>
   math:
     prompt:
-      human: 'Math Correct User: '
-      ai: 'Math Correct Assistant: '
+      human: "Math Correct User: "
+      ai: "Math Correct Assistant: "
       end_of_turn: <|end_of_turn|>
 prompt:
-  human: 'GPT4 Correct User: '
-  ai: 'GPT4 Correct Assistant: '
+  human: "GPT4 Correct User: "
+  ai: "GPT4 Correct Assistant: "
   end_of_turn: <|end_of_turn|>
 template: |-
   {%- for message in messages %}
@@ -61,8 +61,8 @@ template: |-
       {{-ai-}}
   {%- endif -%}
 rule:
-  "3.2": !re /^openchat_v3[.]2/i
-  "3.5-gemma": !re /^openchat-3[.]5-\d+-gemma/i
-  "3.5": !re /^openchat-3[.]5-/i
-  "opencoder": !re /(?:[-_]|^)opencoderplus(?:[-_]|$)/i
   "8192": !re /(?:[-_]|^)OpenChat[-_]8192/i
+  "3.2": !re /^openchat_v3[.]2/i
+  3.5-gemma: !re /^openchat-3[.]5-\d+-gemma/i
+  "3.5": !re /^openchat-3[.]5-/i
+  opencoder: !re /(?:[-_]|^)opencoderplus(?:[-_]|$)/i

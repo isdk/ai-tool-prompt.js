@@ -1,6 +1,7 @@
 import { AdvancePropertyManager } from 'property-manager';
-import { AIPromptSchema, AIPromptSettings } from './prompt-settings';
+import { Config } from './config'
 import { isModelNameMatched } from '@isdk/ai-tool';
+import { AIPromptSchema, AIPromptSettings } from './prompt-settings';
 
 // 128271: 🔏
 const LockedMagic = 128271
@@ -14,8 +15,13 @@ type FitResult = '@' | string | undefined
  * Represents an AIPrompt
  */
 export class AIPrompt extends AdvancePropertyManager {
+  importFromFile(filepath: string) {
+    const src = Config.loadSync(filepath)
+    if (src) {this.assign(src)}
+  }
+
   /**
-   * Checks whether the provided template or the current template (if not provided) is locked.
+   * Checks whether the provided string or the current template (if not provided) is locked.
    *
    * @param template - The template to check for lock status. If not provided, uses the current template.
    * @returns `true` if the template is locked, `false` otherwise.

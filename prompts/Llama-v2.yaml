@@ -4,8 +4,6 @@ type: system
 prompt:
   system: Answer the questions.
 template: |-
-  {%- if not ns.found -%}
-  {%- endif %}
   {%- for message in messages %}
     {% if loop.first and messages[0]['role'] != 'system' %}
       {{- '[INST] <<SYS>>\n' + system + '\n<</SYS>>\n\n' -}}

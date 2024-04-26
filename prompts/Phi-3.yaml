@@ -1,0 +1,24 @@
+_id: Phi-3
+templateFormat: hf
+type: system
+prompt:
+  system: You are a helpful AI assistant.
+template: |-
+  {%- for message in messages %}
+    {% if loop.first and system and messages[0]['role'] != 'system' %}
+      {{- '<|system|>\n' + system + '<|end|>\n' -}}
+    {% endif %}
+      {%- if message['role'] == 'system' -%}
+          {{- '<|system|>\n' + message['content'] + '<|end|>\n' -}}
+      {%- else -%}
+          {%- if message['role'] == 'user' -%}
+              {{-'<|user|>\n' + message['content'] + '<|end|>\n'-}}
+          {%- else -%}
+              {{-'<|assistant|>\n' + message['content'] + '<|end|>\n' -}}
+          {%- endif -%}
+      {%- endif -%}
+  {%- endfor -%}
+  {%- if add_generation_prompt -%}
+      {{-'<|assistant|>\n'-}}
+  {%- endif -%}
+rule: /^Phi[-]3[-]/
