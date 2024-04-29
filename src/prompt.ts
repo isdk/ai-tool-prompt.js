@@ -8,8 +8,34 @@ const LockedMagic = 128271
 
 export interface AIPrompt extends AIPromptSettings {}
 
+export function strIsLocked(value: string) {
+  return (value && value.codePointAt(0) === LockedMagic)
+}
+
 // @ means the default version,
-type FitResult = '@' | string | undefined
+export type AIPromptFitResult = '@' | string | undefined
+
+export function promptIsFitForLLM(prompt: AIPromptSettings, modelName: string) {
+  const rules = prompt.rule
+  let result: AIPromptFitResult
+  if (rules) {
+    if (Array.isArray(rules)) {
+      if (isModelNameMatched(modelName, rules)) {
+        result = '@'
+      }
+    } else if (typeof rules === 'object' && !(rules instanceof RegExp)) {
+      for (const [version, rule] of Object.entries(rules)) {
+        if (isModelNameMatched(modelName, rule)) {
+          result = version
+          break
+        }
+      }
+    } else if (isModelNameMatched(modelName, rules)) {
+      result = '@'
+    }
+  }
+  return result
+}
 
 /**
  * Represents an AIPrompt
@@ -28,7 +54,7 @@ export class AIPrompt extends AdvancePropertyManager {
    */
   isLocked(template?: string) {
     if (!template) {template = this.template}
-    return (template && template.codePointAt(0) === LockedMagic)
+    return strIsLocked(template)
   }
 
   /**
@@ -42,26 +68,8 @@ export class AIPrompt extends AdvancePropertyManager {
    * @param modelName - The name of the LLM model to check for compatibility.
    * @returns The fit result for the given LLM model, representing its compatibility or suitability with this AIPrompt.
    */
-  isFitForLLM(modelName: string) : FitResult {
-    const rules = this.rule
-    let result: FitResult
-    if (rules) {
-      if (Array.isArray(rules)) {
-        if (isModelNameMatched(modelName, rules)) {
-          result = '@'
-        }
-      } else if (typeof rules === 'object' && !(rules instanceof RegExp)) {
-        for (const [version, rule] of Object.entries(rules)) {
-          if (isModelNameMatched(modelName, rule)) {
-            result = version
-            break
-          }
-        }
-      } else if (isModelNameMatched(modelName, rules)) {
-        result = '@'
-      }
-    }
-    return result
+  isFitForLLM(modelName: string) : AIPromptFitResult {
+    return promptIsFitForLLM(this, modelName)
   }
 }
 
