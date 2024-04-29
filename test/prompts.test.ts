@@ -3,7 +3,7 @@ import fastify from 'fastify'
 
 import { ErrorCode, NotFoundError, ResClientTools, ResServerTools, wait } from "@isdk/ai-tool"
 import type { FuncParams } from '@isdk/ai-tool'
-import { findPort } from './find-port'
+import { findPort } from '@isdk/ai-tool/test/util'
 
 import { AIPromptsFunc } from '../src/prompts'
 
