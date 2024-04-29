@@ -8,6 +8,20 @@ const LockedMagic = 128271
 
 export interface AIPrompt extends AIPromptSettings {}
 
+/**
+ * Computes the difference between two arrays of strings, returning elements present in the src array but not in the dest array.
+ * @param src - The first array of strings.
+ * @param dest - The second array of strings from which we want to exclude elements.
+ * @returns An array representing the difference, containing elements that are in src and not in dest.
+ */
+function arrayDifference(src: string[], dest: string[]): string[] {
+  // Create a Set object from the dest array for efficient lookups.
+  const destSet = new Set(dest);
+
+  // Use the filter method to select elements from src that are not included in destSet.
+  return src.filter(element => !destSet.has(element));
+}
+
 export function strIsLocked(value: string) {
   return (value && value.codePointAt(0) === LockedMagic)
 }
@@ -22,16 +36,30 @@ export function promptIsFitForLLM(prompt: AIPromptSettings, modelName: string): 
     if (Array.isArray(rules)) {
       if (isModelNameMatched(modelName, rules)) {
         result.push('@')
+        if (prompt.version) {
+          result.push(...Object.keys(prompt.version))
+        }
       }
     } else if (typeof rules === 'object' && !(rules instanceof RegExp)) {
+      const usedVers = [] as string[]
       for (const [version, rule] of Object.entries(rules)) {
+        usedVers.push(version)
         if (isModelNameMatched(modelName, rule)) {
           result.push(version)
         }
       }
+      if (prompt.version) {
+        const diff = arrayDifference(Object.keys(prompt.version), usedVers)
+        if (diff.length) {
+          result.push(...diff)
+        }
+      }
     } else if (isModelNameMatched(modelName, rules)) {
       result.push('@')
-    }
+      if (prompt.version) {
+        result.push(...Object.keys(prompt.version))
+      }
+  }
   }
   return result.length ? result.length === 1 ? result[0] : result : undefined
 }
