@@ -22,18 +22,20 @@ export class AIPromptsFunc extends KVSqliteResFunc<AIPromptsFuncParams> {
   _getPrompt(modelName: string) {
     const db = this.db
     const prompts = db.list() as AIPromptSettings[]
+    let result: {prompt: AIPromptSettings, version: AIPromptFitResult|AIPromptFitResult[]}|false = false
     for (const prompt of prompts) {
       const version = promptIsFitForLLM(prompt, modelName)
       if (version) {
-        return {
+        result = {
           prompt,
           version,
         }
       }
     }
+    return result
   }
 
-  $getPrompt({model}: AIPromptsFuncParams) {
+  $getPrompt({model, skill}: AIPromptsFuncParams) {
     if (!model) {
       throw new CommonError('model is required', 'AIPromptsFunc.getPrompt', ErrorCode.InvalidArgument)
     }

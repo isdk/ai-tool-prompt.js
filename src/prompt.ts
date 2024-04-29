@@ -15,26 +15,25 @@ export function strIsLocked(value: string) {
 // @ means the default version,
 export type AIPromptFitResult = '@' | string | undefined
 
-export function promptIsFitForLLM(prompt: AIPromptSettings, modelName: string) {
+export function promptIsFitForLLM(prompt: AIPromptSettings, modelName: string): AIPromptFitResult|AIPromptFitResult[]|undefined {
   const rules = prompt.rule
-  let result: AIPromptFitResult
+  const result: AIPromptFitResult[] = []
   if (rules) {
     if (Array.isArray(rules)) {
       if (isModelNameMatched(modelName, rules)) {
-        result = '@'
+        result.push('@')
       }
     } else if (typeof rules === 'object' && !(rules instanceof RegExp)) {
       for (const [version, rule] of Object.entries(rules)) {
         if (isModelNameMatched(modelName, rule)) {
-          result = version
-          break
+          result.push(version)
         }
       }
     } else if (isModelNameMatched(modelName, rules)) {
-      result = '@'
+      result.push('@')
     }
   }
-  return result
+  return result.length ? result.length === 1 ? result[0] : result : undefined
 }
 
 /**
@@ -66,9 +65,9 @@ export class AIPrompt extends AdvancePropertyManager {
    * - `undefined`: No fit or compatibility found.
 
    * @param modelName - The name of the LLM model to check for compatibility.
-   * @returns The fit result for the given LLM model, representing its compatibility or suitability with this AIPrompt.
+   * @returns The fit result(s) for the given LLM model, representing its compatibility or suitability with this AIPrompt.
    */
-  isFitForLLM(modelName: string) : AIPromptFitResult {
+  isFitForLLM(modelName: string) {
     return promptIsFitForLLM(this, modelName)
   }
 }
