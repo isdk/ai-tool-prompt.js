@@ -27,11 +27,12 @@ export function strIsLocked(value: string) {
 }
 
 // @ means the default version,
-export type AIPromptFitResult = '@' | string | undefined
+export type AIPromptFitResult = '@' | string
 
 export function promptIsFitForLLM(prompt: AIPromptSettings, modelName: string): AIPromptFitResult|AIPromptFitResult[]|undefined {
   const rules = prompt.rule
   const result: AIPromptFitResult[] = []
+  let usedVers = [] as string[]
   if (rules) {
     if (Array.isArray(rules)) {
       if (isModelNameMatched(modelName, rules)) {
@@ -41,17 +42,10 @@ export function promptIsFitForLLM(prompt: AIPromptSettings, modelName: string): 
         }
       }
     } else if (typeof rules === 'object' && !(rules instanceof RegExp)) {
-      const usedVers = [] as string[]
       for (const [version, rule] of Object.entries(rules)) {
         usedVers.push(version)
         if (isModelNameMatched(modelName, rule)) {
           result.push(version)
-        }
-      }
-      if (prompt.version) {
-        const diff = arrayDifference(Object.keys(prompt.version), usedVers)
-        if (diff.length) {
-          result.push(...diff)
         }
       }
     } else if (isModelNameMatched(modelName, rules)) {
@@ -59,7 +53,13 @@ export function promptIsFitForLLM(prompt: AIPromptSettings, modelName: string): 
       if (prompt.version) {
         result.push(...Object.keys(prompt.version))
       }
-  }
+    }
+    if (result.length && usedVers.length && prompt.version?.length) {
+      const diff = arrayDifference(Object.keys(prompt.version), usedVers)
+      if (diff.length) {
+        result.push(...diff)
+      }
+    }
   }
   return result.length ? result.length === 1 ? result[0] : result : undefined
 }

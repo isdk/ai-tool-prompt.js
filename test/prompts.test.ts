@@ -160,9 +160,14 @@ describe('Prompts server api', () => {
   it('should get prompt for LLM', async () => {
     const prompts = ResClientTools.get(AIPromptsName)
     expect(prompts).toBeInstanceOf(ResClientTools)
-    const result = await prompts.getPrompt({model: 'Llama-2', skill: 'chat'})
+    let result = await prompts.getPrompt({model: 'Llama-2', skill: 'chat'})
     expect(result).toHaveProperty('prompt')
     expect(result).toHaveProperty('version', '@')
     expect(result.prompt).toHaveProperty('_id', 'Llama-v2')
+    result = await prompts.getPrompt({model: 'phi-3-mini-4k-instruct.Q4_0'})
+    expect(result).toHaveProperty('prompt')
+    expect(result.prompt).toHaveProperty('_id', 'Phi-3')
+    // expect(result).toHaveProperty('version', '@')
+    // expect(result.prompt).toHaveProperty('_id', 'Llama-v2')
   })
 });
