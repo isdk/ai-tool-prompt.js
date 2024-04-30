@@ -1,0 +1,14 @@
+_id: default
+description: the role should be user, system, assistant
+templateFormat: hf
+type: system
+prompt:
+  system: This is a conversation between User and Assistant, a friendly Assistant. Assistant is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+template: |-
+  {%- for message in messages %}
+    {% if loop.first and system and messages[0]['role'] != 'system' %}
+      {{- system + '\n'}}
+    {% endif %}
+    {{message['role']+': ' + message['content'] + '\n'}}
+  {%- endfor -%}
+  {%- if add_generation_prompt -%}assistant: {%- endif -%}`

@@ -5,7 +5,7 @@ import { ErrorCode, NotFoundError, ResClientTools, ResServerTools, wait } from "
 import type { FuncParams } from '@isdk/ai-tool'
 import { findPort } from '@isdk/ai-tool/test/util'
 
-import { AIPromptsFunc } from '../src/prompts'
+import { AIPromptsFunc, AIPromptsName } from '../src/prompts'
 
 // const dbPath = '.promptsdb'
 const dbPath = ':memory:'
@@ -56,8 +56,13 @@ describe('Prompts server api', () => {
       } catch(e) {
         // console.log('🚀 ~ server.all ~ e:', e)
         if (e.code !== undefined) {
-          if (e.stack) {e.stack = undefined}
-          reply.code(e.code).send(JSON.stringify(e))
+          const err: any = {...e, error: e.message}
+          if (err.stack) {delete err.stack}
+          if (typeof err.code === 'number') {
+            reply.code(err.code).send(JSON.stringify(err))
+          } else {
+            reply.code(500).send(JSON.stringify(err))
+          }
         } else if (e.message) {
           reply.code(500).send({error: e.message})
         } else {
@@ -72,7 +77,7 @@ describe('Prompts server api', () => {
     apiRoot = `http://localhost:${port}/api`
 
     ResServerTools.setApiRoot(apiRoot)
-    const res = new AIPromptsFunc('prompts', {dbPath})
+    const res = new AIPromptsFunc(AIPromptsName, {dbPath})
     res.register()
 
     ResClientTools.setApiRoot(apiRoot)
@@ -84,7 +89,7 @@ describe('Prompts server api', () => {
   })
 
   it('should raise error to get non-exists item', async () => {
-    const result = ResClientTools.get('prompts')
+    const result = ResClientTools.get(AIPromptsName)
     expect(result).toBeInstanceOf(ResClientTools)
     let err: any
     try {
@@ -99,7 +104,7 @@ describe('Prompts server api', () => {
   })
 
   it('should list prompts', async () => {
-    const result = ResClientTools.get('prompts')
+    const result = ResClientTools.get(AIPromptsName)
     expect(result).toBeInstanceOf(ResClientTools)
     let res = await result.list()
     expect(res.length).toBeGreaterThanOrEqual(14)
@@ -118,6 +123,38 @@ describe('Prompts server api', () => {
     // const res = await fetch(apiRoot + '/test?as=1&toolId=6', {
     // });
     // console.log(await res.json())
+  })
+  it('should get default prompt', async () => {
+    const prompts = ResClientTools.get(AIPromptsName)
+    expect(prompts).toBeInstanceOf(ResClientTools)
+    const prompt = await prompts.get({id: 'default'})
+    expect(prompt).toHaveProperty('_id', 'default')
+  })
+  it('should add/del prompt', async () => {
+    const prompts = ResClientTools.get(AIPromptsName)
+    expect(prompts).toBeInstanceOf(ResClientTools)
+    const prompt = {
+      _id: 'TestPrompt',
+      templateFormat: 'hf',
+      type: 'system',
+      prompt: {
+        system: 'You are a helpful assistant.',
+      },
+      template: `{%- for message in messages %}
+  {%- if loop.first and system and messages[0]['role'] != 'system' %}
+  {{- system + '\n'}}
+  {%- endif %}
+  {{message['role']+': ' + message['content'] + '\n'}}
+{%- endfor -%}
+{%- if add_generation_prompt -%}assistant: {%- endif -%}`
+    }
+    let result = await prompts.post({id: prompt._id, val: prompt})
+    expect(result).toHaveProperty('changes', 1)
+    result = await prompts.get({id: prompt._id})
+    expect(result).toStrictEqual(prompt)
+    result = await prompts.delete({id: prompt._id})
+    expect(result).toHaveProperty('changes', 1)
+    expect(prompts.get({id: prompt._id})).rejects.toThrow(NotFoundError)
   })
 
 });
