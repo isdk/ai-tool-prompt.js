@@ -29,7 +29,7 @@ function traverseFolderSync(directoryPath: string, fileHandler: (filePath: strin
   }
 }
 
-export function getConfigFiles(directoryPath: string) {
+export function getConfigFileNames(directoryPath: string) {
   const configFiles: string[] = [];
 
   traverseFolderSync(directoryPath, (filePath) => {
@@ -43,6 +43,6 @@ export function getConfigFiles(directoryPath: string) {
 }
 
 export function getConfigs(directoryPath: string) {
-  const files = getConfigFiles(directoryPath);
+  const files = getConfigFileNames(directoryPath);
   return files.map(file => Config.loadSync(file)).filter(config => config !== undefined)
 }
