@@ -1,7 +1,7 @@
 import {readdirSync, type Dirent} from 'fs'
 import path from 'path'
 import { Config } from 'load-config-file'
-import { parse, stringify } from 'yaml'
+import { parse } from 'yaml'
 import { regexp } from 'yaml-types'
 
 function parseYaml(content: string) {
