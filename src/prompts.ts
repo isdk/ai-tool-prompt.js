@@ -44,6 +44,34 @@ export class AIPromptsFunc extends KVSqliteResFunc<AIPromptsFuncParams> {
     return result
   }
 
+  $getDefaultPrompt(): AIPromptResult {
+    let prompt = this.get({id: 'default'})
+    if (!prompt) {
+      prompt = {
+        _id: 'default',
+        description: 'the role should be user, system, assistant',
+        templateFormat: 'hf',
+        type: 'system',
+        prompt: {
+          system: 'This is a conversation between User and Assistant, a friendly Assistant. Assistant is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.'
+        },
+        template:
+          '{%- for message in messages %}\n' +
+          "  {%- if loop.first and system and messages[0]['role'] != 'system' %}\n" +
+          "    {{- system + '\\n'}}\n" +
+          '  {%- endif -%}\n' +
+          "  {%- if message['role'] == 'system' -%}\n" +
+          "    {{- message['content'] + '\\n' -}}\n" +
+          '  {%- else -%}\n' +
+          "    {{- message['role']+': ' + message['content'] + '\\n' -}}\n" +
+          '  {%- endif -%}\n' +
+          '{%- endfor -%}\n' +
+          '{%- if add_generation_prompt -%}assistant: {% endif %}'
+      }
+    }
+    return {prompt}
+  }
+
   $getPrompt({model}: AIPromptsFuncParams) {
     if (!model) {
       throw new CommonError('model is required', 'AIPromptsFunc.getPrompt', ErrorCode.InvalidArgument)
