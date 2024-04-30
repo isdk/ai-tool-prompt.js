@@ -7,6 +7,7 @@ import { CommonError, ErrorCode } from '@isdk/ai-tool';
 
 // const PROMPTS_DB_NAME = '.promptsdb'
 // const eventBus = event.runSync()
+export const AIPromptsName = 'prompts'
 
 interface AIPromptsFuncParams extends AIPromptSettings, KVSqliteResFuncParams {
 }
