@@ -5,6 +5,8 @@ import { getConfigs } from './config';
 import { AIPromptFitResult, promptIsFitForLLM } from './prompt';
 import { CommonError, ErrorCode } from '@isdk/ai-tool';
 
+import './regexp-to-json'
+
 // const PROMPTS_DB_NAME = '.promptsdb'
 // const eventBus = event.runSync()
 export const AIPromptsName = 'prompts'
@@ -31,6 +33,7 @@ export class AIPromptsFunc extends KVSqliteResFunc<AIPromptsFuncParams> {
           prompt,
           version,
         }
+        break
       }
     }
     return result

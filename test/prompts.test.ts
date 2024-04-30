@@ -157,4 +157,12 @@ describe('Prompts server api', () => {
     expect(prompts.get({id: prompt._id})).rejects.toThrow(NotFoundError)
   })
 
+  it('should get prompt for LLM', async () => {
+    const prompts = ResClientTools.get(AIPromptsName)
+    expect(prompts).toBeInstanceOf(ResClientTools)
+    const result = await prompts.getPrompt({model: 'Llama-2', skill: 'chat'})
+    expect(result).toHaveProperty('prompt')
+    expect(result).toHaveProperty('version', '@')
+    expect(result.prompt).toHaveProperty('_id', 'Llama-v2')
+  })
 });
