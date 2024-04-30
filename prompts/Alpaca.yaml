@@ -2,8 +2,7 @@ _id: Alpaca
 templateFormat: hf
 type: system
 prompt:
-  system: Below is an instruction that describes a task. Write a response that
-    appropriately completes the request.
+  system: Below is an instruction that describes a task. Write a response that appropriately completes the request.
 template: >-
   {%- for message in messages %}
     {% if loop.first and messages[0]['role'] != 'system' %}

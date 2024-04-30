@@ -24,4 +24,5 @@ template: |-
 rule:
   - !re /^airoboros-.*-3[.]1[.]2$/i
   - !re /^airoboros-.*-3[.]3$/i
-  - !re /^bagel-/i
+  - !re /^bagel(?:$|[-_])/i
+  - !re /^llama[-_]2(?:$|[-_])/i
