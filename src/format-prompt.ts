@@ -3,7 +3,7 @@ import { AIChatMessageParam, PromptTemplate } from '@isdk/ai-tool'
 import { AIPromptSettings } from "./prompt-settings"
 
 export interface PromptTemplateData {
-  add_generation_prompt?: true,
+  add_generation_prompt?: boolean
   version?: string
   messages?: AIChatMessageParam[]
   [name: string]: any
