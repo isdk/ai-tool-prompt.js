@@ -11,6 +11,11 @@ import './regexp-to-json'
 // const eventBus = event.runSync()
 export const AIPromptsName = 'prompts'
 
+export interface AIPromptResult {
+  prompt: AIPromptSettings
+  version?: AIPromptFitResult | AIPromptFitResult[];
+}
+
 interface AIPromptsFuncParams extends AIPromptSettings, KVSqliteResFuncParams {
 }
 
@@ -22,7 +27,7 @@ export class AIPromptsFunc extends KVSqliteResFunc<AIPromptsFuncParams> {
     this.db.bulkDocs(configs);
   }
 
-  _getPrompt(modelName: string) {
+  _getPrompt(modelName: string): AIPromptResult|false {
     const db = this.db
     const prompts = db.list() as AIPromptSettings[]
     let result: {prompt: AIPromptSettings, version: AIPromptFitResult|AIPromptFitResult[]}|false = false
@@ -39,7 +44,7 @@ export class AIPromptsFunc extends KVSqliteResFunc<AIPromptsFuncParams> {
     return result
   }
 
-  $getPrompt({model, skill}: AIPromptsFuncParams) {
+  $getPrompt({model}: AIPromptsFuncParams) {
     if (!model) {
       throw new CommonError('model is required', 'AIPromptsFunc.getPrompt', ErrorCode.InvalidArgument)
     }
