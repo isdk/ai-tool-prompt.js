@@ -21,4 +21,4 @@ template: |-
   {%- if add_generation_prompt -%}
       {{-'<|assistant|>\n'-}}
   {%- endif -%}
-rule: /^Phi[-]3[-]/
+rule: /^Phi[-_]3(?:$|[-_])/i
