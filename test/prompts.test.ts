@@ -160,7 +160,7 @@ describe('Prompts server api', () => {
   it('should get prompt for LLM', async () => {
     const prompts = ResClientTools.get(AIPromptsName)
     expect(prompts).toBeInstanceOf(ResClientTools)
-    let result = await prompts.getPrompt({model: 'Llama-2', skill: 'chat'})
+    let result = await prompts.getPrompt({model: 'Llama-2'})
     expect(result).toHaveProperty('prompt')
     expect(result).toHaveProperty('version', '@')
     expect(result.prompt).toHaveProperty('_id', 'Llama-v2')
@@ -169,5 +169,36 @@ describe('Prompts server api', () => {
     expect(result.prompt).toHaveProperty('_id', 'Phi-3')
     // expect(result).toHaveProperty('version', '@')
     // expect(result.prompt).toHaveProperty('_id', 'Llama-v2')
+  })
+  it('should get prompt by type for LLM', async () => {
+    const prompts = ResClientTools.get(AIPromptsName)
+    expect(prompts).toBeInstanceOf(ResClientTools)
+    const prompt = {
+      _id: 'TestPrompt:char',
+      templateFormat: 'hf',
+      rule: 'Llama-2',
+      type: 'char',
+      prompt: {
+        system: 'You are a helpful assistant.',
+      },
+      template: `{%- for message in messages %}
+  {%- if loop.first and system and messages[0]['role'] != 'system' %}
+  {{- system + '\n'}}
+  {%- endif %}
+  {{message['role']+': ' + message['content'] + '\n'}}
+{%- endfor -%}
+{%- if add_generation_prompt -%}assistant: {%- endif -%}`
+    }
+    let result = await prompts.post({id: prompt._id, val: prompt})
+    expect(result).toHaveProperty('changes', 1)
+
+    result = await prompts.getPrompt({model: 'Llama-2', type: 'char'})
+    expect(result).toHaveProperty('prompt')
+    expect(result).toHaveProperty('version', '@')
+    expect(result.prompt).toHaveProperty('_id', prompt._id)
+    result = await prompts.delete({id: prompt._id})
+    expect(result).toHaveProperty('changes', 1)
+    expect(prompts.get({id: prompt._id})).rejects.toThrow(NotFoundError)
+
   })
 });

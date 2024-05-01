@@ -1,6 +1,6 @@
 import path from 'path'
 import { KVSqliteResFuncParams, KVSqliteResFunc } from "@isdk/ai-tool-sqlite";
-import { AIPromptSettings } from './prompt-settings';
+import { AIPromptSettings, AIPromptType } from './prompt-settings';
 import { getConfigs } from './config';
 import { AIPromptFitResult, promptIsFitForLLM } from './prompt';
 import { CommonError, ErrorCode } from '@isdk/ai-tool';
@@ -27,18 +27,20 @@ export class AIPromptsFunc extends KVSqliteResFunc<AIPromptsFuncParams> {
     this.db.bulkDocs(configs);
   }
 
-  _getPrompt(modelName: string): AIPromptResult|false {
+  _getPrompt(modelName: string, type?: AIPromptType): AIPromptResult|false {
     const db = this.db
     const prompts = db.list() as AIPromptSettings[]
     let result: {prompt: AIPromptSettings, version: AIPromptFitResult|AIPromptFitResult[]}|false = false
     for (const prompt of prompts) {
-      const version = promptIsFitForLLM(prompt, modelName)
-      if (version) {
-        result = {
-          prompt,
-          version,
+      if (!type || prompt.type === type) {
+        const version = promptIsFitForLLM(prompt, modelName)
+        if (version) {
+          result = {
+            prompt,
+            version,
+          }
+          break
         }
-        break
       }
     }
     return result
@@ -72,11 +74,11 @@ export class AIPromptsFunc extends KVSqliteResFunc<AIPromptsFuncParams> {
     return {prompt}
   }
 
-  $getPrompt({model}: AIPromptsFuncParams) {
+  $getPrompt({model, type}: AIPromptsFuncParams) {
     if (!model) {
       throw new CommonError('model is required', 'AIPromptsFunc.getPrompt', ErrorCode.InvalidArgument)
     }
-    const result = this._getPrompt(model)
+    const result = this._getPrompt(model, type)
     return result
   }
 }
