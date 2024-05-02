@@ -235,4 +235,33 @@ describe('Prompts server api', () => {
     expect(result).toHaveProperty('changes', 1)
     expect(prompts.get({id: prompt._id})).rejects.toThrow(NotFoundError)
   })
+  it('should set priority prompt', async () => {
+    const prompts = ResClientTools.get(AIPromptsName)
+    expect(prompts).toBeInstanceOf(ResClientTools)
+    const prompt = {
+      _id: 'TestPrompt:priority',
+      rule: /(?:^|[-_.])(qwen)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i.toString(),
+      prompt: {
+        system: 'You are a professional assistant.',
+      },
+      priority: 10
+    }
+    let result = await prompts.post({id: prompt._id, val: prompt})
+    expect(result).toHaveProperty('changes', 1)
+
+    result = await prompts.getPrompt({model: 'qwen1.5'})
+    expect(result).toHaveProperty('prompt')
+    expect(result).toHaveProperty('version', '@')
+    expect(result.prompt).toHaveProperty('_id', prompt._id)
+    expect(result.prompt).toHaveProperty('prompt')
+    expect(result.prompt.prompt).toHaveProperty('system', prompt.prompt.system)
+
+    result = await prompts.delete({id: prompt._id})
+    expect(result).toHaveProperty('changes', 1)
+    expect(prompts.get({id: prompt._id})).rejects.toThrow(NotFoundError)
+
+    result = await prompts.getPrompt({model: 'qwen1.5'})
+    expect(result).toHaveProperty('prompt')
+    expect(result.prompt).toHaveProperty('_id', 'ChatML')
+  })
 });

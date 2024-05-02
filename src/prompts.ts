@@ -30,7 +30,10 @@ export class AIPromptsFunc extends KVSqliteResFunc<AIPromptsFuncParams> {
 
   _getPrompt(modelName: string, type?: AIPromptType): AIPromptResult|false {
     const db = this.db
-    const prompts = (db.list() as AIPromptSettings[]).filter(prompt => !type || prompt.type === type)
+    // TODO: `db.list` should implement a json value filter.
+    const prompts = (db.list() as AIPromptSettings[])
+      .filter(prompt => !type || prompt.type === type)
+      .sort((a,b) => (b.priority ?? 0) - (a.priority ?? 0))
     let result: {prompt: AIPromptSettings, version: AIPromptFitResult|AIPromptFitResult[]}|false = false
     for (let prompt of prompts) {
       const version = promptIsFitForLLM(prompt, modelName)
