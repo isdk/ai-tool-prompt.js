@@ -1,3 +1,4 @@
+import { assign } from 'radash'
 import path from 'path'
 import { KVSqliteResFuncParams, KVSqliteResFunc } from "@isdk/ai-tool-sqlite";
 import { AIPromptSettings, AIPromptType } from './prompt-settings';
@@ -29,18 +30,31 @@ export class AIPromptsFunc extends KVSqliteResFunc<AIPromptsFuncParams> {
 
   _getPrompt(modelName: string, type?: AIPromptType): AIPromptResult|false {
     const db = this.db
-    const prompts = db.list() as AIPromptSettings[]
+    const prompts = (db.list() as AIPromptSettings[]).filter(prompt => !type || prompt.type === type)
     let result: {prompt: AIPromptSettings, version: AIPromptFitResult|AIPromptFitResult[]}|false = false
-    for (const prompt of prompts) {
-      if (!type || prompt.type === type) {
-        const version = promptIsFitForLLM(prompt, modelName)
-        if (version) {
-          result = {
-            prompt,
-            version,
-          }
-          break
+    for (let prompt of prompts) {
+      const version = promptIsFitForLLM(prompt, modelName)
+      if (version) {
+        if (prompt.extends) {
+          const parent = this.get({id: prompt.extends})
+          if (parent) {prompt = assign(parent, prompt)}
         }
+        result = {
+          prompt,
+          version,
+        }
+        break
+      }
+    }
+    return result
+  }
+
+  get(params: KVSqliteResFuncParams) {
+    let result = super.get(params)
+    if (result?.extends) {
+      const parent = super.get({id: result.extends})
+      if (parent) {
+        result = assign(parent, result)
       }
     }
     return result

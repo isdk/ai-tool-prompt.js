@@ -32,6 +32,8 @@ export interface AIPromptSettings {
   prompt?: DefaultPrompt
   version?: {[ver: string]: DefaultPrompt}
   parameters?: Record<string, any>
+  extends?: string
+  priority?: number
   [CreationKey]?: ActivityRecord
   [SignatureKey]?: string|Signatures
 }

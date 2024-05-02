@@ -199,9 +199,8 @@ describe('Prompts server api', () => {
     result = await prompts.delete({id: prompt._id})
     expect(result).toHaveProperty('changes', 1)
     expect(prompts.get({id: prompt._id})).rejects.toThrow(NotFoundError)
-
   })
-  it.only('should getLLMParameters', async () => {
+  it('should getLLMParameters', async () => {
     const prompts = ResClientTools.get(AIPromptsName)
     expect(prompts).toBeInstanceOf(ResClientTools)
     let result = await prompts.getParameters({id: 'ChatML', model: 'qwen1.5'})
@@ -209,5 +208,31 @@ describe('Prompts server api', () => {
       temperature: 0.01,
       top_p: 0.9,
     })
+  })
+  it('should extends prompt', async () => {
+    const prompts = ResClientTools.get(AIPromptsName)
+    expect(prompts).toBeInstanceOf(ResClientTools)
+    const prompt = {
+      _id: 'TestPrompt:extends',
+      rule: 'my-extends',
+      prompt: {
+        system: 'You are a professional assistant.',
+      },
+      extends: 'default'
+    }
+    let result = await prompts.post({id: prompt._id, val: prompt})
+    expect(result).toHaveProperty('changes', 1)
+
+    result = await prompts.getPrompt({model: 'my-extends'})
+    expect(result).toHaveProperty('prompt')
+    expect(result).toHaveProperty('version', '@')
+    expect(result.prompt).toHaveProperty('_id', prompt._id)
+    expect(result.prompt).toHaveProperty('prompt')
+    expect(result.prompt.prompt).toHaveProperty('system', prompt.prompt.system)
+    expect(result.prompt).toHaveProperty('template')
+
+    result = await prompts.delete({id: prompt._id})
+    expect(result).toHaveProperty('changes', 1)
+    expect(prompts.get({id: prompt._id})).rejects.toThrow(NotFoundError)
   })
 });
