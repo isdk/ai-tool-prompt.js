@@ -2,7 +2,7 @@ import path from 'path'
 import { KVSqliteResFuncParams, KVSqliteResFunc } from "@isdk/ai-tool-sqlite";
 import { AIPromptSettings, AIPromptType } from './prompt-settings';
 import { getConfigs } from './config';
-import { AIPromptFitResult, promptIsFitForLLM } from './prompt';
+import { AIPromptFitResult, getLLMParameters, promptIsFitForLLM } from './prompt';
 import { CommonError, ErrorCode } from '@isdk/ai-tool';
 
 import './regexp-to-json'
@@ -76,9 +76,21 @@ export class AIPromptsFunc extends KVSqliteResFunc<AIPromptsFuncParams> {
 
   $getPrompt({model, type}: AIPromptsFuncParams) {
     if (!model) {
-      throw new CommonError('model is required', 'AIPromptsFunc.getPrompt', ErrorCode.InvalidArgument)
+      throw new CommonError('model is required', this.name + '.getPrompt', ErrorCode.InvalidArgument)
     }
     const result = this._getPrompt(model, type)
     return result
+  }
+
+   $getParameters({id, model}: AIPromptsFuncParams) {
+    if (!model) {
+      throw new CommonError('model is required', this.name + '.getParameters', ErrorCode.InvalidArgument)
+    }
+    let result: any
+    const prompt = this.get({id})
+    if (prompt) {
+      result = getLLMParameters(prompt, model)
+    }
+    return result || null
   }
 }

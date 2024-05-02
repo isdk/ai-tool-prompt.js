@@ -201,4 +201,13 @@ describe('Prompts server api', () => {
     expect(prompts.get({id: prompt._id})).rejects.toThrow(NotFoundError)
 
   })
+  it.only('should getLLMParameters', async () => {
+    const prompts = ResClientTools.get(AIPromptsName)
+    expect(prompts).toBeInstanceOf(ResClientTools)
+    let result = await prompts.getParameters({id: 'ChatML', model: 'qwen1.5'})
+    expect(result).toStrictEqual({
+      temperature: 0.01,
+      top_p: 0.9,
+    })
+  })
 });

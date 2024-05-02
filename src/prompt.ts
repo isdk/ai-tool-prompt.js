@@ -29,6 +29,40 @@ export function strIsLocked(value: string) {
 // @ means the default version,
 export type AIPromptFitResult = '@' | string
 
+function getMatchedStr(matched: string|RegExpExecArray|undefined) {
+  let result: string|undefined
+  if (matched) {
+    if (Array.isArray(matched)) {
+      result = matched.groups?.id || matched[1]
+    } else {
+      result = matched
+    }
+  }
+  return result
+}
+
+export function getLLMParameters(prompt: AIPromptSettings, modelName: string) {
+  const rules = prompt.rule
+  const parameters = prompt.parameters
+  if (rules && parameters) {
+    let m: string|undefined
+    if (Array.isArray(rules)) {
+      const matched = isModelNameMatched(modelName, rules)
+      if (matched) {m = getMatchedStr(matched)}
+    } else if (typeof rules === 'object' && !(rules instanceof RegExp)) {
+      for (const [_version, rule] of Object.entries(rules)) {
+        m = getMatchedStr(isModelNameMatched(modelName, rule))
+        break
+      }
+    } else {
+      m = getMatchedStr(isModelNameMatched(modelName, rules))
+    }
+    if (m) {
+      return parameters[m]
+    }
+  }
+}
+
 export function promptIsFitForLLM(prompt: AIPromptSettings, modelName: string): AIPromptFitResult|AIPromptFitResult[]|undefined {
   const rules = prompt.rule
   const result: AIPromptFitResult[] = []

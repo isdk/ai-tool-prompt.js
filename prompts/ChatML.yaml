@@ -15,4 +15,8 @@ template: |-
   {% if add_generation_prompt %}<|im_start|>assistant
   {% endif %}
 rule:
-  - !re /qwen/i
+  - !re /(?:^|[-_.])(qwen)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
+parameters:
+  'qwen':
+    temperature: 0.01
+    top_p: 0.9
