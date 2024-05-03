@@ -1,14 +1,14 @@
 import path from 'path'
 import { AIPromptSettings } from '../src'
 import { formatPrompt } from './format-prompt'
-import { Config } from './config'
+import { ConfigFile } from './config'
 
 
 const promptsPath = path.resolve(__dirname, '..', 'prompts')
 
 describe('formatPrompt', () => {
   it('should format default prompt', async () => {
-    const promptTemplate = Config.loadSync(promptsPath + '/default') as AIPromptSettings
+    const promptTemplate = ConfigFile.loadSync(promptsPath + '/default') as AIPromptSettings
     expect(promptTemplate).toHaveProperty('_id', 'default')
     let result = await formatPrompt({
       system: '',

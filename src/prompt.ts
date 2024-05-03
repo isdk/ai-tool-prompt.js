@@ -1,10 +1,12 @@
 import { AdvancePropertyManager } from 'property-manager';
-import { Config } from './config'
+import { ConfigFile } from './config'
 import { isModelNameMatched } from '@isdk/ai-tool';
 import { AIPromptSchema, AIPromptSettings } from './prompt-settings';
 
 // 128271: 🔏
 const LockedMagic = 128271
+
+export { ConfigFile }
 
 export interface AIPrompt extends AIPromptSettings {}
 
@@ -103,7 +105,7 @@ export function promptIsFitForLLM(prompt: AIPromptSettings, modelName: string): 
  */
 export class AIPrompt extends AdvancePropertyManager {
   importFromFile(filepath: string) {
-    const src = Config.loadSync(filepath)
+    const src = ConfigFile.loadSync(filepath)
     if (src) {this.assign(src)}
   }
 

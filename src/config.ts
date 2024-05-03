@@ -1,6 +1,6 @@
 import {readdirSync, type Dirent} from 'fs'
 import path from 'path'
-import { Config } from 'load-config-file'
+import { Config as ConfigFile } from 'load-config-file'
 import { parse } from 'yaml'
 import { regexp } from 'yaml-types'
 
@@ -12,10 +12,10 @@ function parseJson(content: string) {
   return JSON.parse(content)
 }
 
-Config.register(['.yml', '.yaml'], parseYaml)
-Config.register(['.json'], parseJson)
+ConfigFile.register(['.yml', '.yaml'], parseYaml)
+ConfigFile.register(['.json'], parseJson)
 
-export { Config }
+export { ConfigFile }
 
 function traverseFolderSync(directoryPath: string, fileHandler: (filePath: string, entry: Dirent) => void) {
   const files = readdirSync(directoryPath, { withFileTypes: true, recursive: true });
@@ -44,5 +44,5 @@ export function getConfigFileNames(directoryPath: string) {
 
 export function getConfigs(directoryPath: string) {
   const files = getConfigFileNames(directoryPath);
-  return files.map(file => Config.loadSync(file)).filter(config => config !== undefined)
+  return files.map(file => ConfigFile.loadSync(file)).filter(config => config !== undefined)
 }
