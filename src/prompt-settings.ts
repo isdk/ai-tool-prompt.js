@@ -1,4 +1,4 @@
-import { AIModelNameRules } from "@isdk/ai-tool"
+import { AIChatMessageParam, AIModelNameRules } from "@isdk/ai-tool"
 
 export const AIPromptTypes = ['system', 'tool', 'char'] as const
 export type  AIPromptType = (typeof AIPromptTypes[number]) & string
@@ -19,7 +19,7 @@ export interface Signatures {
   [userId: string]: string;
 }
 
-type DefaultPrompt = Record<string, string> | {system?: string, ai?: string, human?: string, end_of_turn?: string, begin_of_turn?: string}
+type DefaultPrompt = Record<string, string> | {system?: string, ai?: string, human?: string, end_of_turn?: string, begin_of_turn?: string, messages?: AIChatMessageParam[]}
 export interface AIPromptSettings {
   _id?: string
   id?:string
@@ -34,6 +34,8 @@ export interface AIPromptSettings {
   parameters?: Record<string, any>
   extends?: string
   priority?: number
+  input?: Record<string, string>[]
+  output?: any
   [CreationKey]?: ActivityRecord
   [SignatureKey]?: string|Signatures
 }
