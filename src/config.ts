@@ -16,7 +16,7 @@ export function registerYamlTag(tags: any) {
   }
 }
 
-function parseYaml(content: string) {
+export function parseYaml(content: string) {
   return parse(content, {customTags: YamlTags})
 }
 
