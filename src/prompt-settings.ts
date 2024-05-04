@@ -49,6 +49,11 @@ export const AIPromptSchema = {
   templateFormat: {type: 'string'},
   prompt: {type: 'any'},
   version: {type: 'any'},
+  parameters: {type: 'any'},
+  extends: {type: 'string'},
+  priority: {type: 'number'},
+  input: {type: 'array'},
+  output: {type: 'any'},
   [CreationKey]: {type: 'object'},
   [SignatureKey]: {type: ['string', 'object']},
 }
