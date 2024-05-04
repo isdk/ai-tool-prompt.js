@@ -6,10 +6,14 @@ import { regexp } from 'yaml-types'
 
 const YamlTags = [regexp]
 
-export function registerYamlTag(tag: any) {
-  const result = YamlTags.indexOf(tag) === -1
-  if (result) { YamlTags.push(tag) }
-  return result
+export function registerYamlTag(tags: any) {
+  if (!Array.isArray(tags)) {
+    tags = [tags]
+  }
+  for (const tag of tags) {
+    const result = YamlTags.indexOf(tag) === -1
+    if (result) { YamlTags.push(tag) }
+  }
 }
 
 function parseYaml(content: string) {
