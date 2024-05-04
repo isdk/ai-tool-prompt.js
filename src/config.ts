@@ -4,8 +4,16 @@ import { Config as ConfigFile } from 'load-config-file'
 import { parse } from 'yaml'
 import { regexp } from 'yaml-types'
 
+const YamlTags = [regexp]
+
+export function registerYamlTag(tag: any) {
+  const result = YamlTags.indexOf(tag) === -1
+  if (result) { YamlTags.push(tag) }
+  return result
+}
+
 function parseYaml(content: string) {
-  return parse(content, {customTags: [regexp]})
+  return parse(content, {customTags: YamlTags})
 }
 
 function parseJson(content: string) {
