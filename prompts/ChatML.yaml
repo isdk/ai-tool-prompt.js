@@ -15,7 +15,7 @@ template: |-
   {% if add_generation_prompt %}<|im_start|>assistant
   {% endif %}
 rule:
-  - !re /(?:^|[-_.])(qwen)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
+  - !re /(?:^|[-_.])(?:code)?(qwen)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
 parameters:
   'qwen':
     temperature: 0.01

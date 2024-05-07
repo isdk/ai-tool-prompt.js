@@ -208,6 +208,11 @@ describe('Prompts server api', () => {
       temperature: 0.01,
       top_p: 0.9,
     })
+    result = await prompts.getParameters({id: 'ChatML', model: 'codeqwen1.5-7b-chat.Q4_0'})
+    expect(result).toStrictEqual({
+      temperature: 0.01,
+      top_p: 0.9,
+    })
   })
   it('should extends prompt', async () => {
     const prompts = ResClientTools.get(AIPromptsName)
