@@ -65,10 +65,20 @@ export function getLLMParameters(prompt: AIPromptSettings, modelName: string) {
   }
 }
 
+function isId(id: string, modelName: string) {
+  if (id === modelName) {return true}
+  const lastIndex = id.lastIndexOf('|')
+  return lastIndex > 0 && id.substring(0, lastIndex) === modelName
+}
+
 export function promptIsFitForLLM(prompt: AIPromptSettings, modelName: string): AIPromptFitResult|AIPromptFitResult[]|undefined {
   const rules = prompt.rule
   const result: AIPromptFitResult[] = []
   let usedVers = [] as string[]
+  if (isId(prompt._id!, modelName)) {
+    return '@'
+  }
+
   if (rules) {
     if (Array.isArray(rules)) {
       if (isModelNameMatched(modelName, rules)) {
