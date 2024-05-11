@@ -63,9 +63,13 @@ export class AIPromptsFunc extends KVSqliteResFunc<AIPromptsFuncParams> {
     return result
   }
 
-  $getDefaultPrompt(): AIPromptResult {
-    let prompt = this.get({id: 'default'})
-    if (!prompt) {
+  $getDefaultPrompt(type?: string): AIPromptResult {
+    let id = 'default'
+    if (type && type !== 'system') {
+      id = type + '|default'
+    }
+    let prompt = this.get({id})
+    if (!prompt && (!type || type === 'system')) {
       prompt = {
         _id: 'default',
         description: 'the role should be user, system, assistant',
