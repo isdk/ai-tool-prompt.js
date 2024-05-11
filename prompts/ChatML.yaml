@@ -10,9 +10,9 @@ template: |-
       {{ system }}<|im_end|>
     {% endif %}
     {{- '<|im_start|>' + message['role'] + '\n' -}}
-  {{message['content']}}<|im_end|>
+  {{message['content']}}{% if not loop.last or messages[-1]['role'] != 'assistant' %}<|im_end|>{% endif %}
   {% endfor %}
-  {% if add_generation_prompt %}<|im_start|>assistant
+  {% if add_generation_prompt and messages[-1]['role'] != 'assistant' %}<|im_start|>assistant
   {% endif %}
 rule:
   - !re /(?:^|[-_.])(?:code)?(qwen)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
@@ -20,3 +20,5 @@ parameters:
   'qwen':
     temperature: 0.01
     top_p: 0.9
+    eot_token: '[PAD151645]'
+    stop_words: ['<|im_end|>']
