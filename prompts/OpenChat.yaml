@@ -6,54 +6,54 @@ version:
     prompt:
       human: "Human: "
       ai: "Assistant: "
-      end_of_turn: <|end_of_turn|>
+      eot_token: <|end_of_turn|>
   opencoder:
     prompt:
       human: "User:"
       ai: "Assistant:"
-      end_of_turn: <|end_of_turn|>
+      eot_token: <|end_of_turn|>
   "3.1":
     prompt:
       system: Assistant is GPT4
       human: "User: "
       ai: "Assistant: "
-      end_of_turn: <|end_of_turn|>
+      eot_token: <|end_of_turn|>
   "3.2":
     prompt:
       human: "GPT4 User: "
       ai: "GPT4 Assistant: "
-      end_of_turn: <|end_of_turn|>
+      eot_token: <|end_of_turn|>
   3.5-gemma:
     prompt:
       human: "GPT4 Correct User: "
       ai: "GPT4 Correct Assistant: "
-      end_of_turn: <end_of_turn>
+      eot_token: <end_of_turn>
   "3.5":
     prompt:
       human: "GPT4 Correct User: "
       ai: "GPT4 Correct Assistant: "
-      end_of_turn: <|end_of_turn|>
+      eot_token: <|end_of_turn|>
   math:
     prompt:
       human: "Math Correct User: "
       ai: "Math Correct Assistant: "
-      end_of_turn: <|end_of_turn|>
+      eot_token: <|end_of_turn|>
 prompt:
   human: "GPT4 Correct User: "
   ai: "GPT4 Correct Assistant: "
-  end_of_turn: <|end_of_turn|>
+  eot_token: <|end_of_turn|>
 template: |-
   {%- for message in messages %}
     {%- if loop.first and system and messages[0]['role'] != 'system' -%}
-      {{- system + end_of_turn -}}
+      {{- system + eot_token -}}
     {% endif %}
     {%- if message['role'] == 'system' -%}
-      {{- '' + message['content'] + end_of_turn -}}
+      {{- '' + message['content'] + eot_token -}}
     {%- else -%}
       {%- if message['role'] == 'user' -%}
-        {{-human + message['content'] + end_of_turn-}}
+        {{-human + message['content'] + eot_token-}}
       {%- else -%}
-        {{-ai + message['content'] + end_of_turn -}}
+        {{-ai + message['content'] + eot_token -}}
       {%- endif -%}
     {%- endif -%}
   {%- endfor -%}
