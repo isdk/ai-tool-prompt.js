@@ -19,4 +19,4 @@ template: |-
   {%- for message in messages %}
     {{- message['role'] + ': ' + message['content'] + '\n' -}}
   {%- endfor -%}
-rule: phi-2
+rule: /^phi-2/i
