@@ -3,6 +3,9 @@ import { AIChatMessageParam, AIModelNameRules } from "@isdk/ai-tool"
 export const AIPromptTypes = ['system', 'tool', 'char'] as const
 export type  AIPromptType = (typeof AIPromptTypes[number]) & string
 
+export const AIContentTypes = ['prompt', 'script'] as const
+export type  AIContentType = (typeof AIContentTypes[number]) & string
+
 export const SignatureKey = '签'
 export const CreationKey = '创'
 export const PersonKey = '者'
@@ -25,6 +28,7 @@ export interface AIPromptSettings {
   id?:string
   template: string
   type: AIPromptType
+  contentType?: AIContentType
   description?: string
   rule?: {[ver: string]: AIModelNameRules} | AIModelNameRules
   templateFormat?: string
@@ -44,6 +48,7 @@ export const AIPromptSchema = {
   _id: {type: 'string', required: true},
   template: {type: 'string', required: true},
   type: {type: 'string', required: true},
+  contentType: {type: 'string'},
   description: {type: 'string'},
   rule: {type: 'any'},
   templateFormat: {type: 'string'},
