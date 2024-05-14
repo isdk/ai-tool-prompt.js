@@ -1,4 +1,4 @@
-import { assign } from 'radash'
+import { defaults } from 'lodash-es'
 import path from 'path'
 import { KVSqliteResFuncParams, KVSqliteResFunc } from "@isdk/ai-tool-sqlite";
 import { AIPromptSettings, AIPromptType } from './prompt-settings';
@@ -40,7 +40,7 @@ export class AIPromptsFunc extends KVSqliteResFunc<AIPromptsFuncParams> {
       if (version) {
         if (prompt.extends) {
           const parent = this.get({id: prompt.extends})
-          if (parent) {prompt = assign(parent, prompt)}
+          if (parent) {defaults(prompt, parent)}
         }
         result = {
           prompt,
@@ -57,7 +57,7 @@ export class AIPromptsFunc extends KVSqliteResFunc<AIPromptsFuncParams> {
     if (result?.extends) {
       const parent = super.get({id: result.extends})
       if (parent) {
-        result = assign(parent, result)
+        defaults(result, parent)
       }
     }
     return result
