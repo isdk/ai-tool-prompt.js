@@ -24,5 +24,8 @@ template: |-
 rule:
   - !re /^airoboros-.*-3[.]1[.]2$/i
   - !re /^airoboros-.*-3[.]3$/i
-  - !re /^bagel(?:$|[-_])/i
+  - !re /^(bagel)(?:$|[-_])(?!8b)/i
   - !re /^llama[-_]2(?:$|[-_])/i
+parameters:
+  'bagel':
+    stop_words: ['<|endoftext|>']

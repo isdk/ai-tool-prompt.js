@@ -24,3 +24,4 @@ template: >-
   {%- endif -%}
 rule:
   - !re /^Meta[-]Llama[-]3[-]\d+B[-]Instruct$/i
+  - !re /^bagel(?:$|[-_])(?:8b)/i
