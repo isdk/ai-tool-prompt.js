@@ -21,4 +21,7 @@ template: |-
   {%- if add_generation_prompt -%}
       {{-'<|assistant|>\n'-}}
   {%- endif -%}
-rule: /^Phi[-_]3(?:$|[-_.])/i
+rule: /^(Phi)[-_]3(?:$|[-_.])/i
+parameters:
+  "Phi":
+    stop_words: ['<|end|>']
