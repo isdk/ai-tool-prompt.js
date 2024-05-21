@@ -251,6 +251,14 @@ describe('Prompts server api', () => {
     expect(result.prompt).toHaveProperty('template')
     expect(result.prompt.prompt.messages).toStrictEqual([3,6])
 
+    result = await prompts.get({id: 'TestPrompt:extends'})
+    expect(result).toHaveProperty('prompt')
+    expect(result).toHaveProperty('_id', prompt._id)
+    expect(result).toHaveProperty('prompt')
+    expect(result.prompt).toHaveProperty('system', promptRoot.prompt.system)
+    expect(result).toHaveProperty('template')
+    expect(result.prompt.messages).toStrictEqual([3,6])
+
     result = await prompts.delete({id: prompt._id})
     expect(result).toHaveProperty('changes', 1)
     expect(prompts.get({id: prompt._id})).rejects.toThrow(NotFoundError)

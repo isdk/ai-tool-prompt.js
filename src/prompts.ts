@@ -1,4 +1,4 @@
-import { defaults, isObject, mergeWith } from 'lodash-es'
+import { mergeWith } from 'lodash-es'
 import path from 'path'
 import { KVSqliteResFuncParams, KVSqliteResFunc } from "@isdk/ai-tool-sqlite";
 import { AIPromptSettings, AIPromptType } from './prompt-settings';
@@ -42,11 +42,7 @@ export class AIPromptsFunc extends KVSqliteResFunc<AIPromptsFuncParams> {
           const parent = this.get({id: prompt.extends})
           if (parent) {
             // defaults(prompt, parent)
-            prompt = mergeWith(parent, prompt, (objValue, srcValue) => {
-              if (Array.isArray(objValue) && srcValue !== undefined) {
-                return objValue.concat(srcValue)
-              }
-            })
+            prompt = merge(parent, prompt)
           }
         }
         result = {
@@ -62,9 +58,9 @@ export class AIPromptsFunc extends KVSqliteResFunc<AIPromptsFuncParams> {
   get(params: KVSqliteResFuncParams) {
     let result = super.get(params)
     if (result?.extends) {
-      const parent = super.get({id: result.extends})
+      const parent = this.get({id: result.extends})
       if (parent) {
-        defaults(result, parent)
+        result = merge(parent, result)
       }
     }
     return result
@@ -121,4 +117,15 @@ export class AIPromptsFunc extends KVSqliteResFunc<AIPromptsFuncParams> {
     }
     return result || null
   }
+}
+
+/**
+ * merge with concat array
+ **/
+function merge(target: any, ...source: any[]) {
+  return mergeWith(target, ...source, (objValue, srcValue) => {
+    if (Array.isArray(objValue) && srcValue !== undefined) {
+      return objValue.concat(srcValue)
+    }
+  })
 }
