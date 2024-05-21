@@ -23,5 +23,8 @@ template: >-
       {{-'<|start_header_id|>assistant<|end_header_id|>\n\n'-}}
   {%- endif -%}
 rule:
-  - !re /^Meta[-]Llama[-]3[-]\d+B[-]Instruct$/i
+  - !re /^Meta[-](Llama)[-]3[-]\d+B[-]Instruct$/i
   - !re /^bagel(?:$|[-_])(?:8b)/i
+parameters:
+  llama:
+    stop_words: ['<|eot_id|>']
