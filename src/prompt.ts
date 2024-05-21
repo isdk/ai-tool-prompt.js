@@ -60,7 +60,7 @@ export function getLLMParameters(prompt: AIPromptSettings, modelName: string) {
       m = getMatchedStr(isModelNameMatched(modelName, rules))
     }
     if (m) {
-      return parameters[m]
+      return parameters[m.toLowerCase()]
     }
   }
 }
