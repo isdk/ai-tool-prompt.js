@@ -3,7 +3,7 @@ import { AIChatMessageParam, AIModelNameRules } from "@isdk/ai-tool"
 export const AIPromptTypes = ['system', 'tool', 'char'] as const
 export type  AIPromptType = (typeof AIPromptTypes[number]) & string
 
-export const AIContentTypes = ['prompt', 'script'] as const
+export const AIContentTypes = ['template', 'script'] as const
 export type  AIContentType = (typeof AIContentTypes[number]) & string
 
 export const SignatureKey = '签'
