@@ -1,4 +1,4 @@
-import { defaults } from 'lodash-es'
+import { defaults, isObject, mergeWith } from 'lodash-es'
 import path from 'path'
 import { KVSqliteResFuncParams, KVSqliteResFunc } from "@isdk/ai-tool-sqlite";
 import { AIPromptSettings, AIPromptType } from './prompt-settings';
@@ -40,7 +40,14 @@ export class AIPromptsFunc extends KVSqliteResFunc<AIPromptsFuncParams> {
       if (version) {
         if (prompt.extends) {
           const parent = this.get({id: prompt.extends})
-          if (parent) {defaults(prompt, parent)}
+          if (parent) {
+            // defaults(prompt, parent)
+            prompt = mergeWith(parent, prompt, (objValue, srcValue) => {
+              if (Array.isArray(objValue) && srcValue !== undefined) {
+                return objValue.concat(srcValue)
+              }
+            })
+          }
         }
         result = {
           prompt,

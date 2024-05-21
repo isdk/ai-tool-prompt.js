@@ -205,11 +205,15 @@ describe('Prompts server api', () => {
     expect(prompts).toBeInstanceOf(ResClientTools)
     let result = await prompts.getParameters({id: 'ChatML', model: 'qwen1.5'})
     expect(result).toStrictEqual({
+      eot_token: '[PAD151645]',
+      stop_words: ['<|im_end|>'],
       temperature: 0.01,
       top_p: 0.9,
     })
     result = await prompts.getParameters({id: 'ChatML', model: 'codeqwen1.5-7b-chat.Q4_0'})
     expect(result).toStrictEqual({
+      eot_token: '[PAD151645]',
+      stop_words: ['<|im_end|>'],
       temperature: 0.01,
       top_p: 0.9,
     })
@@ -217,15 +221,25 @@ describe('Prompts server api', () => {
   it('should extends prompt', async () => {
     const prompts = ResClientTools.get(AIPromptsName)
     expect(prompts).toBeInstanceOf(ResClientTools)
+    const promptRoot = {
+      _id: 'TestPrompt:extends:root',
+      prompt: {
+        system: 'You are a professional assistant.',
+        messages: [3]
+      },
+      extends: 'default'
+    }
+    let result = await prompts.post({id: promptRoot._id, val: promptRoot})
+    expect(result).toHaveProperty('changes', 1)
     const prompt = {
       _id: 'TestPrompt:extends',
       rule: 'my-extends',
       prompt: {
-        system: 'You are a professional assistant.',
+        messages: [6]
       },
-      extends: 'default'
+      extends: promptRoot._id
     }
-    let result = await prompts.post({id: prompt._id, val: prompt})
+    result = await prompts.post({id: prompt._id, val: prompt})
     expect(result).toHaveProperty('changes', 1)
 
     result = await prompts.getPrompt({model: 'my-extends'})
@@ -233,8 +247,9 @@ describe('Prompts server api', () => {
     expect(result).toHaveProperty('version', '@')
     expect(result.prompt).toHaveProperty('_id', prompt._id)
     expect(result.prompt).toHaveProperty('prompt')
-    expect(result.prompt.prompt).toHaveProperty('system', prompt.prompt.system)
+    expect(result.prompt.prompt).toHaveProperty('system', promptRoot.prompt.system)
     expect(result.prompt).toHaveProperty('template')
+    expect(result.prompt.prompt.messages).toStrictEqual([3,6])
 
     result = await prompts.delete({id: prompt._id})
     expect(result).toHaveProperty('changes', 1)
