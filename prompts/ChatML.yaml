@@ -3,22 +3,27 @@ templateFormat: hf
 type: system
 prompt:
   system: You are a helpful assistant
+  bot_token: '<|im_start|>'
+  eot_token: '<|im_end|>'
 template: |-
   {% for message in messages %}
     {% if loop.first and messages[0]['role'] != 'system' %}
-      {{- '<|im_start|>system\n' -}}
-      {{ system }}<|im_end|>
+      {{- bot_token + 'system\n' -}}
+      {{ system + eot_token }}
     {% endif %}
-    {{- '<|im_start|>' + message['role'] + '\n' -}}
-  {{message['content']}}{% if not loop.last or messages[-1]['role'] != 'assistant' %}<|im_end|>{% endif %}
+    {{- bot_token + message['role'] + '\n' -}}
+    {{- message['content']}}{% if not loop.last or messages[-1]['role'] != 'assistant' %}{{ eot_token }}{% endif %}
   {% endfor %}
-  {% if add_generation_prompt and messages[-1]['role'] != 'assistant' %}<|im_start|>assistant
+  {% if add_generation_prompt and messages[-1]['role'] != 'assistant' %}{{ bot_token }}assistant
   {% endif %}
 rule:
-  - !re /(?:^|[-_.])(?:code)?(qwen)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
+  - !re /(?:^|[-_.])(?:code)?(qwen|yi)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
 parameters:
   'qwen':
     temperature: 0.01
     top_p: 0.9
     eot_token: '[PAD151645]'
+    stop_words: ['<|im_end|>']
+  yi:
+    eot_token: '<|im_end|>'
     stop_words: ['<|im_end|>']
