@@ -16,11 +16,11 @@ template: |-
       {%- if message['role'] == 'user' -%}
         {{-'USER: ' + message['content'] + '\n'-}}
       {%- else -%}
-        {{-'ASSISTANT: ' + message['content'] + '</s>\n' -}}
+        {{-'ASSISTANT: ' + message['content'] -}}{% if not loop.last or messages[-1]['role'] != 'assistant' %}{{  '</s>\n' }}{% endif %}
       {%- endif -%}
     {%- endif -%}
   {%- endfor -%}
-  {%- if add_generation_prompt -%}
+  {%- if add_generation_prompt and messages[-1]['role'] != 'assistant' -%}
     {{-'ASSISTANT:'-}}
   {%- endif -%}
 rule:

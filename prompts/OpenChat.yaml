@@ -33,6 +33,22 @@ version:
       human: "GPT4 Correct User: "
       ai: "GPT4 Correct Assistant: "
       eot_token: <|end_of_turn|>
+  "3.6":
+    prompt:
+      eot_token: <|eot_id|>
+    template: |-
+      {%- for message in messages %}
+        {%- if loop.first and system and messages[0]['role'] != 'system' -%}
+          {{- '<|start_header_id|>system<|end_header_id|>\n\n' + system + eot_token -}}
+        {%- endif %}
+        {%- if message['role'] == 'system' %}
+          {{- '<|start_header_id|>System<|end_header_id|>\n\n' -}}
+        {%- else %}
+          {{- '<|start_header_id|>GPT4 Correct ' + message['role'].title() + '<|end_header_id|>\n\n' -}}
+        {%- endif %}
+        {{- message['content'] | trim }}{% if not loop.last or messages[-1]['role'] != 'assistant' %}{{ eot_token }}{% endif %}
+      {%- endfor %}
+      {%- if add_generation_prompt %}{{ '<|start_header_id|>GPT4 Correct Assistant<|end_header_id|>\n\n' }}{% endif %}
   math:
     prompt:
       human: "Math Correct User: "
@@ -65,4 +81,5 @@ rule:
   "3.2": !re /^openchat_v3[.]2/i
   3.5-gemma: !re /^openchat-3[.]5-\d+-gemma/i
   "3.5": !re /^openchat-3[.]5-/i
+  "3.6": !re /^openchat-3[.]6-/i
   opencoder: !re /(?:[-_]|^)opencoderplus(?:[-_]|$)/i

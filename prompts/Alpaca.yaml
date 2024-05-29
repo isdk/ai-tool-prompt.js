@@ -6,19 +6,21 @@ prompt:
 template: >-
   {%- for message in messages %}
     {% if loop.first and messages[0]['role'] != 'system' %}
-      {{- '' + 'Below is an instruction that describes a task. Write a response that appropriately completes the request.' + '\n\n' -}}
+      {{- '' + system + '\n\n' -}}
     {% endif %}
-      {%- if message['role'] == 'system' -%}
-        {{- '' + message['content'] + '\n\n' -}}
+    {%- if message['role'] == 'system' -%}
+      {{- '' + message['content'] + '\n\n' -}}
+    {%- else -%}
+      {%- if message['role'] == 'user' -%}
+        {{-'### Instruction:\n' + message['content'] + '\n\n'-}}
       {%- else -%}
-        {%- if message['role'] == 'user' -%}
-          {{-'### Instruction:\n' + message['content'] + '\n\n'-}}
-        {%- else -%}
-          {{-'### Response:\n' + message['content'] + '\n\n' -}}
-        {%- endif -%}
+        {{-'### Response:\n' + message['content'] -}}{% if not loop.last or messages[-1]['role'] != 'assistant' %}{{ '\n\n' }}{% endif %}
       {%- endif -%}
+    {%- endif -%}
   {%- endfor -%}
 
-  {%- if add_generation_prompt -%}
+  {%- if add_generation_prompt and messages[-1]['role'] != 'assistant' -%}
       {{-'### Response:\n'-}}
   {%- endif -%}
+rule:
+  - !re /(?:^|[-_])(alpaca)(?:[-_]|$)/i

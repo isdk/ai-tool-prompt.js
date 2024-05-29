@@ -5,22 +5,25 @@ prompt:
   system: You are Command-R, a brilliant, sophisticated, AI-assistant trained to
     assist human users by providing thorough responses. You are trained by
     Cohere.
+  eot_token: '<|END_OF_TURN_TOKEN|>'
 template: >-
   {%- for message in messages -%}
     {%- if loop.first and messages[0]['role'] != 'system' -%}
-      {{ '<|START_OF_TURN_TOKEN|><|SYSTEM_TOKEN|>' + system + '<|END_OF_TURN_TOKEN|>' }}
+      {{ '<|START_OF_TURN_TOKEN|><|SYSTEM_TOKEN|>' + system + eot_token }}
     {%- endif -%}
 
     {%- set content = message['content'] -%}
     {%- if message['role'] == 'system' -%}
-      {{ '<|START_OF_TURN_TOKEN|><|SYSTEM_TOKEN|>' + content.strip() + '<|END_OF_TURN_TOKEN|>' }}
+      {{ '<|START_OF_TURN_TOKEN|><|SYSTEM_TOKEN|>' + content.strip() + eot_token }}
     {%- elif message['role'] == 'user' -%}
-      {{ '<|START_OF_TURN_TOKEN|><|USER_TOKEN|>' + content.strip() + '<|END_OF_TURN_TOKEN|>' }}
+      {{ '<|START_OF_TURN_TOKEN|><|USER_TOKEN|>' + content.strip() + eot_token }}
     {%- elif message['role'] == 'assistant' -%}
-      {{ '<|START_OF_TURN_TOKEN|><|CHATBOT_TOKEN|>'  + content.strip() + '<|END_OF_TURN_TOKEN|>' }}
+      {{ '<|START_OF_TURN_TOKEN|><|CHATBOT_TOKEN|>' + content.strip() }}{% if not loop.last or messages[-1]['role'] != 'assistant' %}{{ eot_token }}{% endif %}
     {%- endif -%}
   {%- endfor -%}
 
-  {%- if add_generation_prompt -%}
+  {%- if add_generation_prompt and messages[-1]['role'] != 'assistant' -%}
       {{ '<|START_OF_TURN_TOKEN|><|CHATBOT_TOKEN|>' }}
   {%- endif -%}
+rule:
+  - !re /(?:^|[-_.])(command-r)(?:$|[-_.])/i

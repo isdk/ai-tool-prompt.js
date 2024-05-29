@@ -8,15 +8,16 @@ template: |-
     {% if loop.first and messages[0]['role'] != 'system' %}
       {{- system -}}
     {% endif %}
-      {%- if message['role'] == 'system' -%}
-          {{- '' + message['content'] + '' -}}
-      {%- else -%}
-          {%- if message['role'] == 'user' -%}
-              {{-'[Round <|round|>]\n问：' + message['content'] + '\n'-}}
-          {%- else -%}
-              {{-'答：' + message['content'] + '\n' -}}
-          {%- endif -%}
-      {%- endif -%}
+
+    {%- if message['role'] == 'system' -%}
+        {{- '' + message['content'] + '' -}}
+    {%- else -%}
+        {%- if message['role'] == 'user' -%}
+            {{-'[Round <|round|>]\n问：' + message['content'] + '\n'-}}
+        {%- else -%}
+            {{-'答：' + message['content'] -}}{% if not loop.last or messages[-1]['role'] != 'assistant' %}{{ '\n' }}{% endif %}
+        {%- endif -%}
+    {%- endif -%}
   {%- endfor -%}
   {%- if add_generation_prompt -%}
       {{-'答：'-}}

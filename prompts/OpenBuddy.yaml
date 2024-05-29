@@ -36,11 +36,11 @@ template: |-
           {%- if message['role'] == 'user' -%}
               {{-'User: ' + message['content'] + '\n'-}}
           {%- else -%}
-              {{-'Assistant: ' + message['content'] + '\n' -}}
+              {{-'Assistant: ' + message['content'] -}}{% if not loop.last or messages[-1]['role'] != 'assistant' %}{{ '\n' }}{% endif %}
           {%- endif -%}
       {%- endif -%}
   {%- endfor -%}
-  {%- if add_generation_prompt -%}
+  {%- if add_generation_prompt and messages[-1]['role'] != 'assistant' -%}
       {{-'Assistant:'-}}
   {%- endif -%}
 rule: /^openbuddy-/i
