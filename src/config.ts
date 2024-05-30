@@ -4,6 +4,8 @@ import { Config as ConfigFile } from 'load-config-file'
 import { parse } from 'yaml'
 import { regexp } from 'yaml-types'
 
+export { stringify as stringifyYaml } from 'yaml'
+
 const YamlTags = [regexp]
 
 export function registerYamlTag(tags: any) {
