@@ -22,3 +22,5 @@ rule:
 parameters:
   llama:
     stop_words: ['<|eot_id|>']
+  bagel:
+    stop_words: ['<|eot_id|>', '<|end_of_text|>']
