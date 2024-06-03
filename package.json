@@ -25,7 +25,7 @@
   "dependencies": {
     "@isdk/ai-tool": "workspace:*",
     "@isdk/ai-tool-sqlite": "workspace:*",
-    "load-config-file": "2.0.0-alpha.2",
+    "load-config-file": "2.0.0-alpha.3",
     "lodash-es": "^4.17.21",
     "property-manager": "2.0.0-alpha.5",
     "yaml": "^2.4.2",
