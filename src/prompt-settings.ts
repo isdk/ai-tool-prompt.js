@@ -37,6 +37,8 @@ export interface AIPromptSettings {
   version?: {[ver: string]: DefaultPrompt}
   parameters?: Record<string, any>
   extends?: string
+  // the priority of the prompt template, the higher the priority(value), the earlier it will be used
+  // the low priority less than 0 indicates that if there are built-in template in the model, it will be used first.
   priority?: number
   input?: Record<string, string>[]
   output?: any
