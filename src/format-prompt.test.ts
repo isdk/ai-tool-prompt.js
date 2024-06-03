@@ -1,7 +1,7 @@
 import path from 'path'
 import { AIPromptSettings } from '../src'
 import { formatPrompt } from './format-prompt'
-import { ConfigFile } from './config'
+import { ConfigFile } from '@isdk/ai-tool';
 
 
 const promptsPath = path.resolve(__dirname, '..', 'prompts')

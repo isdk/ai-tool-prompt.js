@@ -1,12 +1,9 @@
 import { AdvancePropertyManager } from 'property-manager';
-import { ConfigFile, registerYamlTag, parseYaml, stringifyYaml } from './config'
-import { isModelNameMatched } from '@isdk/ai-tool';
+import { ConfigFile, isModelNameMatched } from '@isdk/ai-tool';
 import { AIPromptSchema, AIPromptSettings } from './prompt-settings';
 
 // 128271: 🔏
 const LockedMagic = 128271
-
-export { ConfigFile, parseYaml, registerYamlTag, stringifyYaml }
 
 export interface AIPrompt extends AIPromptSettings {}
 

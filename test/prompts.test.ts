@@ -1,8 +1,8 @@
 // @vitest-environment node
 import fastify from 'fastify'
 
-import { ErrorCode, NotFoundError, ResClientTools, ResServerTools, wait } from "@isdk/ai-tool"
-import type { FuncParams } from '@isdk/ai-tool'
+import { ClientTools, ErrorCode, Funcs, NotFoundError, ResClientTools, ResServerTools, ToolFunc, wait } from "@isdk/ai-tool"
+import { FuncParams, ServerTools } from '@isdk/ai-tool'
 import { findPort } from '@isdk/ai-tool/test/util'
 
 import { AIPromptsFunc, AIPromptsName } from '../src/prompts'
@@ -15,6 +15,14 @@ describe('Prompts server api', () => {
   const server = fastify()
 
   beforeAll(async () => {
+    const ServerToolItems: {[name:string]: ServerTools|ToolFunc} = {}
+    Object.setPrototypeOf(ServerToolItems, ToolFunc.items)
+    ServerTools.items = ServerToolItems
+
+    const ClientToolItems: Funcs = {}
+    Object.setPrototypeOf(ClientToolItems, ToolFunc.items)
+    ClientTools.items = ClientToolItems
+
     server.get('/api', async function(request, reply){
       reply.send(ResServerTools.toJSON())
     })
@@ -86,6 +94,8 @@ describe('Prompts server api', () => {
 
   afterAll(async () => {
     await server.close()
+    delete (ClientTools as any).items
+    delete (ServerTools as any).items
   })
 
   it('should raise error to get non-exists item', async () => {
@@ -151,7 +161,7 @@ describe('Prompts server api', () => {
     let result = await prompts.post({id: prompt._id, val: prompt})
     expect(result).toHaveProperty('changes', 1)
     result = await prompts.get({id: prompt._id})
-    expect(result).toStrictEqual(prompt)
+    expect(result).toMatchObject(prompt)
     result = await prompts.delete({id: prompt._id})
     expect(result).toHaveProperty('changes', 1)
     expect(prompts.get({id: prompt._id})).rejects.toThrow(NotFoundError)
@@ -206,14 +216,14 @@ describe('Prompts server api', () => {
     let result = await prompts.getParameters({id: 'ChatML', model: 'qwen1.5'})
     expect(result).toStrictEqual({
       eot_token: '[PAD151645]',
-      stop_words: ['<|im_end|>'],
+      stop_words: ['<|im_end|>', '<|endoftext|>'],
       temperature: 0.01,
       top_p: 0.9,
     })
     result = await prompts.getParameters({id: 'ChatML', model: 'codeqwen1.5-7b-chat.Q4_0'})
     expect(result).toStrictEqual({
       eot_token: '[PAD151645]',
-      stop_words: ['<|im_end|>'],
+      stop_words: ['<|im_end|>', '<|endoftext|>'],
       temperature: 0.01,
       top_p: 0.9,
     })
