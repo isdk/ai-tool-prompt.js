@@ -3,7 +3,7 @@ templateFormat: hf
 type: system
 prompt:
   system: You are a helpful AI assistant.
-  eot_token: '<|end|>\n'
+  eot_token: "<|end|>\n"
 template: |-
   {%- for message in messages %}
     {% if loop.first and messages[0]['role'] != 'system' %}
