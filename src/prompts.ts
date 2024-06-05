@@ -17,6 +17,7 @@ export interface AIPromptResult {
 }
 
 interface AIPromptsFuncParams extends AIPromptSettings, KVSqliteResFuncParams {
+  id?: any
 }
 
 export class AIPromptsFunc extends KVSqliteResFunc<AIPromptsFuncParams> {
