@@ -58,7 +58,8 @@
   },
   "files": [
     "docs",
-    "dist"
+    "dist",
+    "prompts"
   ],
   "keywords": [
     "ai",
