@@ -66,6 +66,6 @@ rule:
   "mistral2-v20": !re /^openbuddy-mistral2-.*-v20(?:[.]\d)?-/i
   "2x": !re /^openbuddy-.*-v2\d(?:[.]\d)?-/i
   "1x": !re /^openbuddy-.*-v1\d(?:[.]\d)?-/i
-  "@": !re /^openbuddy--/i
+  "@": !re /^openbuddy-/i
 
 priority: -1 # low priority less than 0 means if there are built-in template in the model, it will be used first.
