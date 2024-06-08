@@ -22,8 +22,7 @@ parameters:
   'qwen':
     temperature: 0.01
     top_p: 0.9
-    eot_token: '[PAD151645]'
-    stop_words: ['<|im_end|>', '<|endoftext|>']
+    stop_words: ['<|im_end|>', '[PAD151645]', '<|endoftext|>']
   yi:
     eot_token: '<|im_end|>'
     stop_words: ['<|im_end|>']

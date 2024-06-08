@@ -1,6 +1,41 @@
 _id: OpenBuddy
 templateFormat: hf
 type: system
+version:
+  2x:
+    prompt:
+      eos_token: '<|end|>'
+    template: |-
+      {%- for message in messages %}
+        {%- if loop.first and system and messages[0]['role'] != 'system' %}
+          {{-'<|role|>system<|says|>' + system + eos_token + '\n'}}
+        {% endif %}
+        {{-'<|role|>' + message['role'] + '<|says|>' + message['content'] }}{% if not loop.last or messages[-1]['role'] != 'assistant' %}{{ eos_token + '\n' }}{% endif %}
+      {%- endfor -%}
+      {%- if add_generation_prompt and messages[-1]['role'] != 'assistant' -%}
+        {{-'<|role|>assistant<|says|>'-}}
+      {%- endif -%}
+  "mistral2-v20":
+    prompt:
+      eos_token: '</s>'
+    template: |-
+      {%- for message in messages %}
+        {%- if loop.first system and and messages[0]['role'] != 'system' %}
+          {{- system + '\n' -}}
+        {% endif %}
+        {%- if message['role'] == 'system' -%}
+            {{- '' + message['content'] + '\n' -}}
+        {%- else -%}
+            {%- if message['role'] == 'user' -%}
+                {{-'User: ' + message['content'] + '\n'-}}
+            {%- else -%}
+                {{-'Assistant: ' + message['content'] -}}{% if not loop.last or messages[-1]['role'] != 'assistant' %}{{ eos_token + '\n' }}{% endif %}
+            {%- endif -%}
+        {%- endif -%}
+      {%- endfor -%}
+      {%- if add_generation_prompt and messages[-1]['role'] != 'assistant' -%}
+          {{-'Assistant:'-}}
+      {%- endif -%}
 prompt:
   system: >-
     You are a helpful, respectful and honest INTP-T AI Assistant named Buddy. You are talking to a human User.
@@ -9,29 +44,6 @@ prompt:
     You can speak fluently in many languages, for example: English, Chinese.
     You cannot access the internet, but you have vast knowledge, cutoff: 2021-09.
     You are trained by OpenBuddy team, (https://openbuddy.ai, https://github.com/OpenBuddy/OpenBuddy), you are based on LLaMA and Falcon transformers model, not related to GPT or OpenAI.
-  old_system: >-
-    Consider a conversation between User (a human) and Assistant (named Buddy).
-
-    Buddy is an INTP-T, a friendly, intelligent and multilingual AI assistant,
-    by OpenBuddy team on GitHub.
-
-    Buddy cannot access the Internet.\nBuddy can fluently speak the user's
-    language (e.g. English, Chinese).
-
-    Buddy can generate poems, stories, code, essays, songs, parodies, and more.
-
-    Buddy possesses vast knowledge about the world, history, and culture.
-
-    Buddy's responses are always safe, creative, high-quality, helpful and
-    interesting.
-
-    Buddy strictly refuses to discuss political, NSFW, illegal, abusive,
-    offensive, or other sensitive topics.
-
-
-    User: Hi.
-
-    Assistant: Hi, I'm Buddy, your AI assistant. How can I help you today?
 template: |-
   {%- for message in messages %}
     {% if loop.first and messages[0]['role'] != 'system' %}
@@ -50,5 +62,10 @@ template: |-
   {%- if add_generation_prompt and messages[-1]['role'] != 'assistant' -%}
       {{-'Assistant:'-}}
   {%- endif -%}
-rule: /^openbuddy-/i
+rule:
+  "mistral2-v20": !re /^openbuddy-mistral2-.*-v20(?:[.]\d)?-/i
+  "2x": !re /^openbuddy-.*-v2\d(?:[.]\d)?-/i
+  "1x": !re /^openbuddy-.*-v1\d(?:[.]\d)?-/i
+  "@": !re /^openbuddy--/i
+
 priority: -1 # low priority less than 0 means if there are built-in template in the model, it will be used first.

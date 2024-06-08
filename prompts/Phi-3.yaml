@@ -3,14 +3,14 @@ templateFormat: hf
 type: system
 prompt:
   system: You are a helpful AI assistant.
-  eot_token: "<|end|>\n"
+  eot_token: "<|end|>"
 template: |-
   {%- for message in messages %}
     {% if loop.first and messages[0]['role'] != 'system' %}
-      {{- '<|system|>\n' + system + eot_token -}}
+      {{- '<|system|>\n' + system + eot_token + '\n' -}}
     {% endif %}
     {{- '<|' + message['role'] + '|>\n' + message['content'] -}}
-    {%- if not loop.last or messages[-1]['role'] != 'assistant' %}{{ eot_token }}{% endif %}
+    {%- if not loop.last or messages[-1]['role'] != 'assistant' %}{{ eot_token + '\n' }}{% endif %}
   {%- endfor -%}
   {%- if add_generation_prompt and messages[-1]['role'] != 'assistant' -%}
       {{-'<|assistant|>\n'-}}
