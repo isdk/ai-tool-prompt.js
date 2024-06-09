@@ -2,6 +2,21 @@ _id: OpenBuddy
 templateFormat: hf
 type: system
 version:
+  zen-v21:
+    prompt:
+      system: ''
+      eot_token: '<|eot_id|>'
+      eos_token: '<|end|>'
+    template: |-
+      {%- for message in messages %}
+        {%- if loop.first and system %}
+          {{- '<|start_header_id|>system<|end_header_id|>\n\n' + system + '<|eot_id|>' -}}
+        {% endif %}
+        {{-'<|role|>' + message['role'] + '<|says|>' + message['content'] }}{% if not loop.last or messages[-1]['role'] != 'assistant' %}{{ eos_token + '\n' }}{% endif %}
+      {%- endfor -%}
+      {%- if add_generation_prompt and messages[-1]['role'] != 'assistant' -%}
+        {{-'<|role|>assistant<|says|>'-}}
+      {%- endif -%}
   2x:
     prompt:
       eos_token: '<|end|>'
@@ -64,6 +79,7 @@ template: |-
   {%- endif -%}
 rule:
   "mistral2-v20": !re /^openbuddy-mistral2-.*-v20(?:[.]\d)?-/i
+  "zen-v21": !re /^openbuddy-zen-.*-v21(?:[.]\d)?-/i
   "2x": !re /^openbuddy-.*-v2\d(?:[.]\d)?-/i
   "1x": !re /^openbuddy-.*-v1\d(?:[.]\d)?-/i
   "@": !re /^openbuddy-/i
