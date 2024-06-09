@@ -97,10 +97,19 @@ export function promptIsFitForLLM(prompt: AIPromptSettings, modelName: string): 
         result.push(...Object.keys(prompt.version))
       }
     }
-    if (result.length && usedVers.length && prompt.version?.length) {
+    if (result.length && usedVers.length && prompt.version) {
+      // if (usedVers.length > 1) {
+      //   const i = usedVers.indexOf('@')
+      //   if (i >= 0) {usedVers.splice(i, 1)}
+      //   console.log('🚀 ~ promptIsFitForLLM ~ usedVers:', modelName, prompt._id, usedVers)
+      // }
       const diff = arrayDifference(Object.keys(prompt.version), usedVers)
       if (diff.length) {
         result.push(...diff)
+      }
+      if (result.length > 1) {
+        const i = result.indexOf('@')
+        if (i >= 0) {result.splice(i, 1)}
       }
     }
   }
