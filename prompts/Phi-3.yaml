@@ -6,14 +6,18 @@ prompt:
   eot_token: "<|end|>"
 template: |-
   {%- for message in messages %}
-    {% if loop.first and messages[0]['role'] != 'system' %}
-      {{- '<|system|>\n' + system + eot_token + '\n' -}}
+    {% if loop.first and messages[0]['role'] != 'user' %}
+      {{- '<|user|>\n' + system + eot_token + '\n' -}}
     {% endif %}
-    {{- '<|' + message['role'] + '|>\n' + message['content'] -}}
+    {%- if message['role'] == 'system' %}
+      {{- '<|user|>\n' + message['content'] -}}
+    {%- else -%}
+      {{- '<|' + message['role'] + '|>\n' + message['content'] -}}
+    {%- endif -%}
     {%- if not loop.last or messages[-1]['role'] != 'assistant' %}{{ eot_token + '\n' }}{% endif %}
   {%- endfor -%}
   {%- if add_generation_prompt and messages[-1]['role'] != 'assistant' -%}
-      {{-'<|assistant|>\n'-}}
+      {{-'<|assistant|>'-}}
   {%- endif -%}
 rule: /^(phi)[-_]3(?:$|[-_.])/i
 parameters:
