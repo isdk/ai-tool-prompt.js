@@ -84,4 +84,5 @@ rule:
   "1x": !re /^openbuddy-.*-v1\d(?:[.]\d)?-/i
   "@": !re /^openbuddy-/i
 
-priority: -1 # low priority less than 0 means if there are built-in template in the model, it will be used first.
+priority: 10
+#priority: -1 # low priority less than 0 means if there are built-in template in the model, it will be used first.
