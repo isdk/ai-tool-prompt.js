@@ -49,3 +49,4 @@ template: |-
 rule:
   - /^Mistral-/i
   - /^Mixtral-/i
+  - /^miqu/i
