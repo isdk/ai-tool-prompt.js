@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.9](https://github.com/isdk/ai-tool-prompt.js/compare/v0.0.8...v0.0.9) (2024-06-13)
+
+
+### Features
+
+* **prompt:** add miqu ([c6d3ab6](https://github.com/isdk/ai-tool-prompt.js/commit/c6d3ab64821b17807d91df1f7fe96999f630f93c))
+* **prompt:** new system template added ([59bc73b](https://github.com/isdk/ai-tool-prompt.js/commit/59bc73b8289b0a0154bbf3da2b1dc80626976e41))
+
+
+### Bug Fixes
+
+* **prompt:** make high priority to openbuddy ([b869604](https://github.com/isdk/ai-tool-prompt.js/commit/b8696042284c77965cf145d093c30471c1584619))
+
 ## [0.0.8](https://github.com/isdk/ai-tool-prompt.js/compare/v0.0.7...v0.0.8) (2024-06-11)
 
 ## [0.0.7](https://github.com/isdk/ai-tool-prompt.js/compare/v0.0.6...v0.0.7) (2024-06-10)
