@@ -45,6 +45,8 @@
 ### Methods
 
 - [$count](AIPromptsFunc.md#$count)
+- [$createCollection](AIPromptsFunc.md#$createcollection)
+- [$deleteCollection](AIPromptsFunc.md#$deletecollection)
 - [$getDefaultPrompt](AIPromptsFunc.md#$getdefaultprompt)
 - [$getParameters](AIPromptsFunc.md#$getparameters)
 - [$getPrompt](AIPromptsFunc.md#$getprompt)
@@ -159,7 +161,7 @@ KVSqliteResFunc\<AIPromptsFuncParams\>.constructor
 
 #### Defined in
 
-packages/ai-tool-sqlite/dist/index.d.ts:165
+packages/ai-tool-sqlite/dist/index.d.ts:35
 
 ## Properties
 
@@ -187,7 +189,7 @@ KVSqliteResFunc.action
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:550
+packages/ai-tool/dist/index-japi6bEq.d.ts:539
 
 ___
 
@@ -201,7 +203,7 @@ KVSqliteResFunc.allowExportFunc
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:396
+packages/ai-tool/dist/index-japi6bEq.d.ts:396
 
 ___
 
@@ -215,7 +217,7 @@ KVSqliteResFunc.apiRoot
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:130
+packages/ai-tool/dist/index-japi6bEq.d.ts:130
 
 ___
 
@@ -245,7 +247,7 @@ KVSqliteResFunc.db
 
 #### Defined in
 
-packages/ai-tool-sqlite/dist/index.d.ts:164
+packages/ai-tool-sqlite/dist/index.d.ts:34
 
 ___
 
@@ -259,7 +261,7 @@ KVSqliteResFunc.dbPath
 
 #### Defined in
 
-packages/ai-tool-sqlite/dist/index.d.ts:162
+packages/ai-tool-sqlite/dist/index.d.ts:32
 
 ___
 
@@ -296,7 +298,7 @@ KVSqliteResFunc.fetchOptions
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:132
+packages/ai-tool/dist/index-japi6bEq.d.ts:132
 
 ___
 
@@ -310,7 +312,7 @@ KVSqliteResFunc.initDir
 
 #### Defined in
 
-packages/ai-tool-sqlite/dist/index.d.ts:163
+packages/ai-tool-sqlite/dist/index.d.ts:33
 
 ___
 
@@ -324,7 +326,7 @@ KVSqliteResFunc.methods
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:542
+packages/ai-tool/dist/index-japi6bEq.d.ts:531
 
 ___
 
@@ -338,7 +340,7 @@ KVSqliteResFunc.name
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:22
+packages/ai-tool/dist/index-japi6bEq.d.ts:22
 
 ___
 
@@ -368,7 +370,7 @@ KVSqliteResFunc.params
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:551
+packages/ai-tool/dist/index-japi6bEq.d.ts:540
 
 ___
 
@@ -382,7 +384,7 @@ KVSqliteResFunc.result
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:24
+packages/ai-tool/dist/index-japi6bEq.d.ts:24
 
 ___
 
@@ -396,7 +398,7 @@ KVSqliteResFunc.scope
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:25
+packages/ai-tool/dist/index-japi6bEq.d.ts:25
 
 ___
 
@@ -425,7 +427,7 @@ KVSqliteResFunc.setup
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:27
+packages/ai-tool/dist/index-japi6bEq.d.ts:27
 
 ___
 
@@ -439,7 +441,7 @@ KVSqliteResFunc.stream
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:133
+packages/ai-tool/dist/index-japi6bEq.d.ts:133
 
 ___
 
@@ -453,7 +455,7 @@ KVSqliteResFunc.tags
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:26
+packages/ai-tool/dist/index-japi6bEq.d.ts:26
 
 ___
 
@@ -467,7 +469,7 @@ KVSqliteResFunc.dataPath
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:43
+packages/ai-tool/dist/index-japi6bEq.d.ts:43
 
 ___
 
@@ -481,7 +483,7 @@ KVSqliteResFunc.items
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:42
+packages/ai-tool/dist/index-japi6bEq.d.ts:42
 
 ## Accessors
 
@@ -499,7 +501,7 @@ KVSqliteResFunc.apiRoot
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:403
+packages/ai-tool/dist/index-japi6bEq.d.ts:403
 
 ## Methods
 
@@ -523,7 +525,55 @@ KVSqliteResFunc.$count
 
 #### Defined in
 
-packages/ai-tool-sqlite/dist/index.d.ts:178
+packages/ai-tool-sqlite/dist/index.d.ts:48
+
+___
+
+### $createCollection
+
+▸ **$createCollection**(`«destructured»`): `boolean`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `«destructured»` | `KVSqliteResFuncParams` |
+
+#### Returns
+
+`boolean`
+
+#### Inherited from
+
+KVSqliteResFunc.$createCollection
+
+#### Defined in
+
+packages/ai-tool-sqlite/dist/index.d.ts:49
+
+___
+
+### $deleteCollection
+
+▸ **$deleteCollection**(`«destructured»`): `boolean`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `«destructured»` | `KVSqliteResFuncParams` |
+
+#### Returns
+
+`boolean`
+
+#### Inherited from
+
+KVSqliteResFunc.$deleteCollection
+
+#### Defined in
+
+packages/ai-tool-sqlite/dist/index.d.ts:50
 
 ___
 
@@ -543,7 +593,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompts.ts:70](https://github.com/isdk/ai-tool-prompt.js/blob/59bc73b8289b0a0154bbf3da2b1dc80626976e41/src/prompts.ts#L70)
+[packages/ai-tool-prompt/src/prompts.ts:70](https://github.com/isdk/ai-tool-prompt.js/blob/0ecc0f13328258348217ee37f7389f66d3abdbdf/src/prompts.ts#L70)
 
 ___
 
@@ -563,7 +613,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompts.ts:110](https://github.com/isdk/ai-tool-prompt.js/blob/59bc73b8289b0a0154bbf3da2b1dc80626976e41/src/prompts.ts#L110)
+[packages/ai-tool-prompt/src/prompts.ts:110](https://github.com/isdk/ai-tool-prompt.js/blob/0ecc0f13328258348217ee37f7389f66d3abdbdf/src/prompts.ts#L110)
 
 ___
 
@@ -583,7 +633,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompts.ts:102](https://github.com/isdk/ai-tool-prompt.js/blob/59bc73b8289b0a0154bbf3da2b1dc80626976e41/src/prompts.ts#L102)
+[packages/ai-tool-prompt/src/prompts.ts:102](https://github.com/isdk/ai-tool-prompt.js/blob/0ecc0f13328258348217ee37f7389f66d3abdbdf/src/prompts.ts#L102)
 
 ___
 
@@ -607,7 +657,7 @@ KVSqliteResFunc.$search
 
 #### Defined in
 
-packages/ai-tool-sqlite/dist/index.d.ts:177
+packages/ai-tool-sqlite/dist/index.d.ts:47
 
 ___
 
@@ -631,7 +681,7 @@ KVSqliteResFunc.$searchEx
 
 #### Defined in
 
-packages/ai-tool-sqlite/dist/index.d.ts:176
+packages/ai-tool-sqlite/dist/index.d.ts:46
 
 ___
 
@@ -652,7 +702,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompts.ts:32](https://github.com/isdk/ai-tool-prompt.js/blob/59bc73b8289b0a0154bbf3da2b1dc80626976e41/src/prompts.ts#L32)
+[packages/ai-tool-prompt/src/prompts.ts:32](https://github.com/isdk/ai-tool-prompt.js/blob/0ecc0f13328258348217ee37f7389f66d3abdbdf/src/prompts.ts#L32)
 
 ___
 
@@ -676,7 +726,7 @@ KVSqliteResFunc.arr2ObjParams
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:61
+packages/ai-tool/dist/index-japi6bEq.d.ts:61
 
 ___
 
@@ -822,7 +872,7 @@ KVSqliteResFunc.cast
 
 #### Defined in
 
-packages/ai-tool-sqlite/dist/index.d.ts:170
+packages/ai-tool-sqlite/dist/index.d.ts:40
 
 ___
 
@@ -913,13 +963,13 @@ ___
 
 ### delete
 
-▸ **delete**(`«destructured»`): `SqliteRunResult` \| `SqliteRunResult`[]
+▸ **delete**(`options`): `SqliteRunResult` \| `SqliteRunResult`[]
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `«destructured»` | `KVSqliteResFuncParams` |
+| `options` | `KVSqliteResFuncParams` |
 
 #### Returns
 
@@ -931,7 +981,7 @@ KVSqliteResFunc.delete
 
 #### Defined in
 
-packages/ai-tool-sqlite/dist/index.d.ts:175
+packages/ai-tool-sqlite/dist/index.d.ts:45
 
 ___
 
@@ -984,7 +1034,7 @@ KVSqliteResFunc.func
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:555
+packages/ai-tool/dist/index-japi6bEq.d.ts:544
 
 ___
 
@@ -1008,7 +1058,7 @@ KVSqliteResFunc.get
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompts.ts:59](https://github.com/isdk/ai-tool-prompt.js/blob/59bc73b8289b0a0154bbf3da2b1dc80626976e41/src/prompts.ts#L59)
+[packages/ai-tool-prompt/src/prompts.ts:59](https://github.com/isdk/ai-tool-prompt.js/blob/0ecc0f13328258348217ee37f7389f66d3abdbdf/src/prompts.ts#L59)
 
 ___
 
@@ -1032,7 +1082,7 @@ KVSqliteResFunc.getDocsFromDir
 
 #### Defined in
 
-packages/ai-tool-sqlite/dist/index.d.ts:168
+packages/ai-tool-sqlite/dist/index.d.ts:38
 
 ___
 
@@ -1056,7 +1106,7 @@ KVSqliteResFunc.getFunc
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:67
+packages/ai-tool/dist/index-japi6bEq.d.ts:67
 
 ___
 
@@ -1080,7 +1130,7 @@ KVSqliteResFunc.getFuncWithPos
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:72
+packages/ai-tool/dist/index-japi6bEq.d.ts:72
 
 ___
 
@@ -1104,7 +1154,7 @@ KVSqliteResFunc.getMethodFromParams
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:554
+packages/ai-tool/dist/index-japi6bEq.d.ts:543
 
 ___
 
@@ -1172,7 +1222,7 @@ KVSqliteResFunc.initDB
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompts.ts:25](https://github.com/isdk/ai-tool-prompt.js/blob/59bc73b8289b0a0154bbf3da2b1dc80626976e41/src/prompts.ts#L25)
+[packages/ai-tool-prompt/src/prompts.ts:25](https://github.com/isdk/ai-tool-prompt.js/blob/0ecc0f13328258348217ee37f7389f66d3abdbdf/src/prompts.ts#L25)
 
 ___
 
@@ -1206,13 +1256,14 @@ ___
 
 ### intDBFromDir
 
-▸ **intDBFromDir**(`dir`): `void`
+▸ **intDBFromDir**(`dir`, `collection?`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `dir` | `string` |
+| `collection?` | `string` |
 
 #### Returns
 
@@ -1224,7 +1275,7 @@ KVSqliteResFunc.intDBFromDir
 
 #### Defined in
 
-packages/ai-tool-sqlite/dist/index.d.ts:167
+packages/ai-tool-sqlite/dist/index.d.ts:37
 
 ___
 
@@ -1301,7 +1352,7 @@ KVSqliteResFunc.isStream
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:408
+packages/ai-tool/dist/index-japi6bEq.d.ts:408
 
 ___
 
@@ -1325,7 +1376,7 @@ KVSqliteResFunc.list
 
 #### Defined in
 
-packages/ai-tool-sqlite/dist/index.d.ts:171
+packages/ai-tool-sqlite/dist/index.d.ts:41
 
 ___
 
@@ -1378,7 +1429,7 @@ KVSqliteResFunc.obj2ArrParams
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:62
+packages/ai-tool/dist/index-japi6bEq.d.ts:62
 
 ___
 
@@ -1402,7 +1453,7 @@ KVSqliteResFunc.post
 
 #### Defined in
 
-packages/ai-tool-sqlite/dist/index.d.ts:174
+packages/ai-tool-sqlite/dist/index.d.ts:44
 
 ___
 
@@ -1452,7 +1503,7 @@ KVSqliteResFunc.put
 
 #### Defined in
 
-packages/ai-tool-sqlite/dist/index.d.ts:173
+packages/ai-tool-sqlite/dist/index.d.ts:43
 
 ___
 
@@ -1470,7 +1521,7 @@ KVSqliteResFunc.register
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:59
+packages/ai-tool/dist/index-japi6bEq.d.ts:59
 
 ___
 
@@ -1494,7 +1545,7 @@ KVSqliteResFunc.run
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:64
+packages/ai-tool/dist/index-japi6bEq.d.ts:64
 
 ___
 
@@ -1519,7 +1570,7 @@ KVSqliteResFunc.runAs
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:65
+packages/ai-tool/dist/index-japi6bEq.d.ts:65
 
 ___
 
@@ -1544,7 +1595,7 @@ KVSqliteResFunc.runAsSync
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:66
+packages/ai-tool/dist/index-japi6bEq.d.ts:66
 
 ___
 
@@ -1568,7 +1619,7 @@ KVSqliteResFunc.runSync
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:63
+packages/ai-tool/dist/index-japi6bEq.d.ts:63
 
 ___
 
@@ -1592,7 +1643,7 @@ KVSqliteResFunc.runWithPos
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:70
+packages/ai-tool/dist/index-japi6bEq.d.ts:70
 
 ___
 
@@ -1617,7 +1668,7 @@ KVSqliteResFunc.runWithPosAs
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:71
+packages/ai-tool/dist/index-japi6bEq.d.ts:71
 
 ___
 
@@ -1642,7 +1693,7 @@ KVSqliteResFunc.runWithPosAsSync
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:69
+packages/ai-tool/dist/index-japi6bEq.d.ts:69
 
 ___
 
@@ -1666,7 +1717,7 @@ KVSqliteResFunc.runWithPosSync
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:68
+packages/ai-tool/dist/index-japi6bEq.d.ts:68
 
 ___
 
@@ -1770,23 +1821,24 @@ KVSqliteResFunc.unregister
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:60
+packages/ai-tool/dist/index-japi6bEq.d.ts:60
 
 ___
 
 ### updateDBFromDir
 
-▸ **updateDBFromDir**(`dir?`): `void`
+▸ **updateDBFromDir**(`dir?`, `collection?`): `undefined` \| `number`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `dir?` | `string` |
+| `collection?` | `string` |
 
 #### Returns
 
-`void`
+`undefined` \| `number`
 
 #### Inherited from
 
@@ -1794,7 +1846,7 @@ KVSqliteResFunc.updateDBFromDir
 
 #### Defined in
 
-packages/ai-tool-sqlite/dist/index.d.ts:169
+packages/ai-tool-sqlite/dist/index.d.ts:39
 
 ___
 
@@ -2271,7 +2323,7 @@ KVSqliteResFunc.get
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:44
+packages/ai-tool/dist/index-japi6bEq.d.ts:44
 
 ___
 
@@ -2295,7 +2347,7 @@ KVSqliteResFunc.getAllByTag
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:47
+packages/ai-tool/dist/index-japi6bEq.d.ts:47
 
 ___
 
@@ -2319,7 +2371,7 @@ KVSqliteResFunc.getByTag
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:46
+packages/ai-tool/dist/index-japi6bEq.d.ts:46
 
 ___
 
@@ -2343,7 +2395,7 @@ KVSqliteResFunc.getFunc
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:50
+packages/ai-tool/dist/index-japi6bEq.d.ts:50
 
 ___
 
@@ -2367,7 +2419,7 @@ KVSqliteResFunc.getFuncWithPos
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:53
+packages/ai-tool/dist/index-japi6bEq.d.ts:53
 
 ___
 
@@ -2724,7 +2776,7 @@ KVSqliteResFunc.list
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:45
+packages/ai-tool/dist/index-japi6bEq.d.ts:45
 
 ___
 
@@ -2781,7 +2833,7 @@ KVSqliteResFunc.register
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:54
+packages/ai-tool/dist/index-japi6bEq.d.ts:54
 
 ▸ **register**(`func`, `options`): `boolean` \| `ToolFunc`
 
@@ -2802,7 +2854,7 @@ KVSqliteResFunc.register
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:55
+packages/ai-tool/dist/index-japi6bEq.d.ts:55
 
 ▸ **register**(`name`, `options?`): `boolean` \| `ToolFunc`
 
@@ -2823,7 +2875,7 @@ KVSqliteResFunc.register
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:56
+packages/ai-tool/dist/index-japi6bEq.d.ts:56
 
 ___
 
@@ -2848,7 +2900,7 @@ KVSqliteResFunc.run
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:48
+packages/ai-tool/dist/index-japi6bEq.d.ts:48
 
 ___
 
@@ -2873,7 +2925,7 @@ KVSqliteResFunc.runSync
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:49
+packages/ai-tool/dist/index-japi6bEq.d.ts:49
 
 ___
 
@@ -2898,7 +2950,7 @@ KVSqliteResFunc.runWithPos
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:51
+packages/ai-tool/dist/index-japi6bEq.d.ts:51
 
 ___
 
@@ -2923,7 +2975,7 @@ KVSqliteResFunc.runWithPosSync
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:52
+packages/ai-tool/dist/index-japi6bEq.d.ts:52
 
 ___
 
@@ -2979,7 +3031,7 @@ KVSqliteResFunc.setApiRoot
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:404
+packages/ai-tool/dist/index-japi6bEq.d.ts:404
 
 ___
 
@@ -3024,7 +3076,7 @@ KVSqliteResFunc.toJSON
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:405
+packages/ai-tool/dist/index-japi6bEq.d.ts:405
 
 ___
 
@@ -3048,7 +3100,7 @@ KVSqliteResFunc.unregister
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:57
+packages/ai-tool/dist/index-japi6bEq.d.ts:57
 
 ___
 
