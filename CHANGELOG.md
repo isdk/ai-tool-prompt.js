@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.10](https://github.com/isdk/ai-tool-prompt.js/compare/v0.0.9...v0.0.10) (2024-07-08)
+
+
+### Bug Fixes
+
+* **prompt:** qwen missing line feed with eot_token ([e3a2842](https://github.com/isdk/ai-tool-prompt.js/commit/e3a2842d24f17191c714451ddd1911342badbf4f))
+
 ## [0.0.9](https://github.com/isdk/ai-tool-prompt.js/compare/v0.0.8...v0.0.9) (2024-06-13)
 
 
