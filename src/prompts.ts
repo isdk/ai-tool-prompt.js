@@ -22,11 +22,11 @@ interface AIPromptsFuncParams extends AIPromptSettings, KVSqliteResFuncParams {
 
 export class AIPromptsFunc extends KVSqliteResFunc<AIPromptsFuncParams> {
 
-  initDB() {
+  initData() {
     if (!this.initDir) {
       this.initDir = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..', 'prompts')
     }
-    super.initDB()
+    super.initData()
   }
 
   _getPrompt(modelName: string, type?: AIPromptType): AIPromptResult|false {

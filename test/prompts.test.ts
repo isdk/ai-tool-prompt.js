@@ -121,8 +121,8 @@ describe('Prompts server api', () => {
     res = await result.list({size: 2})
     expect(res.length).toBe(2)
     res = await result.list({query: 'Llama%'})
-    expect(res.length).toBe(3)
-    expect(res.map(i=>i._id)).toStrictEqual([ 'Llama-Guard-2', 'Llama-v2', 'Llama-v3' ])
+    expect(res.length).toBe(2)
+    expect(res.map(i=>i._id)).toStrictEqual([ 'Llama-v2', 'Llama-v3' ])
     // expect(result.customMethod).toBeInstanceOf(Function)
     // res = await result.customMethod({id: 2})
     // expect(res).toStrictEqual({name: 'customMethod', id: 2, item: 20})
@@ -215,15 +215,13 @@ describe('Prompts server api', () => {
     expect(prompts).toBeInstanceOf(ResClientTools)
     let result = await prompts.getParameters({id: 'ChatML', model: 'qwen1.5'})
     expect(result).toStrictEqual({
-      eot_token: '[PAD151645]',
-      stop_words: ['<|im_end|>', '<|endoftext|>'],
+      stop_words: ['<|im_end|>', '[PAD151645]', '<|endoftext|>'],
       temperature: 0.01,
       top_p: 0.9,
     })
     result = await prompts.getParameters({id: 'ChatML', model: 'codeqwen1.5-7b-chat.Q4_0'})
     expect(result).toStrictEqual({
-      eot_token: '[PAD151645]',
-      stop_words: ['<|im_end|>', '<|endoftext|>'],
+      stop_words: ['<|im_end|>', '[PAD151645]', '<|endoftext|>'],
       temperature: 0.01,
       top_p: 0.9,
     })
