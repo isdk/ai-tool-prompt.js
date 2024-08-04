@@ -19,4 +19,4 @@ template: |-
   {%- for message in messages %}
     {{- message['role'] + ': ' + message['content'] -}}{% if not loop.last or messages[-1]['role'] != 'assistant' %}{{ '\n' }}{% endif %}
   {%- endfor -%}
-rule: /^phi-2/i
+modelPattern: /^phi-2/i

@@ -30,7 +30,7 @@ export interface AIPromptSettings {
   type: AIPromptType
   contentType?: AIContentType
   description?: string
-  rule?: {[ver: string]: AIModelNameRules} | AIModelNameRules
+  modelPattern?: {[ver: string]: AIModelNameRules} | AIModelNameRules
   templateFormat?: string
   // the default system prompt if any
   prompt?: DefaultPrompt
@@ -52,7 +52,7 @@ export const AIPromptSchema = {
   type: {type: 'string', required: true},
   contentType: {type: 'string'},
   description: {type: 'string'},
-  rule: {type: 'any'},
+  modelPattern: {type: 'any'},
   templateFormat: {type: 'string'},
   prompt: {type: 'any'},
   version: {type: 'any'},

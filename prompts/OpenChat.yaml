@@ -76,7 +76,7 @@ template: |-
   {%- if add_generation_prompt -%}
       {{-ai-}}
   {%- endif -%}
-rule:
+modelPattern:
   "8192": !re /(?:[-_]|^)OpenChat[-_]8192/i
   "3.2": !re /^openchat_v3[.]2/i
   3.5-gemma: !re /^openchat-3[.]5-\d+-gemma/i

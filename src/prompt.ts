@@ -41,7 +41,7 @@ function getMatchedStr(matched: string|RegExpExecArray|undefined) {
 }
 
 export function getLLMParameters(prompt: AIPromptSettings, modelName: string) {
-  const rules = prompt.rule
+  const rules = prompt.modelPattern
   const parameters = prompt.parameters
   if (rules && parameters) {
     let m: string|undefined
@@ -69,7 +69,7 @@ function isId(id: string, modelName: string) {
 }
 
 export function promptIsFitForLLM(prompt: AIPromptSettings, modelName: string): AIPromptFitResult|AIPromptFitResult[]|undefined {
-  const rules = prompt.rule
+  const rules = prompt.modelPattern
   const result: AIPromptFitResult[] = []
   let usedVers = [] as string[]
   if (isId(prompt._id!, modelName)) {

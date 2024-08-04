@@ -23,5 +23,5 @@ template: |-
   {%- if add_generation_prompt and messages[-1]['role'] != 'assistant' -%}
     {{-'ASSISTANT:'-}}
   {%- endif -%}
-rule:
+modelPattern:
   - !re /^airoboros-.*-1[.]2/i

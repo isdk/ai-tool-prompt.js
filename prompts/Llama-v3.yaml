@@ -16,7 +16,7 @@ template: >-
   {%- if add_generation_prompt and messages[-1]['role'] != 'assistant' -%}
       {{-'<|start_header_id|>assistant<|end_header_id|>\n\n'-}}
   {%- endif -%}
-rule:
+modelPattern:
   - !re /^Meta[-](Llama)[-]3[-]\d+B[-]Instruct$/i
   - !re /^bagel(?:$|[-_])(?:8b)/i
 parameters:

@@ -29,7 +29,7 @@ template: |-
   {% endfor %}
   {% if add_generation_prompt and messages[-1]['role'] != 'assistant' %}{{ bot_token }}assistant
   {% endif %}
-rule:
+modelPattern:
   'qwen': !re /(?:^|[-_.])(?:code)?(qwen)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   '@': !re /(?:^|[-_.])(?:code)?(yi)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
 parameters:

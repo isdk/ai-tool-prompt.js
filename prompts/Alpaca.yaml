@@ -22,5 +22,5 @@ template: >-
   {%- if add_generation_prompt and messages[-1]['role'] != 'assistant' -%}
       {{-'### Response:\n'-}}
   {%- endif -%}
-rule:
+modelPattern:
   - !re /(?:^|[-_])(alpaca)(?:[-_]|$)/i

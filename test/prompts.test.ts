@@ -186,7 +186,7 @@ describe('Prompts server api', () => {
     const prompt = {
       _id: 'TestPrompt:char',
       templateFormat: 'hf',
-      rule: 'Llama-2',
+      modelPattern: 'Llama-2',
       type: 'char',
       prompt: {
         system: 'You are a helpful assistant.',
@@ -241,7 +241,7 @@ describe('Prompts server api', () => {
     expect(result).toHaveProperty('changes', 1)
     const prompt = {
       _id: 'TestPrompt:extends',
-      rule: 'my-extends',
+      modelPattern: 'my-extends',
       prompt: {
         messages: [6]
       },
@@ -276,7 +276,7 @@ describe('Prompts server api', () => {
     expect(prompts).toBeInstanceOf(ResClientTools)
     const prompt = {
       _id: 'TestPrompt:priority',
-      rule: /(?:^|[-_.])(qwen)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i.toString(),
+      modelPattern: /(?:^|[-_.])(qwen)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i.toString(),
       prompt: {
         system: 'You are a professional assistant.',
       },

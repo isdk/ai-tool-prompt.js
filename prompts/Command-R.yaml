@@ -25,5 +25,5 @@ template: >-
   {%- if add_generation_prompt and messages[-1]['role'] != 'assistant' -%}
       {{ '<|START_OF_TURN_TOKEN|><|CHATBOT_TOKEN|>' }}
   {%- endif -%}
-rule:
+modelPattern:
   - !re /(?:^|[-_.])(command-r)(?:$|[-_.])/i
