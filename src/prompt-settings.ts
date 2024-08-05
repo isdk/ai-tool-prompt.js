@@ -42,6 +42,7 @@ export interface AIPromptSettings {
   priority?: number
   input?: Record<string, string>[]
   output?: any
+  tag?: string[]
   [CreationKey]?: ActivityRecord
   [SignatureKey]?: string|Signatures
 }
@@ -61,6 +62,7 @@ export const AIPromptSchema = {
   priority: {type: 'number'},
   input: {type: 'array'},
   output: {type: 'any'},
+  tag: {type: 'array'},
   [CreationKey]: {type: 'object'},
   [SignatureKey]: {type: ['string', 'object']},
 }
