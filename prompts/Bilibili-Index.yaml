@@ -1,0 +1,32 @@
+_id: Bilibili-Index
+templateFormat: hf
+type: system
+prompt:
+  system: Below is an instruction that describes a task. Write a response that appropriately completes the request.
+  unk_token: "<unk>"
+  reserved_0: "reserved_0"
+  reserved_1: "reserved_1"
+template: >-
+  {%- for message in messages %}
+    {% if loop.first and system and messages[0]['role'] != 'system' %}
+      {{- unk_token + system -}}
+    {% endif %}
+    {%- if message['role'] == 'system' -%}
+      {{- unk_token + message['content'] -}}
+    {%- else -%}
+      {%- if message['role'] == 'user' -%}
+        {{- reserved_0 + message['content'].strip() + reserved_1 -}}
+      {%- elif message['role'] == 'assistant' -%}
+        {{- message['content'] -}}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+modelPattern:
+  - !re /(?:^|[-_])(index)[-_]1[.]9b(?:[-_]|$)/i
+parameters:
+  'index':
+    temperature: 0.3
+    top_p: 0.8
+    repeat_penalty: 1.1
+    top_k: 5
+    stop_words: ['reserved_0', 'reserved_1', '</s>', '<unk>']
