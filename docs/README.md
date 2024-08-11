@@ -19,7 +19,7 @@ npm install @isdk/ai-tool @isdk/ai-tool-prompt
 * template: `string` - template of the prompt, eg, '{{messages[0].content}}'
 * type: `'system'|'tool'|'char'` - type of the prompt
 * prompt: `object` - default prompt data
-* rule: `string|RegExpr|(string|RegExpr)[]` - rule to match the LLM model name
+* modelPattern: `string|RegExpr|(string|RegExpr)[]|{[version:string]: string|RegExpr}` - pattern(s) to match the LLM model name
 * parameters: `{[ruleMatched: string]: object]}` - the default parameters of LLM models
   * the key is the matched rule named group: `id` or `group[1]`, it is lowercase always.
   * the value is parameters of the LLM model
