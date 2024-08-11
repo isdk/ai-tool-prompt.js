@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.0](https://github.com/isdk/ai-tool-prompt.js/compare/v0.0.10...v0.1.0) (2024-08-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* rename option rule to modelPattern
+
+### Features
+
+* add tag option for prompt settings ([a012089](https://github.com/isdk/ai-tool-prompt.js/commit/a012089c819726221e6782c9ef7103dfe129c70e))
+* **prompt:** add phi-3.1 support ([605d5bb](https://github.com/isdk/ai-tool-prompt.js/commit/605d5bbed13695155e62497bf6f068c5a3680d36))
+* **prompt:** blilibili index 1.9B model system prompt template added ([9c32316](https://github.com/isdk/ai-tool-prompt.js/commit/9c32316e0574225ffbd9c5fceb4a63922ab50fab))
+* **prompt:** Gemma system prompt template added ([2ae3786](https://github.com/isdk/ai-tool-prompt.js/commit/2ae378680e278cb7786c99fb02af150776849f93))
+
+
+### Refactor
+
+* rename option rule to modelPattern ([1f19bd2](https://github.com/isdk/ai-tool-prompt.js/commit/1f19bd2c85d4d386ad2dd914499c3c643eb1378a))
+* update to latest sqlite ([cc3d3fb](https://github.com/isdk/ai-tool-prompt.js/commit/cc3d3fb912c748d79a239142632296cb8ffc1879))
+
 ## [0.0.10](https://github.com/isdk/ai-tool-prompt.js/compare/v0.0.9...v0.0.10) (2024-07-08)
 
 
