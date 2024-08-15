@@ -16,7 +16,7 @@ template: |-
   {% endfor %}
   {%- if add_generation_prompt and messages[-1]['role'] != 'assistant' %}{{ bot_token + 'model\n'}}{% endif -%}
 modelPattern:
-  - !re /^((?:shield|code)?gemma)(?:[-_]|$)/i
+  - !re /(?:^|[-_])((?:shield|code)?gemma)(?:[-_]|$)/i
   # {%- set prev_message = {} -%}
   # {% for message in messages %}
   #   {%- if loop.first and system and messages[0]['role'] != 'system' -%}
