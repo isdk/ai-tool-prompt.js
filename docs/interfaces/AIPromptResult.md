@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompts.ts:15](https://github.com/isdk/ai-tool-prompt.js/blob/ed21755eff38952bb059e8bfb2149f7437b74f80/src/prompts.ts#L15)
+[packages/ai-tool-prompt/src/prompts.ts:15](https://github.com/isdk/ai-tool-prompt.js/blob/725bf4619debb43a5b1b683ede66cffb6a973193/src/prompts.ts#L15)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompts.ts:16](https://github.com/isdk/ai-tool-prompt.js/blob/ed21755eff38952bb059e8bfb2149f7437b74f80/src/prompts.ts#L16)
+[packages/ai-tool-prompt/src/prompts.ts:16](https://github.com/isdk/ai-tool-prompt.js/blob/725bf4619debb43a5b1b683ede66cffb6a973193/src/prompts.ts#L16)
