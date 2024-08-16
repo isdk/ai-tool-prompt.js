@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.2](https://github.com/isdk/ai-tool-prompt.js/compare/v0.1.1...v0.1.2) (2024-08-16)
+
+
+### Features
+
+* glm3, glm4 supports ([725bf46](https://github.com/isdk/ai-tool-prompt.js/commit/725bf4619debb43a5b1b683ede66cffb6a973193))
+
 ## [0.1.1](https://github.com/isdk/ai-tool-prompt.js/compare/v0.1.0...v0.1.1) (2024-08-14)
 
 ## [0.1.0](https://github.com/isdk/ai-tool-prompt.js/compare/v0.0.10...v0.1.0) (2024-08-11)
