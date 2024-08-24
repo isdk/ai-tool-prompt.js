@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.5](https://github.com/isdk/ai-tool-prompt.js/compare/v0.1.4...v0.1.5) (2024-08-24)
+
+
+### Features
+
+* **prompt:** add NousHermes2 and Hermes3 LLM ([afd19d0](https://github.com/isdk/ai-tool-prompt.js/commit/afd19d024719e94e430872e6062c04fa1cd768e0))
+
+
+### Bug Fixes
+
+* can not getLLMParameters correctly ([bf6e30b](https://github.com/isdk/ai-tool-prompt.js/commit/bf6e30b3f55b9c7d8f94c01fd94be4e0f05119c1))
+
 ## [0.1.4](https://github.com/isdk/ai-tool-prompt.js/compare/v0.1.3...v0.1.4) (2024-08-23)
 
 ## [0.1.3](https://github.com/isdk/ai-tool-prompt.js/compare/v0.1.2...v0.1.3) (2024-08-18)
