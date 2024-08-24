@@ -51,7 +51,7 @@ export function getLLMParameters(prompt: AIPromptSettings, modelName: string) {
     } else if (typeof rules === 'object' && !(rules instanceof RegExp)) {
       for (const [_version, rule] of Object.entries(rules)) {
         m = getMatchedStr(isModelNameMatched(modelName, rule))
-        break
+        if (m) {break}
       }
     } else {
       m = getMatchedStr(isModelNameMatched(modelName, rules))

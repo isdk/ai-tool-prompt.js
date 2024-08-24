@@ -210,7 +210,7 @@ describe('Prompts server api', () => {
     expect(result).toHaveProperty('changes', 1)
     expect(prompts.get({id: prompt._id})).rejects.toThrow(NotFoundError)
   })
-  it('should getLLMParameters', async () => {
+  it.only('should getLLMParameters', async () => {
     const prompts = ResClientTools.get(AIPromptsName)
     expect(prompts).toBeInstanceOf(ResClientTools)
     let result = await prompts.getParameters({id: 'ChatML', model: 'qwen1.5'})
@@ -224,6 +224,11 @@ describe('Prompts server api', () => {
       stop_words: ['<|im_end|>', '[PAD151645]', '<|endoftext|>'],
       temperature: 0.01,
       top_p: 0.9,
+    })
+    result = await prompts.getParameters({id: 'ChatML', model: 'nous-hermes-2-yi-34b.Q4_0.gguf'})
+    expect(result).toStrictEqual({
+      min_p: 0.06,
+      repeat_penalty: 1.1,
     })
   })
   it('should extends prompt', async () => {
