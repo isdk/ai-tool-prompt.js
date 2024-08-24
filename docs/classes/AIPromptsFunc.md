@@ -662,7 +662,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompts.ts:70](https://github.com/isdk/ai-tool-prompt.js/blob/afd19d024719e94e430872e6062c04fa1cd768e0/src/prompts.ts#L70)
+[packages/ai-tool-prompt/src/prompts.ts:74](https://github.com/isdk/ai-tool-prompt.js/blob/282164a46634033a9c9e066968045ee745f00f39/src/prompts.ts#L74)
 
 ___
 
@@ -682,7 +682,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompts.ts:110](https://github.com/isdk/ai-tool-prompt.js/blob/afd19d024719e94e430872e6062c04fa1cd768e0/src/prompts.ts#L110)
+[packages/ai-tool-prompt/src/prompts.ts:114](https://github.com/isdk/ai-tool-prompt.js/blob/282164a46634033a9c9e066968045ee745f00f39/src/prompts.ts#L114)
 
 ___
 
@@ -702,7 +702,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompts.ts:102](https://github.com/isdk/ai-tool-prompt.js/blob/afd19d024719e94e430872e6062c04fa1cd768e0/src/prompts.ts#L102)
+[packages/ai-tool-prompt/src/prompts.ts:106](https://github.com/isdk/ai-tool-prompt.js/blob/282164a46634033a9c9e066968045ee745f00f39/src/prompts.ts#L106)
 
 ___
 
@@ -771,7 +771,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompts.ts:32](https://github.com/isdk/ai-tool-prompt.js/blob/afd19d024719e94e430872e6062c04fa1cd768e0/src/prompts.ts#L32)
+[packages/ai-tool-prompt/src/prompts.ts:36](https://github.com/isdk/ai-tool-prompt.js/blob/282164a46634033a9c9e066968045ee745f00f39/src/prompts.ts#L36)
 
 ___
 
@@ -1151,7 +1151,7 @@ KVSqliteResFunc.get
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompts.ts:59](https://github.com/isdk/ai-tool-prompt.js/blob/afd19d024719e94e430872e6062c04fa1cd768e0/src/prompts.ts#L59)
+[packages/ai-tool-prompt/src/prompts.ts:63](https://github.com/isdk/ai-tool-prompt.js/blob/282164a46634033a9c9e066968045ee745f00f39/src/prompts.ts#L63)
 
 ___
 
@@ -1363,7 +1363,7 @@ KVSqliteResFunc.initData
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompts.ts:25](https://github.com/isdk/ai-tool-prompt.js/blob/afd19d024719e94e430872e6062c04fa1cd768e0/src/prompts.ts#L25)
+[packages/ai-tool-prompt/src/prompts.ts:29](https://github.com/isdk/ai-tool-prompt.js/blob/282164a46634033a9c9e066968045ee745f00f39/src/prompts.ts#L29)
 
 ___
 
