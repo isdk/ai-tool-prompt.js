@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.6](https://github.com/isdk/ai-tool-prompt.js/compare/v0.1.5...v0.1.6) (2024-08-24)
+
+
+### Bug Fixes
+
+* can not work on windows ([282164a](https://github.com/isdk/ai-tool-prompt.js/commit/282164a46634033a9c9e066968045ee745f00f39))
+
 ## [0.1.5](https://github.com/isdk/ai-tool-prompt.js/compare/v0.1.4...v0.1.5) (2024-08-24)
 
 
