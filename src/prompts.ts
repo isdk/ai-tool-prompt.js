@@ -1,5 +1,6 @@
 import { mergeWith } from 'lodash-es'
 import path from 'path'
+import { fileURLToPath } from 'url';
 import { KVSqliteResFuncParams, KVSqliteResFunc } from "@isdk/ai-tool-sqlite";
 import { AIPromptSettings, AIPromptType } from './prompt-settings';
 import { AIPromptFitResult, getLLMParameters, promptIsFitForLLM } from './prompt';
@@ -20,11 +21,14 @@ interface AIPromptsFuncParams extends AIPromptSettings, KVSqliteResFuncParams {
   id?: any
 }
 
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+
 export class AIPromptsFunc extends KVSqliteResFunc<AIPromptsFuncParams> {
 
   initData() {
     if (!this.initDir) {
-      this.initDir = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..', 'prompts')
+      this.initDir = path.resolve(__dirname, '..', 'prompts')
     }
     super.initData()
   }
