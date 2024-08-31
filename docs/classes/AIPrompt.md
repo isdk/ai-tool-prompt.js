@@ -114,7 +114,7 @@ AIPromptSettings.constructor
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:80
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:80
 
 ## Properties
 
@@ -124,7 +124,7 @@ node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/advance.d.ts:5
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/advance.d.ts:5
 
 ___
 
@@ -138,7 +138,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:27](https://github.com/isdk/ai-tool-prompt.js/blob/6302fc793b34b8d2fc98e95e3e4ba1c6006d44df/src/prompt-settings.ts#L27)
+[packages/ai-tool-prompt/src/prompt-settings.ts:27](https://github.com/isdk/ai-tool-prompt.js/blob/33d77b1695b150f21f2e25db3d9f326d9032de3d/src/prompt-settings.ts#L27)
 
 ___
 
@@ -164,7 +164,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:31](https://github.com/isdk/ai-tool-prompt.js/blob/6302fc793b34b8d2fc98e95e3e4ba1c6006d44df/src/prompt-settings.ts#L31)
+[packages/ai-tool-prompt/src/prompt-settings.ts:31](https://github.com/isdk/ai-tool-prompt.js/blob/33d77b1695b150f21f2e25db3d9f326d9032de3d/src/prompt-settings.ts#L31)
 
 ___
 
@@ -183,7 +183,7 @@ The default options for export and assign
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:74
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:74
 
 ___
 
@@ -197,7 +197,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:32](https://github.com/isdk/ai-tool-prompt.js/blob/6302fc793b34b8d2fc98e95e3e4ba1c6006d44df/src/prompt-settings.ts#L32)
+[packages/ai-tool-prompt/src/prompt-settings.ts:32](https://github.com/isdk/ai-tool-prompt.js/blob/33d77b1695b150f21f2e25db3d9f326d9032de3d/src/prompt-settings.ts#L32)
 
 ___
 
@@ -211,7 +211,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:39](https://github.com/isdk/ai-tool-prompt.js/blob/6302fc793b34b8d2fc98e95e3e4ba1c6006d44df/src/prompt-settings.ts#L39)
+[packages/ai-tool-prompt/src/prompt-settings.ts:39](https://github.com/isdk/ai-tool-prompt.js/blob/33d77b1695b150f21f2e25db3d9f326d9032de3d/src/prompt-settings.ts#L39)
 
 ___
 
@@ -225,7 +225,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:28](https://github.com/isdk/ai-tool-prompt.js/blob/6302fc793b34b8d2fc98e95e3e4ba1c6006d44df/src/prompt-settings.ts#L28)
+[packages/ai-tool-prompt/src/prompt-settings.ts:28](https://github.com/isdk/ai-tool-prompt.js/blob/33d77b1695b150f21f2e25db3d9f326d9032de3d/src/prompt-settings.ts#L28)
 
 ___
 
@@ -239,7 +239,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:43](https://github.com/isdk/ai-tool-prompt.js/blob/6302fc793b34b8d2fc98e95e3e4ba1c6006d44df/src/prompt-settings.ts#L43)
+[packages/ai-tool-prompt/src/prompt-settings.ts:43](https://github.com/isdk/ai-tool-prompt.js/blob/33d77b1695b150f21f2e25db3d9f326d9032de3d/src/prompt-settings.ts#L43)
 
 ___
 
@@ -253,7 +253,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:33](https://github.com/isdk/ai-tool-prompt.js/blob/6302fc793b34b8d2fc98e95e3e4ba1c6006d44df/src/prompt-settings.ts#L33)
+[packages/ai-tool-prompt/src/prompt-settings.ts:33](https://github.com/isdk/ai-tool-prompt.js/blob/33d77b1695b150f21f2e25db3d9f326d9032de3d/src/prompt-settings.ts#L33)
 
 ___
 
@@ -265,7 +265,7 @@ the property with the default prefix '$' will not be exported.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:78
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:78
 
 ___
 
@@ -279,7 +279,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:44](https://github.com/isdk/ai-tool-prompt.js/blob/6302fc793b34b8d2fc98e95e3e4ba1c6006d44df/src/prompt-settings.ts#L44)
+[packages/ai-tool-prompt/src/prompt-settings.ts:44](https://github.com/isdk/ai-tool-prompt.js/blob/33d77b1695b150f21f2e25db3d9f326d9032de3d/src/prompt-settings.ts#L44)
 
 ___
 
@@ -293,7 +293,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:38](https://github.com/isdk/ai-tool-prompt.js/blob/6302fc793b34b8d2fc98e95e3e4ba1c6006d44df/src/prompt-settings.ts#L38)
+[packages/ai-tool-prompt/src/prompt-settings.ts:38](https://github.com/isdk/ai-tool-prompt.js/blob/33d77b1695b150f21f2e25db3d9f326d9032de3d/src/prompt-settings.ts#L38)
 
 ___
 
@@ -307,7 +307,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:42](https://github.com/isdk/ai-tool-prompt.js/blob/6302fc793b34b8d2fc98e95e3e4ba1c6006d44df/src/prompt-settings.ts#L42)
+[packages/ai-tool-prompt/src/prompt-settings.ts:42](https://github.com/isdk/ai-tool-prompt.js/blob/33d77b1695b150f21f2e25db3d9f326d9032de3d/src/prompt-settings.ts#L42)
 
 ___
 
@@ -321,7 +321,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:36](https://github.com/isdk/ai-tool-prompt.js/blob/6302fc793b34b8d2fc98e95e3e4ba1c6006d44df/src/prompt-settings.ts#L36)
+[packages/ai-tool-prompt/src/prompt-settings.ts:36](https://github.com/isdk/ai-tool-prompt.js/blob/33d77b1695b150f21f2e25db3d9f326d9032de3d/src/prompt-settings.ts#L36)
 
 ___
 
@@ -335,7 +335,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:45](https://github.com/isdk/ai-tool-prompt.js/blob/6302fc793b34b8d2fc98e95e3e4ba1c6006d44df/src/prompt-settings.ts#L45)
+[packages/ai-tool-prompt/src/prompt-settings.ts:45](https://github.com/isdk/ai-tool-prompt.js/blob/33d77b1695b150f21f2e25db3d9f326d9032de3d/src/prompt-settings.ts#L45)
 
 ___
 
@@ -349,7 +349,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:29](https://github.com/isdk/ai-tool-prompt.js/blob/6302fc793b34b8d2fc98e95e3e4ba1c6006d44df/src/prompt-settings.ts#L29)
+[packages/ai-tool-prompt/src/prompt-settings.ts:29](https://github.com/isdk/ai-tool-prompt.js/blob/33d77b1695b150f21f2e25db3d9f326d9032de3d/src/prompt-settings.ts#L29)
 
 ___
 
@@ -363,7 +363,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:34](https://github.com/isdk/ai-tool-prompt.js/blob/6302fc793b34b8d2fc98e95e3e4ba1c6006d44df/src/prompt-settings.ts#L34)
+[packages/ai-tool-prompt/src/prompt-settings.ts:34](https://github.com/isdk/ai-tool-prompt.js/blob/33d77b1695b150f21f2e25db3d9f326d9032de3d/src/prompt-settings.ts#L34)
 
 ___
 
@@ -377,7 +377,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:30](https://github.com/isdk/ai-tool-prompt.js/blob/6302fc793b34b8d2fc98e95e3e4ba1c6006d44df/src/prompt-settings.ts#L30)
+[packages/ai-tool-prompt/src/prompt-settings.ts:30](https://github.com/isdk/ai-tool-prompt.js/blob/33d77b1695b150f21f2e25db3d9f326d9032de3d/src/prompt-settings.ts#L30)
 
 ___
 
@@ -395,7 +395,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:37](https://github.com/isdk/ai-tool-prompt.js/blob/6302fc793b34b8d2fc98e95e3e4ba1c6006d44df/src/prompt-settings.ts#L37)
+[packages/ai-tool-prompt/src/prompt-settings.ts:37](https://github.com/isdk/ai-tool-prompt.js/blob/33d77b1695b150f21f2e25db3d9f326d9032de3d/src/prompt-settings.ts#L37)
 
 ___
 
@@ -409,7 +409,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:46](https://github.com/isdk/ai-tool-prompt.js/blob/6302fc793b34b8d2fc98e95e3e4ba1c6006d44df/src/prompt-settings.ts#L46)
+[packages/ai-tool-prompt/src/prompt-settings.ts:46](https://github.com/isdk/ai-tool-prompt.js/blob/33d77b1695b150f21f2e25db3d9f326d9032de3d/src/prompt-settings.ts#L46)
 
 ___
 
@@ -423,7 +423,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:47](https://github.com/isdk/ai-tool-prompt.js/blob/6302fc793b34b8d2fc98e95e3e4ba1c6006d44df/src/prompt-settings.ts#L47)
+[packages/ai-tool-prompt/src/prompt-settings.ts:47](https://github.com/isdk/ai-tool-prompt.js/blob/33d77b1695b150f21f2e25db3d9f326d9032de3d/src/prompt-settings.ts#L47)
 
 ## Methods
 
@@ -448,7 +448,7 @@ this object
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:106
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:106
 
 ___
 
@@ -474,7 +474,7 @@ Assign a property of src to this object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:117
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:117
 
 ___
 
@@ -503,7 +503,7 @@ Assign the property value from the src to destination object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:131
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:131
 
 ___
 
@@ -528,7 +528,7 @@ the dest object
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:191
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:191
 
 ___
 
@@ -552,7 +552,7 @@ the new object
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:155
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:155
 
 ___
 
@@ -577,7 +577,7 @@ the new dest object
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:148
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:148
 
 ___
 
@@ -601,7 +601,7 @@ Define the attributes of this object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:89
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:89
 
 ___
 
@@ -626,7 +626,7 @@ the dest object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:173
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:173
 
 ___
 
@@ -646,7 +646,7 @@ the descriptors of properties object
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:98
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:98
 
 ___
 
@@ -688,7 +688,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt.ts:123](https://github.com/isdk/ai-tool-prompt.js/blob/6302fc793b34b8d2fc98e95e3e4ba1c6006d44df/src/prompt.ts#L123)
+[packages/ai-tool-prompt/src/prompt.ts:123](https://github.com/isdk/ai-tool-prompt.js/blob/33d77b1695b150f21f2e25db3d9f326d9032de3d/src/prompt.ts#L123)
 
 ___
 
@@ -712,7 +712,7 @@ this object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:139
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:139
 
 ___
 
@@ -741,7 +741,7 @@ The fit result(s) for the given LLM model, representing its compatibility or sui
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt.ts:150](https://github.com/isdk/ai-tool-prompt.js/blob/6302fc793b34b8d2fc98e95e3e4ba1c6006d44df/src/prompt.ts#L150)
+[packages/ai-tool-prompt/src/prompt.ts:150](https://github.com/isdk/ai-tool-prompt.js/blob/33d77b1695b150f21f2e25db3d9f326d9032de3d/src/prompt.ts#L150)
 
 ___
 
@@ -765,7 +765,7 @@ Checks whether the provided string or the current template (if not provided) is 
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt.ts:134](https://github.com/isdk/ai-tool-prompt.js/blob/6302fc793b34b8d2fc98e95e3e4ba1c6006d44df/src/prompt.ts#L134)
+[packages/ai-tool-prompt/src/prompt.ts:134](https://github.com/isdk/ai-tool-prompt.js/blob/33d77b1695b150f21f2e25db3d9f326d9032de3d/src/prompt.ts#L134)
 
 ___
 
@@ -810,7 +810,7 @@ Check the src object whether “equals” this object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:200
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:200
 
 ___
 
@@ -835,7 +835,7 @@ the dest object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:164
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:164
 
 ___
 
@@ -871,7 +871,7 @@ ___
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:182
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:182
 
 ___
 
@@ -911,7 +911,7 @@ the json object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:181
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:181
 
 ___
 
@@ -1117,7 +1117,7 @@ ___
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/advance.d.ts:11
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/advance.d.ts:11
 
 ___
 
@@ -1429,7 +1429,7 @@ get all properties descriptor include inherited.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/advance.d.ts:10
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/advance.d.ts:10
 
 ___
 

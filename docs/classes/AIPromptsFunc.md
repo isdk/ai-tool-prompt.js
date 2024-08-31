@@ -184,7 +184,7 @@ KVSqliteResFunc.$attributes
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/advance.d.ts:5
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/advance.d.ts:5
 
 ___
 
@@ -293,7 +293,7 @@ KVSqliteResFunc.defaultOptions
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:74
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:74
 
 ___
 
@@ -393,7 +393,7 @@ KVSqliteResFunc.nonExported1stChar
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:78
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:78
 
 ___
 
@@ -662,7 +662,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompts.ts:74](https://github.com/isdk/ai-tool-prompt.js/blob/6302fc793b34b8d2fc98e95e3e4ba1c6006d44df/src/prompts.ts#L74)
+[packages/ai-tool-prompt/src/prompts.ts:74](https://github.com/isdk/ai-tool-prompt.js/blob/33d77b1695b150f21f2e25db3d9f326d9032de3d/src/prompts.ts#L74)
 
 ___
 
@@ -682,7 +682,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompts.ts:114](https://github.com/isdk/ai-tool-prompt.js/blob/6302fc793b34b8d2fc98e95e3e4ba1c6006d44df/src/prompts.ts#L114)
+[packages/ai-tool-prompt/src/prompts.ts:114](https://github.com/isdk/ai-tool-prompt.js/blob/33d77b1695b150f21f2e25db3d9f326d9032de3d/src/prompts.ts#L114)
 
 ___
 
@@ -702,7 +702,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompts.ts:106](https://github.com/isdk/ai-tool-prompt.js/blob/6302fc793b34b8d2fc98e95e3e4ba1c6006d44df/src/prompts.ts#L106)
+[packages/ai-tool-prompt/src/prompts.ts:106](https://github.com/isdk/ai-tool-prompt.js/blob/33d77b1695b150f21f2e25db3d9f326d9032de3d/src/prompts.ts#L106)
 
 ___
 
@@ -771,7 +771,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompts.ts:36](https://github.com/isdk/ai-tool-prompt.js/blob/6302fc793b34b8d2fc98e95e3e4ba1c6006d44df/src/prompts.ts#L36)
+[packages/ai-tool-prompt/src/prompts.ts:36](https://github.com/isdk/ai-tool-prompt.js/blob/33d77b1695b150f21f2e25db3d9f326d9032de3d/src/prompts.ts#L36)
 
 ___
 
@@ -824,7 +824,7 @@ KVSqliteResFunc.assign
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:106
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:106
 
 ___
 
@@ -854,7 +854,7 @@ KVSqliteResFunc.assignProperty
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:117
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:117
 
 ___
 
@@ -887,7 +887,7 @@ KVSqliteResFunc.assignPropertyTo
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:131
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:131
 
 ___
 
@@ -916,7 +916,7 @@ KVSqliteResFunc.assignTo
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:191
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:191
 
 ___
 
@@ -993,7 +993,7 @@ KVSqliteResFunc.clone
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:155
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:155
 
 ___
 
@@ -1022,7 +1022,7 @@ KVSqliteResFunc.cloneTo
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:148
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:148
 
 ___
 
@@ -1050,7 +1050,7 @@ KVSqliteResFunc.defineProperties
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:89
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:89
 
 ___
 
@@ -1103,7 +1103,7 @@ KVSqliteResFunc.exportTo
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:173
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:173
 
 ___
 
@@ -1151,7 +1151,7 @@ KVSqliteResFunc.get
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompts.ts:63](https://github.com/isdk/ai-tool-prompt.js/blob/6302fc793b34b8d2fc98e95e3e4ba1c6006d44df/src/prompts.ts#L63)
+[packages/ai-tool-prompt/src/prompts.ts:63](https://github.com/isdk/ai-tool-prompt.js/blob/33d77b1695b150f21f2e25db3d9f326d9032de3d/src/prompts.ts#L63)
 
 ___
 
@@ -1271,7 +1271,7 @@ KVSqliteResFunc.getProperties
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:98
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:98
 
 ___
 
@@ -1363,7 +1363,7 @@ KVSqliteResFunc.initData
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompts.ts:29](https://github.com/isdk/ai-tool-prompt.js/blob/6302fc793b34b8d2fc98e95e3e4ba1c6006d44df/src/prompts.ts#L29)
+[packages/ai-tool-prompt/src/prompts.ts:29](https://github.com/isdk/ai-tool-prompt.js/blob/33d77b1695b150f21f2e25db3d9f326d9032de3d/src/prompts.ts#L29)
 
 ___
 
@@ -1440,7 +1440,7 @@ KVSqliteResFunc.initialize
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:139
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:139
 
 ___
 
@@ -1493,7 +1493,7 @@ KVSqliteResFunc.isSame
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:200
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:200
 
 ___
 
@@ -1570,7 +1570,7 @@ KVSqliteResFunc.mergeTo
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:164
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:164
 
 ___
 
@@ -1900,7 +1900,7 @@ KVSqliteResFunc.toJSON
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:182
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:182
 
 ___
 
@@ -1948,7 +1948,7 @@ KVSqliteResFunc.toObject
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:181
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:181
 
 ___
 
@@ -2233,7 +2233,7 @@ KVSqliteResFunc.defineProperties
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/advance.d.ts:11
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/advance.d.ts:11
 
 ___
 
@@ -2717,7 +2717,7 @@ KVSqliteResFunc.getProperties
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/advance.d.ts:10
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/advance.d.ts:10
 
 ___
 
