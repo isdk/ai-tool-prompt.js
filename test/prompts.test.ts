@@ -86,6 +86,7 @@ describe('Prompts server api', () => {
 
     ResServerTools.setApiRoot(apiRoot)
     const res = new AIPromptsFunc(AIPromptsName, {dbPath})
+    await res.initData()
     res.register()
 
     ResClientTools.setApiRoot(apiRoot)
