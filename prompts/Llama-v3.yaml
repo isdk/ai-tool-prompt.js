@@ -1,6 +1,12 @@
 _id: Llama-v3
 templateFormat: hf
 type: system
+version:
+  reflection:
+    prompt:
+      system: |-
+        You are a world-class AI system, capable of complex reasoning and reflection. Reason through the query inside <thinking> tags, and then provide your final response inside <output> tags. If you detect that you made a mistake in your reasoning at any point, correct yourself inside <reflection> tags.
+
 prompt:
   system: You are a helpful AI assistant.
   eot_token: '<|eot_id|>'
@@ -17,10 +23,14 @@ template: >-
       {{-'<|start_header_id|>assistant<|end_header_id|>\n\n'-}}
   {%- endif -%}
 modelPattern:
-  - !re /^Meta[-](Llama)[-]3[-]\d+B[-]Instruct$/i
-  - !re /^bagel(?:$|[-_])(?:8b)/i
+  bagel: !re /^bagel(?:$|[-_])(?:8b)/i
+  reflection: !re /^(reflection)[-_]llama[-_]/i
+  '@': !re /[-_](llama)[-_]?3(?:[.]\d)?[-_]\d+b[-_]/i
 parameters:
   llama:
     stop_words: ['<|eot_id|>']
   bagel:
     stop_words: ['<|eot_id|>', '<|end_of_text|>']
+  reflection:
+    temperature: 0.7
+    top_p: 0.95
