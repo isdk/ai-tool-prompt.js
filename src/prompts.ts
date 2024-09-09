@@ -26,11 +26,11 @@ const __dirname = path.dirname(__filename)
 
 export class AIPromptsFunc extends KVSqliteResFunc<AIPromptsFuncParams> {
 
-  initData() {
-    if (!this.initDir) {
-      this.initDir = path.resolve(__dirname, '..', 'prompts')
+  async initData(initDir?: string, collection?: string) {
+    if (!initDir) {
+      initDir = this.initDir || path.resolve(__dirname, '..', 'prompts')
     }
-    super.initData()
+    return super.initData(initDir, collection)
   }
 
   _getPrompt(modelName: string, type?: AIPromptType): AIPromptResult|false {
