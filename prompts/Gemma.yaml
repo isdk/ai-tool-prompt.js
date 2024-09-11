@@ -8,7 +8,9 @@ template: |-
   {% for message in messages %}
     {%- if loop.first and system and messages[0]['role'] != 'system' -%}
       {{- bot_token + 'user\n' -}}
-      {{ system | trim + eot_token + '\n' }}
+      {{ system | trim + '\nIf you fully understand, please answer: "Yes, I understand".' + eot_token + '\n' }}
+      {{- bot_token + 'assistant\n' -}}
+      {{ "Yes, I understand." + eot_token + '\n' }}
     {% endif %}
     {%- if (message['role'] == 'assistant') -%}{% set role = 'model' %}{% elif message['role'] == 'system' %}{% set role = 'user' %}{% else %}{% set role = message['role'] %}{%- endif -%}
     {{- bot_token + role + '\n' -}}{{ message['content'] | trim }}
