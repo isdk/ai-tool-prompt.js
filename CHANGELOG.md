@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.2.0](https://github.com/isdk/ai-tool-prompt.js/compare/v0.1.12...v0.2.0) (2024-09-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* follow upstream
+
+### Features
+
+* **OpenBuddy:** add default system prompt ([3cd20b5](https://github.com/isdk/ai-tool-prompt.js/commit/3cd20b5c51c0b148f1b321055ea3af617d53a688))
+* **prompt:** add reflection model ([e49aa5b](https://github.com/isdk/ai-tool-prompt.js/commit/e49aa5b207da33c5c29f751f36e56426f80e7a9a))
+
+
+### Bug Fixes
+
+* **ChatGLM:** v3 duplication template ([3862452](https://github.com/isdk/ai-tool-prompt.js/commit/3862452bd3b666e106a95328741fde9afbc0b196))
+* **gemma:** use user instead of system prompt ([7b2759d](https://github.com/isdk/ai-tool-prompt.js/commit/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a))
+
+
+### Refactor
+
+* follow upstream ([20facfd](https://github.com/isdk/ai-tool-prompt.js/commit/20facfda40476b1691af22ebeaa173d9e0b43f11))
+
 ## [0.1.12](https://github.com/isdk/ai-tool-prompt.js/compare/v0.1.11...v0.1.12) (2024-09-02)
 
 ## [0.1.11](https://github.com/isdk/ai-tool-prompt.js/compare/v0.1.10...v0.1.11) (2024-09-02)
