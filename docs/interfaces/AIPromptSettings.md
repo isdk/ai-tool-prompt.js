@@ -1,216 +1,195 @@
-[@isdk/ai-tool-prompt](../README.md) / [Exports](../modules.md) / AIPromptSettings
+[**@isdk/ai-tool-prompt**](../README.md) • **Docs**
+
+***
+
+[@isdk/ai-tool-prompt](../globals.md) / AIPromptSettings
 
 # Interface: AIPromptSettings
 
-## Hierarchy
+## Extended by
 
-- **`AIPromptSettings`**
-
-  ↳ [`AIPrompt`](../classes/AIPrompt.md)
-
-## Table of contents
-
-### Properties
-
-- [\_id](AIPromptSettings.md#_id)
-- [contentType](AIPromptSettings.md#contenttype)
-- [description](AIPromptSettings.md#description)
-- [extends](AIPromptSettings.md#extends)
-- [id](AIPromptSettings.md#id)
-- [input](AIPromptSettings.md#input)
-- [modelPattern](AIPromptSettings.md#modelpattern)
-- [output](AIPromptSettings.md#output)
-- [parameters](AIPromptSettings.md#parameters)
-- [priority](AIPromptSettings.md#priority)
-- [prompt](AIPromptSettings.md#prompt)
-- [tag](AIPromptSettings.md#tag)
-- [template](AIPromptSettings.md#template)
-- [templateFormat](AIPromptSettings.md#templateformat)
-- [type](AIPromptSettings.md#type)
-- [version](AIPromptSettings.md#version)
-- [创](AIPromptSettings.md#创)
-- [签](AIPromptSettings.md#签)
+- [`AIPrompt`](../classes/AIPrompt.md)
 
 ## Properties
 
-### \_id
+### \_id?
 
-• `Optional` **\_id**: `string`
-
-#### Defined in
-
-[packages/ai-tool-prompt/src/prompt-settings.ts:27](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompt-settings.ts#L27)
-
-___
-
-### contentType
-
-• `Optional` **contentType**: [`AIContentType`](../modules.md#aicontenttype)
+> `optional` **\_id**: `string`
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:31](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompt-settings.ts#L31)
+[packages/ai-tool-prompt/src/prompt-settings.ts:27](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompt-settings.ts#L27)
 
-___
+***
 
-### description
+### 创?
 
-• `Optional` **description**: `string`
-
-#### Defined in
-
-[packages/ai-tool-prompt/src/prompt-settings.ts:32](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompt-settings.ts#L32)
-
-___
-
-### extends
-
-• `Optional` **extends**: `string`
+> `optional` **创**: [`ActivityRecord`](ActivityRecord.md)
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:39](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompt-settings.ts#L39)
+[packages/ai-tool-prompt/src/prompt-settings.ts:46](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompt-settings.ts#L46)
 
-___
+***
 
-### id
+### 签?
 
-• `Optional` **id**: `string`
-
-#### Defined in
-
-[packages/ai-tool-prompt/src/prompt-settings.ts:28](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompt-settings.ts#L28)
-
-___
-
-### input
-
-• `Optional` **input**: `Record`\<`string`, `string`\>[]
+> `optional` **签**: `string` \| [`Signatures`](Signatures.md)
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:43](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompt-settings.ts#L43)
+[packages/ai-tool-prompt/src/prompt-settings.ts:47](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompt-settings.ts#L47)
 
-___
+***
 
-### modelPattern
+### contentType?
 
-• `Optional` **modelPattern**: `AIModelNameRules` \| \{ `[ver: string]`: `AIModelNameRules`;  }
-
-#### Defined in
-
-[packages/ai-tool-prompt/src/prompt-settings.ts:33](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompt-settings.ts#L33)
-
-___
-
-### output
-
-• `Optional` **output**: `any`
+> `optional` **contentType**: [`AIContentType`](../type-aliases/AIContentType.md)
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:44](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompt-settings.ts#L44)
+[packages/ai-tool-prompt/src/prompt-settings.ts:31](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompt-settings.ts#L31)
 
-___
+***
 
-### parameters
+### description?
 
-• `Optional` **parameters**: `Record`\<`string`, `any`\>
-
-#### Defined in
-
-[packages/ai-tool-prompt/src/prompt-settings.ts:38](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompt-settings.ts#L38)
-
-___
-
-### priority
-
-• `Optional` **priority**: `number`
+> `optional` **description**: `string`
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:42](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompt-settings.ts#L42)
+[packages/ai-tool-prompt/src/prompt-settings.ts:32](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompt-settings.ts#L32)
 
-___
+***
 
-### prompt
+### extends?
 
-• `Optional` **prompt**: `DefaultPrompt`
-
-#### Defined in
-
-[packages/ai-tool-prompt/src/prompt-settings.ts:36](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompt-settings.ts#L36)
-
-___
-
-### tag
-
-• `Optional` **tag**: `string`[]
+> `optional` **extends**: `string`
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:45](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompt-settings.ts#L45)
+[packages/ai-tool-prompt/src/prompt-settings.ts:39](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompt-settings.ts#L39)
 
-___
+***
+
+### id?
+
+> `optional` **id**: `string`
+
+#### Defined in
+
+[packages/ai-tool-prompt/src/prompt-settings.ts:28](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompt-settings.ts#L28)
+
+***
+
+### input?
+
+> `optional` **input**: `Record`\<`string`, `string`\>[]
+
+#### Defined in
+
+[packages/ai-tool-prompt/src/prompt-settings.ts:43](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompt-settings.ts#L43)
+
+***
+
+### modelPattern?
+
+> `optional` **modelPattern**: `AIModelNameRules` \| `object`
+
+#### Defined in
+
+[packages/ai-tool-prompt/src/prompt-settings.ts:33](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompt-settings.ts#L33)
+
+***
+
+### output?
+
+> `optional` **output**: `any`
+
+#### Defined in
+
+[packages/ai-tool-prompt/src/prompt-settings.ts:44](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompt-settings.ts#L44)
+
+***
+
+### parameters?
+
+> `optional` **parameters**: `Record`\<`string`, `any`\>
+
+#### Defined in
+
+[packages/ai-tool-prompt/src/prompt-settings.ts:38](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompt-settings.ts#L38)
+
+***
+
+### priority?
+
+> `optional` **priority**: `number`
+
+#### Defined in
+
+[packages/ai-tool-prompt/src/prompt-settings.ts:42](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompt-settings.ts#L42)
+
+***
+
+### prompt?
+
+> `optional` **prompt**: `DefaultPrompt`
+
+#### Defined in
+
+[packages/ai-tool-prompt/src/prompt-settings.ts:36](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompt-settings.ts#L36)
+
+***
+
+### tag?
+
+> `optional` **tag**: `string`[]
+
+#### Defined in
+
+[packages/ai-tool-prompt/src/prompt-settings.ts:45](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompt-settings.ts#L45)
+
+***
 
 ### template
 
-• **template**: `string`
+> **template**: `string`
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:29](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompt-settings.ts#L29)
+[packages/ai-tool-prompt/src/prompt-settings.ts:29](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompt-settings.ts#L29)
 
-___
+***
 
-### templateFormat
+### templateFormat?
 
-• `Optional` **templateFormat**: `string`
+> `optional` **templateFormat**: `string`
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:34](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompt-settings.ts#L34)
+[packages/ai-tool-prompt/src/prompt-settings.ts:34](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompt-settings.ts#L34)
 
-___
+***
 
 ### type
 
-• **type**: [`AIPromptType`](../modules.md#aiprompttype)
+> **type**: [`AIPromptType`](../type-aliases/AIPromptType.md)
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:30](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompt-settings.ts#L30)
+[packages/ai-tool-prompt/src/prompt-settings.ts:30](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompt-settings.ts#L30)
 
-___
+***
 
-### version
+### version?
 
-• `Optional` **version**: `Object`
+> `optional` **version**: `object`
 
-#### Index signature
+#### Index Signature
 
-▪ [ver: `string`]: `DefaultPrompt`
-
-#### Defined in
-
-[packages/ai-tool-prompt/src/prompt-settings.ts:37](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompt-settings.ts#L37)
-
-___
-
-### 创
-
-• `Optional` **创**: [`ActivityRecord`](ActivityRecord.md)
+ \[`ver`: `string`\]: `DefaultPrompt`
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:46](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompt-settings.ts#L46)
-
-___
-
-### 签
-
-• `Optional` **签**: `string` \| [`Signatures`](Signatures.md)
-
-#### Defined in
-
-[packages/ai-tool-prompt/src/prompt-settings.ts:47](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompt-settings.ts#L47)
+[packages/ai-tool-prompt/src/prompt-settings.ts:37](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompt-settings.ts#L37)

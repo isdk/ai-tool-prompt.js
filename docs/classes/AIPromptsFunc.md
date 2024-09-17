@@ -1,164 +1,26 @@
-[@isdk/ai-tool-prompt](../README.md) / [Exports](../modules.md) / AIPromptsFunc
+[**@isdk/ai-tool-prompt**](../README.md) • **Docs**
+
+***
+
+[@isdk/ai-tool-prompt](../globals.md) / AIPromptsFunc
 
 # Class: AIPromptsFunc
 
-## Hierarchy
+## Extends
 
 - `KVSqliteResFunc`\<`AIPromptsFuncParams`\>
 
-  ↳ **`AIPromptsFunc`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](AIPromptsFunc.md#constructor)
-
-### Properties
-
-- [$attributes](AIPromptsFunc.md#$attributes)
-- [action](AIPromptsFunc.md#action)
-- [allowExportFunc](AIPromptsFunc.md#allowexportfunc)
-- [apiRoot](AIPromptsFunc.md#apiroot)
-- [constructor](AIPromptsFunc.md#constructor-1)
-- [db](AIPromptsFunc.md#db)
-- [dbPath](AIPromptsFunc.md#dbpath)
-- [defaultOptions](AIPromptsFunc.md#defaultoptions)
-- [fetchOptions](AIPromptsFunc.md#fetchoptions)
-- [initDir](AIPromptsFunc.md#initdir)
-- [initingData](AIPromptsFunc.md#initingdata)
-- [isApi](AIPromptsFunc.md#isapi)
-- [methods](AIPromptsFunc.md#methods)
-- [name](AIPromptsFunc.md#name)
-- [nonExported1stChar](AIPromptsFunc.md#nonexported1stchar)
-- [params](AIPromptsFunc.md#params)
-- [result](AIPromptsFunc.md#result)
-- [scope](AIPromptsFunc.md#scope)
-- [setup](AIPromptsFunc.md#setup)
-- [stream](AIPromptsFunc.md#stream)
-- [tags](AIPromptsFunc.md#tags)
-- [SpecialRpcMethodNames](AIPromptsFunc.md#specialrpcmethodnames)
-- [dataPath](AIPromptsFunc.md#datapath)
-- [items](AIPromptsFunc.md#items)
-
-### Accessors
-
-- [SpecialRpcMethodNames](AIPromptsFunc.md#specialrpcmethodnames-1)
-- [apiRoot](AIPromptsFunc.md#apiroot-1)
-
-### Methods
-
-- [$count](AIPromptsFunc.md#$count)
-- [$createCollection](AIPromptsFunc.md#$createcollection)
-- [$deleteCollection](AIPromptsFunc.md#$deletecollection)
-- [$getDefaultPrompt](AIPromptsFunc.md#$getdefaultprompt)
-- [$getParameters](AIPromptsFunc.md#$getparameters)
-- [$getPrompt](AIPromptsFunc.md#$getprompt)
-- [$search](AIPromptsFunc.md#$search)
-- [$searchEx](AIPromptsFunc.md#$searchex)
-- [\_getPrompt](AIPromptsFunc.md#_getprompt)
-- [arr2ObjParams](AIPromptsFunc.md#arr2objparams)
-- [assign](AIPromptsFunc.md#assign)
-- [assignProperty](AIPromptsFunc.md#assignproperty)
-- [assignPropertyTo](AIPromptsFunc.md#assignpropertyto)
-- [assignTo](AIPromptsFunc.md#assignto)
-- [cast](AIPromptsFunc.md#cast)
-- [castParams](AIPromptsFunc.md#castparams)
-- [clone](AIPromptsFunc.md#clone)
-- [cloneTo](AIPromptsFunc.md#cloneto)
-- [defineProperties](AIPromptsFunc.md#defineproperties)
-- [delete](AIPromptsFunc.md#delete)
-- [exportTo](AIPromptsFunc.md#exportto)
-- [func](AIPromptsFunc.md#func)
-- [get](AIPromptsFunc.md#get)
-- [getDocsFromDir](AIPromptsFunc.md#getdocsfromdir)
-- [getFunc](AIPromptsFunc.md#getfunc)
-- [getFuncWithPos](AIPromptsFunc.md#getfuncwithpos)
-- [getMethodFromParams](AIPromptsFunc.md#getmethodfromparams)
-- [getProperties](AIPromptsFunc.md#getproperties)
-- [hasAsyncFeature](AIPromptsFunc.md#hasasyncfeature)
-- [hasOwnProperty](AIPromptsFunc.md#hasownproperty)
-- [initDB](AIPromptsFunc.md#initdb)
-- [initData](AIPromptsFunc.md#initdata)
-- [initDataFromDir](AIPromptsFunc.md#initdatafromdir)
-- [initRpcMethods](AIPromptsFunc.md#initrpcmethods)
-- [initialize](AIPromptsFunc.md#initialize)
-- [isPrototypeOf](AIPromptsFunc.md#isprototypeof)
-- [isSame](AIPromptsFunc.md#issame)
-- [isStream](AIPromptsFunc.md#isstream)
-- [list](AIPromptsFunc.md#list)
-- [mergeTo](AIPromptsFunc.md#mergeto)
-- [obj2ArrParams](AIPromptsFunc.md#obj2arrparams)
-- [post](AIPromptsFunc.md#post)
-- [propertyIsEnumerable](AIPromptsFunc.md#propertyisenumerable)
-- [put](AIPromptsFunc.md#put)
-- [register](AIPromptsFunc.md#register)
-- [run](AIPromptsFunc.md#run)
-- [runAs](AIPromptsFunc.md#runas)
-- [runAsSync](AIPromptsFunc.md#runassync)
-- [runSync](AIPromptsFunc.md#runsync)
-- [runWithPos](AIPromptsFunc.md#runwithpos)
-- [runWithPosAs](AIPromptsFunc.md#runwithposas)
-- [runWithPosAsSync](AIPromptsFunc.md#runwithposassync)
-- [runWithPosSync](AIPromptsFunc.md#runwithpossync)
-- [toJSON](AIPromptsFunc.md#tojson)
-- [toLocaleString](AIPromptsFunc.md#tolocalestring)
-- [toObject](AIPromptsFunc.md#toobject)
-- [toString](AIPromptsFunc.md#tostring)
-- [unregister](AIPromptsFunc.md#unregister)
-- [updateDataFromDir](AIPromptsFunc.md#updatedatafromdir)
-- [valueOf](AIPromptsFunc.md#valueof)
-- [assign](AIPromptsFunc.md#assign-1)
-- [create](AIPromptsFunc.md#create)
-- [defineProperties](AIPromptsFunc.md#defineproperties-1)
-- [defineProperty](AIPromptsFunc.md#defineproperty)
-- [entries](AIPromptsFunc.md#entries)
-- [freeze](AIPromptsFunc.md#freeze)
-- [fromEntries](AIPromptsFunc.md#fromentries)
-- [get](AIPromptsFunc.md#get-1)
-- [getAllByTag](AIPromptsFunc.md#getallbytag)
-- [getByTag](AIPromptsFunc.md#getbytag)
-- [getFunc](AIPromptsFunc.md#getfunc-1)
-- [getFuncWithPos](AIPromptsFunc.md#getfuncwithpos-1)
-- [getOwnPropertyDescriptor](AIPromptsFunc.md#getownpropertydescriptor)
-- [getOwnPropertyDescriptors](AIPromptsFunc.md#getownpropertydescriptors)
-- [getOwnPropertyNames](AIPromptsFunc.md#getownpropertynames)
-- [getOwnPropertySymbols](AIPromptsFunc.md#getownpropertysymbols)
-- [getProperties](AIPromptsFunc.md#getproperties-1)
-- [getPrototypeOf](AIPromptsFunc.md#getprototypeof)
-- [hasAsyncFeature](AIPromptsFunc.md#hasasyncfeature-1)
-- [hasOwn](AIPromptsFunc.md#hasown)
-- [is](AIPromptsFunc.md#is)
-- [isExtensible](AIPromptsFunc.md#isextensible)
-- [isFrozen](AIPromptsFunc.md#isfrozen)
-- [isSealed](AIPromptsFunc.md#issealed)
-- [keys](AIPromptsFunc.md#keys)
-- [list](AIPromptsFunc.md#list-1)
-- [preventExtensions](AIPromptsFunc.md#preventextensions)
-- [register](AIPromptsFunc.md#register-1)
-- [run](AIPromptsFunc.md#run-1)
-- [runSync](AIPromptsFunc.md#runsync-1)
-- [runWithPos](AIPromptsFunc.md#runwithpos-1)
-- [runWithPosSync](AIPromptsFunc.md#runwithpossync-1)
-- [seal](AIPromptsFunc.md#seal)
-- [setApiRoot](AIPromptsFunc.md#setapiroot)
-- [setPrototypeOf](AIPromptsFunc.md#setprototypeof)
-- [toJSON](AIPromptsFunc.md#tojson-1)
-- [unregister](AIPromptsFunc.md#unregister-1)
-- [values](AIPromptsFunc.md#values)
-
 ## Constructors
 
-### constructor
+### new AIPromptsFunc()
 
-• **new AIPromptsFunc**(`name`, `options?`): [`AIPromptsFunc`](AIPromptsFunc.md)
+> **new AIPromptsFunc**(`name`, `options`?): [`AIPromptsFunc`](AIPromptsFunc.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` \| `Function` \| `FuncItem` |
-| `options?` | `any` |
+• **name**: `string` \| `Function` \| `FuncItem`
+
+• **options?**: `any`
 
 #### Returns
 
@@ -166,7 +28,7 @@
 
 #### Inherited from
 
-KVSqliteResFunc\<AIPromptsFuncParams\>.constructor
+`KVSqliteResFunc<AIPromptsFuncParams>.constructor`
 
 #### Defined in
 
@@ -176,371 +38,367 @@ packages/ai-tool-sqlite/dist/index.d.ts:56
 
 ### $attributes
 
-• **$attributes**: `Properties`
+> **$attributes**: `Properties`
 
 #### Inherited from
 
-KVSqliteResFunc.$attributes
+`KVSqliteResFunc.$attributes`
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/advance.d.ts:5
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/advance.d.ts:5
 
-___
+***
 
 ### action
 
-• **action**: ``"get"`` \| ``"list"`` \| ``"put"`` \| ``"post"`` \| ``"delete"`` \| ``"patch"`` \| ``"res"``
+> **action**: `"get"` \| `"list"` \| `"put"` \| `"post"` \| `"delete"` \| `"patch"` \| `"res"`
 
 #### Inherited from
 
-KVSqliteResFunc.action
+`KVSqliteResFunc.action`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:431
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:431
 
-___
+***
 
-### allowExportFunc
+### allowExportFunc?
 
-• `Optional` **allowExportFunc**: `boolean`
+> `optional` **allowExportFunc**: `boolean`
 
 #### Inherited from
 
-KVSqliteResFunc.allowExportFunc
+`KVSqliteResFunc.allowExportFunc`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:276
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:276
 
-___
+***
 
-### apiRoot
+### apiRoot?
 
-• `Optional` **apiRoot**: `string`
+> `optional` **apiRoot**: `string`
 
 #### Inherited from
 
-KVSqliteResFunc.apiRoot
+`KVSqliteResFunc.apiRoot`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:160
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:160
 
-___
+***
 
 ### constructor
 
-• **constructor**: `Function`
+> **constructor**: `Function`
 
 The initial value of Object.prototype.constructor is the standard built-in Object constructor.
 
 #### Inherited from
 
-KVSqliteResFunc.constructor
+`KVSqliteResFunc.constructor`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:125
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:125
 
-___
+***
 
 ### db
 
-• **db**: `KVSqlite`
+> **db**: `KVSqlite`
 
 #### Inherited from
 
-KVSqliteResFunc.db
+`KVSqliteResFunc.db`
 
 #### Defined in
 
 packages/ai-tool-sqlite/dist/index.d.ts:54
 
-___
+***
 
 ### dbPath
 
-• **dbPath**: `undefined` \| `string`
+> **dbPath**: `undefined` \| `string`
 
 #### Inherited from
 
-KVSqliteResFunc.dbPath
+`KVSqliteResFunc.dbPath`
 
 #### Defined in
 
 packages/ai-tool-sqlite/dist/index.d.ts:52
 
-___
+***
 
 ### defaultOptions
 
-• **defaultOptions**: `Object`
+> **defaultOptions**: `object`
 
 The default options for export and assign
 
-#### Type declaration
+#### assign?
 
-| Name | Type |
-| :------ | :------ |
-| `assign?` | `IMergeOptions` |
-| `export?` | `IMergeOptions` |
+> `optional` **assign**: `IMergeOptions`
 
-#### Inherited from
+#### export?
 
-KVSqliteResFunc.defaultOptions
-
-#### Defined in
-
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:74
-
-___
-
-### fetchOptions
-
-• `Optional` **fetchOptions**: `any`
+> `optional` **export**: `IMergeOptions`
 
 #### Inherited from
 
-KVSqliteResFunc.fetchOptions
+`KVSqliteResFunc.defaultOptions`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:162
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:74
 
-___
+***
+
+### fetchOptions?
+
+> `optional` **fetchOptions**: `any`
+
+#### Inherited from
+
+`KVSqliteResFunc.fetchOptions`
+
+#### Defined in
+
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:162
+
+***
 
 ### initDir
 
-• **initDir**: `undefined` \| `string`
+> **initDir**: `undefined` \| `string`
 
 #### Inherited from
 
-KVSqliteResFunc.initDir
+`KVSqliteResFunc.initDir`
 
 #### Defined in
 
 packages/ai-tool-sqlite/dist/index.d.ts:53
 
-___
+***
 
 ### initingData
 
-• **initingData**: `undefined` \| `boolean`
+> **initingData**: `undefined` \| `boolean`
 
 #### Inherited from
 
-KVSqliteResFunc.initingData
+`KVSqliteResFunc.initingData`
 
 #### Defined in
 
 packages/ai-tool-sqlite/dist/index.d.ts:55
 
-___
+***
 
-### isApi
+### isApi?
 
-• `Optional` **isApi**: `boolean`
+> `optional` **isApi**: `boolean`
 
 #### Inherited from
 
-KVSqliteResFunc.isApi
+`KVSqliteResFunc.isApi`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:42
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:42
 
-___
+***
 
 ### methods
 
-• **methods**: `string`[]
+> **methods**: `string`[]
 
 #### Inherited from
 
-KVSqliteResFunc.methods
+`KVSqliteResFunc.methods`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:404
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:404
 
-___
+***
 
-### name
+### name?
 
-• `Optional` **name**: `string`
+> `optional` **name**: `string`
 
 #### Inherited from
 
-KVSqliteResFunc.name
+`KVSqliteResFunc.name`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:36
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:36
 
-___
+***
 
 ### nonExported1stChar
 
-• **nonExported1stChar**: `string`
+> **nonExported1stChar**: `string`
 
 the property with the default prefix '$' will not be exported.
 
 #### Inherited from
 
-KVSqliteResFunc.nonExported1stChar
+`KVSqliteResFunc.nonExported1stChar`
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:78
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:78
 
-___
+***
 
 ### params
 
-• **params**: `FuncParams`
+> **params**: `FuncParams`
 
 #### Inherited from
 
-KVSqliteResFunc.params
+`KVSqliteResFunc.params`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:432
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:432
 
-___
+***
 
-### result
+### result?
 
-• `Optional` **result**: `string`
+> `optional` **result**: `string`
 
 #### Inherited from
 
-KVSqliteResFunc.result
+`KVSqliteResFunc.result`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:38
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:38
 
-___
+***
 
-### scope
+### scope?
 
-• `Optional` **scope**: `any`
+> `optional` **scope**: `any`
 
 #### Inherited from
 
-KVSqliteResFunc.scope
+`KVSqliteResFunc.scope`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:39
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:39
 
-___
+***
 
-### setup
+### setup()?
 
-• `Optional` **setup**: (`this`: `ToolFunc`, `options?`: `FuncItem`) => `void`
+> `optional` **setup**: (`this`, `options`?) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`this`, `options?`): `void`
+• **this**: `ToolFunc`
 
-##### Parameters
+• **options?**: `FuncItem`
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `ToolFunc` |
-| `options?` | `FuncItem` |
-
-##### Returns
+#### Returns
 
 `void`
 
 #### Inherited from
 
-KVSqliteResFunc.setup
+`KVSqliteResFunc.setup`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:41
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:41
 
-___
+***
 
-### stream
+### stream?
 
-• `Optional` **stream**: `boolean`
+> `optional` **stream**: `boolean`
 
 #### Inherited from
 
-KVSqliteResFunc.stream
+`KVSqliteResFunc.stream`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:43
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:43
 
-___
+***
 
-### tags
+### tags?
 
-• `Optional` **tags**: `string` \| `string`[]
+> `optional` **tags**: `string` \| `string`[]
 
 #### Inherited from
 
-KVSqliteResFunc.tags
+`KVSqliteResFunc.tags`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:40
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:40
 
-___
-
-### SpecialRpcMethodNames
-
-▪ `Static` **SpecialRpcMethodNames**: `any`
-
-#### Inherited from
-
-KVSqliteResFunc.SpecialRpcMethodNames
-
-#### Defined in
-
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:430
-
-___
+***
 
 ### dataPath
 
-▪ `Static` **dataPath**: `string`
+> `static` **dataPath**: `string`
 
 #### Inherited from
 
-KVSqliteResFunc.dataPath
+`KVSqliteResFunc.dataPath`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:64
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:64
 
-___
+***
 
 ### items
 
-▪ `Static` **items**: `Funcs`
+> `static` **items**: `Funcs`
 
 #### Inherited from
 
-KVSqliteResFunc.items
+`KVSqliteResFunc.items`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:63
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:63
+
+***
+
+### SpecialRpcMethodNames
+
+> `static` **SpecialRpcMethodNames**: `any`
+
+#### Inherited from
+
+`KVSqliteResFunc.SpecialRpcMethodNames`
+
+#### Defined in
+
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:430
 
 ## Accessors
 
 ### SpecialRpcMethodNames
 
-• `get` **SpecialRpcMethodNames**(): `any`
+> `get` **SpecialRpcMethodNames**(): `any`
 
 #### Returns
 
@@ -548,17 +406,17 @@ packages/ai-tool/dist/index-nP9lSU6E.d.ts:63
 
 #### Inherited from
 
-KVSqliteResFunc.SpecialRpcMethodNames
+`KVSqliteResFunc.SpecialRpcMethodNames`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:409
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:409
 
-___
+***
 
 ### apiRoot
 
-• `get` **apiRoot**(): `undefined` \| `string`
+> `get` `static` **apiRoot**(): `undefined` \| `string`
 
 #### Returns
 
@@ -566,23 +424,41 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.apiRoot
+`KVSqliteResFunc.apiRoot`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:283
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:283
 
 ## Methods
 
-### $count
+### \_getPrompt()
 
-▸ **$count**(`options?`): `number`
+> **\_getPrompt**(`modelName`, `type`?): `false` \| [`AIPromptResult`](../interfaces/AIPromptResult.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | `KVSqliteResFuncParams` |
+• **modelName**: `string`
+
+• **type?**: [`AIPromptType`](../type-aliases/AIPromptType.md)
+
+#### Returns
+
+`false` \| [`AIPromptResult`](../interfaces/AIPromptResult.md)
+
+#### Defined in
+
+[packages/ai-tool-prompt/src/prompts.ts:36](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompts.ts#L36)
+
+***
+
+### $count()
+
+> **$count**(`options`?): `number`
+
+#### Parameters
+
+• **options?**: `KVSqliteResFuncParams`
 
 #### Returns
 
@@ -590,23 +466,21 @@ packages/ai-tool/dist/index-nP9lSU6E.d.ts:283
 
 #### Inherited from
 
-KVSqliteResFunc.$count
+`KVSqliteResFunc.$count`
 
 #### Defined in
 
 packages/ai-tool-sqlite/dist/index.d.ts:69
 
-___
+***
 
-### $createCollection
+### $createCollection()
 
-▸ **$createCollection**(`«destructured»`): `boolean`
+> **$createCollection**(`__namedParameters`): `boolean`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `«destructured»` | `KVSqliteResFuncParams` |
+• **\_\_namedParameters**: `KVSqliteResFuncParams`
 
 #### Returns
 
@@ -614,23 +488,21 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.$createCollection
+`KVSqliteResFunc.$createCollection`
 
 #### Defined in
 
 packages/ai-tool-sqlite/dist/index.d.ts:70
 
-___
+***
 
-### $deleteCollection
+### $deleteCollection()
 
-▸ **$deleteCollection**(`«destructured»`): `boolean`
+> **$deleteCollection**(`__namedParameters`): `boolean`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `«destructured»` | `KVSqliteResFuncParams` |
+• **\_\_namedParameters**: `KVSqliteResFuncParams`
 
 #### Returns
 
@@ -638,23 +510,21 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.$deleteCollection
+`KVSqliteResFunc.$deleteCollection`
 
 #### Defined in
 
 packages/ai-tool-sqlite/dist/index.d.ts:71
 
-___
+***
 
-### $getDefaultPrompt
+### $getDefaultPrompt()
 
-▸ **$getDefaultPrompt**(`type?`): [`AIPromptResult`](../interfaces/AIPromptResult.md)
+> **$getDefaultPrompt**(`type`?): [`AIPromptResult`](../interfaces/AIPromptResult.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `type?` | `string` |
+• **type?**: `string`
 
 #### Returns
 
@@ -662,19 +532,17 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompts.ts:74](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompts.ts#L74)
+[packages/ai-tool-prompt/src/prompts.ts:74](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompts.ts#L74)
 
-___
+***
 
-### $getParameters
+### $getParameters()
 
-▸ **$getParameters**(`«destructured»`): `any`
+> **$getParameters**(`__namedParameters`): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `«destructured»` | `AIPromptsFuncParams` |
+• **\_\_namedParameters**: `AIPromptsFuncParams`
 
 #### Returns
 
@@ -682,39 +550,35 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompts.ts:114](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompts.ts#L114)
+[packages/ai-tool-prompt/src/prompts.ts:114](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompts.ts#L114)
 
-___
+***
 
-### $getPrompt
+### $getPrompt()
 
-▸ **$getPrompt**(`«destructured»`): ``false`` \| [`AIPromptResult`](../interfaces/AIPromptResult.md)
+> **$getPrompt**(`__namedParameters`): `false` \| [`AIPromptResult`](../interfaces/AIPromptResult.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `«destructured»` | `AIPromptsFuncParams` |
+• **\_\_namedParameters**: `AIPromptsFuncParams`
 
 #### Returns
 
-``false`` \| [`AIPromptResult`](../interfaces/AIPromptResult.md)
+`false` \| [`AIPromptResult`](../interfaces/AIPromptResult.md)
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompts.ts:106](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompts.ts#L106)
+[packages/ai-tool-prompt/src/prompts.ts:106](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompts.ts#L106)
 
-___
+***
 
-### $search
+### $search()
 
-▸ **$search**(`options?`): `AIPromptsFuncParams`[]
+> **$search**(`options`?): `AIPromptsFuncParams`[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | `KVSqliteResFuncParams` |
+• **options?**: `KVSqliteResFuncParams`
 
 #### Returns
 
@@ -722,23 +586,21 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.$search
+`KVSqliteResFunc.$search`
 
 #### Defined in
 
 packages/ai-tool-sqlite/dist/index.d.ts:68
 
-___
+***
 
-### $searchEx
+### $searchEx()
 
-▸ **$searchEx**(`options?`): `AIPromptsFuncParams`[]
+> **$searchEx**(`options`?): `AIPromptsFuncParams`[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | `KVSqliteResFuncParams` |
+• **options?**: `KVSqliteResFuncParams`
 
 #### Returns
 
@@ -746,44 +608,21 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.$searchEx
+`KVSqliteResFunc.$searchEx`
 
 #### Defined in
 
 packages/ai-tool-sqlite/dist/index.d.ts:67
 
-___
+***
 
-### \_getPrompt
+### arr2ObjParams()
 
-▸ **_getPrompt**(`modelName`, `type?`): ``false`` \| [`AIPromptResult`](../interfaces/AIPromptResult.md)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `modelName` | `string` |
-| `type?` | [`AIPromptType`](../modules.md#aiprompttype) |
-
-#### Returns
-
-``false`` \| [`AIPromptResult`](../interfaces/AIPromptResult.md)
-
-#### Defined in
-
-[packages/ai-tool-prompt/src/prompts.ts:36](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompts.ts#L36)
-
-___
-
-### arr2ObjParams
-
-▸ **arr2ObjParams**(`params`): `any`[]
+> **arr2ObjParams**(`params`): `any`[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params` | `any`[] |
+• **params**: `any`[]
 
 #### Returns
 
@@ -791,26 +630,27 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.arr2ObjParams
+`KVSqliteResFunc.arr2ObjParams`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:83
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:83
 
-___
+***
 
-### assign
+### assign()
 
-▸ **assign**(`src`, `options?`): `this`
+> **assign**(`src`, `options`?): `this`
 
 Assign the values from the src object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `src` | `any` | the source object |
-| `options?` | `IMergeOptions` | - |
+• **src**: `any`
+
+the source object
+
+• **options?**: `IMergeOptions`
 
 #### Returns
 
@@ -820,29 +660,39 @@ this object
 
 #### Inherited from
 
-KVSqliteResFunc.assign
+`KVSqliteResFunc.assign`
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:106
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:106
 
-___
+***
 
-### assignProperty
+### assignProperty()
 
-▸ **assignProperty**(`src`, `name`, `value`, `attrs?`, `options?`): `void`
+> **assignProperty**(`src`, `name`, `value`, `attrs`?, `options`?): `void`
 
 Assign a property of src to this object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `src` | `any` | the src object |
-| `name` | `string` | the property name to assign |
-| `value` | `any` | the property value to assign |
-| `attrs?` | `any` | the attributes object |
-| `options?` | `IMergeOptions` |  |
+• **src**: `any`
+
+the src object
+
+• **name**: `string`
+
+the property name to assign
+
+• **value**: `any`
+
+the property value to assign
+
+• **attrs?**: `any`
+
+the attributes object
+
+• **options?**: `IMergeOptions`
 
 #### Returns
 
@@ -850,59 +700,71 @@ Assign a property of src to this object.
 
 #### Inherited from
 
-KVSqliteResFunc.assignProperty
+`KVSqliteResFunc.assignProperty`
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:117
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:117
 
-___
+***
 
-### assignPropertyTo
+### assignPropertyTo()
 
-▸ **assignPropertyTo**(`dest`, `src`, `name`, `value`, `attrs?`, `options?`): `void`
+> `abstract` **assignPropertyTo**(`dest`, `src`, `name`, `value`, `attrs`?, `options`?): `void`
 
 Assign the property value from the src to destination object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `dest` | `any` | The destination object |
-| `src` | `any` | The src object |
-| `name` | `string` | The property name |
-| `value` | `any` | The property value |
-| `attrs?` | `any` | The attributes object of the property |
-| `options?` | `IMergeOptions` |  |
+• **dest**: `any`
+
+The destination object
+
+• **src**: `any`
+
+The src object
+
+• **name**: `string`
+
+The property name
+
+• **value**: `any`
+
+The property value
+
+• **attrs?**: `any`
+
+The attributes object of the property
+
+• **options?**: `IMergeOptions`
 
 #### Returns
 
 `void`
 
-**`Abstract`**
-
 #### Inherited from
 
-KVSqliteResFunc.assignPropertyTo
+`KVSqliteResFunc.assignPropertyTo`
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:131
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:131
 
-___
+***
 
-### assignTo
+### assignTo()
 
-▸ **assignTo**(`dest?`, `options?`): `any`
+> **assignTo**(`dest`?, `options`?): `any`
 
 Assign this attributes to the dest object
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `dest?` | `any` | the destination object |
-| `options?` | `IMergeOptions` | - |
+• **dest?**: `any`
+
+the destination object
+
+• **options?**: `IMergeOptions`
 
 #### Returns
 
@@ -912,24 +774,23 @@ the dest object
 
 #### Inherited from
 
-KVSqliteResFunc.assignTo
+`KVSqliteResFunc.assignTo`
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:191
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:191
 
-___
+***
 
-### cast
+### cast()
 
-▸ **cast**(`key`, `value`): `any`
+> **cast**(`key`, `value`): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `key` | `string` |
-| `value` | `any` |
+• **key**: `string`
+
+• **value**: `any`
 
 #### Returns
 
@@ -937,23 +798,21 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.cast
+`KVSqliteResFunc.cast`
 
 #### Defined in
 
 packages/ai-tool-sqlite/dist/index.d.ts:61
 
-___
+***
 
-### castParams
+### castParams()
 
-▸ **castParams**(`params`): `RpcMethodsServerFuncParams`
+> **castParams**(`params`): `RpcMethodsServerFuncParams`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params` | `RpcMethodsServerFuncParams` |
+• **params**: `RpcMethodsServerFuncParams`
 
 #### Returns
 
@@ -961,25 +820,23 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.castParams
+`KVSqliteResFunc.castParams`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:435
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:435
 
-___
+***
 
-### clone
+### clone()
 
-▸ **clone**(`options?`): `any`
+> **clone**(`options`?): `any`
 
 Create a new object with the same values of attributes.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | `IMergeOptions` |
+• **options?**: `IMergeOptions`
 
 #### Returns
 
@@ -989,26 +846,27 @@ the new object
 
 #### Inherited from
 
-KVSqliteResFunc.clone
+`KVSqliteResFunc.clone`
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:155
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:155
 
-___
+***
 
-### cloneTo
+### cloneTo()
 
-▸ **cloneTo**(`dest`, `options?`): `any`
+> **cloneTo**(`dest`, `options`?): `any`
 
 Create and assign the values to the destination object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `dest` | `any` | the destination object |
-| `options?` | `IMergeOptions` |  |
+• **dest**: `any`
+
+the destination object
+
+• **options?**: `IMergeOptions`
 
 #### Returns
 
@@ -1018,51 +876,47 @@ the new dest object
 
 #### Inherited from
 
-KVSqliteResFunc.cloneTo
+`KVSqliteResFunc.cloneTo`
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:148
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:148
 
-___
+***
 
-### defineProperties
+### defineProperties()
 
-▸ **defineProperties**(`aProperties`): `any`
+> `abstract` **defineProperties**(`aProperties`): `any`
 
 Define the attributes of this object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `aProperties` | `SimplePropDescriptors` | the defined attributes of the object |
+• **aProperties**: `SimplePropDescriptors`
+
+the defined attributes of the object
 
 #### Returns
 
 `any`
 
-**`Abstract`**
-
 #### Inherited from
 
-KVSqliteResFunc.defineProperties
+`KVSqliteResFunc.defineProperties`
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:89
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:89
 
-___
+***
 
-### delete
+### delete()
 
-▸ **delete**(`options`): `SqliteRunResult` \| `SqliteRunResult`[]
+> **delete**(`options`): `SqliteRunResult` \| `SqliteRunResult`[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | `KVSqliteResFuncParams` |
+• **options**: `KVSqliteResFuncParams`
 
 #### Returns
 
@@ -1070,26 +924,27 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.delete
+`KVSqliteResFunc.delete`
 
 #### Defined in
 
 packages/ai-tool-sqlite/dist/index.d.ts:66
 
-___
+***
 
-### exportTo
+### exportTo()
 
-▸ **exportTo**(`dest`, `options?`): `any`
+> **exportTo**(`dest`, `options`?): `any`
 
 Export attributes to the dest json object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `dest` | `any` | the destination object |
-| `options?` | `IExportOptions` | - |
+• **dest**: `any`
+
+the destination object
+
+• **options?**: `IExportOptions`
 
 #### Returns
 
@@ -1099,23 +954,21 @@ the dest object.
 
 #### Inherited from
 
-KVSqliteResFunc.exportTo
+`KVSqliteResFunc.exportTo`
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:173
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:173
 
-___
+***
 
-### func
+### func()
 
-▸ **func**(`params`): `any`
+> **func**(`params`): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params` | `RpcMethodsServerFuncParams` |
+• **params**: `RpcMethodsServerFuncParams`
 
 #### Returns
 
@@ -1123,23 +976,21 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.func
+`KVSqliteResFunc.func`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:415
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:415
 
-___
+***
 
-### get
+### get()
 
-▸ **get**(`params`): `AIPromptsFuncParams`
+> **get**(`params`): `AIPromptsFuncParams`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params` | `KVSqliteResFuncParams` |
+• **params**: `KVSqliteResFuncParams`
 
 #### Returns
 
@@ -1147,23 +998,21 @@ ___
 
 #### Overrides
 
-KVSqliteResFunc.get
+`KVSqliteResFunc.get`
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompts.ts:63](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompts.ts#L63)
+[packages/ai-tool-prompt/src/prompts.ts:63](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompts.ts#L63)
 
-___
+***
 
-### getDocsFromDir
+### getDocsFromDir()
 
-▸ **getDocsFromDir**(`dir`): `Promise`\<`any`[]\>
+> **getDocsFromDir**(`dir`): `Promise`\<`any`[]\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `dir` | `string` |
+• **dir**: `string`
 
 #### Returns
 
@@ -1171,23 +1020,21 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.getDocsFromDir
+`KVSqliteResFunc.getDocsFromDir`
 
 #### Defined in
 
 packages/ai-tool-sqlite/dist/index.d.ts:59
 
-___
+***
 
-### getFunc
+### getFunc()
 
-▸ **getFunc**(`name?`): `any`
+> **getFunc**(`name`?): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name?` | `string` |
+• **name?**: `string`
 
 #### Returns
 
@@ -1195,23 +1042,21 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.getFunc
+`KVSqliteResFunc.getFunc`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:89
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:89
 
-___
+***
 
-### getFuncWithPos
+### getFuncWithPos()
 
-▸ **getFuncWithPos**(`name?`): `any`
+> **getFuncWithPos**(`name`?): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name?` | `string` |
+• **name?**: `string`
 
 #### Returns
 
@@ -1219,23 +1064,21 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.getFuncWithPos
+`KVSqliteResFunc.getFuncWithPos`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:94
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:94
 
-___
+***
 
-### getMethodFromParams
+### getMethodFromParams()
 
-▸ **getMethodFromParams**(`params`): `undefined` \| `string`
+> **getMethodFromParams**(`params`): `undefined` \| `string`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params` | `ResServerFuncParams` |
+• **params**: `ResServerFuncParams`
 
 #### Returns
 
@@ -1243,17 +1086,17 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.getMethodFromParams
+`KVSqliteResFunc.getMethodFromParams`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:434
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:434
 
-___
+***
 
-### getProperties
+### getProperties()
 
-▸ **getProperties**(): `PropDescriptors`
+> `abstract` **getProperties**(): `PropDescriptors`
 
 Get the defined attributes.
 
@@ -1263,27 +1106,23 @@ Get the defined attributes.
 
 the descriptors of properties object
 
-**`Abstract`**
-
 #### Inherited from
 
-KVSqliteResFunc.getProperties
+`KVSqliteResFunc.getProperties`
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:98
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:98
 
-___
+***
 
-### hasAsyncFeature
+### hasAsyncFeature()
 
-▸ **hasAsyncFeature**(`feature`): `boolean`
+> **hasAsyncFeature**(`feature`): `boolean`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `feature` | `AsyncFeatureBits` |
+• **feature**: `AsyncFeatureBits`
 
 #### Returns
 
@@ -1291,25 +1130,25 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.hasAsyncFeature
+`KVSqliteResFunc.hasAsyncFeature`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:95
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:95
 
-___
+***
 
-### hasOwnProperty
+### hasOwnProperty()
 
-▸ **hasOwnProperty**(`v`): `boolean`
+> **hasOwnProperty**(`v`): `boolean`
 
 Determines whether an object has a property with the specified name.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `v` | `PropertyKey` | A property name. |
+• **v**: `PropertyKey`
+
+A property name.
 
 #### Returns
 
@@ -1317,48 +1156,23 @@ Determines whether an object has a property with the specified name.
 
 #### Inherited from
 
-KVSqliteResFunc.hasOwnProperty
+`KVSqliteResFunc.hasOwnProperty`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:140
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:140
 
-___
+***
 
-### initDB
+### initData()
 
-▸ **initDB**(`db`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `db` | `KVSqlite` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-KVSqliteResFunc.initDB
-
-#### Defined in
-
-packages/ai-tool-sqlite/dist/index.d.ts:49
-
-___
-
-### initData
-
-▸ **initData**(`initDir?`, `collection?`): `Promise`\<`void`\>
+> **initData**(`initDir`?, `collection`?): `Promise`\<`void`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `initDir?` | `string` |
-| `collection?` | `string` |
+• **initDir?**: `string`
+
+• **collection?**: `string`
 
 #### Returns
 
@@ -1366,24 +1180,23 @@ ___
 
 #### Overrides
 
-KVSqliteResFunc.initData
+`KVSqliteResFunc.initData`
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompts.ts:29](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompts.ts#L29)
+[packages/ai-tool-prompt/src/prompts.ts:29](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompts.ts#L29)
 
-___
+***
 
-### initDataFromDir
+### initDataFromDir()
 
-▸ **initDataFromDir**(`dir`, `collection?`): `Promise`\<`void`\>
+> **initDataFromDir**(`dir`, `collection`?): `Promise`\<`void`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `dir` | `string` |
-| `collection?` | `string` |
+• **dir**: `string`
+
+• **collection?**: `string`
 
 #### Returns
 
@@ -1391,23 +1204,21 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.initDataFromDir
+`KVSqliteResFunc.initDataFromDir`
 
 #### Defined in
 
 packages/ai-tool-sqlite/dist/index.d.ts:58
 
-___
+***
 
-### initRpcMethods
+### initDB()
 
-▸ **initRpcMethods**(`methods?`): `void`
+> **initDB**(`db`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `methods?` | `string`[] |
+• **db**: `KVSqlite`
 
 #### Returns
 
@@ -1415,25 +1226,23 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.initRpcMethods
+`KVSqliteResFunc.initDB`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:410
+packages/ai-tool-sqlite/dist/index.d.ts:49
 
-___
+***
 
-### initialize
+### initialize()
 
-▸ **initialize**(`src?`): `this`
+> **initialize**(`src`?): `this`
 
 Initialize object and assign attribute values from src if src exists.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `src?` | `any` |
+• **src?**: `any`
 
 #### Returns
 
@@ -1443,25 +1252,47 @@ this object.
 
 #### Inherited from
 
-KVSqliteResFunc.initialize
+`KVSqliteResFunc.initialize`
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:139
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:139
 
-___
+***
 
-### isPrototypeOf
+### initRpcMethods()
 
-▸ **isPrototypeOf**(`v`): `boolean`
+> **initRpcMethods**(`methods`?): `void`
+
+#### Parameters
+
+• **methods?**: `string`[]
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+`KVSqliteResFunc.initRpcMethods`
+
+#### Defined in
+
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:410
+
+***
+
+### isPrototypeOf()
+
+> **isPrototypeOf**(`v`): `boolean`
 
 Determines whether an object exists in another object's prototype chain.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `v` | `Object` | Another object whose prototype chain is to be checked. |
+• **v**: `Object`
+
+Another object whose prototype chain is to be checked.
 
 #### Returns
 
@@ -1469,26 +1300,27 @@ Determines whether an object exists in another object's prototype chain.
 
 #### Inherited from
 
-KVSqliteResFunc.isPrototypeOf
+`KVSqliteResFunc.isPrototypeOf`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:146
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:146
 
-___
+***
 
-### isSame
+### isSame()
 
-▸ **isSame**(`src`, `options?`): `boolean`
+> **isSame**(`src`, `options`?): `boolean`
 
 Check the src object whether “equals” this object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `src` | `any` | The source object |
-| `options?` | `IMergeOptions` | - |
+• **src**: `any`
+
+The source object
+
+• **options?**: `IMergeOptions`
 
 #### Returns
 
@@ -1496,23 +1328,21 @@ Check the src object whether “equals” this object.
 
 #### Inherited from
 
-KVSqliteResFunc.isSame
+`KVSqliteResFunc.isSame`
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:200
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:200
 
-___
+***
 
-### isStream
+### isStream()
 
-▸ **isStream**(`params`): `undefined` \| `boolean`
+> **isStream**(`params`): `undefined` \| `boolean`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params` | `any` |
+• **params**: `any`
 
 #### Returns
 
@@ -1520,23 +1350,21 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.isStream
+`KVSqliteResFunc.isStream`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:96
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:96
 
-___
+***
 
-### list
+### list()
 
-▸ **list**(`options?`): `AIPromptsFuncParams`[]
+> **list**(`options`?): `AIPromptsFuncParams`[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | `KVSqliteResFuncParams` |
+• **options?**: `KVSqliteResFuncParams`
 
 #### Returns
 
@@ -1544,26 +1372,27 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.list
+`KVSqliteResFunc.list`
 
 #### Defined in
 
 packages/ai-tool-sqlite/dist/index.d.ts:62
 
-___
+***
 
-### mergeTo
+### mergeTo()
 
-▸ **mergeTo**(`dest`, `options?`): `any`
+> **mergeTo**(`dest`, `options`?): `any`
 
 Merge this attributes to dest object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `dest` | `any` | The destination object |
-| `options?` | `IMergeOptions` | - |
+• **dest**: `any`
+
+The destination object
+
+• **options?**: `IMergeOptions`
 
 #### Returns
 
@@ -1573,23 +1402,21 @@ the dest object.
 
 #### Inherited from
 
-KVSqliteResFunc.mergeTo
+`KVSqliteResFunc.mergeTo`
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:164
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:164
 
-___
+***
 
-### obj2ArrParams
+### obj2ArrParams()
 
-▸ **obj2ArrParams**(`params?`): `any`[]
+> **obj2ArrParams**(`params`?): `any`[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params?` | `any` |
+• **params?**: `any`
 
 #### Returns
 
@@ -1597,23 +1424,21 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.obj2ArrParams
+`KVSqliteResFunc.obj2ArrParams`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:84
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:84
 
-___
+***
 
-### post
+### post()
 
-▸ **post**(`model`): `SqliteRunResult` \| `SqliteRunResult`[] \| `Promise`\<`SqliteRunResult` \| `SqliteRunResult`[]\>
+> **post**(`model`): `SqliteRunResult` \| `SqliteRunResult`[] \| `Promise`\<`SqliteRunResult` \| `SqliteRunResult`[]\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `model` | `KVSqliteResFuncParams` |
+• **model**: `KVSqliteResFuncParams`
 
 #### Returns
 
@@ -1621,25 +1446,25 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.post
+`KVSqliteResFunc.post`
 
 #### Defined in
 
 packages/ai-tool-sqlite/dist/index.d.ts:65
 
-___
+***
 
-### propertyIsEnumerable
+### propertyIsEnumerable()
 
-▸ **propertyIsEnumerable**(`v`): `boolean`
+> **propertyIsEnumerable**(`v`): `boolean`
 
 Determines whether a specified property is enumerable.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `v` | `PropertyKey` | A property name. |
+• **v**: `PropertyKey`
+
+A property name.
 
 #### Returns
 
@@ -1647,23 +1472,21 @@ Determines whether a specified property is enumerable.
 
 #### Inherited from
 
-KVSqliteResFunc.propertyIsEnumerable
+`KVSqliteResFunc.propertyIsEnumerable`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:152
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:152
 
-___
+***
 
-### put
+### put()
 
-▸ **put**(`model`): `SqliteRunResult` \| `Promise`\<`SqliteRunResult`\>
+> **put**(`model`): `SqliteRunResult` \| `Promise`\<`SqliteRunResult`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `model` | `KVSqliteResFuncParams` |
+• **model**: `KVSqliteResFuncParams`
 
 #### Returns
 
@@ -1671,17 +1494,17 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.put
+`KVSqliteResFunc.put`
 
 #### Defined in
 
 packages/ai-tool-sqlite/dist/index.d.ts:64
 
-___
+***
 
-### register
+### register()
 
-▸ **register**(): `boolean` \| `ToolFunc`
+> **register**(): `boolean` \| `ToolFunc`
 
 #### Returns
 
@@ -1689,23 +1512,21 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.register
+`KVSqliteResFunc.register`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:81
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:81
 
-___
+***
 
-### run
+### run()
 
-▸ **run**(`params?`): `Promise`\<`any`\>
+> **run**(`params`?): `Promise`\<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params?` | `any` |
+• **params?**: `any`
 
 #### Returns
 
@@ -1713,24 +1534,23 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.run
+`KVSqliteResFunc.run`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:86
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:86
 
-___
+***
 
-### runAs
+### runAs()
 
-▸ **runAs**(`name`, `params?`): `Promise`\<`any`\>
+> **runAs**(`name`, `params`?): `Promise`\<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `params?` | `any` |
+• **name**: `string`
+
+• **params?**: `any`
 
 #### Returns
 
@@ -1738,24 +1558,23 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.runAs
+`KVSqliteResFunc.runAs`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:87
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:87
 
-___
+***
 
-### runAsSync
+### runAsSync()
 
-▸ **runAsSync**(`name`, `params?`): `any`
+> **runAsSync**(`name`, `params`?): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `params?` | `any` |
+• **name**: `string`
+
+• **params?**: `any`
 
 #### Returns
 
@@ -1763,23 +1582,21 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.runAsSync
+`KVSqliteResFunc.runAsSync`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:88
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:88
 
-___
+***
 
-### runSync
+### runSync()
 
-▸ **runSync**(`params?`): `any`
+> **runSync**(`params`?): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params?` | `any` |
+• **params?**: `any`
 
 #### Returns
 
@@ -1787,23 +1604,21 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.runSync
+`KVSqliteResFunc.runSync`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:85
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:85
 
-___
+***
 
-### runWithPos
+### runWithPos()
 
-▸ **runWithPos**(`...params`): `Promise`\<`any`\>
+> **runWithPos**(...`params`): `Promise`\<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `...params` | `any`[] |
+• ...**params**: `any`[]
 
 #### Returns
 
@@ -1811,24 +1626,23 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.runWithPos
+`KVSqliteResFunc.runWithPos`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:92
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:92
 
-___
+***
 
-### runWithPosAs
+### runWithPosAs()
 
-▸ **runWithPosAs**(`name`, `...params`): `Promise`\<`any`\>
+> **runWithPosAs**(`name`, ...`params`): `Promise`\<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `...params` | `any`[] |
+• **name**: `string`
+
+• ...**params**: `any`[]
 
 #### Returns
 
@@ -1836,24 +1650,23 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.runWithPosAs
+`KVSqliteResFunc.runWithPosAs`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:93
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:93
 
-___
+***
 
-### runWithPosAsSync
+### runWithPosAsSync()
 
-▸ **runWithPosAsSync**(`name`, `...params`): `any`
+> **runWithPosAsSync**(`name`, ...`params`): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `...params` | `any`[] |
+• **name**: `string`
+
+• ...**params**: `any`[]
 
 #### Returns
 
@@ -1861,23 +1674,21 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.runWithPosAsSync
+`KVSqliteResFunc.runWithPosAsSync`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:91
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:91
 
-___
+***
 
-### runWithPosSync
+### runWithPosSync()
 
-▸ **runWithPosSync**(`...params`): `any`
+> **runWithPosSync**(...`params`): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `...params` | `any`[] |
+• ...**params**: `any`[]
 
 #### Returns
 
@@ -1885,17 +1696,17 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.runWithPosSync
+`KVSqliteResFunc.runWithPosSync`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:90
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:90
 
-___
+***
 
-### toJSON
+### toJSON()
 
-▸ **toJSON**(): `any`
+> **toJSON**(): `any`
 
 #### Returns
 
@@ -1903,17 +1714,17 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.toJSON
+`KVSqliteResFunc.toJSON`
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:182
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:182
 
-___
+***
 
-### toLocaleString
+### toLocaleString()
 
-▸ **toLocaleString**(): `string`
+> **toLocaleString**(): `string`
 
 Returns a date converted to a string using the current locale.
 
@@ -1923,25 +1734,23 @@ Returns a date converted to a string using the current locale.
 
 #### Inherited from
 
-KVSqliteResFunc.toLocaleString
+`KVSqliteResFunc.toLocaleString`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:131
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:131
 
-___
+***
 
-### toObject
+### toObject()
 
-▸ **toObject**(`options?`): `any`
+> **toObject**(`options`?): `any`
 
 Convert the attributes to the json object
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | `any` |
+• **options?**: `any`
 
 #### Returns
 
@@ -1951,17 +1760,17 @@ the json object.
 
 #### Inherited from
 
-KVSqliteResFunc.toObject
+`KVSqliteResFunc.toObject`
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:181
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:181
 
-___
+***
 
-### toString
+### toString()
 
-▸ **toString**(): `string`
+> **toString**(): `string`
 
 Returns a string representation of an object.
 
@@ -1971,17 +1780,17 @@ Returns a string representation of an object.
 
 #### Inherited from
 
-KVSqliteResFunc.toString
+`KVSqliteResFunc.toString`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:128
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:128
 
-___
+***
 
-### unregister
+### unregister()
 
-▸ **unregister**(): `any`
+> **unregister**(): `any`
 
 #### Returns
 
@@ -1989,24 +1798,23 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.unregister
+`KVSqliteResFunc.unregister`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:82
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:82
 
-___
+***
 
-### updateDataFromDir
+### updateDataFromDir()
 
-▸ **updateDataFromDir**(`dir?`, `collection?`): `Promise`\<`undefined` \| `number`\>
+> **updateDataFromDir**(`dir`?, `collection`?): `Promise`\<`undefined` \| `number`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `dir?` | `string` |
-| `collection?` | `string` |
+• **dir?**: `string`
+
+• **collection?**: `string`
 
 #### Returns
 
@@ -2014,17 +1822,17 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.updateDataFromDir
+`KVSqliteResFunc.updateDataFromDir`
 
 #### Defined in
 
 packages/ai-tool-sqlite/dist/index.d.ts:60
 
-___
+***
 
-### valueOf
+### valueOf()
 
-▸ **valueOf**(): `Object`
+> **valueOf**(): `Object`
 
 Returns the primitive value of the specified object.
 
@@ -2034,175 +1842,239 @@ Returns the primitive value of the specified object.
 
 #### Inherited from
 
-KVSqliteResFunc.valueOf
+`KVSqliteResFunc.valueOf`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:134
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:134
 
-___
+***
 
-### assign
+### assign()
 
-▸ **assign**\<`T`, `U`\>(`target`, `source`): `T` & `U`
+#### assign(target, source)
+
+> `static` **assign**\<`T`, `U`\>(`target`, `source`): `T` & `U`
 
 Copy the values of all of the enumerable own properties from one or more source objects to a
 target object. Returns the target object.
 
-#### Type parameters
+##### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends `Object` |
-| `U` | `U` |
+• **T** *extends* `object`
 
-#### Parameters
+• **U**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `target` | `T` | The target object to copy to. |
-| `source` | `U` | The source object from which to copy properties. |
+##### Parameters
 
-#### Returns
+• **target**: `T`
+
+The target object to copy to.
+
+• **source**: `U`
+
+The source object from which to copy properties.
+
+##### Returns
 
 `T` & `U`
 
-#### Inherited from
+##### Inherited from
 
-KVSqliteResFunc.assign
+`KVSqliteResFunc.assign`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:284
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:286
 
-▸ **assign**\<`T`, `U`, `V`\>(`target`, `source1`, `source2`): `T` & `U` & `V`
+#### assign(target, source1, source2)
+
+> `static` **assign**\<`T`, `U`, `V`\>(`target`, `source1`, `source2`): `T` & `U` & `V`
 
 Copy the values of all of the enumerable own properties from one or more source objects to a
 target object. Returns the target object.
 
-#### Type parameters
+##### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends `Object` |
-| `U` | `U` |
-| `V` | `V` |
+• **T** *extends* `object`
 
-#### Parameters
+• **U**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `target` | `T` | The target object to copy to. |
-| `source1` | `U` | The first source object from which to copy properties. |
-| `source2` | `V` | The second source object from which to copy properties. |
+• **V**
 
-#### Returns
+##### Parameters
+
+• **target**: `T`
+
+The target object to copy to.
+
+• **source1**: `U`
+
+The first source object from which to copy properties.
+
+• **source2**: `V`
+
+The second source object from which to copy properties.
+
+##### Returns
 
 `T` & `U` & `V`
 
-#### Inherited from
+##### Inherited from
 
-KVSqliteResFunc.assign
+`KVSqliteResFunc.assign`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:293
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:295
 
-▸ **assign**\<`T`, `U`, `V`, `W`\>(`target`, `source1`, `source2`, `source3`): `T` & `U` & `V` & `W`
+#### assign(target, source1, source2, source3)
+
+> `static` **assign**\<`T`, `U`, `V`, `W`\>(`target`, `source1`, `source2`, `source3`): `T` & `U` & `V` & `W`
 
 Copy the values of all of the enumerable own properties from one or more source objects to a
 target object. Returns the target object.
 
-#### Type parameters
+##### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends `Object` |
-| `U` | `U` |
-| `V` | `V` |
-| `W` | `W` |
+• **T** *extends* `object`
 
-#### Parameters
+• **U**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `target` | `T` | The target object to copy to. |
-| `source1` | `U` | The first source object from which to copy properties. |
-| `source2` | `V` | The second source object from which to copy properties. |
-| `source3` | `W` | The third source object from which to copy properties. |
+• **V**
 
-#### Returns
+• **W**
+
+##### Parameters
+
+• **target**: `T`
+
+The target object to copy to.
+
+• **source1**: `U`
+
+The first source object from which to copy properties.
+
+• **source2**: `V`
+
+The second source object from which to copy properties.
+
+• **source3**: `W`
+
+The third source object from which to copy properties.
+
+##### Returns
 
 `T` & `U` & `V` & `W`
 
-#### Inherited from
+##### Inherited from
 
-KVSqliteResFunc.assign
+`KVSqliteResFunc.assign`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:303
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:305
 
-▸ **assign**(`target`, `...sources`): `any`
+#### assign(target, sources)
+
+> `static` **assign**(`target`, ...`sources`): `any`
 
 Copy the values of all of the enumerable own properties from one or more source objects to a
 target object. Returns the target object.
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `target` | `object` | The target object to copy to. |
-| `...sources` | `any`[] | One or more source objects from which to copy properties |
+• **target**: `object`
 
-#### Returns
+The target object to copy to.
+
+• ...**sources**: `any`[]
+
+One or more source objects from which to copy properties
+
+##### Returns
 
 `any`
 
-#### Inherited from
+##### Inherited from
 
-KVSqliteResFunc.assign
+`KVSqliteResFunc.assign`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:311
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:313
 
-___
+***
 
-### create
+### create()
 
-▸ **create**(`o`): `any`
+#### create(o)
+
+> `static` **create**(`o`): `any`
 
 Creates an object that has the specified prototype or that has null prototype.
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | ``null`` \| `object` | Object to use as a prototype. May be null. |
+• **o**: `null` \| `object`
 
-#### Returns
+Object to use as a prototype. May be null.
+
+##### Returns
 
 `any`
 
-#### Inherited from
+##### Inherited from
 
-KVSqliteResFunc.create
+`KVSqliteResFunc.create`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:188
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:188
 
-▸ **create**(`o`, `properties`): `any`
+#### create(o, properties)
+
+> `static` **create**(`o`, `properties`): `any`
 
 Creates an object that has the specified prototype, and that optionally contains specified properties.
 
+##### Parameters
+
+• **o**: `null` \| `object`
+
+Object to use as a prototype. May be null
+
+• **properties**: `PropertyDescriptorMap` & `ThisType`\<`any`\>
+
+JavaScript object that contains one or more property descriptors.
+
+##### Returns
+
+`any`
+
+##### Inherited from
+
+`KVSqliteResFunc.create`
+
+##### Defined in
+
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:195
+
+***
+
+### defineProperties()
+
+> `static` **defineProperties**(`aTarget`, `aProperties`, `recreate`?): `any`
+
+Adds one or more properties to an object, and/or modifies attributes of existing properties.
+
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | ``null`` \| `object` | Object to use as a prototype. May be null |
-| `properties` | `PropertyDescriptorMap` & `ThisType`\<`any`\> | JavaScript object that contains one or more property descriptors. |
+• **aTarget**: `any`
+
+• **aProperties**: `PropDescriptors`
+
+• **recreate?**: `boolean`
 
 #### Returns
 
@@ -2210,59 +2082,37 @@ Creates an object that has the specified prototype, and that optionally contains
 
 #### Inherited from
 
-KVSqliteResFunc.create
+`KVSqliteResFunc.defineProperties`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:195
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/advance.d.ts:11
 
-___
+***
 
-### defineProperties
+### defineProperty()
 
-▸ **defineProperties**(`aTarget`, `aProperties`, `recreate?`): `any`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `aTarget` | `any` |
-| `aProperties` | `PropDescriptors` |
-| `recreate?` | `boolean` |
-
-#### Returns
-
-`any`
-
-#### Inherited from
-
-KVSqliteResFunc.defineProperties
-
-#### Defined in
-
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/advance.d.ts:11
-
-___
-
-### defineProperty
-
-▸ **defineProperty**\<`T`\>(`o`, `p`, `attributes`): `T`
+> `static` **defineProperty**\<`T`\>(`o`, `p`, `attributes`): `T`
 
 Adds a property to an object, or modifies attributes of an existing property.
 
-#### Type parameters
+#### Type Parameters
 
-| Name |
-| :------ |
-| `T` |
+• **T**
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `T` | Object on which to add or modify the property. This can be a native JavaScript object (that is, a user-defined object or a built in object) or a DOM object. |
-| `p` | `PropertyKey` | The property name. |
-| `attributes` | `PropertyDescriptor` & `ThisType`\<`any`\> | Descriptor for the property. It can be for a data property or an accessor property. |
+• **o**: `T`
+
+Object on which to add or modify the property. This can be a native JavaScript object (that is, a user-defined object or a built in object) or a DOM object.
+
+• **p**: `PropertyKey`
+
+The property name.
+
+• **attributes**: `PropertyDescriptor` & `ThisType`\<`any`\>
+
+Descriptor for the property. It can be for a data property or an accessor property.
 
 #### Returns
 
@@ -2270,220 +2120,223 @@ Adds a property to an object, or modifies attributes of an existing property.
 
 #### Inherited from
 
-KVSqliteResFunc.defineProperty
+`KVSqliteResFunc.defineProperty`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:203
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:203
 
-___
+***
 
-### entries
+### entries()
 
-▸ **entries**\<`T`\>(`o`): [`string`, `T`][]
+#### entries(o)
 
-Returns an array of key/values of the enumerable properties of an object
+> `static` **entries**\<`T`\>(`o`): [`string`, `T`][]
 
-#### Type parameters
+Returns an array of key/values of the enumerable own properties of an object
 
-| Name |
-| :------ |
-| `T` |
+##### Type Parameters
 
-#### Parameters
+• **T**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | \{ `[s: string]`: `T`;  } \| `ArrayLike`\<`T`\> | Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object. |
+##### Parameters
 
-#### Returns
+• **o**: `object` \| `ArrayLike`\<`T`\>
+
+Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+
+##### Returns
 
 [`string`, `T`][]
 
-#### Inherited from
+##### Inherited from
 
-KVSqliteResFunc.entries
+`KVSqliteResFunc.entries`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2017.object.d.ts:36
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2017.object.d.ts:36
 
-▸ **entries**(`o`): [`string`, `any`][]
+#### entries(o)
 
-Returns an array of key/values of the enumerable properties of an object
+> `static` **entries**(`o`): [`string`, `any`][]
 
-#### Parameters
+Returns an array of key/values of the enumerable own properties of an object
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `Object` | Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object. |
+##### Parameters
 
-#### Returns
+• **o**
+
+Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+
+##### Returns
 
 [`string`, `any`][]
 
-#### Inherited from
+##### Inherited from
 
-KVSqliteResFunc.entries
+`KVSqliteResFunc.entries`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2017.object.d.ts:42
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2017.object.d.ts:42
 
-___
+***
 
-### freeze
+### freeze()
 
-▸ **freeze**\<`T`\>(`f`): `T`
+#### freeze(f)
+
+> `static` **freeze**\<`T`\>(`f`): `T`
 
 Prevents the modification of existing property attributes and values, and prevents the addition of new properties.
 
-#### Type parameters
+##### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends `Function` |
+• **T** *extends* `Function`
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `f` | `T` | Object on which to lock the attributes. |
+• **f**: `T`
 
-#### Returns
+Object on which to lock the attributes.
+
+##### Returns
 
 `T`
 
-#### Inherited from
+##### Inherited from
 
-KVSqliteResFunc.freeze
+`KVSqliteResFunc.freeze`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:222
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:222
 
-▸ **freeze**\<`T`, `U`\>(`o`): `Readonly`\<`T`\>
+#### freeze(o)
 
-Prevents the modification of existing property attributes and values, and prevents the addition of new properties.
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `T` | extends `Object` |
-| `U` | extends `string` \| `number` \| `bigint` \| `boolean` \| `symbol` |
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `T` | Object on which to lock the attributes. |
-
-#### Returns
-
-`Readonly`\<`T`\>
-
-#### Inherited from
-
-KVSqliteResFunc.freeze
-
-#### Defined in
-
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:228
-
-▸ **freeze**\<`T`\>(`o`): `Readonly`\<`T`\>
+> `static` **freeze**\<`T`, `U`\>(`o`): `Readonly`\<`T`\>
 
 Prevents the modification of existing property attributes and values, and prevents the addition of new properties.
 
-#### Type parameters
+##### Type Parameters
 
-| Name |
-| :------ |
-| `T` |
+• **T** *extends* `object`
 
-#### Parameters
+• **U** *extends* `string` \| `number` \| `bigint` \| `boolean` \| `symbol`
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `T` | Object on which to lock the attributes. |
+##### Parameters
 
-#### Returns
+• **o**: `T`
+
+Object on which to lock the attributes.
+
+##### Returns
 
 `Readonly`\<`T`\>
 
-#### Inherited from
+##### Inherited from
 
-KVSqliteResFunc.freeze
+`KVSqliteResFunc.freeze`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:234
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:228
 
-___
+#### freeze(o)
 
-### fromEntries
+> `static` **freeze**\<`T`\>(`o`): `Readonly`\<`T`\>
 
-▸ **fromEntries**\<`T`\>(`entries`): `Object`
+Prevents the modification of existing property attributes and values, and prevents the addition of new properties.
+
+##### Type Parameters
+
+• **T**
+
+##### Parameters
+
+• **o**: `T`
+
+Object on which to lock the attributes.
+
+##### Returns
+
+`Readonly`\<`T`\>
+
+##### Inherited from
+
+`KVSqliteResFunc.freeze`
+
+##### Defined in
+
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:234
+
+***
+
+### fromEntries()
+
+#### fromEntries(entries)
+
+> `static` **fromEntries**\<`T`\>(`entries`): `object`
 
 Returns an object created by key-value entries for properties and methods
 
-#### Type parameters
+##### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | `any` |
+• **T** = `any`
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `entries` | `Iterable`\<readonly [`PropertyKey`, `T`]\> | An iterable object that contains key-value entries for properties and methods. |
+• **entries**: `Iterable`\<readonly [`PropertyKey`, `T`], `any`, `any`\>
 
-#### Returns
+An iterable object that contains key-value entries for properties and methods.
 
-`Object`
+##### Returns
 
-#### Inherited from
+`object`
 
-KVSqliteResFunc.fromEntries
+##### Inherited from
 
-#### Defined in
+`KVSqliteResFunc.fromEntries`
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2019.object.d.ts:26
+##### Defined in
 
-▸ **fromEntries**(`entries`): `any`
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2019.object.d.ts:26
+
+#### fromEntries(entries)
+
+> `static` **fromEntries**(`entries`): `any`
 
 Returns an object created by key-value entries for properties and methods
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `entries` | `Iterable`\<readonly `any`[]\> | An iterable object that contains key-value entries for properties and methods. |
+• **entries**: `Iterable`\<readonly `any`[], `any`, `any`\>
 
-#### Returns
+An iterable object that contains key-value entries for properties and methods.
+
+##### Returns
 
 `any`
 
-#### Inherited from
+##### Inherited from
 
-KVSqliteResFunc.fromEntries
+`KVSqliteResFunc.fromEntries`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2019.object.d.ts:32
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2019.object.d.ts:32
 
-___
+***
 
-### get
+### get()
 
-▸ **get**(`name`): `ToolFunc`
+> `static` **get**(`name`): `ToolFunc`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
+• **name**: `string`
 
 #### Returns
 
@@ -2491,23 +2344,21 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.get
+`KVSqliteResFunc.get`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:65
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:65
 
-___
+***
 
-### getAllByTag
+### getAllByTag()
 
-▸ **getAllByTag**(`tagName`): `ToolFunc`[]
+> `static` **getAllByTag**(`tagName`): `ToolFunc`[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `tagName` | `string` |
+• **tagName**: `string`
 
 #### Returns
 
@@ -2515,23 +2366,21 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.getAllByTag
+`KVSqliteResFunc.getAllByTag`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:68
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:68
 
-___
+***
 
-### getByTag
+### getByTag()
 
-▸ **getByTag**(`tagName`): `undefined` \| `ToolFunc`
+> `static` **getByTag**(`tagName`): `undefined` \| `ToolFunc`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `tagName` | `string` |
+• **tagName**: `string`
 
 #### Returns
 
@@ -2539,23 +2388,21 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.getByTag
+`KVSqliteResFunc.getByTag`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:67
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:67
 
-___
+***
 
-### getFunc
+### getFunc()
 
-▸ **getFunc**(`name`): `any`
+> `static` **getFunc**(`name`): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
+• **name**: `string`
 
 #### Returns
 
@@ -2563,23 +2410,21 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.getFunc
+`KVSqliteResFunc.getFunc`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:72
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:72
 
-___
+***
 
-### getFuncWithPos
+### getFuncWithPos()
 
-▸ **getFuncWithPos**(`name`): `any`
+> `static` **getFuncWithPos**(`name`): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
+• **name**: `string`
 
 #### Returns
 
@@ -2587,27 +2432,30 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.getFuncWithPos
+`KVSqliteResFunc.getFuncWithPos`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:75
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:75
 
-___
+***
 
-### getOwnPropertyDescriptor
+### getOwnPropertyDescriptor()
 
-▸ **getOwnPropertyDescriptor**(`o`, `p`): `undefined` \| `PropertyDescriptor`
+> `static` **getOwnPropertyDescriptor**(`o`, `p`): `undefined` \| `PropertyDescriptor`
 
 Gets the own property descriptor of the specified object.
 An own property descriptor is one that is defined directly on the object and is not inherited from the object's prototype.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | Object that contains the property. |
-| `p` | `PropertyKey` | Name of the property. |
+• **o**: `any`
+
+Object that contains the property.
+
+• **p**: `PropertyKey`
+
+Name of the property.
 
 #### Returns
 
@@ -2615,58 +2463,56 @@ An own property descriptor is one that is defined directly on the object and is 
 
 #### Inherited from
 
-KVSqliteResFunc.getOwnPropertyDescriptor
+`KVSqliteResFunc.getOwnPropertyDescriptor`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:175
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:175
 
-___
+***
 
-### getOwnPropertyDescriptors
+### getOwnPropertyDescriptors()
 
-▸ **getOwnPropertyDescriptors**\<`T`\>(`o`): \{ [P in string \| number \| symbol]: TypedPropertyDescriptor\<T[P]\> } & \{ `[x: string]`: `PropertyDescriptor`;  }
+> `static` **getOwnPropertyDescriptors**\<`T`\>(`o`): \{ \[P in string \| number \| symbol\]: TypedPropertyDescriptor\<T\[P\]\> \} & `object`
 
 Returns an object containing all own property descriptors of an object
 
-#### Type parameters
+#### Type Parameters
 
-| Name |
-| :------ |
-| `T` |
+• **T**
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `T` | Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object. |
+• **o**: `T`
+
+Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
 
 #### Returns
 
-\{ [P in string \| number \| symbol]: TypedPropertyDescriptor\<T[P]\> } & \{ `[x: string]`: `PropertyDescriptor`;  }
+\{ \[P in string \| number \| symbol\]: TypedPropertyDescriptor\<T\[P\]\> \} & `object`
 
 #### Inherited from
 
-KVSqliteResFunc.getOwnPropertyDescriptors
+`KVSqliteResFunc.getOwnPropertyDescriptors`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2017.object.d.ts:48
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2017.object.d.ts:48
 
-___
+***
 
-### getOwnPropertyNames
+### getOwnPropertyNames()
 
-▸ **getOwnPropertyNames**(`o`): `string`[]
+> `static` **getOwnPropertyNames**(`o`): `string`[]
 
 Returns the names of the own properties of an object. The own properties of an object are those that are defined directly
 on that object, and are not inherited from the object's prototype. The properties of an object include both fields (objects) and functions.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | Object that contains the own properties. |
+• **o**: `any`
+
+Object that contains the own properties.
 
 #### Returns
 
@@ -2674,25 +2520,25 @@ on that object, and are not inherited from the object's prototype. The propertie
 
 #### Inherited from
 
-KVSqliteResFunc.getOwnPropertyNames
+`KVSqliteResFunc.getOwnPropertyNames`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:182
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:182
 
-___
+***
 
-### getOwnPropertySymbols
+### getOwnPropertySymbols()
 
-▸ **getOwnPropertySymbols**(`o`): `symbol`[]
+> `static` **getOwnPropertySymbols**(`o`): `symbol`[]
 
 Returns an array of all symbol properties found directly on object o.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | Object to retrieve the symbols from. |
+• **o**: `any`
+
+Object to retrieve the symbols from.
 
 #### Returns
 
@@ -2700,17 +2546,17 @@ Returns an array of all symbol properties found directly on object o.
 
 #### Inherited from
 
-KVSqliteResFunc.getOwnPropertySymbols
+`KVSqliteResFunc.getOwnPropertySymbols`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:317
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:319
 
-___
+***
 
-### getProperties
+### getProperties()
 
-▸ **getProperties**(): `PropDescriptors`
+> `static` **getProperties**(): `PropDescriptors`
 
 get all properties descriptor include inherited.
 
@@ -2720,25 +2566,25 @@ get all properties descriptor include inherited.
 
 #### Inherited from
 
-KVSqliteResFunc.getProperties
+`KVSqliteResFunc.getProperties`
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/advance.d.ts:10
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/advance.d.ts:10
 
-___
+***
 
-### getPrototypeOf
+### getPrototypeOf()
 
-▸ **getPrototypeOf**(`o`): `any`
+> `static` **getPrototypeOf**(`o`): `any`
 
 Returns the prototype of an object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | The object that references the prototype. |
+• **o**: `any`
+
+The object that references the prototype.
 
 #### Returns
 
@@ -2746,23 +2592,21 @@ Returns the prototype of an object.
 
 #### Inherited from
 
-KVSqliteResFunc.getPrototypeOf
+`KVSqliteResFunc.getPrototypeOf`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:167
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:167
 
-___
+***
 
-### hasAsyncFeature
+### hasAsyncFeature()
 
-▸ **hasAsyncFeature**(`feature`): `boolean`
+> `static` **hasAsyncFeature**(`feature`): `boolean`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `feature` | `AsyncFeatureBits` |
+• **feature**: `AsyncFeatureBits`
 
 #### Returns
 
@@ -2770,26 +2614,29 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.hasAsyncFeature
+`KVSqliteResFunc.hasAsyncFeature`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:69
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:69
 
-___
+***
 
-### hasOwn
+### hasOwn()
 
-▸ **hasOwn**(`o`, `v`): `boolean`
+> `static` **hasOwn**(`o`, `v`): `boolean`
 
 Determines whether an object has a property with the specified name.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `object` | An object. |
-| `v` | `PropertyKey` | A property name. |
+• **o**: `object`
+
+An object.
+
+• **v**: `PropertyKey`
+
+A property name.
 
 #### Returns
 
@@ -2797,26 +2644,29 @@ Determines whether an object has a property with the specified name.
 
 #### Inherited from
 
-KVSqliteResFunc.hasOwn
+`KVSqliteResFunc.hasOwn`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2022.object.d.ts:25
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2022.object.d.ts:25
 
-___
+***
 
-### is
+### is()
 
-▸ **is**(`value1`, `value2`): `boolean`
+> `static` **is**(`value1`, `value2`): `boolean`
 
 Returns true if the values are the same value, false otherwise.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `value1` | `any` | The first value. |
-| `value2` | `any` | The second value. |
+• **value1**: `any`
+
+The first value.
+
+• **value2**: `any`
+
+The second value.
 
 #### Returns
 
@@ -2824,25 +2674,25 @@ Returns true if the values are the same value, false otherwise.
 
 #### Inherited from
 
-KVSqliteResFunc.is
+`KVSqliteResFunc.is`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:330
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:332
 
-___
+***
 
-### isExtensible
+### isExtensible()
 
-▸ **isExtensible**(`o`): `boolean`
+> `static` **isExtensible**(`o`): `boolean`
 
 Returns a value that indicates whether new properties can be added to an object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | Object to test. |
+• **o**: `any`
+
+Object to test.
 
 #### Returns
 
@@ -2850,25 +2700,25 @@ Returns a value that indicates whether new properties can be added to an object.
 
 #### Inherited from
 
-KVSqliteResFunc.isExtensible
+`KVSqliteResFunc.isExtensible`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:258
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:258
 
-___
+***
 
-### isFrozen
+### isFrozen()
 
-▸ **isFrozen**(`o`): `boolean`
+> `static` **isFrozen**(`o`): `boolean`
 
 Returns true if existing property attributes and values cannot be modified in an object, and new properties cannot be added to the object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | Object to test. |
+• **o**: `any`
+
+Object to test.
 
 #### Returns
 
@@ -2876,25 +2726,25 @@ Returns true if existing property attributes and values cannot be modified in an
 
 #### Inherited from
 
-KVSqliteResFunc.isFrozen
+`KVSqliteResFunc.isFrozen`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:252
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:252
 
-___
+***
 
-### isSealed
+### isSealed()
 
-▸ **isSealed**(`o`): `boolean`
+> `static` **isSealed**(`o`): `boolean`
 
 Returns true if existing property attributes cannot be modified in an object and new properties cannot be added to the object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | Object to test. |
+• **o**: `any`
+
+Object to test.
 
 #### Returns
 
@@ -2902,65 +2752,69 @@ Returns true if existing property attributes cannot be modified in an object and
 
 #### Inherited from
 
-KVSqliteResFunc.isSealed
+`KVSqliteResFunc.isSealed`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:246
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:246
 
-___
+***
 
-### keys
+### keys()
 
-▸ **keys**(`o`): `string`[]
+#### keys(o)
+
+> `static` **keys**(`o`): `string`[]
 
 Returns the names of the enumerable string properties and methods of an object.
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `object` | Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object. |
+• **o**: `object`
 
-#### Returns
+Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+
+##### Returns
 
 `string`[]
 
-#### Inherited from
+##### Inherited from
 
-KVSqliteResFunc.keys
+`KVSqliteResFunc.keys`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:264
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:264
 
-▸ **keys**(`o`): `string`[]
+#### keys(o)
+
+> `static` **keys**(`o`): `string`[]
 
 Returns the names of the enumerable string properties and methods of an object.
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `Object` | Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object. |
+• **o**
 
-#### Returns
+Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+
+##### Returns
 
 `string`[]
 
-#### Inherited from
+##### Inherited from
 
-KVSqliteResFunc.keys
+`KVSqliteResFunc.keys`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:323
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:325
 
-___
+***
 
-### list
+### list()
 
-▸ **list**(): `Funcs`
+> `static` **list**(): `Funcs`
 
 #### Returns
 
@@ -2968,31 +2822,29 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.list
+`KVSqliteResFunc.list`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:66
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:66
 
-___
+***
 
-### preventExtensions
+### preventExtensions()
 
-▸ **preventExtensions**\<`T`\>(`o`): `T`
+> `static` **preventExtensions**\<`T`\>(`o`): `T`
 
 Prevents the addition of new properties to an object.
 
-#### Type parameters
+#### Type Parameters
 
-| Name |
-| :------ |
-| `T` |
+• **T**
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `T` | Object to make non-extensible. |
+• **o**: `T`
+
+Object to make non-extensible.
 
 #### Returns
 
@@ -3000,91 +2852,93 @@ Prevents the addition of new properties to an object.
 
 #### Inherited from
 
-KVSqliteResFunc.preventExtensions
+`KVSqliteResFunc.preventExtensions`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:240
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:240
 
-___
+***
 
-### register
+### register()
 
-▸ **register**(`name`, `options`): `boolean` \| `ToolFunc`
+#### register(name, options)
 
-#### Parameters
+> `static` **register**(`name`, `options`): `boolean` \| `ToolFunc`
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `options` | `FuncItem` |
+##### Parameters
 
-#### Returns
+• **name**: `string`
+
+• **options**: `FuncItem`
+
+##### Returns
 
 `boolean` \| `ToolFunc`
 
-#### Inherited from
+##### Inherited from
 
-KVSqliteResFunc.register
+`KVSqliteResFunc.register`
 
-#### Defined in
+##### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:76
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:76
 
-▸ **register**(`func`, `options`): `boolean` \| `ToolFunc`
+#### register(func, options)
 
-#### Parameters
+> `static` **register**(`func`, `options`): `boolean` \| `ToolFunc`
 
-| Name | Type |
-| :------ | :------ |
-| `func` | `Function` |
-| `options` | `FuncItem` |
+##### Parameters
 
-#### Returns
+• **func**: `Function`
 
-`boolean` \| `ToolFunc`
+• **options**: `FuncItem`
 
-#### Inherited from
-
-KVSqliteResFunc.register
-
-#### Defined in
-
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:77
-
-▸ **register**(`name`, `options?`): `boolean` \| `ToolFunc`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` \| `Function` \| `ToolFunc` \| `FuncItem` |
-| `options?` | `FuncItem` |
-
-#### Returns
+##### Returns
 
 `boolean` \| `ToolFunc`
 
-#### Inherited from
+##### Inherited from
 
-KVSqliteResFunc.register
+`KVSqliteResFunc.register`
 
-#### Defined in
+##### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:78
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:77
 
-___
+#### register(name, options)
 
-### run
+> `static` **register**(`name`, `options`?): `boolean` \| `ToolFunc`
 
-▸ **run**(`name`, `params?`): `Promise`\<`any`\>
+##### Parameters
+
+• **name**: `string` \| `Function` \| `ToolFunc` \| `FuncItem`
+
+• **options?**: `FuncItem`
+
+##### Returns
+
+`boolean` \| `ToolFunc`
+
+##### Inherited from
+
+`KVSqliteResFunc.register`
+
+##### Defined in
+
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:78
+
+***
+
+### run()
+
+> `static` **run**(`name`, `params`?): `Promise`\<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `params?` | `any` |
+• **name**: `string`
+
+• **params?**: `any`
 
 #### Returns
 
@@ -3092,24 +2946,23 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.run
+`KVSqliteResFunc.run`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:70
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:70
 
-___
+***
 
-### runSync
+### runSync()
 
-▸ **runSync**(`name`, `params?`): `any`
+> `static` **runSync**(`name`, `params`?): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `params?` | `any` |
+• **name**: `string`
+
+• **params?**: `any`
 
 #### Returns
 
@@ -3117,24 +2970,23 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.runSync
+`KVSqliteResFunc.runSync`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:71
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:71
 
-___
+***
 
-### runWithPos
+### runWithPos()
 
-▸ **runWithPos**(`name`, `...params`): `Promise`\<`any`\>
+> `static` **runWithPos**(`name`, ...`params`): `Promise`\<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `...params` | `any`[] |
+• **name**: `string`
+
+• ...**params**: `any`[]
 
 #### Returns
 
@@ -3142,24 +2994,23 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.runWithPos
+`KVSqliteResFunc.runWithPos`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:73
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:73
 
-___
+***
 
-### runWithPosSync
+### runWithPosSync()
 
-▸ **runWithPosSync**(`name`, `...params`): `any`
+> `static` **runWithPosSync**(`name`, ...`params`): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `...params` | `any`[] |
+• **name**: `string`
+
+• ...**params**: `any`[]
 
 #### Returns
 
@@ -3167,31 +3018,29 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.runWithPosSync
+`KVSqliteResFunc.runWithPosSync`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:74
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:74
 
-___
+***
 
-### seal
+### seal()
 
-▸ **seal**\<`T`\>(`o`): `T`
+> `static` **seal**\<`T`\>(`o`): `T`
 
 Prevents the modification of attributes of existing properties, and prevents the addition of new properties.
 
-#### Type parameters
+#### Type Parameters
 
-| Name |
-| :------ |
-| `T` |
+• **T**
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `T` | Object on which to lock the attributes. |
+• **o**: `T`
+
+Object on which to lock the attributes.
 
 #### Returns
 
@@ -3199,23 +3048,21 @@ Prevents the modification of attributes of existing properties, and prevents the
 
 #### Inherited from
 
-KVSqliteResFunc.seal
+`KVSqliteResFunc.seal`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:216
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:216
 
-___
+***
 
-### setApiRoot
+### setApiRoot()
 
-▸ **setApiRoot**(`v`): `void`
+> `static` **setApiRoot**(`v`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `v` | `string` |
+• **v**: `string`
 
 #### Returns
 
@@ -3223,26 +3070,29 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.setApiRoot
+`KVSqliteResFunc.setApiRoot`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:284
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:284
 
-___
+***
 
-### setPrototypeOf
+### setPrototypeOf()
 
-▸ **setPrototypeOf**(`o`, `proto`): `any`
+> `static` **setPrototypeOf**(`o`, `proto`): `any`
 
 Sets the prototype of a specified object o to object proto or null. Returns the object o.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | The object to change its prototype. |
-| `proto` | ``null`` \| `object` | The value of the new prototype or null. |
+• **o**: `any`
+
+The object to change its prototype.
+
+• **proto**: `null` \| `object`
+
+The value of the new prototype or null.
 
 #### Returns
 
@@ -3250,41 +3100,39 @@ Sets the prototype of a specified object o to object proto or null. Returns the 
 
 #### Inherited from
 
-KVSqliteResFunc.setPrototypeOf
+`KVSqliteResFunc.setPrototypeOf`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:337
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:339
 
-___
+***
 
-### toJSON
+### toJSON()
 
-▸ **toJSON**(): `Object`
+> `static` **toJSON**(): `object`
 
 #### Returns
 
-`Object`
+`object`
 
 #### Inherited from
 
-KVSqliteResFunc.toJSON
+`KVSqliteResFunc.toJSON`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:285
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:285
 
-___
+***
 
-### unregister
+### unregister()
 
-▸ **unregister**(`name`): `undefined` \| `ToolFunc`
+> `static` **unregister**(`name`): `undefined` \| `ToolFunc`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
+• **name**: `string`
 
 #### Returns
 
@@ -3292,62 +3140,64 @@ ___
 
 #### Inherited from
 
-KVSqliteResFunc.unregister
+`KVSqliteResFunc.unregister`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:79
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:79
 
-___
+***
 
-### values
+### values()
 
-▸ **values**\<`T`\>(`o`): `T`[]
+#### values(o)
 
-Returns an array of values of the enumerable properties of an object
+> `static` **values**\<`T`\>(`o`): `T`[]
 
-#### Type parameters
+Returns an array of values of the enumerable own properties of an object
 
-| Name |
-| :------ |
-| `T` |
+##### Type Parameters
 
-#### Parameters
+• **T**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | \{ `[s: string]`: `T`;  } \| `ArrayLike`\<`T`\> | Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object. |
+##### Parameters
 
-#### Returns
+• **o**: `object` \| `ArrayLike`\<`T`\>
+
+Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+
+##### Returns
 
 `T`[]
 
-#### Inherited from
+##### Inherited from
 
-KVSqliteResFunc.values
+`KVSqliteResFunc.values`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2017.object.d.ts:24
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2017.object.d.ts:24
 
-▸ **values**(`o`): `any`[]
+#### values(o)
 
-Returns an array of values of the enumerable properties of an object
+> `static` **values**(`o`): `any`[]
 
-#### Parameters
+Returns an array of values of the enumerable own properties of an object
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `Object` | Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object. |
+##### Parameters
 
-#### Returns
+• **o**
+
+Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+
+##### Returns
 
 `any`[]
 
-#### Inherited from
+##### Inherited from
 
-KVSqliteResFunc.values
+`KVSqliteResFunc.values`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2017.object.d.ts:30
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2017.object.d.ts:30

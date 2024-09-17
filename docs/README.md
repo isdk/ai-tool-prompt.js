@@ -1,4 +1,6 @@
-@isdk/ai-tool-prompt / [Exports](modules.md)
+**@isdk/ai-tool-prompt** • [**Docs**](globals.md)
+
+***
 
 # ai-tool-prompt
 

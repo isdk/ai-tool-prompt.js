@@ -1,108 +1,26 @@
-[@isdk/ai-tool-prompt](../README.md) / [Exports](../modules.md) / AIPrompt
+[**@isdk/ai-tool-prompt**](../README.md) • **Docs**
+
+***
+
+[@isdk/ai-tool-prompt](../globals.md) / AIPrompt
 
 # Class: AIPrompt
 
 Represents an AIPrompt
 
-## Hierarchy
+## Extends
 
-- [`AIPromptSettings`](../interfaces/AIPromptSettings.md)
-
-- `AdvancePropertyManager`
-
-  ↳ **`AIPrompt`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](AIPrompt.md#constructor)
-
-### Properties
-
-- [$attributes](AIPrompt.md#$attributes)
-- [\_id](AIPrompt.md#_id)
-- [constructor](AIPrompt.md#constructor-1)
-- [contentType](AIPrompt.md#contenttype)
-- [defaultOptions](AIPrompt.md#defaultoptions)
-- [description](AIPrompt.md#description)
-- [extends](AIPrompt.md#extends)
-- [id](AIPrompt.md#id)
-- [input](AIPrompt.md#input)
-- [modelPattern](AIPrompt.md#modelpattern)
-- [nonExported1stChar](AIPrompt.md#nonexported1stchar)
-- [output](AIPrompt.md#output)
-- [parameters](AIPrompt.md#parameters)
-- [priority](AIPrompt.md#priority)
-- [prompt](AIPrompt.md#prompt)
-- [tag](AIPrompt.md#tag)
-- [template](AIPrompt.md#template)
-- [templateFormat](AIPrompt.md#templateformat)
-- [type](AIPrompt.md#type)
-- [version](AIPrompt.md#version)
-- [创](AIPrompt.md#创)
-- [签](AIPrompt.md#签)
-
-### Methods
-
-- [assign](AIPrompt.md#assign)
-- [assignProperty](AIPrompt.md#assignproperty)
-- [assignPropertyTo](AIPrompt.md#assignpropertyto)
-- [assignTo](AIPrompt.md#assignto)
-- [clone](AIPrompt.md#clone)
-- [cloneTo](AIPrompt.md#cloneto)
-- [defineProperties](AIPrompt.md#defineproperties)
-- [exportTo](AIPrompt.md#exportto)
-- [getProperties](AIPrompt.md#getproperties)
-- [hasOwnProperty](AIPrompt.md#hasownproperty)
-- [importFromFile](AIPrompt.md#importfromfile)
-- [initialize](AIPrompt.md#initialize)
-- [isFitForLLM](AIPrompt.md#isfitforllm)
-- [isLocked](AIPrompt.md#islocked)
-- [isPrototypeOf](AIPrompt.md#isprototypeof)
-- [isSame](AIPrompt.md#issame)
-- [mergeTo](AIPrompt.md#mergeto)
-- [propertyIsEnumerable](AIPrompt.md#propertyisenumerable)
-- [toJSON](AIPrompt.md#tojson)
-- [toLocaleString](AIPrompt.md#tolocalestring)
-- [toObject](AIPrompt.md#toobject)
-- [toString](AIPrompt.md#tostring)
-- [valueOf](AIPrompt.md#valueof)
-- [assign](AIPrompt.md#assign-1)
-- [create](AIPrompt.md#create)
-- [defineProperties](AIPrompt.md#defineproperties-1)
-- [defineProperty](AIPrompt.md#defineproperty)
-- [entries](AIPrompt.md#entries)
-- [freeze](AIPrompt.md#freeze)
-- [fromEntries](AIPrompt.md#fromentries)
-- [getOwnPropertyDescriptor](AIPrompt.md#getownpropertydescriptor)
-- [getOwnPropertyDescriptors](AIPrompt.md#getownpropertydescriptors)
-- [getOwnPropertyNames](AIPrompt.md#getownpropertynames)
-- [getOwnPropertySymbols](AIPrompt.md#getownpropertysymbols)
-- [getProperties](AIPrompt.md#getproperties-1)
-- [getPrototypeOf](AIPrompt.md#getprototypeof)
-- [hasOwn](AIPrompt.md#hasown)
-- [is](AIPrompt.md#is)
-- [isExtensible](AIPrompt.md#isextensible)
-- [isFrozen](AIPrompt.md#isfrozen)
-- [isSealed](AIPrompt.md#issealed)
-- [keys](AIPrompt.md#keys)
-- [preventExtensions](AIPrompt.md#preventextensions)
-- [seal](AIPrompt.md#seal)
-- [setPrototypeOf](AIPrompt.md#setprototypeof)
-- [values](AIPrompt.md#values)
+- [`AIPromptSettings`](../interfaces/AIPromptSettings.md).`AdvancePropertyManager`
 
 ## Constructors
 
-### constructor
+### new AIPrompt()
 
-• **new AIPrompt**(`...args`): [`AIPrompt`](AIPrompt.md)
+> **new AIPrompt**(...`args`): [`AIPrompt`](AIPrompt.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `...args` | `any`[] |
+• ...**args**: `any`[]
 
 #### Returns
 
@@ -110,335 +28,337 @@ Represents an AIPrompt
 
 #### Inherited from
 
-AIPromptSettings.constructor
+`AIPromptSettings.constructor`
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:80
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:80
 
 ## Properties
 
-### $attributes
+### \_id?
 
-• **$attributes**: `Properties`
-
-#### Defined in
-
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/advance.d.ts:5
-
-___
-
-### \_id
-
-• `Optional` **\_id**: `string`
+> `optional` **\_id**: `string`
 
 #### Inherited from
 
-[AIPromptSettings](../interfaces/AIPromptSettings.md).[_id](../interfaces/AIPromptSettings.md#_id)
+[`AIPromptSettings`](../interfaces/AIPromptSettings.md).[`_id`](../interfaces/AIPromptSettings.md#_id)
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:27](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompt-settings.ts#L27)
+[packages/ai-tool-prompt/src/prompt-settings.ts:27](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompt-settings.ts#L27)
 
-___
+***
+
+### $attributes
+
+> **$attributes**: `Properties`
+
+#### Defined in
+
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/advance.d.ts:5
+
+***
+
+### 创?
+
+> `optional` **创**: [`ActivityRecord`](../interfaces/ActivityRecord.md)
+
+#### Inherited from
+
+[`AIPromptSettings`](../interfaces/AIPromptSettings.md).[`创`](../interfaces/AIPromptSettings.md#%E5%88%9B)
+
+#### Defined in
+
+[packages/ai-tool-prompt/src/prompt-settings.ts:46](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompt-settings.ts#L46)
+
+***
+
+### 签?
+
+> `optional` **签**: `string` \| [`Signatures`](../interfaces/Signatures.md)
+
+#### Inherited from
+
+[`AIPromptSettings`](../interfaces/AIPromptSettings.md).[`签`](../interfaces/AIPromptSettings.md#%E7%AD%BE)
+
+#### Defined in
+
+[packages/ai-tool-prompt/src/prompt-settings.ts:47](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompt-settings.ts#L47)
+
+***
 
 ### constructor
 
-• **constructor**: `Function`
+> **constructor**: `Function`
 
 The initial value of Object.prototype.constructor is the standard built-in Object constructor.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:125
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:125
 
-___
+***
 
-### contentType
+### contentType?
 
-• `Optional` **contentType**: [`AIContentType`](../modules.md#aicontenttype)
+> `optional` **contentType**: [`AIContentType`](../type-aliases/AIContentType.md)
 
 #### Inherited from
 
-[AIPromptSettings](../interfaces/AIPromptSettings.md).[contentType](../interfaces/AIPromptSettings.md#contenttype)
+[`AIPromptSettings`](../interfaces/AIPromptSettings.md).[`contentType`](../interfaces/AIPromptSettings.md#contenttype)
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:31](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompt-settings.ts#L31)
+[packages/ai-tool-prompt/src/prompt-settings.ts:31](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompt-settings.ts#L31)
 
-___
+***
 
 ### defaultOptions
 
-• **defaultOptions**: `Object`
+> **defaultOptions**: `object`
 
 The default options for export and assign
 
-#### Type declaration
+#### assign?
 
-| Name | Type |
-| :------ | :------ |
-| `assign?` | `IMergeOptions` |
-| `export?` | `IMergeOptions` |
+> `optional` **assign**: `IMergeOptions`
+
+#### export?
+
+> `optional` **export**: `IMergeOptions`
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:74
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:74
 
-___
+***
 
-### description
+### description?
 
-• `Optional` **description**: `string`
+> `optional` **description**: `string`
 
 #### Inherited from
 
-[AIPromptSettings](../interfaces/AIPromptSettings.md).[description](../interfaces/AIPromptSettings.md#description)
+[`AIPromptSettings`](../interfaces/AIPromptSettings.md).[`description`](../interfaces/AIPromptSettings.md#description)
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:32](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompt-settings.ts#L32)
+[packages/ai-tool-prompt/src/prompt-settings.ts:32](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompt-settings.ts#L32)
 
-___
+***
 
-### extends
+### extends?
 
-• `Optional` **extends**: `string`
+> `optional` **extends**: `string`
 
 #### Inherited from
 
-[AIPromptSettings](../interfaces/AIPromptSettings.md).[extends](../interfaces/AIPromptSettings.md#extends)
+[`AIPromptSettings`](../interfaces/AIPromptSettings.md).[`extends`](../interfaces/AIPromptSettings.md#extends)
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:39](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompt-settings.ts#L39)
+[packages/ai-tool-prompt/src/prompt-settings.ts:39](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompt-settings.ts#L39)
 
-___
+***
 
-### id
+### id?
 
-• `Optional` **id**: `string`
+> `optional` **id**: `string`
 
 #### Inherited from
 
-[AIPromptSettings](../interfaces/AIPromptSettings.md).[id](../interfaces/AIPromptSettings.md#id)
+[`AIPromptSettings`](../interfaces/AIPromptSettings.md).[`id`](../interfaces/AIPromptSettings.md#id)
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:28](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompt-settings.ts#L28)
+[packages/ai-tool-prompt/src/prompt-settings.ts:28](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompt-settings.ts#L28)
 
-___
+***
 
-### input
+### input?
 
-• `Optional` **input**: `Record`\<`string`, `string`\>[]
+> `optional` **input**: `Record`\<`string`, `string`\>[]
 
 #### Inherited from
 
-[AIPromptSettings](../interfaces/AIPromptSettings.md).[input](../interfaces/AIPromptSettings.md#input)
+[`AIPromptSettings`](../interfaces/AIPromptSettings.md).[`input`](../interfaces/AIPromptSettings.md#input)
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:43](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompt-settings.ts#L43)
+[packages/ai-tool-prompt/src/prompt-settings.ts:43](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompt-settings.ts#L43)
 
-___
+***
 
-### modelPattern
+### modelPattern?
 
-• `Optional` **modelPattern**: `AIModelNameRules` \| \{ `[ver: string]`: `AIModelNameRules`;  }
+> `optional` **modelPattern**: `AIModelNameRules` \| `object`
 
 #### Inherited from
 
-[AIPromptSettings](../interfaces/AIPromptSettings.md).[modelPattern](../interfaces/AIPromptSettings.md#modelpattern)
+[`AIPromptSettings`](../interfaces/AIPromptSettings.md).[`modelPattern`](../interfaces/AIPromptSettings.md#modelpattern)
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:33](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompt-settings.ts#L33)
+[packages/ai-tool-prompt/src/prompt-settings.ts:33](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompt-settings.ts#L33)
 
-___
+***
 
 ### nonExported1stChar
 
-• **nonExported1stChar**: `string`
+> **nonExported1stChar**: `string`
 
 the property with the default prefix '$' will not be exported.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:78
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:78
 
-___
+***
 
-### output
+### output?
 
-• `Optional` **output**: `any`
-
-#### Inherited from
-
-[AIPromptSettings](../interfaces/AIPromptSettings.md).[output](../interfaces/AIPromptSettings.md#output)
-
-#### Defined in
-
-[packages/ai-tool-prompt/src/prompt-settings.ts:44](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompt-settings.ts#L44)
-
-___
-
-### parameters
-
-• `Optional` **parameters**: `Record`\<`string`, `any`\>
+> `optional` **output**: `any`
 
 #### Inherited from
 
-[AIPromptSettings](../interfaces/AIPromptSettings.md).[parameters](../interfaces/AIPromptSettings.md#parameters)
+[`AIPromptSettings`](../interfaces/AIPromptSettings.md).[`output`](../interfaces/AIPromptSettings.md#output)
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:38](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompt-settings.ts#L38)
+[packages/ai-tool-prompt/src/prompt-settings.ts:44](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompt-settings.ts#L44)
 
-___
+***
 
-### priority
+### parameters?
 
-• `Optional` **priority**: `number`
+> `optional` **parameters**: `Record`\<`string`, `any`\>
 
 #### Inherited from
 
-[AIPromptSettings](../interfaces/AIPromptSettings.md).[priority](../interfaces/AIPromptSettings.md#priority)
+[`AIPromptSettings`](../interfaces/AIPromptSettings.md).[`parameters`](../interfaces/AIPromptSettings.md#parameters)
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:42](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompt-settings.ts#L42)
+[packages/ai-tool-prompt/src/prompt-settings.ts:38](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompt-settings.ts#L38)
 
-___
+***
 
-### prompt
+### priority?
 
-• `Optional` **prompt**: `DefaultPrompt`
+> `optional` **priority**: `number`
 
 #### Inherited from
 
-[AIPromptSettings](../interfaces/AIPromptSettings.md).[prompt](../interfaces/AIPromptSettings.md#prompt)
+[`AIPromptSettings`](../interfaces/AIPromptSettings.md).[`priority`](../interfaces/AIPromptSettings.md#priority)
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:36](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompt-settings.ts#L36)
+[packages/ai-tool-prompt/src/prompt-settings.ts:42](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompt-settings.ts#L42)
 
-___
+***
 
-### tag
+### prompt?
 
-• `Optional` **tag**: `string`[]
+> `optional` **prompt**: `DefaultPrompt`
 
 #### Inherited from
 
-[AIPromptSettings](../interfaces/AIPromptSettings.md).[tag](../interfaces/AIPromptSettings.md#tag)
+[`AIPromptSettings`](../interfaces/AIPromptSettings.md).[`prompt`](../interfaces/AIPromptSettings.md#prompt)
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:45](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompt-settings.ts#L45)
+[packages/ai-tool-prompt/src/prompt-settings.ts:36](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompt-settings.ts#L36)
 
-___
+***
+
+### tag?
+
+> `optional` **tag**: `string`[]
+
+#### Inherited from
+
+[`AIPromptSettings`](../interfaces/AIPromptSettings.md).[`tag`](../interfaces/AIPromptSettings.md#tag)
+
+#### Defined in
+
+[packages/ai-tool-prompt/src/prompt-settings.ts:45](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompt-settings.ts#L45)
+
+***
 
 ### template
 
-• **template**: `string`
+> **template**: `string`
 
 #### Inherited from
 
-[AIPromptSettings](../interfaces/AIPromptSettings.md).[template](../interfaces/AIPromptSettings.md#template)
+[`AIPromptSettings`](../interfaces/AIPromptSettings.md).[`template`](../interfaces/AIPromptSettings.md#template)
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:29](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompt-settings.ts#L29)
+[packages/ai-tool-prompt/src/prompt-settings.ts:29](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompt-settings.ts#L29)
 
-___
+***
 
-### templateFormat
+### templateFormat?
 
-• `Optional` **templateFormat**: `string`
+> `optional` **templateFormat**: `string`
 
 #### Inherited from
 
-[AIPromptSettings](../interfaces/AIPromptSettings.md).[templateFormat](../interfaces/AIPromptSettings.md#templateformat)
+[`AIPromptSettings`](../interfaces/AIPromptSettings.md).[`templateFormat`](../interfaces/AIPromptSettings.md#templateformat)
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:34](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompt-settings.ts#L34)
+[packages/ai-tool-prompt/src/prompt-settings.ts:34](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompt-settings.ts#L34)
 
-___
+***
 
 ### type
 
-• **type**: [`AIPromptType`](../modules.md#aiprompttype)
+> **type**: [`AIPromptType`](../type-aliases/AIPromptType.md)
 
 #### Inherited from
 
-[AIPromptSettings](../interfaces/AIPromptSettings.md).[type](../interfaces/AIPromptSettings.md#type)
+[`AIPromptSettings`](../interfaces/AIPromptSettings.md).[`type`](../interfaces/AIPromptSettings.md#type)
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:30](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompt-settings.ts#L30)
+[packages/ai-tool-prompt/src/prompt-settings.ts:30](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompt-settings.ts#L30)
 
-___
+***
 
-### version
+### version?
 
-• `Optional` **version**: `Object`
+> `optional` **version**: `object`
 
-#### Index signature
+#### Index Signature
 
-▪ [ver: `string`]: `DefaultPrompt`
+ \[`ver`: `string`\]: `DefaultPrompt`
 
 #### Inherited from
 
-[AIPromptSettings](../interfaces/AIPromptSettings.md).[version](../interfaces/AIPromptSettings.md#version)
+[`AIPromptSettings`](../interfaces/AIPromptSettings.md).[`version`](../interfaces/AIPromptSettings.md#version)
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:37](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompt-settings.ts#L37)
-
-___
-
-### 创
-
-• `Optional` **创**: [`ActivityRecord`](../interfaces/ActivityRecord.md)
-
-#### Inherited from
-
-[AIPromptSettings](../interfaces/AIPromptSettings.md).[创](../interfaces/AIPromptSettings.md#创)
-
-#### Defined in
-
-[packages/ai-tool-prompt/src/prompt-settings.ts:46](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompt-settings.ts#L46)
-
-___
-
-### 签
-
-• `Optional` **签**: `string` \| [`Signatures`](../interfaces/Signatures.md)
-
-#### Inherited from
-
-[AIPromptSettings](../interfaces/AIPromptSettings.md).[签](../interfaces/AIPromptSettings.md#签)
-
-#### Defined in
-
-[packages/ai-tool-prompt/src/prompt-settings.ts:47](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompt-settings.ts#L47)
+[packages/ai-tool-prompt/src/prompt-settings.ts:37](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompt-settings.ts#L37)
 
 ## Methods
 
-### assign
+### assign()
 
-▸ **assign**(`src`, `options?`): `this`
+> **assign**(`src`, `options`?): `this`
 
 Assign the values from the src object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `src` | `any` | the source object |
-| `options?` | `IMergeOptions` | - |
+• **src**: `any`
+
+the source object
+
+• **options?**: `IMergeOptions`
 
 #### Returns
 
@@ -448,25 +368,35 @@ this object
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:106
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:106
 
-___
+***
 
-### assignProperty
+### assignProperty()
 
-▸ **assignProperty**(`src`, `name`, `value`, `attrs?`, `options?`): `void`
+> **assignProperty**(`src`, `name`, `value`, `attrs`?, `options`?): `void`
 
 Assign a property of src to this object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `src` | `any` | the src object |
-| `name` | `string` | the property name to assign |
-| `value` | `any` | the property value to assign |
-| `attrs?` | `any` | the attributes object |
-| `options?` | `IMergeOptions` |  |
+• **src**: `any`
+
+the src object
+
+• **name**: `string`
+
+the property name to assign
+
+• **value**: `any`
+
+the property value to assign
+
+• **attrs?**: `any`
+
+the attributes object
+
+• **options?**: `IMergeOptions`
 
 #### Returns
 
@@ -474,51 +404,63 @@ Assign a property of src to this object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:117
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:117
 
-___
+***
 
-### assignPropertyTo
+### assignPropertyTo()
 
-▸ **assignPropertyTo**(`dest`, `src`, `name`, `value`, `attrs?`, `options?`): `void`
+> `abstract` **assignPropertyTo**(`dest`, `src`, `name`, `value`, `attrs`?, `options`?): `void`
 
 Assign the property value from the src to destination object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `dest` | `any` | The destination object |
-| `src` | `any` | The src object |
-| `name` | `string` | The property name |
-| `value` | `any` | The property value |
-| `attrs?` | `any` | The attributes object of the property |
-| `options?` | `IMergeOptions` |  |
+• **dest**: `any`
+
+The destination object
+
+• **src**: `any`
+
+The src object
+
+• **name**: `string`
+
+The property name
+
+• **value**: `any`
+
+The property value
+
+• **attrs?**: `any`
+
+The attributes object of the property
+
+• **options?**: `IMergeOptions`
 
 #### Returns
 
 `void`
 
-**`Abstract`**
-
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:131
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:131
 
-___
+***
 
-### assignTo
+### assignTo()
 
-▸ **assignTo**(`dest?`, `options?`): `any`
+> **assignTo**(`dest`?, `options`?): `any`
 
 Assign this attributes to the dest object
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `dest?` | `any` | the destination object |
-| `options?` | `IMergeOptions` | - |
+• **dest?**: `any`
+
+the destination object
+
+• **options?**: `IMergeOptions`
 
 #### Returns
 
@@ -528,21 +470,19 @@ the dest object
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:191
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:191
 
-___
+***
 
-### clone
+### clone()
 
-▸ **clone**(`options?`): `any`
+> **clone**(`options`?): `any`
 
 Create a new object with the same values of attributes.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | `IMergeOptions` |
+• **options?**: `IMergeOptions`
 
 #### Returns
 
@@ -552,22 +492,23 @@ the new object
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:155
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:155
 
-___
+***
 
-### cloneTo
+### cloneTo()
 
-▸ **cloneTo**(`dest`, `options?`): `any`
+> **cloneTo**(`dest`, `options`?): `any`
 
 Create and assign the values to the destination object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `dest` | `any` | the destination object |
-| `options?` | `IMergeOptions` |  |
+• **dest**: `any`
+
+the destination object
+
+• **options?**: `IMergeOptions`
 
 #### Returns
 
@@ -577,46 +518,45 @@ the new dest object
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:148
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:148
 
-___
+***
 
-### defineProperties
+### defineProperties()
 
-▸ **defineProperties**(`aProperties`): `any`
+> `abstract` **defineProperties**(`aProperties`): `any`
 
 Define the attributes of this object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `aProperties` | `SimplePropDescriptors` | the defined attributes of the object |
+• **aProperties**: `SimplePropDescriptors`
+
+the defined attributes of the object
 
 #### Returns
 
 `any`
 
-**`Abstract`**
-
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:89
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:89
 
-___
+***
 
-### exportTo
+### exportTo()
 
-▸ **exportTo**(`dest`, `options?`): `any`
+> **exportTo**(`dest`, `options`?): `any`
 
 Export attributes to the dest json object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `dest` | `any` | the destination object |
-| `options?` | `IExportOptions` | - |
+• **dest**: `any`
+
+the destination object
+
+• **options?**: `IExportOptions`
 
 #### Returns
 
@@ -626,13 +566,13 @@ the dest object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:173
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:173
 
-___
+***
 
-### getProperties
+### getProperties()
 
-▸ **getProperties**(): `PropDescriptors`
+> `abstract` **getProperties**(): `PropDescriptors`
 
 Get the defined attributes.
 
@@ -642,25 +582,23 @@ Get the defined attributes.
 
 the descriptors of properties object
 
-**`Abstract`**
-
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:98
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:98
 
-___
+***
 
-### hasOwnProperty
+### hasOwnProperty()
 
-▸ **hasOwnProperty**(`v`): `boolean`
+> **hasOwnProperty**(`v`): `boolean`
 
 Determines whether an object has a property with the specified name.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `v` | `PropertyKey` | A property name. |
+• **v**: `PropertyKey`
+
+A property name.
 
 #### Returns
 
@@ -668,19 +606,17 @@ Determines whether an object has a property with the specified name.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:140
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:140
 
-___
+***
 
-### importFromFile
+### importFromFile()
 
-▸ **importFromFile**(`filepath`): `void`
+> **importFromFile**(`filepath`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `filepath` | `string` |
+• **filepath**: `string`
 
 #### Returns
 
@@ -688,21 +624,19 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt.ts:123](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompt.ts#L123)
+[packages/ai-tool-prompt/src/prompt.ts:123](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompt.ts#L123)
 
-___
+***
 
-### initialize
+### initialize()
 
-▸ **initialize**(`src?`): `this`
+> **initialize**(`src`?): `this`
 
 Initialize object and assign attribute values from src if src exists.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `src?` | `any` |
+• **src?**: `any`
 
 #### Returns
 
@@ -712,13 +646,13 @@ this object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:139
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:139
 
-___
+***
 
-### isFitForLLM
+### isFitForLLM()
 
-▸ **isFitForLLM**(`modelName`): `undefined` \| `string` \| `string`[]
+> **isFitForLLM**(`modelName`): `undefined` \| `string` \| `string`[]
 
 Determines the fit result for the specified LLM model name with respect to this AIPrompt.
 
@@ -729,9 +663,9 @@ The fit result can be one of the following:
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `modelName` | `string` | The name of the LLM model to check for compatibility. |
+• **modelName**: `string`
+
+The name of the LLM model to check for compatibility.
 
 #### Returns
 
@@ -741,45 +675,45 @@ The fit result(s) for the given LLM model, representing its compatibility or sui
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt.ts:150](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompt.ts#L150)
+[packages/ai-tool-prompt/src/prompt.ts:150](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompt.ts#L150)
 
-___
+***
 
-### isLocked
+### isLocked()
 
-▸ **isLocked**(`template?`): `boolean` \| ``""``
+> **isLocked**(`template`?): `boolean` \| `""`
 
 Checks whether the provided string or the current template (if not provided) is locked.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `template?` | `string` | The template to check for lock status. If not provided, uses the current template. |
+• **template?**: `string`
+
+The template to check for lock status. If not provided, uses the current template.
 
 #### Returns
 
-`boolean` \| ``""``
+`boolean` \| `""`
 
 `true` if the template is locked, `false` otherwise.
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt.ts:134](https://github.com/isdk/ai-tool-prompt.js/blob/7b2759d3d059910f1044ddf5b0a55dd3ecf6348a/src/prompt.ts#L134)
+[packages/ai-tool-prompt/src/prompt.ts:134](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/prompt.ts#L134)
 
-___
+***
 
-### isPrototypeOf
+### isPrototypeOf()
 
-▸ **isPrototypeOf**(`v`): `boolean`
+> **isPrototypeOf**(`v`): `boolean`
 
 Determines whether an object exists in another object's prototype chain.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `v` | `Object` | Another object whose prototype chain is to be checked. |
+• **v**: `Object`
+
+Another object whose prototype chain is to be checked.
 
 #### Returns
 
@@ -787,22 +721,23 @@ Determines whether an object exists in another object's prototype chain.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:146
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:146
 
-___
+***
 
-### isSame
+### isSame()
 
-▸ **isSame**(`src`, `options?`): `boolean`
+> **isSame**(`src`, `options`?): `boolean`
 
 Check the src object whether “equals” this object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `src` | `any` | The source object |
-| `options?` | `IMergeOptions` | - |
+• **src**: `any`
+
+The source object
+
+• **options?**: `IMergeOptions`
 
 #### Returns
 
@@ -810,22 +745,23 @@ Check the src object whether “equals” this object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:200
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:200
 
-___
+***
 
-### mergeTo
+### mergeTo()
 
-▸ **mergeTo**(`dest`, `options?`): `any`
+> **mergeTo**(`dest`, `options`?): `any`
 
 Merge this attributes to dest object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `dest` | `any` | The destination object |
-| `options?` | `IMergeOptions` | - |
+• **dest**: `any`
+
+The destination object
+
+• **options?**: `IMergeOptions`
 
 #### Returns
 
@@ -835,21 +771,21 @@ the dest object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:164
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:164
 
-___
+***
 
-### propertyIsEnumerable
+### propertyIsEnumerable()
 
-▸ **propertyIsEnumerable**(`v`): `boolean`
+> **propertyIsEnumerable**(`v`): `boolean`
 
 Determines whether a specified property is enumerable.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `v` | `PropertyKey` | A property name. |
+• **v**: `PropertyKey`
+
+A property name.
 
 #### Returns
 
@@ -857,13 +793,13 @@ Determines whether a specified property is enumerable.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:152
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:152
 
-___
+***
 
-### toJSON
+### toJSON()
 
-▸ **toJSON**(): `any`
+> **toJSON**(): `any`
 
 #### Returns
 
@@ -871,13 +807,13 @@ ___
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:182
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:182
 
-___
+***
 
-### toLocaleString
+### toLocaleString()
 
-▸ **toLocaleString**(): `string`
+> **toLocaleString**(): `string`
 
 Returns a date converted to a string using the current locale.
 
@@ -887,21 +823,19 @@ Returns a date converted to a string using the current locale.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:131
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:131
 
-___
+***
 
-### toObject
+### toObject()
 
-▸ **toObject**(`options?`): `any`
+> **toObject**(`options`?): `any`
 
 Convert the attributes to the json object
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | `any` |
+• **options?**: `any`
 
 #### Returns
 
@@ -911,13 +845,13 @@ the json object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:181
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:181
 
-___
+***
 
-### toString
+### toString()
 
-▸ **toString**(): `string`
+> **toString**(): `string`
 
 Returns a string representation of an object.
 
@@ -927,13 +861,13 @@ Returns a string representation of an object.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:128
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:128
 
-___
+***
 
-### valueOf
+### valueOf()
 
-▸ **valueOf**(): `Object`
+> **valueOf**(): `Object`
 
 Returns the primitive value of the specified object.
 
@@ -943,151 +877,211 @@ Returns the primitive value of the specified object.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:134
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:134
 
-___
+***
 
-### assign
+### assign()
 
-▸ **assign**\<`T`, `U`\>(`target`, `source`): `T` & `U`
+#### assign(target, source)
+
+> `static` **assign**\<`T`, `U`\>(`target`, `source`): `T` & `U`
 
 Copy the values of all of the enumerable own properties from one or more source objects to a
 target object. Returns the target object.
 
-#### Type parameters
+##### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends `Object` |
-| `U` | `U` |
+• **T** *extends* `object`
 
-#### Parameters
+• **U**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `target` | `T` | The target object to copy to. |
-| `source` | `U` | The source object from which to copy properties. |
+##### Parameters
 
-#### Returns
+• **target**: `T`
+
+The target object to copy to.
+
+• **source**: `U`
+
+The source object from which to copy properties.
+
+##### Returns
 
 `T` & `U`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:284
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:286
 
-▸ **assign**\<`T`, `U`, `V`\>(`target`, `source1`, `source2`): `T` & `U` & `V`
+#### assign(target, source1, source2)
+
+> `static` **assign**\<`T`, `U`, `V`\>(`target`, `source1`, `source2`): `T` & `U` & `V`
 
 Copy the values of all of the enumerable own properties from one or more source objects to a
 target object. Returns the target object.
 
-#### Type parameters
+##### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends `Object` |
-| `U` | `U` |
-| `V` | `V` |
+• **T** *extends* `object`
 
-#### Parameters
+• **U**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `target` | `T` | The target object to copy to. |
-| `source1` | `U` | The first source object from which to copy properties. |
-| `source2` | `V` | The second source object from which to copy properties. |
+• **V**
 
-#### Returns
+##### Parameters
+
+• **target**: `T`
+
+The target object to copy to.
+
+• **source1**: `U`
+
+The first source object from which to copy properties.
+
+• **source2**: `V`
+
+The second source object from which to copy properties.
+
+##### Returns
 
 `T` & `U` & `V`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:293
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:295
 
-▸ **assign**\<`T`, `U`, `V`, `W`\>(`target`, `source1`, `source2`, `source3`): `T` & `U` & `V` & `W`
+#### assign(target, source1, source2, source3)
+
+> `static` **assign**\<`T`, `U`, `V`, `W`\>(`target`, `source1`, `source2`, `source3`): `T` & `U` & `V` & `W`
 
 Copy the values of all of the enumerable own properties from one or more source objects to a
 target object. Returns the target object.
 
-#### Type parameters
+##### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends `Object` |
-| `U` | `U` |
-| `V` | `V` |
-| `W` | `W` |
+• **T** *extends* `object`
 
-#### Parameters
+• **U**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `target` | `T` | The target object to copy to. |
-| `source1` | `U` | The first source object from which to copy properties. |
-| `source2` | `V` | The second source object from which to copy properties. |
-| `source3` | `W` | The third source object from which to copy properties. |
+• **V**
 
-#### Returns
+• **W**
+
+##### Parameters
+
+• **target**: `T`
+
+The target object to copy to.
+
+• **source1**: `U`
+
+The first source object from which to copy properties.
+
+• **source2**: `V`
+
+The second source object from which to copy properties.
+
+• **source3**: `W`
+
+The third source object from which to copy properties.
+
+##### Returns
 
 `T` & `U` & `V` & `W`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:303
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:305
 
-▸ **assign**(`target`, `...sources`): `any`
+#### assign(target, sources)
+
+> `static` **assign**(`target`, ...`sources`): `any`
 
 Copy the values of all of the enumerable own properties from one or more source objects to a
 target object. Returns the target object.
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `target` | `object` | The target object to copy to. |
-| `...sources` | `any`[] | One or more source objects from which to copy properties |
+• **target**: `object`
 
-#### Returns
+The target object to copy to.
+
+• ...**sources**: `any`[]
+
+One or more source objects from which to copy properties
+
+##### Returns
 
 `any`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:311
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:313
 
-___
+***
 
-### create
+### create()
 
-▸ **create**(`o`): `any`
+#### create(o)
+
+> `static` **create**(`o`): `any`
 
 Creates an object that has the specified prototype or that has null prototype.
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | ``null`` \| `object` | Object to use as a prototype. May be null. |
+• **o**: `null` \| `object`
 
-#### Returns
+Object to use as a prototype. May be null.
+
+##### Returns
 
 `any`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:188
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:188
 
-▸ **create**(`o`, `properties`): `any`
+#### create(o, properties)
+
+> `static` **create**(`o`, `properties`): `any`
 
 Creates an object that has the specified prototype, and that optionally contains specified properties.
 
+##### Parameters
+
+• **o**: `null` \| `object`
+
+Object to use as a prototype. May be null
+
+• **properties**: `PropertyDescriptorMap` & `ThisType`\<`any`\>
+
+JavaScript object that contains one or more property descriptors.
+
+##### Returns
+
+`any`
+
+##### Defined in
+
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:195
+
+***
+
+### defineProperties()
+
+> `static` **defineProperties**(`aTarget`, `aProperties`, `recreate`?): `any`
+
+Adds one or more properties to an object, and/or modifies attributes of existing properties.
+
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | ``null`` \| `object` | Object to use as a prototype. May be null |
-| `properties` | `PropertyDescriptorMap` & `ThisType`\<`any`\> | JavaScript object that contains one or more property descriptors. |
+• **aTarget**: `any`
+
+• **aProperties**: `PropDescriptors`
+
+• **recreate?**: `boolean`
 
 #### Returns
 
@@ -1095,51 +1089,33 @@ Creates an object that has the specified prototype, and that optionally contains
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:195
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/advance.d.ts:11
 
-___
+***
 
-### defineProperties
+### defineProperty()
 
-▸ **defineProperties**(`aTarget`, `aProperties`, `recreate?`): `any`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `aTarget` | `any` |
-| `aProperties` | `PropDescriptors` |
-| `recreate?` | `boolean` |
-
-#### Returns
-
-`any`
-
-#### Defined in
-
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/advance.d.ts:11
-
-___
-
-### defineProperty
-
-▸ **defineProperty**\<`T`\>(`o`, `p`, `attributes`): `T`
+> `static` **defineProperty**\<`T`\>(`o`, `p`, `attributes`): `T`
 
 Adds a property to an object, or modifies attributes of an existing property.
 
-#### Type parameters
+#### Type Parameters
 
-| Name |
-| :------ |
-| `T` |
+• **T**
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `T` | Object on which to add or modify the property. This can be a native JavaScript object (that is, a user-defined object or a built in object) or a DOM object. |
-| `p` | `PropertyKey` | The property name. |
-| `attributes` | `PropertyDescriptor` & `ThisType`\<`any`\> | Descriptor for the property. It can be for a data property or an accessor property. |
+• **o**: `T`
+
+Object on which to add or modify the property. This can be a native JavaScript object (that is, a user-defined object or a built in object) or a DOM object.
+
+• **p**: `PropertyKey`
+
+The property name.
+
+• **attributes**: `PropertyDescriptor` & `ThisType`\<`any`\>
+
+Descriptor for the property. It can be for a data property or an accessor property.
 
 #### Returns
 
@@ -1147,192 +1123,200 @@ Adds a property to an object, or modifies attributes of an existing property.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:203
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:203
 
-___
+***
 
-### entries
+### entries()
 
-▸ **entries**\<`T`\>(`o`): [`string`, `T`][]
+#### entries(o)
 
-Returns an array of key/values of the enumerable properties of an object
+> `static` **entries**\<`T`\>(`o`): [`string`, `T`][]
 
-#### Type parameters
+Returns an array of key/values of the enumerable own properties of an object
 
-| Name |
-| :------ |
-| `T` |
+##### Type Parameters
 
-#### Parameters
+• **T**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | \{ `[s: string]`: `T`;  } \| `ArrayLike`\<`T`\> | Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object. |
+##### Parameters
 
-#### Returns
+• **o**: `object` \| `ArrayLike`\<`T`\>
+
+Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+
+##### Returns
 
 [`string`, `T`][]
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2017.object.d.ts:36
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2017.object.d.ts:36
 
-▸ **entries**(`o`): [`string`, `any`][]
+#### entries(o)
 
-Returns an array of key/values of the enumerable properties of an object
+> `static` **entries**(`o`): [`string`, `any`][]
 
-#### Parameters
+Returns an array of key/values of the enumerable own properties of an object
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `Object` | Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object. |
+##### Parameters
 
-#### Returns
+• **o**
+
+Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+
+##### Returns
 
 [`string`, `any`][]
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2017.object.d.ts:42
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2017.object.d.ts:42
 
-___
+***
 
-### freeze
+### freeze()
 
-▸ **freeze**\<`T`\>(`f`): `T`
+#### freeze(f)
+
+> `static` **freeze**\<`T`\>(`f`): `T`
 
 Prevents the modification of existing property attributes and values, and prevents the addition of new properties.
 
-#### Type parameters
+##### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends `Function` |
+• **T** *extends* `Function`
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `f` | `T` | Object on which to lock the attributes. |
+• **f**: `T`
 
-#### Returns
+Object on which to lock the attributes.
+
+##### Returns
 
 `T`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:222
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:222
 
-▸ **freeze**\<`T`, `U`\>(`o`): `Readonly`\<`T`\>
+#### freeze(o)
 
-Prevents the modification of existing property attributes and values, and prevents the addition of new properties.
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `T` | extends `Object` |
-| `U` | extends `string` \| `number` \| `bigint` \| `boolean` \| `symbol` |
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `T` | Object on which to lock the attributes. |
-
-#### Returns
-
-`Readonly`\<`T`\>
-
-#### Defined in
-
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:228
-
-▸ **freeze**\<`T`\>(`o`): `Readonly`\<`T`\>
+> `static` **freeze**\<`T`, `U`\>(`o`): `Readonly`\<`T`\>
 
 Prevents the modification of existing property attributes and values, and prevents the addition of new properties.
 
-#### Type parameters
+##### Type Parameters
 
-| Name |
-| :------ |
-| `T` |
+• **T** *extends* `object`
 
-#### Parameters
+• **U** *extends* `string` \| `number` \| `bigint` \| `boolean` \| `symbol`
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `T` | Object on which to lock the attributes. |
+##### Parameters
 
-#### Returns
+• **o**: `T`
+
+Object on which to lock the attributes.
+
+##### Returns
 
 `Readonly`\<`T`\>
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:234
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:228
 
-___
+#### freeze(o)
 
-### fromEntries
+> `static` **freeze**\<`T`\>(`o`): `Readonly`\<`T`\>
 
-▸ **fromEntries**\<`T`\>(`entries`): `Object`
+Prevents the modification of existing property attributes and values, and prevents the addition of new properties.
+
+##### Type Parameters
+
+• **T**
+
+##### Parameters
+
+• **o**: `T`
+
+Object on which to lock the attributes.
+
+##### Returns
+
+`Readonly`\<`T`\>
+
+##### Defined in
+
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:234
+
+***
+
+### fromEntries()
+
+#### fromEntries(entries)
+
+> `static` **fromEntries**\<`T`\>(`entries`): `object`
 
 Returns an object created by key-value entries for properties and methods
 
-#### Type parameters
+##### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | `any` |
+• **T** = `any`
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `entries` | `Iterable`\<readonly [`PropertyKey`, `T`]\> | An iterable object that contains key-value entries for properties and methods. |
+• **entries**: `Iterable`\<readonly [`PropertyKey`, `T`], `any`, `any`\>
 
-#### Returns
+An iterable object that contains key-value entries for properties and methods.
 
-`Object`
+##### Returns
 
-#### Defined in
+`object`
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2019.object.d.ts:26
+##### Defined in
 
-▸ **fromEntries**(`entries`): `any`
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2019.object.d.ts:26
+
+#### fromEntries(entries)
+
+> `static` **fromEntries**(`entries`): `any`
 
 Returns an object created by key-value entries for properties and methods
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `entries` | `Iterable`\<readonly `any`[]\> | An iterable object that contains key-value entries for properties and methods. |
+• **entries**: `Iterable`\<readonly `any`[], `any`, `any`\>
 
-#### Returns
+An iterable object that contains key-value entries for properties and methods.
+
+##### Returns
 
 `any`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2019.object.d.ts:32
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2019.object.d.ts:32
 
-___
+***
 
-### getOwnPropertyDescriptor
+### getOwnPropertyDescriptor()
 
-▸ **getOwnPropertyDescriptor**(`o`, `p`): `undefined` \| `PropertyDescriptor`
+> `static` **getOwnPropertyDescriptor**(`o`, `p`): `undefined` \| `PropertyDescriptor`
 
 Gets the own property descriptor of the specified object.
 An own property descriptor is one that is defined directly on the object and is not inherited from the object's prototype.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | Object that contains the property. |
-| `p` | `PropertyKey` | Name of the property. |
+• **o**: `any`
+
+Object that contains the property.
+
+• **p**: `PropertyKey`
+
+Name of the property.
 
 #### Returns
 
@@ -1340,50 +1324,48 @@ An own property descriptor is one that is defined directly on the object and is 
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:175
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:175
 
-___
+***
 
-### getOwnPropertyDescriptors
+### getOwnPropertyDescriptors()
 
-▸ **getOwnPropertyDescriptors**\<`T`\>(`o`): \{ [P in string \| number \| symbol]: TypedPropertyDescriptor\<T[P]\> } & \{ `[x: string]`: `PropertyDescriptor`;  }
+> `static` **getOwnPropertyDescriptors**\<`T`\>(`o`): \{ \[P in string \| number \| symbol\]: TypedPropertyDescriptor\<T\[P\]\> \} & `object`
 
 Returns an object containing all own property descriptors of an object
 
-#### Type parameters
+#### Type Parameters
 
-| Name |
-| :------ |
-| `T` |
+• **T**
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `T` | Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object. |
+• **o**: `T`
+
+Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
 
 #### Returns
 
-\{ [P in string \| number \| symbol]: TypedPropertyDescriptor\<T[P]\> } & \{ `[x: string]`: `PropertyDescriptor`;  }
+\{ \[P in string \| number \| symbol\]: TypedPropertyDescriptor\<T\[P\]\> \} & `object`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2017.object.d.ts:48
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2017.object.d.ts:48
 
-___
+***
 
-### getOwnPropertyNames
+### getOwnPropertyNames()
 
-▸ **getOwnPropertyNames**(`o`): `string`[]
+> `static` **getOwnPropertyNames**(`o`): `string`[]
 
 Returns the names of the own properties of an object. The own properties of an object are those that are defined directly
 on that object, and are not inherited from the object's prototype. The properties of an object include both fields (objects) and functions.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | Object that contains the own properties. |
+• **o**: `any`
+
+Object that contains the own properties.
 
 #### Returns
 
@@ -1391,21 +1373,21 @@ on that object, and are not inherited from the object's prototype. The propertie
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:182
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:182
 
-___
+***
 
-### getOwnPropertySymbols
+### getOwnPropertySymbols()
 
-▸ **getOwnPropertySymbols**(`o`): `symbol`[]
+> `static` **getOwnPropertySymbols**(`o`): `symbol`[]
 
 Returns an array of all symbol properties found directly on object o.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | Object to retrieve the symbols from. |
+• **o**: `any`
+
+Object to retrieve the symbols from.
 
 #### Returns
 
@@ -1413,13 +1395,13 @@ Returns an array of all symbol properties found directly on object o.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:317
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:319
 
-___
+***
 
-### getProperties
+### getProperties()
 
-▸ **getProperties**(): `PropDescriptors`
+> `static` **getProperties**(): `PropDescriptors`
 
 get all properties descriptor include inherited.
 
@@ -1429,21 +1411,21 @@ get all properties descriptor include inherited.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/advance.d.ts:10
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/advance.d.ts:10
 
-___
+***
 
-### getPrototypeOf
+### getPrototypeOf()
 
-▸ **getPrototypeOf**(`o`): `any`
+> `static` **getPrototypeOf**(`o`): `any`
 
 Returns the prototype of an object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | The object that references the prototype. |
+• **o**: `any`
+
+The object that references the prototype.
 
 #### Returns
 
@@ -1451,22 +1433,25 @@ Returns the prototype of an object.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:167
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:167
 
-___
+***
 
-### hasOwn
+### hasOwn()
 
-▸ **hasOwn**(`o`, `v`): `boolean`
+> `static` **hasOwn**(`o`, `v`): `boolean`
 
 Determines whether an object has a property with the specified name.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `object` | An object. |
-| `v` | `PropertyKey` | A property name. |
+• **o**: `object`
+
+An object.
+
+• **v**: `PropertyKey`
+
+A property name.
 
 #### Returns
 
@@ -1474,22 +1459,25 @@ Determines whether an object has a property with the specified name.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2022.object.d.ts:25
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2022.object.d.ts:25
 
-___
+***
 
-### is
+### is()
 
-▸ **is**(`value1`, `value2`): `boolean`
+> `static` **is**(`value1`, `value2`): `boolean`
 
 Returns true if the values are the same value, false otherwise.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `value1` | `any` | The first value. |
-| `value2` | `any` | The second value. |
+• **value1**: `any`
+
+The first value.
+
+• **value2**: `any`
+
+The second value.
 
 #### Returns
 
@@ -1497,21 +1485,21 @@ Returns true if the values are the same value, false otherwise.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:330
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:332
 
-___
+***
 
-### isExtensible
+### isExtensible()
 
-▸ **isExtensible**(`o`): `boolean`
+> `static` **isExtensible**(`o`): `boolean`
 
 Returns a value that indicates whether new properties can be added to an object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | Object to test. |
+• **o**: `any`
+
+Object to test.
 
 #### Returns
 
@@ -1519,21 +1507,21 @@ Returns a value that indicates whether new properties can be added to an object.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:258
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:258
 
-___
+***
 
-### isFrozen
+### isFrozen()
 
-▸ **isFrozen**(`o`): `boolean`
+> `static` **isFrozen**(`o`): `boolean`
 
 Returns true if existing property attributes and values cannot be modified in an object, and new properties cannot be added to the object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | Object to test. |
+• **o**: `any`
+
+Object to test.
 
 #### Returns
 
@@ -1541,21 +1529,21 @@ Returns true if existing property attributes and values cannot be modified in an
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:252
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:252
 
-___
+***
 
-### isSealed
+### isSealed()
 
-▸ **isSealed**(`o`): `boolean`
+> `static` **isSealed**(`o`): `boolean`
 
 Returns true if existing property attributes cannot be modified in an object and new properties cannot be added to the object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | Object to test. |
+• **o**: `any`
+
+Object to test.
 
 #### Returns
 
@@ -1563,67 +1551,69 @@ Returns true if existing property attributes cannot be modified in an object and
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:246
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:246
 
-___
+***
 
-### keys
+### keys()
 
-▸ **keys**(`o`): `string`[]
+#### keys(o)
 
-Returns the names of the enumerable string properties and methods of an object.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `object` | Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object. |
-
-#### Returns
-
-`string`[]
-
-#### Defined in
-
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:264
-
-▸ **keys**(`o`): `string`[]
+> `static` **keys**(`o`): `string`[]
 
 Returns the names of the enumerable string properties and methods of an object.
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `Object` | Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object. |
+• **o**: `object`
 
-#### Returns
+Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+
+##### Returns
 
 `string`[]
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:323
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:264
 
-___
+#### keys(o)
 
-### preventExtensions
+> `static` **keys**(`o`): `string`[]
 
-▸ **preventExtensions**\<`T`\>(`o`): `T`
+Returns the names of the enumerable string properties and methods of an object.
+
+##### Parameters
+
+• **o**
+
+Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+
+##### Returns
+
+`string`[]
+
+##### Defined in
+
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:325
+
+***
+
+### preventExtensions()
+
+> `static` **preventExtensions**\<`T`\>(`o`): `T`
 
 Prevents the addition of new properties to an object.
 
-#### Type parameters
+#### Type Parameters
 
-| Name |
-| :------ |
-| `T` |
+• **T**
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `T` | Object to make non-extensible. |
+• **o**: `T`
+
+Object to make non-extensible.
 
 #### Returns
 
@@ -1631,27 +1621,25 @@ Prevents the addition of new properties to an object.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:240
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:240
 
-___
+***
 
-### seal
+### seal()
 
-▸ **seal**\<`T`\>(`o`): `T`
+> `static` **seal**\<`T`\>(`o`): `T`
 
 Prevents the modification of attributes of existing properties, and prevents the addition of new properties.
 
-#### Type parameters
+#### Type Parameters
 
-| Name |
-| :------ |
-| `T` |
+• **T**
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `T` | Object on which to lock the attributes. |
+• **o**: `T`
+
+Object on which to lock the attributes.
 
 #### Returns
 
@@ -1659,22 +1647,25 @@ Prevents the modification of attributes of existing properties, and prevents the
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:216
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:216
 
-___
+***
 
-### setPrototypeOf
+### setPrototypeOf()
 
-▸ **setPrototypeOf**(`o`, `proto`): `any`
+> `static` **setPrototypeOf**(`o`, `proto`): `any`
 
 Sets the prototype of a specified object o to object proto or null. Returns the object o.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | The object to change its prototype. |
-| `proto` | ``null`` \| `object` | The value of the new prototype or null. |
+• **o**: `any`
+
+The object to change its prototype.
+
+• **proto**: `null` \| `object`
+
+The value of the new prototype or null.
 
 #### Returns
 
@@ -1682,50 +1673,52 @@ Sets the prototype of a specified object o to object proto or null. Returns the 
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:337
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:339
 
-___
+***
 
-### values
+### values()
 
-▸ **values**\<`T`\>(`o`): `T`[]
+#### values(o)
 
-Returns an array of values of the enumerable properties of an object
+> `static` **values**\<`T`\>(`o`): `T`[]
 
-#### Type parameters
+Returns an array of values of the enumerable own properties of an object
 
-| Name |
-| :------ |
-| `T` |
+##### Type Parameters
 
-#### Parameters
+• **T**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | \{ `[s: string]`: `T`;  } \| `ArrayLike`\<`T`\> | Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object. |
+##### Parameters
 
-#### Returns
+• **o**: `object` \| `ArrayLike`\<`T`\>
+
+Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+
+##### Returns
 
 `T`[]
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2017.object.d.ts:24
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2017.object.d.ts:24
 
-▸ **values**(`o`): `any`[]
+#### values(o)
 
-Returns an array of values of the enumerable properties of an object
+> `static` **values**(`o`): `any`[]
 
-#### Parameters
+Returns an array of values of the enumerable own properties of an object
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `Object` | Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object. |
+##### Parameters
 
-#### Returns
+• **o**
+
+Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+
+##### Returns
 
 `any`[]
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2017.object.d.ts:30
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2017.object.d.ts:30
