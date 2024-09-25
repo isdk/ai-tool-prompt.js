@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/format-prompt.ts:6](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/format-prompt.ts#L6)
+[packages/ai-tool-prompt/src/format-prompt.ts:6](https://github.com/isdk/ai-tool-prompt.js/blob/915769d6b56683475da31584b01ecd159c158470/src/format-prompt.ts#L6)
 
 ***
 
@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/format-prompt.ts:8](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/format-prompt.ts#L8)
+[packages/ai-tool-prompt/src/format-prompt.ts:8](https://github.com/isdk/ai-tool-prompt.js/blob/915769d6b56683475da31584b01ecd159c158470/src/format-prompt.ts#L8)
 
 ***
 
@@ -38,4 +38,4 @@
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/format-prompt.ts:7](https://github.com/isdk/ai-tool-prompt.js/blob/ccb6c76c282ffb3a596c3e9bc1daa79eaec7b66a/src/format-prompt.ts#L7)
+[packages/ai-tool-prompt/src/format-prompt.ts:7](https://github.com/isdk/ai-tool-prompt.js/blob/915769d6b56683475da31584b01ecd159c158470/src/format-prompt.ts#L7)
