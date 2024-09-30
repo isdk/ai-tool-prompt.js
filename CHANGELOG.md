@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.2.3](https://github.com/isdk/ai-tool-prompt.js/compare/v0.2.2...v0.2.3) (2024-09-30)
+
 ## [0.2.2](https://github.com/isdk/ai-tool-prompt.js/compare/v0.2.1...v0.2.2) (2024-09-25)
 
 ## [0.2.1](https://github.com/isdk/ai-tool-prompt.js/compare/v0.2.0...v0.2.1) (2024-09-17)
