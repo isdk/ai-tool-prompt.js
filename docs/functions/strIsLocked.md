@@ -18,4 +18,4 @@
 
 ## Defined in
 
-[packages/ai-tool-prompt/src/prompt.ts:24](https://github.com/isdk/ai-tool-prompt.js/blob/915769d6b56683475da31584b01ecd159c158470/src/prompt.ts#L24)
+[packages/ai-tool-prompt/src/prompt.ts:24](https://github.com/isdk/ai-tool-prompt.js/blob/cf3fc2758759b055a3b34708f92339dcf4ac415b/src/prompt.ts#L24)
