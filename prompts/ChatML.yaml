@@ -33,7 +33,7 @@ modelPattern:
   'qwen': !re /(?:^|[-_.])(?:code)?(qwen)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   NousHermes2: !re /(?:^|[-_.])Nous-Hermes-2-([^-]+)(?:$|[-_.])/i
   Hermes3: !re /(?:^|[-_.])(Hermes-3)(?:$|[-_.])/i
-  '@': !re /(?:^|[-_.])(?:code)?(yi)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
+  '@': !re /(?:^|[-_.])(?:code)?(yi|MiniCPM)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
 parameters:
   'qwen':
     temperature: 0.01
