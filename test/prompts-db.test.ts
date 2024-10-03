@@ -5,7 +5,7 @@ import { ClientTools, ErrorCode, Funcs, NotFoundError, ResClientTools, ResServer
 import { FuncParams, ServerTools } from '@isdk/ai-tool'
 import { findPort } from '@isdk/ai-tool/test/util'
 
-import { AIPromptsFunc, AIPromptsName } from '../src/prompts'
+import { AIPromptsFunc, AIPromptsName } from '../src/prompts-db'
 
 // const dbPath = '.promptsdb'
 const dbPath = ':memory:'
@@ -211,7 +211,7 @@ describe('Prompts server api', () => {
     expect(result).toHaveProperty('changes', 1)
     expect(prompts.get({id: prompt._id})).rejects.toThrow(NotFoundError)
   })
-  it.only('should getLLMParameters', async () => {
+  it('should getLLMParameters', async () => {
     const prompts = ResClientTools.get(AIPromptsName)
     expect(prompts).toBeInstanceOf(ResClientTools)
     let result = await prompts.getParameters({id: 'ChatML', model: 'qwen1.5'})
