@@ -1,6 +1,19 @@
 import { AIChatMessageParam, AIModelNameRules } from "@isdk/ai-tool"
 
-export const AIPromptTypes = ['system', 'tool', 'char'] as const
+export const AIPromptTypes = [
+  /**
+   * the system prompt template for the model
+   */
+  'system',
+  /**
+   * the tool prompt template for the model
+   */
+  'tool',
+  /**
+   * the character(Role play) prompt template for the model
+   */
+  'char',
+] as const
 export type  AIPromptType = (typeof AIPromptTypes[number]) & string
 
 export const AIContentTypes = ['template', 'script'] as const
@@ -22,7 +35,7 @@ export interface Signatures {
   [userId: string]: string;
 }
 
-type DefaultPrompt = Record<string, string> | {system?: string, ai?: string, human?: string, end_of_turn?: string, begin_of_turn?: string, messages?: AIChatMessageParam[]}
+type DefaultPrompt = Record<string, string> | {system?: string, ai?: string, human?: string, bot_token?: string, eot_token?: string, end_of_turn?: string, begin_of_turn?: string, template?: string, messages?: AIChatMessageParam[]}
 export interface AIPromptSettings {
   _id?: string
   id?:string
@@ -32,9 +45,10 @@ export interface AIPromptSettings {
   description?: string
   modelPattern?: {[ver: string]: AIModelNameRules} | AIModelNameRules
   templateFormat?: string
-  // the default system prompt if any
+  // the default prompt tempalte data if any
   prompt?: DefaultPrompt
   version?: {[ver: string]: DefaultPrompt}
+  // the default LLM parameters
   parameters?: Record<string, any>
   extends?: string
   // the priority of the prompt template, the higher the priority(value), the earlier it will be used
