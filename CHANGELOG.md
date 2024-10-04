@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.2.4](https://github.com/isdk/ai-tool-prompt.js/compare/v0.2.3...v0.2.4) (2024-10-04)
+
+
+### Features
+
+* add default params to minicpm ([62dcc41](https://github.com/isdk/ai-tool-prompt.js/commit/62dcc414729d59aa5c9d70320d17de2e19b14307))
+* add MiniCPM model supports ([9458199](https://github.com/isdk/ai-tool-prompt.js/commit/94581993fe925d4a5307f5bf7d5ef0c2272ef6e2))
+
+
+### Refactor
+
+* extract findPrompt from prompts-db ([e41c1e3](https://github.com/isdk/ai-tool-prompt.js/commit/e41c1e3ed2bd2d90b57efffe16652a00fa8b35c4))
+* rename prompts.ts to prompts-db.ts ([78a7c12](https://github.com/isdk/ai-tool-prompt.js/commit/78a7c12609f49e432d69538e345b0b070ab90a99))
+
 ## [0.2.3](https://github.com/isdk/ai-tool-prompt.js/compare/v0.2.2...v0.2.3) (2024-09-30)
 
 ## [0.2.2](https://github.com/isdk/ai-tool-prompt.js/compare/v0.2.1...v0.2.2) (2024-09-25)
