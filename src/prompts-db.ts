@@ -1,9 +1,8 @@
-import { mergeWith } from 'lodash-es'
 import path from 'path'
 import { fileURLToPath } from 'url';
 import { KVSqliteResFuncParams, KVSqliteResFunc } from "@isdk/ai-tool-sqlite";
 import { AIPromptSettings, AIPromptType } from './prompt-settings';
-import { AIPromptFitResult, getLLMParameters, promptIsFitForLLM } from './prompt';
+import { AIPromptResult, findPrompt, getLLMParameters, mergeWithConcatArray } from './prompt';
 import { CommonError, ErrorCode } from '@isdk/ai-tool';
 
 import './regexp-to-json'
@@ -12,12 +11,7 @@ import './regexp-to-json'
 // const eventBus = event.runSync()
 export const AIPromptsName = 'prompts'
 
-export interface AIPromptResult {
-  prompt: AIPromptSettings
-  version?: AIPromptFitResult | AIPromptFitResult[];
-}
-
-interface AIPromptsFuncParams extends AIPromptSettings, KVSqliteResFuncParams {
+interface AIPromptsFuncParams extends Partial<AIPromptSettings>, KVSqliteResFuncParams {
   id?: any
 }
 
@@ -33,30 +27,12 @@ export class AIPromptsFunc extends KVSqliteResFunc<AIPromptsFuncParams> {
     return super.initData(initDir, collection)
   }
 
-  _getPrompt(modelName: string, type?: AIPromptType): AIPromptResult|false {
+  async _getPrompt(modelName: string, type?: AIPromptType) {
     const db = this.db
     // TODO: `db.list` should implement a json value filter.
     const prompts = (db.list() as AIPromptSettings[])
-      .filter(prompt => !type || prompt.type === type)
-      .sort((a,b) => (b.priority ?? 0) - (a.priority ?? 0))
-    let result: {prompt: AIPromptSettings, version: AIPromptFitResult|AIPromptFitResult[]}|false = false
-    for (let prompt of prompts) {
-      const version = promptIsFitForLLM(prompt, modelName)
-      if (version) {
-        if (prompt.extends) {
-          const parent = this.get({id: prompt.extends})
-          if (parent) {
-            // defaults(prompt, parent)
-            prompt = merge(parent, prompt)
-          }
-        }
-        result = {
-          prompt,
-          version,
-        }
-        break
-      }
-    }
+    const getById = (id: string) => super.get({id}) as AIPromptSettings
+    const result = await findPrompt(prompts, modelName, {type, getById})
     return result
   }
 
@@ -65,10 +41,10 @@ export class AIPromptsFunc extends KVSqliteResFunc<AIPromptsFuncParams> {
     if (result?.extends) {
       const parent = this.get({id: result.extends})
       if (parent) {
-        result = merge(parent, result)
+        result = mergeWithConcatArray(parent, result)
       }
     }
-    return result
+    return result as AIPromptSettings
   }
 
   $getDefaultPrompt(type?: string): AIPromptResult {
@@ -103,11 +79,11 @@ export class AIPromptsFunc extends KVSqliteResFunc<AIPromptsFuncParams> {
     return {prompt}
   }
 
-  $getPrompt({model, type}: AIPromptsFuncParams) {
+  async $getPrompt({model, type}: AIPromptsFuncParams) {
     if (!model) {
       throw new CommonError('model is required', this.name + '.getPrompt', ErrorCode.InvalidArgument)
     }
-    const result = this._getPrompt(model, type)
+    const result = await this._getPrompt(model, type)
     return result
   }
 
@@ -122,15 +98,4 @@ export class AIPromptsFunc extends KVSqliteResFunc<AIPromptsFuncParams> {
     }
     return result || null
   }
-}
-
-/**
- * merge with concat array
- **/
-function merge(target: any, ...source: any[]) {
-  return mergeWith(target, ...source, (objValue, srcValue) => {
-    if (Array.isArray(objValue) && srcValue !== undefined) {
-      return objValue.concat(srcValue)
-    }
-  })
 }

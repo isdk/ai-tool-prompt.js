@@ -12,6 +12,7 @@ const dbPath = ':memory:'
 
 describe('Prompts server api', () => {
   let apiRoot: string // = 'http://localhost:3000/api'
+  let promptsFunc: AIPromptsFunc
   const server = fastify()
 
   beforeAll(async () => {
@@ -85,9 +86,9 @@ describe('Prompts server api', () => {
     apiRoot = `http://localhost:${port}/api`
 
     ResServerTools.setApiRoot(apiRoot)
-    const res = new AIPromptsFunc(AIPromptsName, {dbPath})
-    await res.initData()
-    res.register()
+    promptsFunc = new AIPromptsFunc(AIPromptsName, {dbPath})
+    await promptsFunc.initData()
+    promptsFunc.register()
 
     ResClientTools.setApiRoot(apiRoot)
     await ResClientTools.loadFrom()
@@ -277,7 +278,7 @@ describe('Prompts server api', () => {
     expect(result).toHaveProperty('changes', 1)
     expect(prompts.get({id: prompt._id})).rejects.toThrow(NotFoundError)
   })
-  it('should set priority prompt', async () => {
+  it.only('should set priority prompt', async () => {
     const prompts = ResClientTools.get(AIPromptsName)
     expect(prompts).toBeInstanceOf(ResClientTools)
     const prompt = {
@@ -292,6 +293,8 @@ describe('Prompts server api', () => {
     expect(result).toHaveProperty('changes', 1)
 
     result = await prompts.getPrompt({model: 'qwen1.5'})
+    const result2 = await promptsFunc.$getPrompt({model: 'qwen1.5'})
+    expect(result2).toMatchObject(result)
     expect(result).toHaveProperty('prompt')
     expect(result).toHaveProperty('version', '@')
     expect(result.prompt).toHaveProperty('_id', prompt._id)

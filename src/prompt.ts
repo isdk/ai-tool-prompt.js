@@ -1,9 +1,18 @@
+import { mergeWith } from 'lodash-es'
 import { AdvancePropertyManager } from 'property-manager';
 import { ConfigFile, isModelNameMatched } from '@isdk/ai-tool';
-import { AIPromptSchema, AIPromptSettings } from './prompt-settings';
+import { AIPromptSchema, AIPromptSettings, AIPromptType } from './prompt-settings';
 
 // 128271: 🔏
 const LockedMagic = 128271
+
+// @ means the default version,
+export type AIPromptFitResult = '@' | string
+
+export interface AIPromptResult {
+  prompt: AIPromptSettings
+  version?: AIPromptFitResult | AIPromptFitResult[];
+}
 
 export interface AIPrompt extends AIPromptSettings {}
 
@@ -24,9 +33,6 @@ function arrayDifference(src: string[], dest: string[]): string[] {
 export function strIsLocked(value: string) {
   return (value && value.codePointAt(0) === LockedMagic)
 }
-
-// @ means the default version,
-export type AIPromptFitResult = '@' | string
 
 function getMatchedStr(matched: string|RegExpExecArray|undefined) {
   let result: string|undefined
@@ -117,6 +123,75 @@ export function promptIsFitForLLM(prompt: AIPromptSettings, modelName: string): 
 }
 
 /**
+ * Finds a suitable prompt from an array of prompt settings based on the given model name and optional parameters.
+ * @param prompts - An array of AI prompt settings to search through.
+ * @param modelFileName - The name of the model to check compatibility with.
+ * @param options - An object containing optional parameters:
+ *   @param options.type - An optional filter for the type of prompt to include in the search.
+ *   @param options.getById - An optional function to retrieve a prompt by its ID.
+ * @returns An object containing the matched prompt and its version, or `false` if no match is found.
+ *
+ * @example
+ * const prompts = [
+ *   { _id: "sp1", type: "system", priority: 10, extends: "sp2", modelPattern: /^model-\d+/, ... },
+ *   { _id: "sp2", type: "system", priority: 5, parameters: {temperature: 0.8}, ... },
+ *   { _id: "cp3", type: "char", priority: 8, ... }
+ * ];
+ *
+ * const result = findPrompt(prompts, "model-1", { type: "system" });
+ * // '@' means the default version
+ * console.log(result); // Output: { prompt: { _id: "sp1", type: "system", parameters: {temperature: 0.8}, ... }, version: '@' }
+ */
+export async function findPrompt(prompts:AIPromptSettings[], modelFileName: string, {type, getById}: {type?: AIPromptType, getById?: (id: string)=>AIPromptSettings|undefined|Promise<AIPromptSettings|undefined>}={}) {
+  const _prompts = prompts
+    .filter(prompt => !type || prompt.type === type)
+    .sort((a,b) => (b.priority ?? 0) - (a.priority ?? 0))
+
+  if (typeof getById !== 'function') {
+    getById = (id: string) => prompts.find(p => p._id === id)
+  }
+
+  const get = (id: string) => {
+    let result: any = getById(id)
+
+    if (typeof (result as any).then === 'function') {
+      // is async
+      return (result as any).then(async (result?: AIPromptSettings)=>{
+        if (result?.extends) {
+          const parent = await get(result.extends)
+          if (parent) {
+            result = mergeWithConcatArray(parent, result)
+          }
+        }
+        return result
+      })
+    } else {
+      if (result?.extends) {
+        const parent = get(result.extends)
+        if (parent) {
+          result = mergeWithConcatArray(parent, result)
+        }
+      }
+    return result
+    }
+  }
+
+  let result: {prompt: AIPromptSettings, version: AIPromptFitResult|AIPromptFitResult[]}|false = false
+  for (let prompt of _prompts) {
+    const version = promptIsFitForLLM(prompt, modelFileName)
+    if (version) { // found the prompt for the modelName
+      prompt = await get(prompt._id!)!
+      result = {
+        prompt,
+        version,
+      }
+      break
+    }
+  }
+  return result
+}
+
+/**
  * Represents an AIPrompt
  */
 export class AIPrompt extends AdvancePropertyManager {
@@ -153,3 +228,14 @@ export class AIPrompt extends AdvancePropertyManager {
 }
 
 AIPrompt.defineProperties(AIPrompt, AIPromptSchema)
+
+/**
+ * merge with concat array for mergeing the messages etc.
+ **/
+export function mergeWithConcatArray(target: any, ...source: any[]) {
+  return mergeWith(target, ...source, (objValue, srcValue) => {
+    if (Array.isArray(objValue) && srcValue !== undefined) {
+      return objValue.concat(srcValue)
+    }
+  })
+}
