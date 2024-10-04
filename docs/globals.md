@@ -38,7 +38,9 @@
 
 ## Functions
 
+- [findPrompt](functions/findPrompt.md)
 - [formatPrompt](functions/formatPrompt.md)
 - [getLLMParameters](functions/getLLMParameters.md)
+- [mergeWithConcatArray](functions/mergeWithConcatArray.md)
 - [promptIsFitForLLM](functions/promptIsFitForLLM.md)
 - [strIsLocked](functions/strIsLocked.md)

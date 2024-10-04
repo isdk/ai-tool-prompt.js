@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:27](https://github.com/isdk/ai-tool-prompt.js/blob/cf3fc2758759b055a3b34708f92339dcf4ac415b/src/prompt-settings.ts#L27)
+[packages/ai-tool-prompt/src/prompt-settings.ts:40](https://github.com/isdk/ai-tool-prompt.js/blob/0136bd578ac5c79f75e3197311fc0252c414fe6f/src/prompt-settings.ts#L40)
 
 ***
 
@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:46](https://github.com/isdk/ai-tool-prompt.js/blob/cf3fc2758759b055a3b34708f92339dcf4ac415b/src/prompt-settings.ts#L46)
+[packages/ai-tool-prompt/src/prompt-settings.ts:60](https://github.com/isdk/ai-tool-prompt.js/blob/0136bd578ac5c79f75e3197311fc0252c414fe6f/src/prompt-settings.ts#L60)
 
 ***
 
@@ -38,7 +38,7 @@
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:47](https://github.com/isdk/ai-tool-prompt.js/blob/cf3fc2758759b055a3b34708f92339dcf4ac415b/src/prompt-settings.ts#L47)
+[packages/ai-tool-prompt/src/prompt-settings.ts:61](https://github.com/isdk/ai-tool-prompt.js/blob/0136bd578ac5c79f75e3197311fc0252c414fe6f/src/prompt-settings.ts#L61)
 
 ***
 
@@ -48,7 +48,7 @@
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:31](https://github.com/isdk/ai-tool-prompt.js/blob/cf3fc2758759b055a3b34708f92339dcf4ac415b/src/prompt-settings.ts#L31)
+[packages/ai-tool-prompt/src/prompt-settings.ts:44](https://github.com/isdk/ai-tool-prompt.js/blob/0136bd578ac5c79f75e3197311fc0252c414fe6f/src/prompt-settings.ts#L44)
 
 ***
 
@@ -58,7 +58,7 @@
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:32](https://github.com/isdk/ai-tool-prompt.js/blob/cf3fc2758759b055a3b34708f92339dcf4ac415b/src/prompt-settings.ts#L32)
+[packages/ai-tool-prompt/src/prompt-settings.ts:45](https://github.com/isdk/ai-tool-prompt.js/blob/0136bd578ac5c79f75e3197311fc0252c414fe6f/src/prompt-settings.ts#L45)
 
 ***
 
@@ -68,7 +68,7 @@
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:39](https://github.com/isdk/ai-tool-prompt.js/blob/cf3fc2758759b055a3b34708f92339dcf4ac415b/src/prompt-settings.ts#L39)
+[packages/ai-tool-prompt/src/prompt-settings.ts:53](https://github.com/isdk/ai-tool-prompt.js/blob/0136bd578ac5c79f75e3197311fc0252c414fe6f/src/prompt-settings.ts#L53)
 
 ***
 
@@ -78,7 +78,7 @@
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:28](https://github.com/isdk/ai-tool-prompt.js/blob/cf3fc2758759b055a3b34708f92339dcf4ac415b/src/prompt-settings.ts#L28)
+[packages/ai-tool-prompt/src/prompt-settings.ts:41](https://github.com/isdk/ai-tool-prompt.js/blob/0136bd578ac5c79f75e3197311fc0252c414fe6f/src/prompt-settings.ts#L41)
 
 ***
 
@@ -88,7 +88,7 @@
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:43](https://github.com/isdk/ai-tool-prompt.js/blob/cf3fc2758759b055a3b34708f92339dcf4ac415b/src/prompt-settings.ts#L43)
+[packages/ai-tool-prompt/src/prompt-settings.ts:57](https://github.com/isdk/ai-tool-prompt.js/blob/0136bd578ac5c79f75e3197311fc0252c414fe6f/src/prompt-settings.ts#L57)
 
 ***
 
@@ -98,7 +98,7 @@
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:33](https://github.com/isdk/ai-tool-prompt.js/blob/cf3fc2758759b055a3b34708f92339dcf4ac415b/src/prompt-settings.ts#L33)
+[packages/ai-tool-prompt/src/prompt-settings.ts:46](https://github.com/isdk/ai-tool-prompt.js/blob/0136bd578ac5c79f75e3197311fc0252c414fe6f/src/prompt-settings.ts#L46)
 
 ***
 
@@ -108,7 +108,7 @@
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:44](https://github.com/isdk/ai-tool-prompt.js/blob/cf3fc2758759b055a3b34708f92339dcf4ac415b/src/prompt-settings.ts#L44)
+[packages/ai-tool-prompt/src/prompt-settings.ts:58](https://github.com/isdk/ai-tool-prompt.js/blob/0136bd578ac5c79f75e3197311fc0252c414fe6f/src/prompt-settings.ts#L58)
 
 ***
 
@@ -118,7 +118,7 @@
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:38](https://github.com/isdk/ai-tool-prompt.js/blob/cf3fc2758759b055a3b34708f92339dcf4ac415b/src/prompt-settings.ts#L38)
+[packages/ai-tool-prompt/src/prompt-settings.ts:52](https://github.com/isdk/ai-tool-prompt.js/blob/0136bd578ac5c79f75e3197311fc0252c414fe6f/src/prompt-settings.ts#L52)
 
 ***
 
@@ -128,7 +128,7 @@
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:42](https://github.com/isdk/ai-tool-prompt.js/blob/cf3fc2758759b055a3b34708f92339dcf4ac415b/src/prompt-settings.ts#L42)
+[packages/ai-tool-prompt/src/prompt-settings.ts:56](https://github.com/isdk/ai-tool-prompt.js/blob/0136bd578ac5c79f75e3197311fc0252c414fe6f/src/prompt-settings.ts#L56)
 
 ***
 
@@ -138,7 +138,7 @@
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:36](https://github.com/isdk/ai-tool-prompt.js/blob/cf3fc2758759b055a3b34708f92339dcf4ac415b/src/prompt-settings.ts#L36)
+[packages/ai-tool-prompt/src/prompt-settings.ts:49](https://github.com/isdk/ai-tool-prompt.js/blob/0136bd578ac5c79f75e3197311fc0252c414fe6f/src/prompt-settings.ts#L49)
 
 ***
 
@@ -148,7 +148,7 @@
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:45](https://github.com/isdk/ai-tool-prompt.js/blob/cf3fc2758759b055a3b34708f92339dcf4ac415b/src/prompt-settings.ts#L45)
+[packages/ai-tool-prompt/src/prompt-settings.ts:59](https://github.com/isdk/ai-tool-prompt.js/blob/0136bd578ac5c79f75e3197311fc0252c414fe6f/src/prompt-settings.ts#L59)
 
 ***
 
@@ -158,7 +158,7 @@
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:29](https://github.com/isdk/ai-tool-prompt.js/blob/cf3fc2758759b055a3b34708f92339dcf4ac415b/src/prompt-settings.ts#L29)
+[packages/ai-tool-prompt/src/prompt-settings.ts:42](https://github.com/isdk/ai-tool-prompt.js/blob/0136bd578ac5c79f75e3197311fc0252c414fe6f/src/prompt-settings.ts#L42)
 
 ***
 
@@ -168,7 +168,7 @@
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:34](https://github.com/isdk/ai-tool-prompt.js/blob/cf3fc2758759b055a3b34708f92339dcf4ac415b/src/prompt-settings.ts#L34)
+[packages/ai-tool-prompt/src/prompt-settings.ts:47](https://github.com/isdk/ai-tool-prompt.js/blob/0136bd578ac5c79f75e3197311fc0252c414fe6f/src/prompt-settings.ts#L47)
 
 ***
 
@@ -178,7 +178,7 @@
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:30](https://github.com/isdk/ai-tool-prompt.js/blob/cf3fc2758759b055a3b34708f92339dcf4ac415b/src/prompt-settings.ts#L30)
+[packages/ai-tool-prompt/src/prompt-settings.ts:43](https://github.com/isdk/ai-tool-prompt.js/blob/0136bd578ac5c79f75e3197311fc0252c414fe6f/src/prompt-settings.ts#L43)
 
 ***
 
@@ -192,4 +192,4 @@
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:37](https://github.com/isdk/ai-tool-prompt.js/blob/cf3fc2758759b055a3b34708f92339dcf4ac415b/src/prompt-settings.ts#L37)
+[packages/ai-tool-prompt/src/prompt-settings.ts:50](https://github.com/isdk/ai-tool-prompt.js/blob/0136bd578ac5c79f75e3197311fc0252c414fe6f/src/prompt-settings.ts#L50)
