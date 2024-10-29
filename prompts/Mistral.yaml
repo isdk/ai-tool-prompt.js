@@ -50,3 +50,4 @@ modelPattern:
   - /^Mistral-/i
   - /^Mixtral-/i
   - /^miqu/i
+  - /^Ministral-/i
