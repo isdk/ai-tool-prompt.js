@@ -51,3 +51,4 @@ modelPattern:
   - /^Mixtral-/i
   - /^miqu/i
   - /^Ministral-/i
+  - /(?:^|[-_])(monstral|cydonia)(?:[-_]|$)/i
