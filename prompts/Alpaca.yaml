@@ -23,4 +23,4 @@ template: >-
       {{-'### Response:\n'-}}
   {%- endif -%}
 modelPattern:
-  - !re /(?:^|[-_])(alpaca)(?:[-_]|$)/i
+  - !re /(?:^|[-_])(alpaca|beepo)(?:[-_]|$)/i

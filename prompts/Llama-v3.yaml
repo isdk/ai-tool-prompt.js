@@ -25,6 +25,7 @@ template: >-
 modelPattern:
   bagel: !re /^bagel(?:$|[-_])(?:8b)/i
   reflection: !re /^(reflection)[-_]llama[-_]/i
+  stheno: !re /^L3-8B-(stheno)/i
   '@': !re /(?:^|[-_])(llama)[-_]?3(?:[.]\d)?[-_]\d+b[-_]/i
 parameters:
   llama:
@@ -34,3 +35,10 @@ parameters:
   reflection:
     temperature: 0.7
     top_p: 0.95
+  stheno:
+    temperature: 1.12 # 1.1-1.22
+    top_k: 50 # 40
+    top_p: 1
+    min_p: 0.075
+    stop_words: ['<|eot_id|>', '<|end_of_text|>']
+    # repeat_penalty: 1.1 # default 1.1
