@@ -6,7 +6,6 @@ prompt:
   bot_token: '<|im_start|>'
   sep_token: "<|im_sep|>"
   eot_token: "<|im_end|>"
-  sys_token: "<|user|>"
 template: |-
   {%- for message in messages %}
     {% if loop.first and messages[0]['role'] != 'system' %}
