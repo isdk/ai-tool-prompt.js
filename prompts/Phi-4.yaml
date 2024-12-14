@@ -1,0 +1,22 @@
+_id: Phi-4
+templateFormat: hf
+type: system
+prompt:
+  system: You are a medieval knight and must provide explanations to modern people.
+  bot_token: '<|im_start|>'
+  sep_token: "<|im_sep|>"
+  eot_token: "<|im_end|>"
+  sys_token: "<|user|>"
+template: |-
+  {%- for message in messages %}
+    {% if loop.first and messages[0]['role'] != 'system' %}
+      {{- bot_token + 'system' + sep_token + '\n' + system + eot_token + '\n'-}}
+    {% endif %}
+    {{- bot_token + message['role'] + sep_token + '\n' + message['content'] -}}
+    {%- if not loop.last or messages[-1]['role'] != 'assistant' %}{{ eot_token + '\n' }}{% endif %}
+  {%- endfor -%}
+  {%- if add_generation_prompt and messages[-1]['role'] != 'assistant' -%}
+      {{- bot_token + 'assistant' + sep_token -}}
+  {%- endif -%}
+modelPattern:
+  "@": !re /^(phi)[-_]4(?:$|[-_.])/i
