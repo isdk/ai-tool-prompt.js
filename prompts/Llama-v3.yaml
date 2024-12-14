@@ -26,7 +26,7 @@ modelPattern:
   bagel: !re /^bagel(?:$|[-_])(?:8b)/i
   reflection: !re /^(reflection)[-_]llama[-_]/i
   stheno: !re /^L3-8B-(stheno)/i
-  '@': !re /(?:^|[-_])(llama)[-_]?3(?:[.]\d)?[-_]\d+b[-_]/i
+  '@': !re /(?:^|[-_])(llama|l)[-_]?3(?:[.]\d+)?[-_]\d+b[-_]/i
 parameters:
   llama:
     stop_words: ['<|eot_id|>']
