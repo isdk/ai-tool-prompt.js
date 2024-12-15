@@ -10,4 +10,4 @@
 
 ## Defined in
 
-[packages/ai-tool-prompt/src/prompt.ts:10](https://github.com/isdk/ai-tool-prompt.js/blob/0136bd578ac5c79f75e3197311fc0252c414fe6f/src/prompt.ts#L10)
+[packages/ai-tool-prompt/src/prompt.ts:10](https://github.com/isdk/ai-tool-prompt.js/blob/db68a2def162f8b3a993e98a144d8f84707a7b4f/src/prompt.ts#L10)
