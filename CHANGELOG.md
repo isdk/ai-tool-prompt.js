@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.2.5](https://github.com/isdk/ai-tool-prompt.js/compare/v0.2.4...v0.2.5) (2024-12-15)
+
+
+### Features
+
+* add excludeModels option ([8233020](https://github.com/isdk/ai-tool-prompt.js/commit/823302019024d01f05f9653738cac0507a5a8b01))
+* add Ministral ([ca23d47](https://github.com/isdk/ai-tool-prompt.js/commit/ca23d476f063a5faa71e78ae63f628d3f3d23da4))
+* add monstral, cydonia supports ([4a8d5c4](https://github.com/isdk/ai-tool-prompt.js/commit/4a8d5c474e7257a95353124eefd7bcfde2cb6142))
+* add phi-4 model ([6bfabd9](https://github.com/isdk/ai-tool-prompt.js/commit/6bfabd9d47001288341b73e49fd910c77a33992d))
+* add qwq-32b model ([c0b31c7](https://github.com/isdk/ai-tool-prompt.js/commit/c0b31c7e828a26fbcf9cadab465464f64e8ad89b))
+* add SmoLLM model ([d50f00d](https://github.com/isdk/ai-tool-prompt.js/commit/d50f00da45d2fc9ac594c7baf8113e46f7686960))
+* add tonggu model ([95e5cbc](https://github.com/isdk/ai-tool-prompt.js/commit/95e5cbcd1470761a466920b7ca3036f27188c3a3))
+* more lama3.3 models supports ([0c644d2](https://github.com/isdk/ai-tool-prompt.js/commit/0c644d2d4923abde87907de8d941afbe23b75caf))
+* more models added ([24fbda5](https://github.com/isdk/ai-tool-prompt.js/commit/24fbda540e00c3e1900adff6ec3e7e17f8e58fef))
+
+
+### Bug Fixes
+
+* **prompt:** detect llama3 ([3110737](https://github.com/isdk/ai-tool-prompt.js/commit/31107379128579cad6ab6804bdeb6af701aa1c96))
+
 ## [0.2.4](https://github.com/isdk/ai-tool-prompt.js/compare/v0.2.3...v0.2.4) (2024-10-04)
 
 
