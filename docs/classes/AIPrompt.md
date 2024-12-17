@@ -46,7 +46,7 @@ node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/ab
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:40](https://github.com/isdk/ai-tool-prompt.js/blob/db68a2def162f8b3a993e98a144d8f84707a7b4f/src/prompt-settings.ts#L40)
+[packages/ai-tool-prompt/src/prompt-settings.ts:40](https://github.com/isdk/ai-tool-prompt.js/blob/0233e5c9813084375813f34230e8747b56fe8088/src/prompt-settings.ts#L40)
 
 ***
 
@@ -70,7 +70,7 @@ node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/ad
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:61](https://github.com/isdk/ai-tool-prompt.js/blob/db68a2def162f8b3a993e98a144d8f84707a7b4f/src/prompt-settings.ts#L61)
+[packages/ai-tool-prompt/src/prompt-settings.ts:61](https://github.com/isdk/ai-tool-prompt.js/blob/0233e5c9813084375813f34230e8747b56fe8088/src/prompt-settings.ts#L61)
 
 ***
 
@@ -84,7 +84,7 @@ node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/ad
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:62](https://github.com/isdk/ai-tool-prompt.js/blob/db68a2def162f8b3a993e98a144d8f84707a7b4f/src/prompt-settings.ts#L62)
+[packages/ai-tool-prompt/src/prompt-settings.ts:62](https://github.com/isdk/ai-tool-prompt.js/blob/0233e5c9813084375813f34230e8747b56fe8088/src/prompt-settings.ts#L62)
 
 ***
 
@@ -110,7 +110,7 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:44](https://github.com/isdk/ai-tool-prompt.js/blob/db68a2def162f8b3a993e98a144d8f84707a7b4f/src/prompt-settings.ts#L44)
+[packages/ai-tool-prompt/src/prompt-settings.ts:44](https://github.com/isdk/ai-tool-prompt.js/blob/0233e5c9813084375813f34230e8747b56fe8088/src/prompt-settings.ts#L44)
 
 ***
 
@@ -144,7 +144,7 @@ node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/ab
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:45](https://github.com/isdk/ai-tool-prompt.js/blob/db68a2def162f8b3a993e98a144d8f84707a7b4f/src/prompt-settings.ts#L45)
+[packages/ai-tool-prompt/src/prompt-settings.ts:45](https://github.com/isdk/ai-tool-prompt.js/blob/0233e5c9813084375813f34230e8747b56fe8088/src/prompt-settings.ts#L45)
 
 ***
 
@@ -158,7 +158,7 @@ node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/ab
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:47](https://github.com/isdk/ai-tool-prompt.js/blob/db68a2def162f8b3a993e98a144d8f84707a7b4f/src/prompt-settings.ts#L47)
+[packages/ai-tool-prompt/src/prompt-settings.ts:47](https://github.com/isdk/ai-tool-prompt.js/blob/0233e5c9813084375813f34230e8747b56fe8088/src/prompt-settings.ts#L47)
 
 ***
 
@@ -172,7 +172,7 @@ node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/ab
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:54](https://github.com/isdk/ai-tool-prompt.js/blob/db68a2def162f8b3a993e98a144d8f84707a7b4f/src/prompt-settings.ts#L54)
+[packages/ai-tool-prompt/src/prompt-settings.ts:54](https://github.com/isdk/ai-tool-prompt.js/blob/0233e5c9813084375813f34230e8747b56fe8088/src/prompt-settings.ts#L54)
 
 ***
 
@@ -186,7 +186,7 @@ node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/ab
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:41](https://github.com/isdk/ai-tool-prompt.js/blob/db68a2def162f8b3a993e98a144d8f84707a7b4f/src/prompt-settings.ts#L41)
+[packages/ai-tool-prompt/src/prompt-settings.ts:41](https://github.com/isdk/ai-tool-prompt.js/blob/0233e5c9813084375813f34230e8747b56fe8088/src/prompt-settings.ts#L41)
 
 ***
 
@@ -200,7 +200,7 @@ node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/ab
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:58](https://github.com/isdk/ai-tool-prompt.js/blob/db68a2def162f8b3a993e98a144d8f84707a7b4f/src/prompt-settings.ts#L58)
+[packages/ai-tool-prompt/src/prompt-settings.ts:58](https://github.com/isdk/ai-tool-prompt.js/blob/0233e5c9813084375813f34230e8747b56fe8088/src/prompt-settings.ts#L58)
 
 ***
 
@@ -214,7 +214,7 @@ node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/ab
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:46](https://github.com/isdk/ai-tool-prompt.js/blob/db68a2def162f8b3a993e98a144d8f84707a7b4f/src/prompt-settings.ts#L46)
+[packages/ai-tool-prompt/src/prompt-settings.ts:46](https://github.com/isdk/ai-tool-prompt.js/blob/0233e5c9813084375813f34230e8747b56fe8088/src/prompt-settings.ts#L46)
 
 ***
 
@@ -240,7 +240,7 @@ node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/ab
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:59](https://github.com/isdk/ai-tool-prompt.js/blob/db68a2def162f8b3a993e98a144d8f84707a7b4f/src/prompt-settings.ts#L59)
+[packages/ai-tool-prompt/src/prompt-settings.ts:59](https://github.com/isdk/ai-tool-prompt.js/blob/0233e5c9813084375813f34230e8747b56fe8088/src/prompt-settings.ts#L59)
 
 ***
 
@@ -254,7 +254,7 @@ node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/ab
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:53](https://github.com/isdk/ai-tool-prompt.js/blob/db68a2def162f8b3a993e98a144d8f84707a7b4f/src/prompt-settings.ts#L53)
+[packages/ai-tool-prompt/src/prompt-settings.ts:53](https://github.com/isdk/ai-tool-prompt.js/blob/0233e5c9813084375813f34230e8747b56fe8088/src/prompt-settings.ts#L53)
 
 ***
 
@@ -268,7 +268,7 @@ node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/ab
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:57](https://github.com/isdk/ai-tool-prompt.js/blob/db68a2def162f8b3a993e98a144d8f84707a7b4f/src/prompt-settings.ts#L57)
+[packages/ai-tool-prompt/src/prompt-settings.ts:57](https://github.com/isdk/ai-tool-prompt.js/blob/0233e5c9813084375813f34230e8747b56fe8088/src/prompt-settings.ts#L57)
 
 ***
 
@@ -282,7 +282,7 @@ node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/ab
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:50](https://github.com/isdk/ai-tool-prompt.js/blob/db68a2def162f8b3a993e98a144d8f84707a7b4f/src/prompt-settings.ts#L50)
+[packages/ai-tool-prompt/src/prompt-settings.ts:50](https://github.com/isdk/ai-tool-prompt.js/blob/0233e5c9813084375813f34230e8747b56fe8088/src/prompt-settings.ts#L50)
 
 ***
 
@@ -296,7 +296,7 @@ node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/ab
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:60](https://github.com/isdk/ai-tool-prompt.js/blob/db68a2def162f8b3a993e98a144d8f84707a7b4f/src/prompt-settings.ts#L60)
+[packages/ai-tool-prompt/src/prompt-settings.ts:60](https://github.com/isdk/ai-tool-prompt.js/blob/0233e5c9813084375813f34230e8747b56fe8088/src/prompt-settings.ts#L60)
 
 ***
 
@@ -310,7 +310,7 @@ node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/ab
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:42](https://github.com/isdk/ai-tool-prompt.js/blob/db68a2def162f8b3a993e98a144d8f84707a7b4f/src/prompt-settings.ts#L42)
+[packages/ai-tool-prompt/src/prompt-settings.ts:42](https://github.com/isdk/ai-tool-prompt.js/blob/0233e5c9813084375813f34230e8747b56fe8088/src/prompt-settings.ts#L42)
 
 ***
 
@@ -324,7 +324,7 @@ node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/ab
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:48](https://github.com/isdk/ai-tool-prompt.js/blob/db68a2def162f8b3a993e98a144d8f84707a7b4f/src/prompt-settings.ts#L48)
+[packages/ai-tool-prompt/src/prompt-settings.ts:48](https://github.com/isdk/ai-tool-prompt.js/blob/0233e5c9813084375813f34230e8747b56fe8088/src/prompt-settings.ts#L48)
 
 ***
 
@@ -338,7 +338,7 @@ node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/ab
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:43](https://github.com/isdk/ai-tool-prompt.js/blob/db68a2def162f8b3a993e98a144d8f84707a7b4f/src/prompt-settings.ts#L43)
+[packages/ai-tool-prompt/src/prompt-settings.ts:43](https://github.com/isdk/ai-tool-prompt.js/blob/0233e5c9813084375813f34230e8747b56fe8088/src/prompt-settings.ts#L43)
 
 ***
 
@@ -356,7 +356,7 @@ node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/ab
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt-settings.ts:51](https://github.com/isdk/ai-tool-prompt.js/blob/db68a2def162f8b3a993e98a144d8f84707a7b4f/src/prompt-settings.ts#L51)
+[packages/ai-tool-prompt/src/prompt-settings.ts:51](https://github.com/isdk/ai-tool-prompt.js/blob/0233e5c9813084375813f34230e8747b56fe8088/src/prompt-settings.ts#L51)
 
 ## Methods
 
@@ -638,7 +638,7 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt.ts:198](https://github.com/isdk/ai-tool-prompt.js/blob/db68a2def162f8b3a993e98a144d8f84707a7b4f/src/prompt.ts#L198)
+[packages/ai-tool-prompt/src/prompt.ts:198](https://github.com/isdk/ai-tool-prompt.js/blob/0233e5c9813084375813f34230e8747b56fe8088/src/prompt.ts#L198)
 
 ***
 
@@ -689,7 +689,7 @@ The fit result(s) for the given LLM model, representing its compatibility or sui
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt.ts:225](https://github.com/isdk/ai-tool-prompt.js/blob/db68a2def162f8b3a993e98a144d8f84707a7b4f/src/prompt.ts#L225)
+[packages/ai-tool-prompt/src/prompt.ts:225](https://github.com/isdk/ai-tool-prompt.js/blob/0233e5c9813084375813f34230e8747b56fe8088/src/prompt.ts#L225)
 
 ***
 
@@ -713,7 +713,7 @@ The template to check for lock status. If not provided, uses the current templat
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompt.ts:209](https://github.com/isdk/ai-tool-prompt.js/blob/db68a2def162f8b3a993e98a144d8f84707a7b4f/src/prompt.ts#L209)
+[packages/ai-tool-prompt/src/prompt.ts:209](https://github.com/isdk/ai-tool-prompt.js/blob/0233e5c9813084375813f34230e8747b56fe8088/src/prompt.ts#L209)
 
 ***
 
