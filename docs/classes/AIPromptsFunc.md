@@ -448,7 +448,7 @@ packages/ai-tool/dist/index-BC3GQn6-.d.ts:290
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompts-db.ts:30](https://github.com/isdk/ai-tool-prompt.js/blob/0233e5c9813084375813f34230e8747b56fe8088/src/prompts-db.ts#L30)
+[packages/ai-tool-prompt/src/prompts-db.ts:30](https://github.com/isdk/ai-tool-prompt.js/blob/56ba47e7448def48d7081eb98dbdd2995e67a298/src/prompts-db.ts#L30)
 
 ***
 
@@ -532,7 +532,7 @@ packages/ai-tool-sqlite/dist/index.d.ts:71
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompts-db.ts:50](https://github.com/isdk/ai-tool-prompt.js/blob/0233e5c9813084375813f34230e8747b56fe8088/src/prompts-db.ts#L50)
+[packages/ai-tool-prompt/src/prompts-db.ts:50](https://github.com/isdk/ai-tool-prompt.js/blob/56ba47e7448def48d7081eb98dbdd2995e67a298/src/prompts-db.ts#L50)
 
 ***
 
@@ -550,7 +550,7 @@ packages/ai-tool-sqlite/dist/index.d.ts:71
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompts-db.ts:90](https://github.com/isdk/ai-tool-prompt.js/blob/0233e5c9813084375813f34230e8747b56fe8088/src/prompts-db.ts#L90)
+[packages/ai-tool-prompt/src/prompts-db.ts:90](https://github.com/isdk/ai-tool-prompt.js/blob/56ba47e7448def48d7081eb98dbdd2995e67a298/src/prompts-db.ts#L90)
 
 ***
 
@@ -568,7 +568,7 @@ packages/ai-tool-sqlite/dist/index.d.ts:71
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompts-db.ts:82](https://github.com/isdk/ai-tool-prompt.js/blob/0233e5c9813084375813f34230e8747b56fe8088/src/prompts-db.ts#L82)
+[packages/ai-tool-prompt/src/prompts-db.ts:82](https://github.com/isdk/ai-tool-prompt.js/blob/56ba47e7448def48d7081eb98dbdd2995e67a298/src/prompts-db.ts#L82)
 
 ***
 
@@ -1002,7 +1002,7 @@ packages/ai-tool/dist/index-BC3GQn6-.d.ts:422
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompts-db.ts:39](https://github.com/isdk/ai-tool-prompt.js/blob/0233e5c9813084375813f34230e8747b56fe8088/src/prompts-db.ts#L39)
+[packages/ai-tool-prompt/src/prompts-db.ts:39](https://github.com/isdk/ai-tool-prompt.js/blob/56ba47e7448def48d7081eb98dbdd2995e67a298/src/prompts-db.ts#L39)
 
 ***
 
@@ -1184,7 +1184,7 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1
 
 #### Defined in
 
-[packages/ai-tool-prompt/src/prompts-db.ts:23](https://github.com/isdk/ai-tool-prompt.js/blob/0233e5c9813084375813f34230e8747b56fe8088/src/prompts-db.ts#L23)
+[packages/ai-tool-prompt/src/prompts-db.ts:23](https://github.com/isdk/ai-tool-prompt.js/blob/56ba47e7448def48d7081eb98dbdd2995e67a298/src/prompts-db.ts#L23)
 
 ***
 
