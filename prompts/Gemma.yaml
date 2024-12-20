@@ -17,8 +17,11 @@ template: |-
     {%- if not loop.last or messages[-1]['role'] != 'assistant' -%}{{ eot_token + '\n'}}{%- endif -%}
   {% endfor %}
   {%- if add_generation_prompt and messages[-1]['role'] != 'assistant' %}{{ bot_token + 'model\n'}}{% endif -%}
+parameters:
+  gemma:
+    stop_words: ['<eos>']
 modelPattern:
-  - !re /(?:^|[-_])((?:shield|code)?gemma)(?:[-_]|$)/i
+  - !re /(?:^|[-_])(?:shield|code)?(gemma)(?:[-_]|$)/i
   # {%- set prev_message = {} -%}
   # {% for message in messages %}
   #   {%- if loop.first and system and messages[0]['role'] != 'system' -%}
