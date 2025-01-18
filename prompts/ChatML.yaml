@@ -30,7 +30,7 @@ template: |-
   {% if add_generation_prompt and messages[-1]['role'] != 'assistant' %}{{ bot_token }}assistant
   {% endif %}
 modelPattern:
-  'qwen': !re /(?:^|[-_.])(?:code)?(qwen|qwq)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
+  'qwen': !re /(?:^|[-_.])(?:code)?(qwen|qwq|Sky-T1)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   NousHermes2: !re /(?:^|[-_.])Nous-Hermes-2-([^-]+)(?:$|[-_.])/i
   Hermes3: !re /(?:^|[-_.])(Hermes-3)(?:$|[-_.])/i
   '@': !re /(?:^|[-_.])(?:code)?(yi|MiniCPM|smollm|2B_or_not_2B|Violet_Twilight)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
