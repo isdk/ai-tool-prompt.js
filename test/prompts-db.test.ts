@@ -166,7 +166,7 @@ describe('Prompts server api', () => {
     expect(result).toMatchObject(prompt)
     result = await prompts.delete({id: prompt._id})
     expect(result).toHaveProperty('changes', 1)
-    expect(prompts.get({id: prompt._id})).rejects.toThrow(NotFoundError)
+    await expect(prompts.get({id: prompt._id})).rejects.toThrow(NotFoundError)
   })
 
   it('should get prompt for LLM', async () => {
@@ -210,7 +210,7 @@ describe('Prompts server api', () => {
     expect(result.prompt).toHaveProperty('_id', prompt._id)
     result = await prompts.delete({id: prompt._id})
     expect(result).toHaveProperty('changes', 1)
-    expect(prompts.get({id: prompt._id})).rejects.toThrow(NotFoundError)
+    await expect(prompts.get({id: prompt._id})).rejects.toThrow(NotFoundError)
   })
   it('should getLLMParameters', async () => {
     const prompts = ResClientTools.get(AIPromptsName)
@@ -276,9 +276,9 @@ describe('Prompts server api', () => {
 
     result = await prompts.delete({id: prompt._id})
     expect(result).toHaveProperty('changes', 1)
-    expect(prompts.get({id: prompt._id})).rejects.toThrow(NotFoundError)
+    await expect(prompts.get({id: prompt._id})).rejects.toThrow(NotFoundError)
   })
-  it.only('should set priority prompt', async () => {
+  it('should set priority prompt', async () => {
     const prompts = ResClientTools.get(AIPromptsName)
     expect(prompts).toBeInstanceOf(ResClientTools)
     const prompt = {
@@ -303,7 +303,7 @@ describe('Prompts server api', () => {
 
     result = await prompts.delete({id: prompt._id})
     expect(result).toHaveProperty('changes', 1)
-    expect(prompts.get({id: prompt._id})).rejects.toThrow(NotFoundError)
+    await expect(prompts.get({id: prompt._id})).rejects.toThrow(NotFoundError)
 
     result = await prompts.getPrompt({model: 'qwen1.5'})
     expect(result).toHaveProperty('prompt')
