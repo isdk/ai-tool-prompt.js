@@ -76,7 +76,7 @@ export class AIPromptsFunc extends KVSqliteResFunc<AIPromptsFuncParams> {
           '{%- if add_generation_prompt -%}assistant: {% endif %}'
       }
     }
-    return {prompt}
+    return {prompt, id}
   }
 
   async $getPrompt({model, type}: AIPromptsFuncParams) {

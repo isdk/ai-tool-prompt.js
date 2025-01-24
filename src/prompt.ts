@@ -12,6 +12,7 @@ export type AIPromptFitResult = '@' | string
 export interface AIPromptResult {
   prompt: AIPromptSettings
   version?: AIPromptFitResult | AIPromptFitResult[];
+  id?: string
 }
 
 export interface AIPrompt extends AIPromptSettings {}
@@ -140,7 +141,7 @@ export function promptIsFitForLLM(prompt: AIPromptSettings, modelName: string): 
  *
  * const result = findPrompt(prompts, "model-1", { type: "system" });
  * // '@' means the default version
- * console.log(result); // Output: { prompt: { _id: "sp1", type: "system", parameters: {temperature: 0.8}, ... }, version: '@' }
+ * console.log(result); // Output: { id: "sp1", prompt: { _id: "sp1", type: "system", parameters: {temperature: 0.8}, ... }, version: '@' }
  */
 export async function findPrompt(prompts:AIPromptSettings[], modelFileName: string, {type, getById}: {type?: AIPromptType, getById?: (id: string)=>AIPromptSettings|undefined|Promise<AIPromptSettings|undefined>}={}) {
   const _prompts = prompts
@@ -176,12 +177,13 @@ export async function findPrompt(prompts:AIPromptSettings[], modelFileName: stri
     }
   }
 
-  let result: {prompt: AIPromptSettings, version: AIPromptFitResult|AIPromptFitResult[]}|false = false
+  let result: {id: string, prompt: AIPromptSettings, version: AIPromptFitResult|AIPromptFitResult[]}|false = false
   for (let prompt of _prompts) {
     const version = promptIsFitForLLM(prompt, modelFileName)
     if (version) { // found the prompt for the modelName
       prompt = await get(prompt._id!)!
       result = {
+        id: prompt._id!,
         prompt,
         version,
       }
