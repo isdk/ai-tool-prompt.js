@@ -5,15 +5,12 @@ prompt:
   bos_token: '<｜begin▁of▁sentence｜>'
   eos_token: "<｜end▁of▁sentence｜>"
 supports: ['tools']
+# For mathematical problems, it is advisable to include a directive in your prompt such as:
+# "Please reason step by step, and put your final answer within \boxed{}."
 template: >-
   {% set ns = namespace(is_tool=false, is_output_first=true) %}
   {%- for message in messages %}
-    {%- if loop.first and system and messages[0]['role'] != 'system' %}
-      {{- '' + system -}}
-    {%- endif %}
-    {%- if message['role'] == 'system' -%}
-      {{- '' + message['content'] -}}
-    {%- elif message['role'] == 'user' -%}
+    {%- if message['role'] == 'user' or message['role'] == 'system' -%}
       {%- set ns.is_tool = false -%}
       {{- '<｜User｜>' + message['content'] -}}
     {%- elif message['role'] == 'assistant' -%}
@@ -65,3 +62,6 @@ template: >-
 modelPattern:
   - !re /(?:^|[-_])(deepseek-r1)(?:[-_]|$)/i
 priority: 10
+parameters:
+  deepseek-r1:
+    temperature: 0.6 # 0.5-0.7
