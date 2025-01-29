@@ -2,7 +2,6 @@ _id: Mistral
 templateFormat: hf
 type: system
 prompt:
-  system: ""
   bos_token: "<s>"
   eos_token: "</s>"
 version:
@@ -29,15 +28,15 @@ version:
         {%- endif %}
       {%- endfor %}
 template: |-
+  {%- set system_message = messages | selectattr('role', 'equalto', 'system') | map(attribute='content') | join('\n') %}
   {%- for message in messages %}
-    {% if loop.first and messages[0]['role'] != 'system' %}
-      {{- system -}}
-    {% endif %}
-    {%- if message['role'] == 'system' -%}
-      {{- message['content'] -}}
-    {%- else -%}
+    {%- if message['role'] != 'system' -%}
       {%- if message['role'] == 'user' -%}
-        {{-'[INST] ' + message['content'].strip() + ' [/INST]'-}}
+        {%- if loop.last and system_message %}
+          {{- "[INST]" + system_message + "\n\n" + message["content"].strip() + "[/INST]" }}
+        {%- else %}
+        {{-'[INST]' + message['content'].strip() + '[/INST]'-}}
+        {%- endif %}
       {%- else -%}
         {{-'' + message['content'] -}}{% if not loop.last or messages[-1]['role'] != 'assistant' %}{{ eos_token }}{% endif %}
       {%- endif -%}
