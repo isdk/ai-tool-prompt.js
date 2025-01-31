@@ -60,8 +60,8 @@ template: >-
       {{-'<｜Assistant｜>'-}}
   {%- endif -%}
 modelPattern:
-  - !re /(?:^|[-_])(deepseek-r1)(?:[-_]|$)/i
+  - !re /(?:^|[-_])(deepseek-r1|deepseekr1)(?:[-_]|$)/i
 priority: 10
 parameters:
-  deepseek-r1:
+  '@':
     temperature: 0.6 # 0.5-0.7

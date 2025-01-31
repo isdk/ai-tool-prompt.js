@@ -63,9 +63,12 @@ export function getLLMParameters(prompt: AIPromptSettings, modelName: string) {
     } else {
       m = getMatchedStr(isModelNameMatched(modelName, rules))
     }
+    let result: any
     if (m) {
-      return parameters[m.toLowerCase()]
+      result = parameters[m.toLowerCase()]
     }
+    if (!result) {result = parameters['@']}
+    return result
   }
 }
 
