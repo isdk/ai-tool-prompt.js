@@ -27,12 +27,12 @@ export class AIPromptsFunc extends KVSqliteResFunc<AIPromptsFuncParams> {
     return super.initData(initDir, collection)
   }
 
-  async _getPrompt(modelName: string, type?: AIPromptType) {
+  async _getPrompt(modelName: string, type?: AIPromptType, size?: number|string) {
     const db = this.db
     // TODO: `db.list` should implement a json value filter.
     const prompts = (db.list() as AIPromptSettings[])
     const getById = (id: string) => super.get({id}) as AIPromptSettings
-    const result = await findPrompt(prompts, modelName, {type, getById})
+    const result = await findPrompt(prompts, modelName, {size, type, getById})
     return result
   }
 
@@ -79,11 +79,11 @@ export class AIPromptsFunc extends KVSqliteResFunc<AIPromptsFuncParams> {
     return {prompt, id}
   }
 
-  async $getPrompt({model, type}: AIPromptsFuncParams) {
+  async $getPrompt({model, type, modelSize}: AIPromptsFuncParams) {
     if (!model) {
       throw new CommonError('model is required', this.name + '.getPrompt', ErrorCode.InvalidArgument)
     }
-    const result = await this._getPrompt(model, type)
+    const result = await this._getPrompt(model, type, modelSize)
     return result
   }
 

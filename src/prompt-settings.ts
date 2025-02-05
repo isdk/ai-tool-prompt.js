@@ -44,6 +44,7 @@ export interface AIPromptSettings {
   contentType?: AIContentType
   description?: string
   modelPattern?: {[ver: string]: AIModelNameRules} | AIModelNameRules
+  modelSize?: string|number
   excludeModels?: AIModelNameRules
   templateFormat?: string
   // the default prompt tempalte data if any

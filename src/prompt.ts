@@ -1,6 +1,6 @@
 import { mergeWith } from 'lodash-es'
 import { AdvancePropertyManager } from 'property-manager';
-import { ConfigFile, isModelNameMatched } from '@isdk/ai-tool';
+import { ConfigFile, isModelNameMatched, scaleStrToParamsSize } from '@isdk/ai-tool';
 import { AIPromptSchema, AIPromptSettings, AIPromptType } from './prompt-settings';
 
 // 128271: 🔏
@@ -78,10 +78,12 @@ function isId(id: string, modelName: string) {
   return lastIndex > 0 && id.substring(0, lastIndex) === modelName
 }
 
-export function promptIsFitForLLM(prompt: AIPromptSettings, modelName: string): AIPromptFitResult|AIPromptFitResult[]|undefined {
+export function promptIsFitForLLM(prompt: AIPromptSettings, modelName: string, size?: number|string): AIPromptFitResult|AIPromptFitResult[]|undefined {
   const rules = prompt.modelPattern
   const result: AIPromptFitResult[] = []
   let usedVers = [] as string[]
+  if (size && prompt.modelSize && !promptIsFitSize(prompt.modelSize, size)) {return}
+
   if (isId(prompt._id!, modelName)) {
     return '@'
   }
@@ -126,11 +128,56 @@ export function promptIsFitForLLM(prompt: AIPromptSettings, modelName: string): 
   return result.length ? result.length === 1 ? result[0] : result : undefined
 }
 
+function floatEqual(a: number, b: number, epsilon: number = 1e-10): boolean {
+  return Math.abs(a - b) < epsilon;
+}
+
+
+export function promptIsFitSize(allowedModelSize?: string|number, size?: number|string, epsilon: number = 1e-10) {
+  let result = true
+  if (allowedModelSize && size) {
+    if (typeof size === 'string') {
+      size = scaleStrToParamsSize(size)
+    }
+    let op = '='
+    if (typeof allowedModelSize === 'string') {
+      const _op = ['<=', '>=', '!=', '>', '<', '='].find(item => (allowedModelSize as string).startsWith(item))
+      if (_op) {
+        op = _op
+        allowedModelSize = allowedModelSize.slice(op.length)
+      }
+      allowedModelSize = scaleStrToParamsSize(allowedModelSize)
+    }
+    switch (op) {
+      case '>': {
+        result = size > allowedModelSize
+      }; break;
+      case '<': {
+        result = size < allowedModelSize
+      }; break;
+      case '=': {
+        result = floatEqual(size, allowedModelSize, epsilon)
+      }; break;
+      case '<=': {
+        result = size <= allowedModelSize
+      }; break;
+      case '>=': {
+        result = size >= allowedModelSize
+      }; break;
+      case '!=': {
+        result = !floatEqual(size, allowedModelSize, epsilon)
+      }; break;
+    }
+  }
+  return result
+}
+
 /**
  * Finds a suitable prompt from an array of prompt settings based on the given model name and optional parameters.
  * @param prompts - An array of AI prompt settings to search through.
  * @param modelFileName - The name of the model to check compatibility with.
  * @param options - An object containing optional parameters:
+ *   @param options.size - An optional the parameter size of the modelFileName
  *   @param options.type - An optional filter for the type of prompt to include in the search.
  *   @param options.getById - An optional function to retrieve a prompt by its ID.
  * @returns An object containing the matched prompt and its version, or `false` if no match is found.
@@ -146,7 +193,7 @@ export function promptIsFitForLLM(prompt: AIPromptSettings, modelName: string): 
  * // '@' means the default version
  * console.log(result); // Output: { id: "sp1", prompt: { _id: "sp1", type: "system", parameters: {temperature: 0.8}, ... }, version: '@' }
  */
-export async function findPrompt(prompts:AIPromptSettings[], modelFileName: string, {type, getById}: {type?: AIPromptType, getById?: (id: string)=>AIPromptSettings|undefined|Promise<AIPromptSettings|undefined>}={}) {
+export async function findPrompt(prompts:AIPromptSettings[], modelFileName: string, {size, type, getById}: {size?: number|string, type?: AIPromptType, getById?: (id: string)=>AIPromptSettings|undefined|Promise<AIPromptSettings|undefined>}={}) {
   const _prompts = prompts
     .filter(prompt => !type || prompt.type === type)
     .sort((a,b) => (b.priority ?? 0) - (a.priority ?? 0))
@@ -182,7 +229,7 @@ export async function findPrompt(prompts:AIPromptSettings[], modelFileName: stri
 
   let result: {id: string, prompt: AIPromptSettings, version: AIPromptFitResult|AIPromptFitResult[]}|false = false
   for (let prompt of _prompts) {
-    const version = promptIsFitForLLM(prompt, modelFileName)
+    const version = promptIsFitForLLM(prompt, modelFileName, size)
     if (version) { // found the prompt for the modelName
       prompt = await get(prompt._id!)!
       result = {
@@ -225,10 +272,11 @@ export class AIPrompt extends AdvancePropertyManager {
    * - `undefined`: No fit or compatibility found.
 
    * @param modelName - The name of the LLM model to check for compatibility.
+   * @param size - The parameter size of the LLM model, if applicable.
    * @returns The fit result(s) for the given LLM model, representing its compatibility or suitability with this AIPrompt.
    */
-  isFitForLLM(modelName: string) {
-    return promptIsFitForLLM(this, modelName)
+  isFitForLLM(modelName: string, size?: number) {
+    return promptIsFitForLLM(this, modelName, size)
   }
 }
 
