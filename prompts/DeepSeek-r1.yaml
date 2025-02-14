@@ -5,6 +5,10 @@ prompt:
   bos_token: '<｜begin▁of▁sentence｜>'
   eos_token: "<｜end▁of▁sentence｜>"
 supports: ['tools']
+shouldThink:
+  mode: 'deep'
+  thinkTag:
+    - ["<think>", "</think>"]
 # For mathematical problems, it is advisable to include a directive in your prompt such as:
 # "Please reason step by step, and put your final answer within \boxed{}."
 template: >-
@@ -60,8 +64,11 @@ template: >-
       {{-'<｜Assistant｜>'-}}
   {%- endif -%}
 modelPattern:
-  - !re /(?:^|[-_])(deepseek-r1|deepseekr1)(?:[-_]|$)/i
+  - !re /(?:^|[-_])(deepseek-r1|deepseekr1|deepsex)(?:[-_]|$)/i
 priority: 10
 parameters:
+  # 最大生成长度锁定在 32768 个 token，温度值维持在 0.6，top-p 值定格在 0.95。每个测试都生成 64 个响应样本。
   '@':
     temperature: 0.6 # 0.5-0.7
+    top_p: 0.95
+

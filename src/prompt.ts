@@ -220,7 +220,11 @@ export async function findPrompt(prompts:AIPromptSettings[], modelFileName: stri
       if (result?.extends) {
         const parent = get(result.extends)
         if (parent) {
+          const modelPattern = result.modelPattern
           result = mergeWithConcatArray(parent, result)
+          if (modelPattern) {
+            result.modelPattern = modelPattern
+          }
         }
       }
     return result

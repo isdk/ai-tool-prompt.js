@@ -181,7 +181,11 @@ describe('Prompts server api', () => {
     expect(result.prompt).toHaveProperty('_id', 'Phi-3')
     // expect(result).toHaveProperty('version', '@')
     // expect(result.prompt).toHaveProperty('_id', 'Llama-v2')
+    result = await prompts.getPrompt({model: 's1-instruct.Q4_0'})
+    expect(result).toHaveProperty('version', 's1')
+    expect(result.prompt).toHaveProperty('_id', 'Qwen')
   })
+
   it('should get prompt by type for LLM', async () => {
     const prompts = ResClientTools.get(AIPromptsName)
     expect(prompts).toBeInstanceOf(ResClientTools)
@@ -215,22 +219,29 @@ describe('Prompts server api', () => {
   it('should getLLMParameters', async () => {
     const prompts = ResClientTools.get(AIPromptsName)
     expect(prompts).toBeInstanceOf(ResClientTools)
-    let result = await prompts.getParameters({id: 'ChatML', model: 'qwen1.5'})
+    let result = await prompts.getParameters({id: 'ChatML', model: 'minicpm'})
     expect(result).toStrictEqual({
-      stop_words: ['<|im_end|>', '[PAD151645]', '<|endoftext|>'],
-      temperature: 0.01,
-      top_p: 0.9,
+      temperature: 0.7,
+      top_p: 0.7,
     })
-    result = await prompts.getParameters({id: 'ChatML', model: 'codeqwen1.5-7b-chat.Q4_0'})
+    result = await prompts.getParameters({id: 'ChatML', model: 'violet_twilight-7b-chat.Q4_0'})
     expect(result).toStrictEqual({
-      stop_words: ['<|im_end|>', '[PAD151645]', '<|endoftext|>'],
-      temperature: 0.01,
-      top_p: 0.9,
+      temperature: 1.22,
+      top_p: 1,
+      top_k: 50,
+      top_a: 0,
     })
     result = await prompts.getParameters({id: 'ChatML', model: 'nous-hermes-2-yi-34b.Q4_0.gguf'})
     expect(result).toStrictEqual({
       min_p: 0.06,
       repeat_penalty: 1.1,
+    })
+
+    result = await prompts.getParameters({id: 'Qwen', model: 'qwen1.5'})
+    expect(result).toStrictEqual({
+      temperature: 0.01,
+      top_p: 0.9,
+      stop_words: ['<|im_end|>', '[PAD151645]', '<|endoftext|>'],
     })
   })
   it('should extends prompt', async () => {
@@ -307,6 +318,6 @@ describe('Prompts server api', () => {
 
     result = await prompts.getPrompt({model: 'qwen1.5'})
     expect(result).toHaveProperty('prompt')
-    expect(result.prompt).toHaveProperty('_id', 'ChatML')
+    expect(result.prompt).toHaveProperty('_id', 'Qwen')
   })
 });

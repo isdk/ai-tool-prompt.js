@@ -35,6 +35,12 @@ export interface Signatures {
   [userId: string]: string;
 }
 
+export interface AIPromptThinkProfile {
+  mode: 'last'|'first'|'deep'
+  thinkTag?: Array<string|[string,string]>
+  answerTag?: Array<string|[string,string]>
+}
+
 type DefaultPrompt = Record<string, string> | {system?: string, ai?: string, human?: string, bot_token?: string, eot_token?: string, end_of_turn?: string, begin_of_turn?: string, template?: string, messages?: AIChatMessageParam[]}
 export interface AIPromptSettings {
   _id?: string
@@ -59,6 +65,7 @@ export interface AIPromptSettings {
   input?: Record<string, string>[]
   output?: any
   tag?: string[]
+  shouldThink?: AIPromptThinkProfile
   [CreationKey]?: ActivityRecord
   [SignatureKey]?: string|Signatures
 }

@@ -1,46 +1,6 @@
 _id: ChatML
 templateFormat: hf
 type: system
-version:
-  qwen:
-    supports: ['tools']
-    template: |-
-      {% for message in messages %}
-        {% if loop.first %}
-          {{- bot_token + 'system\n' -}}
-          {%- if messages[0]['role'] != 'system' %}
-            {{- system + eot_token + '\n'}}
-          {%- else %}
-            {{- message['content'] + eot_token + '\n'}}
-          {%- endif %}
-          {%- if tools %}
-            {{- "\n# Tools\n\nYou may call one or more functions to assist with the user query.\n\nYou are provided with function signatures within <tools></tools> XML tags:\n<tools>" }}
-            {%- for tool in tools %}
-                {{- "\n" }}
-                {{- tool | tojson }}
-            {%- endfor %}
-            {{- "\n</tools>\n\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\n<tool_call>\n{\"name\": <function-name>, \"arguments\": <args-json-object>}\n</tool_call><|im_end|>\n" }}
-          {%- endif %}
-        {% else %}
-          {{- bot_token + message['role'] + '\n' -}}
-          {{- message['content']}}
-          {%- if message.tool_calls %}
-            {%- for tool_call in message.tool_calls %}
-              {%- if tool_call.function is defined %}
-                {%- set tool_call = tool_call.function %}
-              {%- endif %}
-              {{- '\n<tool_call>\n{"name": "' }}
-              {{- tool_call.name }}
-              {{- '", "arguments": ' }}
-              {{- tool_call.arguments | tojson }}
-              {{- '}\n</tool_call>' }}
-            {%- endfor %}
-          {%- endif %}
-          {%- if not loop.last or messages[-1]['role'] != 'assistant' %}{{ eot_token + '\n'}}{% endif %}
-        {% endif %}
-      {% endfor %}
-      {% if add_generation_prompt and messages[-1]['role'] != 'assistant' %}{{ bot_token }}assistant
-      {% endif %}
 prompt:
   system: You are a helpful assistant
   bot_token: '<|im_start|>'
@@ -57,15 +17,10 @@ template: |-
   {% if add_generation_prompt and messages[-1]['role'] != 'assistant' %}{{ bot_token }}assistant
   {% endif %}
 modelPattern:
-  'qwen': !re /(?:^|[-_.])(?:code)?(qwen|qwq|Sky-T1|s1)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   NousHermes2: !re /(?:^|[-_.])Nous-Hermes-2-([^-]+)(?:$|[-_.])/i
   Hermes3: !re /(?:^|[-_.])(Hermes-3)(?:$|[-_.])/i
   '@': !re /(?:^|[-_.])(?:code)?(yi|MiniCPM|smollm|2B_or_not_2B|Violet_Twilight)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
 parameters:
-  'qwen':
-    temperature: 0.01
-    top_p: 0.9
-    stop_words: ['<|im_end|>', '[PAD151645]', '<|endoftext|>']
   yi:
     min_p: 0.06
     repeat_penalty: 1.1
@@ -77,4 +32,3 @@ parameters:
     top_p: 1
     top_k: 50
     top_a: 0
-
