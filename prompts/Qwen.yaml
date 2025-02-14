@@ -6,9 +6,9 @@ version:
     shouldThink:
       mode: deep
       thinkTag:
-        - "think:"
+        - "/^think\n/"
       answerTag:
-        - "answer:"
+        - "\nanswer\n"
 template: |-
   {% for message in messages %}
     {% if loop.first %}
