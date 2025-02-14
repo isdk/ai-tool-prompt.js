@@ -6,6 +6,7 @@ import { FuncParams, ServerTools } from '@isdk/ai-tool'
 import { findPort } from '@isdk/ai-tool/test/util'
 
 import { AIPromptsFunc, AIPromptsName } from '../src/prompts-db'
+import { getVersionPromptSettings } from '../src'
 
 // const dbPath = '.promptsdb'
 const dbPath = ':memory:'
@@ -181,9 +182,11 @@ describe('Prompts server api', () => {
     expect(result.prompt).toHaveProperty('_id', 'Phi-3')
     // expect(result).toHaveProperty('version', '@')
     // expect(result.prompt).toHaveProperty('_id', 'Llama-v2')
-    result = await prompts.getPrompt({model: 's1-instruct.Q4_0'})
+    result = await prompts.getPrompt({model: 's1-32b.Q4_0', type: 'system'})
     expect(result).toHaveProperty('version', 's1')
     expect(result.prompt).toHaveProperty('_id', 'Qwen')
+    let promptSettings = getVersionPromptSettings('s1', result.prompt)
+    expect(promptSettings).toHaveProperty('shouldThink')
   })
 
   it('should get prompt by type for LLM', async () => {

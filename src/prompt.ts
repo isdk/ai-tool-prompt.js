@@ -172,6 +172,34 @@ export function promptIsFitSize(allowedModelSize?: string|number, size?: number|
   return result
 }
 
+async function getPromptSettingsType(prompt: AIPromptSettings, getById: (id: string)=>AIPromptSettings|undefined|Promise<AIPromptSettings|undefined>) {
+  let result = prompt.type
+  const visited = new Set<string>()
+  visited.add(prompt._id!)
+
+  while (!result && prompt && prompt.extends && !visited.has(prompt.extends)) {
+    prompt = await getById(prompt.extends) as any
+    if (prompt) {
+      result = prompt.type
+    }
+    visited.add(prompt.extends!)
+  }
+  return result
+}
+
+function inheritParent(result: AIPromptSettings, parent: AIPromptSettings) {
+  const modelPattern = result.modelPattern
+  const shouldThink = result.shouldThink
+  result = mergeWithConcatArray(parent, result)
+  if (modelPattern) {
+    result!.modelPattern = modelPattern
+  }
+  if (shouldThink) {
+    result!.shouldThink = shouldThink
+  }
+  return result
+}
+
 /**
  * Finds a suitable prompt from an array of prompt settings based on the given model name and optional parameters.
  * @param prompts - An array of AI prompt settings to search through.
@@ -194,16 +222,24 @@ export function promptIsFitSize(allowedModelSize?: string|number, size?: number|
  * console.log(result); // Output: { id: "sp1", prompt: { _id: "sp1", type: "system", parameters: {temperature: 0.8}, ... }, version: '@' }
  */
 export async function findPrompt(prompts:AIPromptSettings[], modelFileName: string, {size, type, getById}: {size?: number|string, type?: AIPromptType, getById?: (id: string)=>AIPromptSettings|undefined|Promise<AIPromptSettings|undefined>}={}) {
-  const _prompts = prompts
-    .filter(prompt => !type || prompt.type === type)
-    .sort((a,b) => (b.priority ?? 0) - (a.priority ?? 0))
-
   if (typeof getById !== 'function') {
-    getById = (id: string) => prompts.find(p => p._id === id)
+    getById = ((prompts) => (id: string) => prompts.find(p => p._id === id))(prompts)
   }
 
-  const get = (id: string) => {
-    let result: any = getById(id)
+  let _prompts: AIPromptSettings[] = prompts
+  if (type) {
+    _prompts = []
+    for (const prompt of prompts) {
+      const vType = await getPromptSettingsType(prompt, getById)
+      if (vType === type) {
+        _prompts.push(prompt)
+      }
+    }
+  }
+  _prompts = _prompts.sort((a,b) => (b.priority ?? 0) - (a.priority ?? 0))
+
+  const get = async (id: string) => {
+    let result: any = await getById(id)
 
     if (typeof (result as any).then === 'function') {
       // is async
@@ -211,20 +247,16 @@ export async function findPrompt(prompts:AIPromptSettings[], modelFileName: stri
         if (result?.extends) {
           const parent = await get(result.extends)
           if (parent) {
-            result = mergeWithConcatArray(parent, result)
+            result = inheritParent(result, parent)
           }
         }
         return result
       })
     } else {
       if (result?.extends) {
-        const parent = get(result.extends)
+        const parent = await get(result.extends)
         if (parent) {
-          const modelPattern = result.modelPattern
-          result = mergeWithConcatArray(parent, result)
-          if (modelPattern) {
-            result.modelPattern = modelPattern
-          }
+          result = inheritParent(result, parent)
         }
       }
     return result
