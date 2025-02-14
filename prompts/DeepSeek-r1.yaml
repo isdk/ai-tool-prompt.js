@@ -7,8 +7,7 @@ prompt:
 supports: ['tools']
 shouldThink:
   mode: 'deep'
-  thinkTag:
-    - ["<think>", "</think>"]
+  thinkTag: ["<think>", "</think>"]
 # For mathematical problems, it is advisable to include a directive in your prompt such as:
 # "Please reason step by step, and put your final answer within \boxed{}."
 template: >-

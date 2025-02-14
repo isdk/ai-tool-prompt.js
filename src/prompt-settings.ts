@@ -37,8 +37,8 @@ export interface Signatures {
 
 export interface AIPromptThinkProfile {
   mode: 'last'|'first'|'deep'
-  thinkTag?: Array<string|[string,string]>
-  answerTag?: Array<string|[string,string]>
+  thinkTag?: string|[string,string]
+  answerTag?: string|[string,string]
 }
 
 type DefaultPrompt = Record<string, string> | {system?: string, ai?: string, human?: string, bot_token?: string, eot_token?: string, end_of_turn?: string, begin_of_turn?: string, template?: string, messages?: AIChatMessageParam[]}
