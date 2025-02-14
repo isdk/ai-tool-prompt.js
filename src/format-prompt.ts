@@ -13,9 +13,7 @@ export async function formatPrompt(data: PromptTemplateData, promptSettings: AIP
   const version = data.version
 
   const rootPrompt = promptSettings.prompt
-  if (version && promptSettings.version && promptSettings.version[version]) {
-    promptSettings = {...promptSettings, ...promptSettings.version[version]}
-  }
+  if (version) {promptSettings = getVersionPromptSettings(version, promptSettings)}
 
   const defaultPrompt = {...rootPrompt, ...promptSettings.prompt}
   const result = await PromptTemplate.format({
@@ -26,4 +24,11 @@ export async function formatPrompt(data: PromptTemplateData, promptSettings: AIP
     }
   })
   return result
+}
+
+export function getVersionPromptSettings(version: string, promptSettings: AIPromptSettings) {
+  if (promptSettings.version && promptSettings.version[version]) {
+    promptSettings = {...promptSettings, ...promptSettings.version[version]}
+  }
+  return promptSettings
 }
