@@ -5,7 +5,7 @@ version:
   s1:
     shouldThink:
       mode: deep
-      thinkTag: "/^think\n/"
+      thinkTag: "think\n"
       answerTag: "\nanswer\n"
 template: |-
   {% for message in messages %}
