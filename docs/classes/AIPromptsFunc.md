@@ -6,7 +6,7 @@
 
 # Class: AIPromptsFunc
 
-Defined in: [packages/ai-tool-prompt/src/prompts-db.ts:21](https://github.com/isdk/ai-tool-prompt.js/blob/3d678772f316709a988562abb5bf3336d18a36eb/src/prompts-db.ts#L21)
+Defined in: [packages/ai-tool-prompt/src/prompts-db.ts:21](https://github.com/isdk/ai-tool-prompt.js/blob/70ce94702eed9d85cca3f3ee34932e2e7327d2ba/src/prompts-db.ts#L21)
 
 ## Extends
 
@@ -400,7 +400,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:693
 
 > **\_getPrompt**(`modelName`, `type`?, `size`?): `Promise`\<`false` \| \{ `id`: `string`; `prompt`: [`AIPromptSettings`](../interfaces/AIPromptSettings.md); `version`: `string` \| `string`[]; \}\>
 
-Defined in: [packages/ai-tool-prompt/src/prompts-db.ts:30](https://github.com/isdk/ai-tool-prompt.js/blob/3d678772f316709a988562abb5bf3336d18a36eb/src/prompts-db.ts#L30)
+Defined in: [packages/ai-tool-prompt/src/prompts-db.ts:30](https://github.com/isdk/ai-tool-prompt.js/blob/70ce94702eed9d85cca3f3ee34932e2e7327d2ba/src/prompts-db.ts#L30)
 
 #### Parameters
 
@@ -492,7 +492,7 @@ Defined in: packages/ai-tool-sqlite/dist/index.d.ts:71
 
 > **$getDefaultPrompt**(`type`?): [`AIPromptResult`](../interfaces/AIPromptResult.md)
 
-Defined in: [packages/ai-tool-prompt/src/prompts-db.ts:50](https://github.com/isdk/ai-tool-prompt.js/blob/3d678772f316709a988562abb5bf3336d18a36eb/src/prompts-db.ts#L50)
+Defined in: [packages/ai-tool-prompt/src/prompts-db.ts:50](https://github.com/isdk/ai-tool-prompt.js/blob/70ce94702eed9d85cca3f3ee34932e2e7327d2ba/src/prompts-db.ts#L50)
 
 #### Parameters
 
@@ -510,7 +510,7 @@ Defined in: [packages/ai-tool-prompt/src/prompts-db.ts:50](https://github.com/is
 
 > **$getParameters**(`__namedParameters`): `any`
 
-Defined in: [packages/ai-tool-prompt/src/prompts-db.ts:90](https://github.com/isdk/ai-tool-prompt.js/blob/3d678772f316709a988562abb5bf3336d18a36eb/src/prompts-db.ts#L90)
+Defined in: [packages/ai-tool-prompt/src/prompts-db.ts:90](https://github.com/isdk/ai-tool-prompt.js/blob/70ce94702eed9d85cca3f3ee34932e2e7327d2ba/src/prompts-db.ts#L90)
 
 #### Parameters
 
@@ -528,7 +528,7 @@ Defined in: [packages/ai-tool-prompt/src/prompts-db.ts:90](https://github.com/is
 
 > **$getPrompt**(`__namedParameters`): `Promise`\<`false` \| \{ `id`: `string`; `prompt`: [`AIPromptSettings`](../interfaces/AIPromptSettings.md); `version`: `string` \| `string`[]; \}\>
 
-Defined in: [packages/ai-tool-prompt/src/prompts-db.ts:82](https://github.com/isdk/ai-tool-prompt.js/blob/3d678772f316709a988562abb5bf3336d18a36eb/src/prompts-db.ts#L82)
+Defined in: [packages/ai-tool-prompt/src/prompts-db.ts:82](https://github.com/isdk/ai-tool-prompt.js/blob/70ce94702eed9d85cca3f3ee34932e2e7327d2ba/src/prompts-db.ts#L82)
 
 #### Parameters
 
@@ -986,7 +986,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:826
 
 > **get**(`params`): [`AIPromptSettings`](../interfaces/AIPromptSettings.md)
 
-Defined in: [packages/ai-tool-prompt/src/prompts-db.ts:39](https://github.com/isdk/ai-tool-prompt.js/blob/3d678772f316709a988562abb5bf3336d18a36eb/src/prompts-db.ts#L39)
+Defined in: [packages/ai-tool-prompt/src/prompts-db.ts:39](https://github.com/isdk/ai-tool-prompt.js/blob/70ce94702eed9d85cca3f3ee34932e2e7327d2ba/src/prompts-db.ts#L39)
 
 #### Parameters
 
@@ -1164,7 +1164,7 @@ A property name.
 
 > **initData**(`initDir`?, `collection`?): `Promise`\<`void`\>
 
-Defined in: [packages/ai-tool-prompt/src/prompts-db.ts:23](https://github.com/isdk/ai-tool-prompt.js/blob/3d678772f316709a988562abb5bf3336d18a36eb/src/prompts-db.ts#L23)
+Defined in: [packages/ai-tool-prompt/src/prompts-db.ts:23](https://github.com/isdk/ai-tool-prompt.js/blob/70ce94702eed9d85cca3f3ee34932e2e7327d2ba/src/prompts-db.ts#L23)
 
 #### Parameters
 
