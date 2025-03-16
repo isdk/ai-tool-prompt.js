@@ -2,6 +2,41 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.3.0](https://github.com/isdk/ai-tool-prompt.js/compare/v0.2.7...v0.3.0) (2025-03-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* change the shouldThink tags type
+
+### Features
+
+* add @ default supports for parameters ([19e2e62](https://github.com/isdk/ai-tool-prompt.js/commit/19e2e620d8565b78485bc0f3b7793dde9e6c3e76))
+* add DeeSeek-R1 model ([1abcd50](https://github.com/isdk/ai-tool-prompt.js/commit/1abcd50a215941af274dc0228f7c769434906aa8))
+* add fitSize to prompt ([f40ce7f](https://github.com/isdk/ai-tool-prompt.js/commit/f40ce7f17eba6cfad2e26730f9c801a1934290cf))
+* add getVersionPromptSettings func ([a8b8921](https://github.com/isdk/ai-tool-prompt.js/commit/a8b89216afcf4cefd2d70b757b70ea8008960770))
+* add id to AIPromptResult ([efff181](https://github.com/isdk/ai-tool-prompt.js/commit/efff181702b76aeadc39bd6c225d380b13f9edd8))
+* add qwq_32b supports ([bf31283](https://github.com/isdk/ai-tool-prompt.js/commit/bf31283ef77e523584c4559b4f542ed9e63e4873))
+* add s1 model ([8f806f6](https://github.com/isdk/ai-tool-prompt.js/commit/8f806f6f48b5f501566164c893c35db006cb5523))
+* add sky-t1 model support ([99c6a7f](https://github.com/isdk/ai-tool-prompt.js/commit/99c6a7f65a571f65460e77789a6fc7306b2e071b))
+* add tools to qwen ([7b70b6c](https://github.com/isdk/ai-tool-prompt.js/commit/7b70b6cabfc4b9c8f98e9e384aac9550b62aae1b))
+
+
+### Bug Fixes
+
+* add <eos> to gemma stop_words ([158d3a6](https://github.com/isdk/ai-tool-prompt.js/commit/158d3a6df4b93d4e2b17445a55006c1aa5f91d67))
+* can not find the prompt type in parent ([69275e2](https://github.com/isdk/ai-tool-prompt.js/commit/69275e2725ef2699ba9e5e56df29ed8645781daf))
+* Ministral should put the system prompt at last ([0a56792](https://github.com/isdk/ai-tool-prompt.js/commit/0a5679228a69ca3ed44fda31696762c53a5d737a))
+* s1 think/answer tag ([0ad3277](https://github.com/isdk/ai-tool-prompt.js/commit/0ad3277f4f4c1cc08e0f4970359690f5c2d3a871))
+* the thinkTag for s1 ([2b8075c](https://github.com/isdk/ai-tool-prompt.js/commit/2b8075cf339c1330331847a2227a0911b92d0336))
+
+
+### Refactor
+
+* change the shouldThink tags type ([2ce727d](https://github.com/isdk/ai-tool-prompt.js/commit/2ce727d5ce746e9febdc85bec6884e25e935bd02))
+* DeepSeek-r1 recommend temperature as default and system prompt ([f2d3cba](https://github.com/isdk/ai-tool-prompt.js/commit/f2d3cbafe165a5a5b575027105575bebb84bcb55))
+* extract Qwen from ChatML ([5ea37de](https://github.com/isdk/ai-tool-prompt.js/commit/5ea37de97bcabbfafc6ab5a1c7c7af7f10635839))
+
 ## [0.2.7](https://github.com/isdk/ai-tool-prompt.js/compare/v0.2.6...v0.2.7) (2024-12-18)
 
 ## [0.2.6](https://github.com/isdk/ai-tool-prompt.js/compare/v0.2.5...v0.2.6) (2024-12-17)
