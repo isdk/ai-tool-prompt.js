@@ -8,7 +8,7 @@
 
 > **strIsLocked**(`value`): `boolean` \| `""`
 
-Defined in: [packages/ai-tool-prompt/src/prompt.ts:34](https://github.com/isdk/ai-tool-prompt.js/blob/70ce94702eed9d85cca3f3ee34932e2e7327d2ba/src/prompt.ts#L34)
+Defined in: [packages/ai-tool-prompt/src/prompt.ts:34](https://github.com/isdk/ai-tool-prompt.js/blob/6d21e06e0e8e1b8449bddc69a03bdb7d160ce970/src/prompt.ts#L34)
 
 ## Parameters
 
