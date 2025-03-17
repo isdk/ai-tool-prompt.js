@@ -8,4 +8,4 @@
 
 > **AIPromptFitResult**: `"@"` \| `string`
 
-Defined in: [packages/ai-tool-prompt/src/prompt.ts:10](https://github.com/isdk/ai-tool-prompt.js/blob/eeec85b9b223b655246c647bdd3056a0c12f08bc/src/prompt.ts#L10)
+Defined in: [packages/ai-tool-prompt/src/prompt.ts:10](https://github.com/isdk/ai-tool-prompt.js/blob/88ae2ed1235c29d7d920521dfc5c20e448fa67fc/src/prompt.ts#L10)

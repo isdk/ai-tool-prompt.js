@@ -8,4 +8,4 @@
 
 > **AIPromptType**: *typeof* [`AIPromptTypes`](../variables/AIPromptTypes.md)\[`number`\] & `string`
 
-Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:17](https://github.com/isdk/ai-tool-prompt.js/blob/eeec85b9b223b655246c647bdd3056a0c12f08bc/src/prompt-settings.ts#L17)
+Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:17](https://github.com/isdk/ai-tool-prompt.js/blob/88ae2ed1235c29d7d920521dfc5c20e448fa67fc/src/prompt-settings.ts#L17)

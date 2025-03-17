@@ -6,7 +6,7 @@
 
 # Class: AIPromptsFunc
 
-Defined in: [packages/ai-tool-prompt/src/prompts-db.ts:21](https://github.com/isdk/ai-tool-prompt.js/blob/eeec85b9b223b655246c647bdd3056a0c12f08bc/src/prompts-db.ts#L21)
+Defined in: [packages/ai-tool-prompt/src/prompts-db.ts:21](https://github.com/isdk/ai-tool-prompt.js/blob/88ae2ed1235c29d7d920521dfc5c20e448fa67fc/src/prompts-db.ts#L21)
 
 ## Extends
 
@@ -60,7 +60,7 @@ Defined in: node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-ma
 
 > **action**: `"get"` \| `"list"` \| `"put"` \| `"post"` \| `"delete"` \| `"patch"` \| `"res"`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:842
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:849
 
 #### Inherited from
 
@@ -68,11 +68,23 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:842
 
 ***
 
+### alias?
+
+> `optional` **alias**: `string` \| `string`[]
+
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:33
+
+#### Inherited from
+
+`KVSqliteResFunc.alias`
+
+***
+
 ### allowExportFunc?
 
 > `optional` **allowExportFunc**: `boolean`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:686
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:693
 
 #### Inherited from
 
@@ -84,7 +96,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:686
 
 > `optional` **apiRoot**: `string`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:149
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:156
 
 #### Inherited from
 
@@ -156,7 +168,7 @@ The default options for export and assign
 
 > `optional` **fetchOptions**: `any`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:151
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:158
 
 #### Inherited from
 
@@ -192,7 +204,7 @@ Defined in: packages/ai-tool-sqlite/dist/index.d.ts:55
 
 > `optional` **isApi**: `boolean`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:31
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:31
 
 #### Inherited from
 
@@ -204,7 +216,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:31
 
 > **methods**: `string`[]
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:815
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:822
 
 #### Inherited from
 
@@ -216,7 +228,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:815
 
 > `optional` **name**: `string`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:25
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:25
 
 #### Inherited from
 
@@ -242,7 +254,7 @@ the property with the default prefix '$' will not be exported.
 
 > **params**: `FuncParams`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:843
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:850
 
 #### Inherited from
 
@@ -254,7 +266,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:843
 
 > `optional` **result**: `string`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:27
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:27
 
 #### Inherited from
 
@@ -266,7 +278,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:27
 
 > `optional` **scope**: `any`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:28
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:28
 
 #### Inherited from
 
@@ -278,7 +290,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:28
 
 > `optional` **setup**: (`this`, `options`?) => `void`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:30
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:30
 
 #### Parameters
 
@@ -304,7 +316,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:30
 
 > `optional` **stream**: `boolean`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:32
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:32
 
 #### Inherited from
 
@@ -316,7 +328,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:32
 
 > `optional` **tags**: `string` \| `string`[]
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:29
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:29
 
 #### Inherited from
 
@@ -324,11 +336,27 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:29
 
 ***
 
+### aliases
+
+> `static` **aliases**: `object`
+
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:54
+
+#### Index Signature
+
+\[`name`: `string`\]: `string`
+
+#### Inherited from
+
+`KVSqliteResFunc.aliases`
+
+***
+
 ### dataPath
 
 > `static` **dataPath**: `string`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:53
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:57
 
 #### Inherited from
 
@@ -340,7 +368,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:53
 
 > `static` **items**: `Funcs`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:52
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:53
 
 #### Inherited from
 
@@ -352,7 +380,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:52
 
 > `static` **SpecialRpcMethodNames**: `any`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:841
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:848
 
 #### Inherited from
 
@@ -366,7 +394,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:841
 
 > **get** **SpecialRpcMethodNames**(): `any`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:820
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:827
 
 ##### Returns
 
@@ -384,7 +412,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:820
 
 > **get** `static` **apiRoot**(): `undefined` \| `string`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:693
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:700
 
 ##### Returns
 
@@ -400,7 +428,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:693
 
 > **\_getPrompt**(`modelName`, `type`?, `size`?): `Promise`\<`false` \| \{ `id`: `string`; `prompt`: [`AIPromptSettings`](../interfaces/AIPromptSettings.md); `version`: `string` \| `string`[]; \}\>
 
-Defined in: [packages/ai-tool-prompt/src/prompts-db.ts:30](https://github.com/isdk/ai-tool-prompt.js/blob/eeec85b9b223b655246c647bdd3056a0c12f08bc/src/prompts-db.ts#L30)
+Defined in: [packages/ai-tool-prompt/src/prompts-db.ts:30](https://github.com/isdk/ai-tool-prompt.js/blob/88ae2ed1235c29d7d920521dfc5c20e448fa67fc/src/prompts-db.ts#L30)
 
 #### Parameters
 
@@ -492,7 +520,7 @@ Defined in: packages/ai-tool-sqlite/dist/index.d.ts:71
 
 > **$getDefaultPrompt**(`type`?): [`AIPromptResult`](../interfaces/AIPromptResult.md)
 
-Defined in: [packages/ai-tool-prompt/src/prompts-db.ts:50](https://github.com/isdk/ai-tool-prompt.js/blob/eeec85b9b223b655246c647bdd3056a0c12f08bc/src/prompts-db.ts#L50)
+Defined in: [packages/ai-tool-prompt/src/prompts-db.ts:50](https://github.com/isdk/ai-tool-prompt.js/blob/88ae2ed1235c29d7d920521dfc5c20e448fa67fc/src/prompts-db.ts#L50)
 
 #### Parameters
 
@@ -510,7 +538,7 @@ Defined in: [packages/ai-tool-prompt/src/prompts-db.ts:50](https://github.com/is
 
 > **$getParameters**(`__namedParameters`): `any`
 
-Defined in: [packages/ai-tool-prompt/src/prompts-db.ts:90](https://github.com/isdk/ai-tool-prompt.js/blob/eeec85b9b223b655246c647bdd3056a0c12f08bc/src/prompts-db.ts#L90)
+Defined in: [packages/ai-tool-prompt/src/prompts-db.ts:90](https://github.com/isdk/ai-tool-prompt.js/blob/88ae2ed1235c29d7d920521dfc5c20e448fa67fc/src/prompts-db.ts#L90)
 
 #### Parameters
 
@@ -528,7 +556,7 @@ Defined in: [packages/ai-tool-prompt/src/prompts-db.ts:90](https://github.com/is
 
 > **$getPrompt**(`__namedParameters`): `Promise`\<`false` \| \{ `id`: `string`; `prompt`: [`AIPromptSettings`](../interfaces/AIPromptSettings.md); `version`: `string` \| `string`[]; \}\>
 
-Defined in: [packages/ai-tool-prompt/src/prompts-db.ts:82](https://github.com/isdk/ai-tool-prompt.js/blob/eeec85b9b223b655246c647bdd3056a0c12f08bc/src/prompts-db.ts#L82)
+Defined in: [packages/ai-tool-prompt/src/prompts-db.ts:82](https://github.com/isdk/ai-tool-prompt.js/blob/88ae2ed1235c29d7d920521dfc5c20e448fa67fc/src/prompts-db.ts#L82)
 
 #### Parameters
 
@@ -590,7 +618,7 @@ Defined in: packages/ai-tool-sqlite/dist/index.d.ts:67
 
 > **arr2ObjParams**(`params`): `any`[]
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:72
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:76
 
 #### Parameters
 
@@ -804,7 +832,7 @@ Defined in: packages/ai-tool-sqlite/dist/index.d.ts:61
 
 > **castParams**(`params`): `RpcMethodsServerFuncParams`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:846
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:853
 
 #### Parameters
 
@@ -964,7 +992,7 @@ the dest object.
 
 > **func**(`params`): `any`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:826
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:833
 
 #### Parameters
 
@@ -986,7 +1014,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:826
 
 > **get**(`params`): [`AIPromptSettings`](../interfaces/AIPromptSettings.md)
 
-Defined in: [packages/ai-tool-prompt/src/prompts-db.ts:39](https://github.com/isdk/ai-tool-prompt.js/blob/eeec85b9b223b655246c647bdd3056a0c12f08bc/src/prompts-db.ts#L39)
+Defined in: [packages/ai-tool-prompt/src/prompts-db.ts:39](https://github.com/isdk/ai-tool-prompt.js/blob/88ae2ed1235c29d7d920521dfc5c20e448fa67fc/src/prompts-db.ts#L39)
 
 #### Parameters
 
@@ -1030,7 +1058,7 @@ Defined in: packages/ai-tool-sqlite/dist/index.d.ts:59
 
 > **getFunc**(`name`?): `any`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:78
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:82
 
 #### Parameters
 
@@ -1052,7 +1080,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:78
 
 > **getFuncWithPos**(`name`?): `any`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:83
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:87
 
 #### Parameters
 
@@ -1074,7 +1102,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:83
 
 > **getMethodFromParams**(`params`): `undefined` \| `string`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:845
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:852
 
 #### Parameters
 
@@ -1116,7 +1144,7 @@ the descriptors of properties object
 
 > **hasAsyncFeature**(`feature`): `boolean`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:84
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:88
 
 #### Parameters
 
@@ -1164,7 +1192,7 @@ A property name.
 
 > **initData**(`initDir`?, `collection`?): `Promise`\<`void`\>
 
-Defined in: [packages/ai-tool-prompt/src/prompts-db.ts:23](https://github.com/isdk/ai-tool-prompt.js/blob/eeec85b9b223b655246c647bdd3056a0c12f08bc/src/prompts-db.ts#L23)
+Defined in: [packages/ai-tool-prompt/src/prompts-db.ts:23](https://github.com/isdk/ai-tool-prompt.js/blob/88ae2ed1235c29d7d920521dfc5c20e448fa67fc/src/prompts-db.ts#L23)
 
 #### Parameters
 
@@ -1264,7 +1292,7 @@ this object.
 
 > **initRpcMethods**(`methods`?): `void`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:821
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:828
 
 #### Parameters
 
@@ -1342,7 +1370,7 @@ The source object
 
 > **isStream**(`params`): `undefined` \| `boolean`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:85
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:89
 
 #### Parameters
 
@@ -1418,7 +1446,7 @@ the dest object.
 
 > **obj2ArrParams**(`params`?): `any`[]
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:73
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:77
 
 #### Parameters
 
@@ -1510,7 +1538,7 @@ Defined in: packages/ai-tool-sqlite/dist/index.d.ts:64
 
 > **register**(): `boolean` \| `ToolFunc`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:70
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:74
 
 #### Returns
 
@@ -1526,7 +1554,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:70
 
 > **run**(`params`?): `Promise`\<`any`\>
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:75
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:79
 
 #### Parameters
 
@@ -1548,7 +1576,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:75
 
 > **runAs**(`name`, `params`?): `Promise`\<`any`\>
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:76
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:80
 
 #### Parameters
 
@@ -1574,7 +1602,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:76
 
 > **runAsSync**(`name`, `params`?): `any`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:77
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:81
 
 #### Parameters
 
@@ -1600,7 +1628,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:77
 
 > **runSync**(`params`?): `any`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:74
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:78
 
 #### Parameters
 
@@ -1622,7 +1650,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:74
 
 > **runWithPos**(...`params`): `Promise`\<`any`\>
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:81
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:85
 
 #### Parameters
 
@@ -1644,7 +1672,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:81
 
 > **runWithPosAs**(`name`, ...`params`): `Promise`\<`any`\>
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:82
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:86
 
 #### Parameters
 
@@ -1670,7 +1698,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:82
 
 > **runWithPosAsSync**(`name`, ...`params`): `any`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:80
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:84
 
 #### Parameters
 
@@ -1696,7 +1724,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:80
 
 > **runWithPosSync**(...`params`): `any`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:79
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:83
 
 #### Parameters
 
@@ -1796,7 +1824,7 @@ Returns a string representation of an object.
 
 > **unregister**(): `any`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:71
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:75
 
 #### Returns
 
@@ -2358,7 +2386,7 @@ An iterable object that contains key-value entries for properties and methods.
 
 > `static` **get**(`name`): `ToolFunc`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:54
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:58
 
 #### Parameters
 
@@ -2380,7 +2408,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:54
 
 > `static` **getAllByTag**(`tagName`): `ToolFunc`[]
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:57
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:61
 
 #### Parameters
 
@@ -2402,7 +2430,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:57
 
 > `static` **getByTag**(`tagName`): `undefined` \| `ToolFunc`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:56
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:60
 
 #### Parameters
 
@@ -2424,7 +2452,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:56
 
 > `static` **getFunc**(`name`): `any`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:61
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:65
 
 #### Parameters
 
@@ -2446,7 +2474,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:61
 
 > `static` **getFuncWithPos**(`name`): `any`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:64
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:68
 
 #### Parameters
 
@@ -2628,7 +2656,7 @@ The object that references the prototype.
 
 > `static` **hasAsyncFeature**(`feature`): `boolean`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:58
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:62
 
 #### Parameters
 
@@ -2842,7 +2870,7 @@ Object that contains the properties and methods. This can be an object that you 
 
 > `static` **list**(): `Funcs`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:55
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:59
 
 #### Returns
 
@@ -2890,7 +2918,7 @@ Object to make non-extensible.
 
 > `static` **register**(`name`, `options`): `boolean` \| `ToolFunc`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:65
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:69
 
 ##### Parameters
 
@@ -2914,7 +2942,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:65
 
 > `static` **register**(`func`, `options`): `boolean` \| `ToolFunc`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:66
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:70
 
 ##### Parameters
 
@@ -2938,7 +2966,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:66
 
 > `static` **register**(`name`, `options`?): `boolean` \| `ToolFunc`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:67
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:71
 
 ##### Parameters
 
@@ -2964,7 +2992,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:67
 
 > `static` **run**(`name`, `params`?): `Promise`\<`any`\>
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:59
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:63
 
 #### Parameters
 
@@ -2990,7 +3018,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:59
 
 > `static` **runSync**(`name`, `params`?): `any`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:60
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:64
 
 #### Parameters
 
@@ -3016,7 +3044,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:60
 
 > `static` **runWithPos**(`name`, ...`params`): `Promise`\<`any`\>
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:62
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:66
 
 #### Parameters
 
@@ -3042,7 +3070,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:62
 
 > `static` **runWithPosSync**(`name`, ...`params`): `any`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:63
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:67
 
 #### Parameters
 
@@ -3098,7 +3126,7 @@ Object on which to lock the attributes.
 
 > `static` **setApiRoot**(`v`): `void`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:694
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:701
 
 #### Parameters
 
@@ -3152,7 +3180,7 @@ The value of the new prototype or null.
 
 > `static` **toJSON**(): `object`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:695
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:702
 
 #### Returns
 
@@ -3168,7 +3196,7 @@ Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:695
 
 > `static` **unregister**(`name`): `undefined` \| `ToolFunc`
 
-Defined in: packages/ai-tool/dist/index-Br-4ZYgE.d.ts:68
+Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:72
 
 #### Parameters
 
