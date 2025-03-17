@@ -8,4 +8,4 @@
 
 > `const` **AIPromptsName**: `"prompts"` = `'prompts'`
 
-Defined in: [packages/ai-tool-prompt/src/prompts-db.ts:12](https://github.com/isdk/ai-tool-prompt.js/blob/6d21e06e0e8e1b8449bddc69a03bdb7d160ce970/src/prompts-db.ts#L12)
+Defined in: [packages/ai-tool-prompt/src/prompts-db.ts:12](https://github.com/isdk/ai-tool-prompt.js/blob/eeec85b9b223b655246c647bdd3056a0c12f08bc/src/prompts-db.ts#L12)

@@ -6,7 +6,7 @@
 
 # Interface: AIPromptThinkProfile
 
-Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:38](https://github.com/isdk/ai-tool-prompt.js/blob/6d21e06e0e8e1b8449bddc69a03bdb7d160ce970/src/prompt-settings.ts#L38)
+Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:38](https://github.com/isdk/ai-tool-prompt.js/blob/eeec85b9b223b655246c647bdd3056a0c12f08bc/src/prompt-settings.ts#L38)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:38](https://github.c
 
 > `optional` **answerTag**: `string` \| \[`string`, `string`\]
 
-Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:41](https://github.com/isdk/ai-tool-prompt.js/blob/6d21e06e0e8e1b8449bddc69a03bdb7d160ce970/src/prompt-settings.ts#L41)
+Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:41](https://github.com/isdk/ai-tool-prompt.js/blob/eeec85b9b223b655246c647bdd3056a0c12f08bc/src/prompt-settings.ts#L41)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:41](https://github.c
 
 > **mode**: `"last"` \| `"first"` \| `"deep"`
 
-Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:39](https://github.com/isdk/ai-tool-prompt.js/blob/6d21e06e0e8e1b8449bddc69a03bdb7d160ce970/src/prompt-settings.ts#L39)
+Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:39](https://github.com/isdk/ai-tool-prompt.js/blob/eeec85b9b223b655246c647bdd3056a0c12f08bc/src/prompt-settings.ts#L39)
 
 ***
 
@@ -30,4 +30,4 @@ Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:39](https://github.c
 
 > `optional` **thinkTag**: `string` \| \[`string`, `string`\]
 
-Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:40](https://github.com/isdk/ai-tool-prompt.js/blob/6d21e06e0e8e1b8449bddc69a03bdb7d160ce970/src/prompt-settings.ts#L40)
+Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:40](https://github.com/isdk/ai-tool-prompt.js/blob/eeec85b9b223b655246c647bdd3056a0c12f08bc/src/prompt-settings.ts#L40)

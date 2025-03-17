@@ -8,7 +8,7 @@
 
 > `const` **AIPromptSchema**: `object`
 
-Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:73](https://github.com/isdk/ai-tool-prompt.js/blob/6d21e06e0e8e1b8449bddc69a03bdb7d160ce970/src/prompt-settings.ts#L73)
+Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:73](https://github.com/isdk/ai-tool-prompt.js/blob/eeec85b9b223b655246c647bdd3056a0c12f08bc/src/prompt-settings.ts#L73)
 
 ## Type declaration
 
