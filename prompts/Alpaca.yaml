@@ -24,3 +24,4 @@ template: >-
   {%- endif -%}
 modelPattern:
   - !re /(?:^|[-_])(alpaca|beepo)(?:[-_]|$)/i
+  - !re /^(oni_mitsubishi)(?:[-_]|$)/i
