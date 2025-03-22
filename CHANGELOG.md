@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.3.6](https://github.com/isdk/ai-tool-prompt.js/compare/v0.3.5...v0.3.6) (2025-03-22)
+
+
+### Features
+
+* add oni_mitsubishi model ([88a2018](https://github.com/isdk/ai-tool-prompt.js/commit/88a2018f9fc059314a41874ae8daecfb580b170e))
+
 ## [0.3.5](https://github.com/isdk/ai-tool-prompt.js/compare/v0.3.4...v0.3.5) (2025-03-17)
 
 ## [0.3.4](https://github.com/isdk/ai-tool-prompt.js/compare/v0.3.3...v0.3.4) (2025-03-17)
