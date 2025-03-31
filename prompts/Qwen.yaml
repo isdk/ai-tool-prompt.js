@@ -49,7 +49,7 @@ template: |-
   {% if add_generation_prompt and messages[-1]['role'] != 'assistant' %}{{ bot_token }}assistant
   {% endif %}
 modelPattern:
-  qwq: !re /(?:^|[-_.])(?:code)?(qwq)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
+  qwq: !re /(?:^|[-_.])(?:code)?(qwq|fuseo1)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   s1: !re /(?:^|[-_.])(?:code)?(s1)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   '@': !re /(?:^|[-_.])(?:code)?(qwen|qwq|Sky-T1)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
 parameters:
