@@ -1,3 +1,4 @@
+import { defaultsDeep } from 'lodash-es'
 import { AIChatMessageParam, PromptTemplate } from '@isdk/ai-tool'
 
 import { AIPromptSettings } from "./prompt-settings"
@@ -15,20 +16,19 @@ export async function formatPrompt(data: PromptTemplateData, promptSettings: AIP
   const rootPrompt = promptSettings.prompt
   if (version) {promptSettings = getVersionPromptSettings(version, promptSettings)}
 
-  const defaultPrompt = {...rootPrompt, ...promptSettings.prompt}
+  const defaultPrompt = defaultsDeep({}, rootPrompt, promptSettings.prompt)
+  data = defaultsDeep(data, defaultPrompt)
+  data.result = {add_generation_prompt: null}
   const result = await PromptTemplate.format({
     ...promptSettings,
-    data: {
-      ...defaultPrompt,
-      ...data,
-    }
+    data,
   })
   return result
 }
 
 export function getVersionPromptSettings(version: string, promptSettings: AIPromptSettings) {
   if (promptSettings.version && promptSettings.version[version]) {
-    promptSettings = {...promptSettings, ...promptSettings.version[version]}
+    promptSettings = defaultsDeep({}, promptSettings.version[version], promptSettings)
   }
   return promptSettings
 }
