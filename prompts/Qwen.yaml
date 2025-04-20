@@ -11,13 +11,28 @@ version:
     shouldThink:
       mode: 'deep'
       thinkTag: ["<think>", "</think>"]
+  fuseo1-deepseekr1:
+    shouldThink:
+      mode: 'deep'
+      thinkTag: ["<think>", "</think>"]
+    prompt:
+      assistant_suffix: "\n<think>"
+  fuseo1-qwq:
+    shouldThink:
+      mode: 'deep'
+      thinkTag: ["<|box_start|>", "<|box_end|>"]
+    prompt:
+      assistant_suffix: "\n<|box_start|>"
+prompt:
+  assistant_suffix: ""
 template: |-
   {% for message in messages %}
     {% if loop.first %}
-      {{- bot_token + 'system\n' -}}
-      {%- if messages[0]['role'] != 'system' %}
+      {%- if system and messages[0]['role'] != 'system' %}
+        {{- bot_token + 'system\n' -}}
         {{- system + eot_token + '\n'}}
       {%- else %}
+        {{- bot_token + message['role'] + '\n' -}}
         {{- message['content'] + eot_token + '\n'}}
       {%- endif %}
       {%- if tools %}
@@ -46,10 +61,12 @@ template: |-
       {%- if not loop.last or messages[-1]['role'] != 'assistant' %}{{ eot_token + '\n'}}{% endif %}
     {% endif %}
   {% endfor %}
-  {% if add_generation_prompt and messages[-1]['role'] != 'assistant' %}{{ bot_token }}assistant
+  {% if add_generation_prompt and messages[-1]['role'] != 'assistant' %}{{ bot_token }}assistant{{ assistant_suffix }}
   {% endif %}
 modelPattern:
-  qwq: !re /(?:^|[-_.])(?:code)?(qwq|fuseo1)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
+  # fuseo1-qwq: !re /^(fuseo1-qwq-deepseekr1)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
+  fuseo1-deepseekr1: !re /^(fuseo1-deepseekr1)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
+  qwq: !re /(?:^|[-_.])(?:code)?(qwq)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   s1: !re /(?:^|[-_.])(?:code)?(s1)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   '@': !re /(?:^|[-_.])(?:code)?(qwen|qwq|Sky-T1)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
 parameters:
