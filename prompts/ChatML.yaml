@@ -2,12 +2,12 @@ _id: ChatML
 templateFormat: hf
 type: system
 prompt:
-  system: You are a helpful assistant
+  # system: You are a helpful assistant
   bot_token: '<|im_start|>'
   eot_token: '<|im_end|>'
 template: |-
   {% for message in messages %}
-    {% if loop.first and messages[0]['role'] != 'system' %}
+    {% if loop.first and system and messages[0]['role'] != 'system' %}
       {{- bot_token + 'system\n' -}}
       {{ system + eot_token }}
     {% endif %}
