@@ -18,7 +18,6 @@ export async function formatPrompt(data: PromptTemplateData, promptSettings: AIP
 
   const defaultPrompt = defaultsDeep({}, rootPrompt, promptSettings.prompt)
   data = defaultsDeep(data, defaultPrompt)
-  data.result = {add_generation_prompt: null}
   const result = await PromptTemplate.format({
     ...promptSettings,
     data,
