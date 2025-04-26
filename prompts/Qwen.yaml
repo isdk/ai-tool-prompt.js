@@ -7,6 +7,10 @@ version:
       mode: deep
       thinkTag: "think\n"
       answerTag: "\nanswer\n"
+  t1:
+    shouldThink:
+      mode: 'deep'
+      thinkTag: ["<think>", "</think>"]
   qwq:
     shouldThink:
       mode: 'deep'
@@ -17,12 +21,12 @@ version:
       thinkTag: ["<think>", "</think>"]
     prompt:
       assistant_suffix: "\n<think>"
-  fuseo1-qwq:
-    shouldThink:
-      mode: 'deep'
-      thinkTag: ["<|box_start|>", "<|box_end|>"]
-    prompt:
-      assistant_suffix: "\n<|box_start|>"
+  # fuseo1-qwq:
+  #   shouldThink:
+  #     mode: 'deep'
+  #     thinkTag: ["<|box_start|>", "<|box_end|>"]
+  #   prompt:
+  #     assistant_suffix: "\n<|box_start|>"
 prompt:
   assistant_suffix: ""
 template: |-
@@ -66,9 +70,10 @@ template: |-
 modelPattern:
   # fuseo1-qwq: !re /^(fuseo1-qwq-deepseekr1)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   fuseo1-deepseekr1: !re /^(fuseo1-deepseekr1)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
+  t1: !re /^(Sky-T1-32B-Preview)(?:[-_]|$)/i
   qwq: !re /(?:^|[-_.])(?:code)?(qwq)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   s1: !re /(?:^|[-_.])(?:code)?(s1)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
-  '@': !re /(?:^|[-_.])(?:code)?(qwen|qwq|Sky-T1)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
+  '@': !re /(?:^|[-_.])(?:code)?(qwen|qwq)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
 parameters:
   'qwen':
     temperature: 0.01
