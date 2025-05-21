@@ -1,6 +1,6 @@
 import path from 'path'
 import { AIPromptSettings } from '../src'
-import { formatPrompt } from './format-prompt'
+import { formatPrompt, getPromptSettings } from './format-prompt'
 import { ConfigFile } from '@isdk/ai-tool';
 
 
@@ -95,4 +95,25 @@ describe('formatPrompt', () => {
     }, promptTemplate)
     expect(result).toStrictEqual(promptTemplate.prompt!.system + '\nuser: {user}\nassistant: {assistant}\nuser: {user}\nassistant: ')
   });
+});
+
+describe('getPromptSettings', () => {
+  it('should get prompt settings extented', () => {
+    const promptTemplate = ConfigFile.loadSync(promptsPath + '/Qwen') as AIPromptSettings
+    expect(promptTemplate).toHaveProperty('_id', 'Qwen')
+    const result = getPromptSettings({
+      version: 'qwq',
+      system: '',
+      messages: [
+        {
+          role: 'user',
+          content: '{user}'
+        }
+      ]
+    }, promptTemplate)
+    expect(result).toHaveProperty('supports')
+    expect(result.supports).toHaveProperty('tools', true)
+    expect(result.supports).toHaveProperty('thinkMode')
+    expect((result.supports as any).thinkMode).toMatchObject(['deep'])
+  })
 });

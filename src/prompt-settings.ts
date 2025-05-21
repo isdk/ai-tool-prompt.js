@@ -41,11 +41,25 @@ export interface AIPromptThinkProfile {
   answerTag?: string|[string,string]
 }
 
+export interface AISupportObjectItem {
+  name?: string
+  id?: string
+  _id?: string
+  [id: string]: any
+}
+
+export interface AISupportObject {
+  [id: string]: AISupportObjectItem|boolean
+}
+
+export type AISupportItem = string|AISupportObject|AISupportObjectItem
+
 type DefaultPrompt = Record<string, string> | {system?: string, ai?: string, human?: string, bot_token?: string, eot_token?: string, end_of_turn?: string, begin_of_turn?: string, template?: string, messages?: AIChatMessageParam[]}
 export interface AIPromptSettings {
   _id?: string
   id?:string
   template: string
+  supports?: AISupportItem[]|AISupportObject
   type: AIPromptType
   contentType?: AIContentType
   description?: string
