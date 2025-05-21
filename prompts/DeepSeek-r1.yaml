@@ -4,9 +4,10 @@ type: system
 prompt:
   bos_token: '<｜begin▁of▁sentence｜>'
   eos_token: "<｜end▁of▁sentence｜>"
-supports: ['tools']
+supports:
+  - 'tools'
+  - thinkMode: ['deep']
 shouldThink:
-  mode: 'deep'
   thinkTag: ["<think>", "</think>"]
 # For mathematical problems, it is advisable to include a directive in your prompt such as:
 # "Please reason step by step, and put your final answer within \boxed{}."
