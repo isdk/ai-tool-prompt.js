@@ -4,6 +4,8 @@ supports:
   - 'tools'
 version:
   s1:
+    supports:
+      - thinkMode: ['deep']
     shouldThink:
       mode: deep
       thinkTag: "think\n"
@@ -12,11 +14,13 @@ version:
     supports:
       - thinkMode: ['deep']
     shouldThink:
+      mode: deep
       thinkTag: ["<think>", "</think>"]
   qwq:
     supports:
       - thinkMode: ['deep']
     shouldThink:
+      mode: deep
       thinkTag: ["<think>", "</think>"]
   qwen3:
     supports:
@@ -27,6 +31,7 @@ version:
     supports:
       - thinkMode: ['deep']
     shouldThink:
+      mode: deep
       thinkTag: ["<think>", "</think>"]
     prompt:
       assistant_suffix: "\n<think>"
