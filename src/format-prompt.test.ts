@@ -18,7 +18,7 @@ describe('formatPrompt', () => {
           content: '{user}'
         }
       ]
-    }, promptTemplate)
+    }, {prompt: promptTemplate})
     expect(result).toStrictEqual('user: {user}\n')
 
     result = await formatPrompt({
@@ -33,7 +33,7 @@ describe('formatPrompt', () => {
           content: '{user}'
         },
       ]
-    }, promptTemplate)
+    }, {prompt: promptTemplate})
     expect(result).toStrictEqual('{system}\nuser: {user}\n')
 
     result = await formatPrompt({
@@ -49,7 +49,7 @@ describe('formatPrompt', () => {
           content: '{user}'
         },
       ]
-    }, promptTemplate)
+    }, {prompt: promptTemplate})
     expect(result).toStrictEqual('{system}\nuser: {user}\nassistant: ')
 
     result = await formatPrompt({
@@ -73,7 +73,7 @@ describe('formatPrompt', () => {
           content: '{user}'
         },
       ]
-    }, promptTemplate)
+    }, {prompt: promptTemplate})
     expect(result).toStrictEqual('{system}\nuser: {user}\nassistant: {assistant}\nuser: {user}\nassistant: ')
 
     result = await formatPrompt({
@@ -92,7 +92,7 @@ describe('formatPrompt', () => {
           content: '{user}'
         },
       ]
-    }, promptTemplate)
+    }, {prompt: promptTemplate})
     expect(result).toStrictEqual(promptTemplate.prompt!.system + '\nuser: {user}\nassistant: {assistant}\nuser: {user}\nassistant: ')
   });
 });
@@ -110,7 +110,7 @@ describe('getPromptSettings', () => {
           content: '{user}'
         }
       ]
-    }, promptTemplate)
+    }, {prompt: promptTemplate})
     expect(result).toHaveProperty('supports')
     expect(result.supports).toHaveProperty('tools', true)
     expect(result.supports).toHaveProperty('thinkMode')
