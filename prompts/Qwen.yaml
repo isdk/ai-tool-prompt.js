@@ -1,6 +1,7 @@
 _id: Qwen
 extends: ChatML
-supports: ['tools']
+supports:
+  - 'tools'
 version:
   s1:
     shouldThink:
@@ -8,16 +9,24 @@ version:
       thinkTag: "think\n"
       answerTag: "\nanswer\n"
   t1:
+    supports:
+      - thinkMode: ['deep']
     shouldThink:
-      mode: 'deep'
       thinkTag: ["<think>", "</think>"]
   qwq:
+    supports:
+      - thinkMode: ['deep']
     shouldThink:
-      mode: 'deep'
+      thinkTag: ["<think>", "</think>"]
+  qwen3:
+    supports:
+      - thinkMode: ['deep', 'off']
+    shouldThink:
       thinkTag: ["<think>", "</think>"]
   fuseo1-deepseekr1:
+    supports:
+      - thinkMode: ['deep']
     shouldThink:
-      mode: 'deep'
       thinkTag: ["<think>", "</think>"]
     prompt:
       assistant_suffix: "\n<think>"
@@ -30,6 +39,9 @@ version:
 prompt:
   assistant_suffix: ""
 template: |-
+  {% if version == 'qwen3' and shouldThink.mode != 3 %}
+    {% set assistant_suffix = '\n<think></think>' %}
+  {% endif %}
   {% for message in messages %}
     {% if loop.first %}
       {%- if system and messages[0]['role'] != 'system' %}
@@ -73,8 +85,15 @@ modelPattern:
   t1: !re /^(Sky-T1-32B-Preview)(?:[-_]|$)/i
   qwq: !re /(?:^|[-_.])(?:code)?(qwq)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   s1: !re /(?:^|[-_.])(?:code)?(s1)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
+  qwen3: !re /(?:^|[-_.])(?:code)?(qwen3)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   '@': !re /(?:^|[-_.])(?:code)?(qwen|qwq)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
 parameters:
+  'qwq':
+    temperature: 0.5
+    top_p: 0.9
+  'qwen3':
+    temperature: 0.5
+    top_p: 0.9
   'qwen':
     temperature: 0.01
     top_p: 0.9
