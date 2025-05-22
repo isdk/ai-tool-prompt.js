@@ -27,6 +27,8 @@ version:
       - thinkMode: ['deep', 'off']
     shouldThink:
       thinkTag: ["<think>", "</think>"]
+    prompt:
+      blankThink: "<think></think>"
   fuseo1-deepseekr1:
     supports:
       - thinkMode: ['deep']
@@ -45,7 +47,7 @@ prompt:
   assistant_suffix: ""
 template: |-
   {% if version == 'qwen3' and shouldThink.mode != 3 %}
-    {% set assistant_suffix = '\n<think></think>' %}
+    {% set assistant_suffix = '\n' + blankThink %}
   {% endif %}
   {% for message in messages %}
     {% if loop.first %}
