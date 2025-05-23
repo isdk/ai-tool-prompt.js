@@ -29,7 +29,7 @@ version:
       thinkTag: ["<think>", "</think>"]
     prompt:
       blankThink: "<think></think>"
-  fuseo1-deepseekr1:
+  fuseo1:
     supports:
       - thinkMode: ['deep']
     shouldThink:
@@ -87,8 +87,9 @@ template: |-
   {% if add_generation_prompt and messages[-1]['role'] != 'assistant' %}{{ bot_token }}assistant{{ assistant_suffix }}
   {% endif %}
 modelPattern:
+  # fuseo1-qwq-deepseekr1 can not output </think>
   # fuseo1-qwq: !re /^(fuseo1-qwq-deepseekr1)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
-  fuseo1-deepseekr1: !re /^(fuseo1-deepseekr1)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
+  fuseo1: !re /^(fuseo1-deepseekr1)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   t1: !re /^(Sky-T1-32B-Preview)(?:[-_]|$)/i
   qwq: !re /(?:^|[-_.])(?:code)?(qwq)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   s1: !re /(?:^|[-_.])(?:code)?(s1)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
