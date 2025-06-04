@@ -28,7 +28,7 @@ version:
     shouldThink:
       thinkTag: ["<think>", "</think>"]
     prompt:
-      blankThink: "<think></think>"
+      blankThink: "<think>\n\n</think>"
   fuseo1:
     supports:
       - thinkMode: ['deep']
