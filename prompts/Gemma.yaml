@@ -10,7 +10,7 @@ version:
       answerTag: <|回|>
       defaultThinkPrompt:
         prompt:
-          deepHint: |-
+          deepThinkPrompt: |-
             SYSTEM INSTRUCTION: think silently if needed. You are a helpful medical assistant.
             Please answer after the "<|回|>" tag.
   gemma3:
