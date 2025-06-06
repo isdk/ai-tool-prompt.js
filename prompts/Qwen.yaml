@@ -28,7 +28,7 @@ version:
     shouldThink:
       thinkTag: ["<think>", "</think>"]
     prompt:
-      blankThink: "<think>\n\n</think>\n"
+      blankThink: "\n<think>\n\n</think>"
   fuseo1:
     supports:
       - thinkMode: ['deep']
@@ -44,7 +44,7 @@ version:
   #   prompt:
   #     assistant_suffix: "\n<|box_start|>"
 prompt:
-  assistant_suffix: ""
+  assistant_suffix: "\n"
 template: |-
   {% if version == 'qwen3' and shouldThink.mode != 3 %}
     {% set assistant_suffix = '\n' + blankThink %}
@@ -84,8 +84,7 @@ template: |-
       {%- if not loop.last or messages[-1]['role'] != 'assistant' %}{{ eot_token + '\n'}}{% endif %}
     {% endif %}
   {% endfor %}
-  {% if add_generation_prompt and messages[-1]['role'] != 'assistant' %}{{ bot_token }}assistant{{ assistant_suffix }}
-  {% endif %}
+  {% if add_generation_prompt and messages[-1]['role'] != 'assistant' %}{{ bot_token }}assistant{{ assistant_suffix }}{% endif %}
 modelPattern:
   # fuseo1-qwq-deepseekr1 can not output </think>
   # fuseo1-qwq: !re /^(fuseo1-qwq-deepseekr1)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
