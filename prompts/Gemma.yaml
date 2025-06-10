@@ -28,9 +28,10 @@ version:
       {%- endif -%}
 
       {% for message in loop_messages %}
-        {%- if (message['role'] == 'user') != (loop.index0 % 2 == 0) -%}
-          {{ raise_exception("Conversation roles must alternate user/assistant/user/assistant/...") }}
+        {%- if loop.index0 > 0 and (message['role'] == 'user') == (prev_role == 'user') -%}
+          {{ raise_exception("Conversation roles must alternate") }}
         {%- endif -%}
+        {% set prev_role = message['role'] %}
         {%- if (message['role'] == 'assistant') -%}
           {%- set role = "model" -%}
         {%- else -%}
