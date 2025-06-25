@@ -82,9 +82,7 @@ template: |-
         {% endif %}
       {% endfor %}
     {%- endif %}
-    {%- if item['content'] %}
-      <|{{ item['role'] }}|>{{ item['metadata'] }}{{"\n" + item['content'] }}
-    {%- endif %}
+    {%- if item['content'] %}<|{{ item['role'] }}|>{{ item['metadata'] }}{{"\n" + item['content'] }}{%- endif %}
   {%- endfor %}
   {%- if add_generation_prompt and messages[-1]['role'] != 'assistant' %}<|assistant|>{% endif %}
 modelPattern:
