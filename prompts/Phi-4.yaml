@@ -1,6 +1,13 @@
 _id: Phi-4
 templateFormat: hf
 type: system
+version:
+  reasoning:
+    supports:
+      - thinkMode: ['deep']
+    shouldThink:
+      mode: deep
+      thinkTag: ["<think>", "</think>"]
 prompt:
   system: You are a medieval knight and must provide explanations to modern people.
   bot_token: '<|im_start|>'
@@ -18,4 +25,11 @@ template: |-
       {{- bot_token + 'assistant' + sep_token -}}
   {%- endif -%}
 modelPattern:
-  "@": !re /^(phi)[-_]4(?:$|[-_.])/i
+  reasoning: !re /(?:^|[-_.])(phi)[-_]4[-_]reasoning(?:$|[-_.])/i
+  "@": !re /(?:^|[-_.])(phi)[-_]4(?:$|[-_.])/i
+parameters:
+  'reasoning':
+    temperature: 0.8
+    top_p: 0.95
+    top_k: 50
+    seed: -1 # setting it to -1 implies that a different response will be generated on each generation, similarly to HuggingFace's `do_sample` arg. Defaults to 1337.
