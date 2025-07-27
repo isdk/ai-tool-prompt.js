@@ -92,9 +92,16 @@ modelPattern:
   t1: !re /^(Sky-T1-32B-Preview)(?:[-_]|$)/i
   qwq: !re /(?:^|[-_.])(?:code)?(qwq)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   s1: !re /(?:^|[-_.])(?:code)?(s1)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
+  qwen3-coder: !re /(?:^|[-_.])(qwen3-coder)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   qwen3: !re /(?:^|[-_.])(?:code)?(qwen3)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   '@': !re /(?:^|[-_.])(?:code)?(qwen|qwq)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
 parameters:
+  'qwen3-coder':
+    temperature: 0.7
+    top_k: 20
+    top_p: 0.8
+    min_p: 0 # 0.01
+    repeat_penalty: 1.05
   'qwq':
     temperature: 0.5
     top_p: 0.9
