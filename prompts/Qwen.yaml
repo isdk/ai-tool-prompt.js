@@ -93,9 +93,24 @@ modelPattern:
   qwq: !re /(?:^|[-_.])(?:code)?(qwq)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   s1: !re /(?:^|[-_.])(?:code)?(s1)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   qwen3-coder: !re /(?:^|[-_.])(qwen3-coder)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
+  qwen3-235b-instruct: !re /(?:^|[-_.])(?:code)?(Qwen3-235B-A22B-Instruct-2507)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
+  qwen3-235b-think: !re /(?:^|[-_.])(?:code)?(Qwen3-235B-A22B-Thinking-2507)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   qwen3: !re /(?:^|[-_.])(?:code)?(qwen3)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   '@': !re /(?:^|[-_.])(?:code)?(qwen|qwq)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
 parameters:
+  qwen3-235b-instruct:
+    temperature: 0.7
+    top_k: 20
+    top_p: 0.8
+    min_p: 0
+    # presence_penalty = 1.5 # 0.0 to 2.0 default turns it off, to reduce repetitions, you can use this
+  qwen3-235b-think:
+    temperature: 0.6
+    top_k: 20
+    top_p: 0.95
+    min_p: 0
+    # repeat_penalty: 1.05
+    # presence_penalty = 1.5 # 0.0 to 2.0 default turns it off, to reduce repetitions, you can use this
   'qwen3-coder':
     temperature: 0.7
     top_k: 20
