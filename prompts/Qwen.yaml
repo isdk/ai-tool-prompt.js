@@ -29,6 +29,13 @@ version:
       thinkTag: ["<think>", "</think>"]
     prompt:
       blankThink: "\n<think>\n\n</think>"
+  qwen3-235b-think:
+    supports:
+      - thinkMode: ['deep', 'off']
+    shouldThink:
+      thinkTag: ["<think>", "</think>"]
+    prompt:
+      blankThink: "\n<think>\n\n</think>"
   fuseo1:
     supports:
       - thinkMode: ['deep']
