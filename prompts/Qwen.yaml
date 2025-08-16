@@ -99,6 +99,7 @@ modelPattern:
   t1: !re /^(Sky-T1-32B-Preview)(?:[-_]|$)/i
   qwq: !re /(?:^|[-_.])(?:code)?(qwq)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   s1: !re /(?:^|[-_.])(?:code)?(s1)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
+  OpenReasoning-Nemotron: /^(OpenReasoning-Nemotron)(?:[-_]|$)/i
   qwen3-coder: !re /(?:^|[-_.])(qwen3-coder)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   qwen3-235b-instruct: !re /(?:^|[-_.])(?:code)?(Qwen3-235B-A22B-Instruct-2507)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   qwen3-235b-think: !re /(?:^|[-_.])(?:code)?(Qwen3-235B-A22B-Thinking-2507)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
