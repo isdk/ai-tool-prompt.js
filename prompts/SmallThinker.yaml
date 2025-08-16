@@ -1,0 +1,6 @@
+_id: SmallThinker
+extends: ChatML
+supports:
+  - 'tools'
+modelPattern:
+  '@': !re /(?:^|[-_.])(?:code)?(smallthinker)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
