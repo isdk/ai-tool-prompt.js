@@ -2,7 +2,13 @@ _id: Phi-3
 templateFormat: hf
 type: system
 version:
+  mediphi:
+    prompt:
+      sys_token: "<|system|>"
   "3.1":
+    prompt:
+      sys_token: "<|system|>"
+  "3.5":
     prompt:
       sys_token: "<|system|>"
 prompt:
@@ -25,8 +31,13 @@ template: |-
       {{-'<|assistant|>'-}}
   {%- endif -%}
 modelPattern:
+  mediphi: !re /^(MediPhi)(?:$|[-_.])/i
+  "3.5": !re /^(phi)[-_]3[.]5(?:$|[-_.])/i
   "3.1": !re /^(phi)[-_]3[.]1(?:$|[-_.])/i
   "@": !re /^(phi)[-_]3(?:$|[-_.])/i
 parameters:
+  mediphi:
+    stop_words: ['<|end|>']
+    temperature: 0
   "phi":
     stop_words: ['<|end|>']
