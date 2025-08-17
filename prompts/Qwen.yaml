@@ -36,6 +36,13 @@ version:
       thinkTag: ["<think>", "</think>"]
     prompt:
       blankThink: "\n<think>\n\n</think>"
+  qwewn3-Baichuan-M2-32B-think:
+    supports:
+      - thinkMode: ['deep', 'off']
+    shouldThink:
+      thinkTag: ["<think>", "</think>"]
+    prompt:
+      blankThink: "\n<think>\n\n</think>"
   fuseo1:
     supports:
       - thinkMode: ['deep']
@@ -99,6 +106,7 @@ modelPattern:
   t1: !re /^(Sky-T1-32B-Preview)(?:[-_]|$)/i
   qwq: !re /(?:^|[-_.])(?:code)?(qwq)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   s1: !re /(?:^|[-_.])(?:code)?(s1)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
+  qwewn3-Baichuan-M2-32B-think: !re /(?:^|[-_.])(Baichuan-M2-32B)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   OpenReasoning-Nemotron: /^(OpenReasoning-Nemotron)(?:[-_]|$)/i
   qwen3-coder: !re /(?:^|[-_.])(qwen3-coder)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   qwen3-235b-instruct: !re /(?:^|[-_.])(?:code)?(Qwen3-235B-A22B-Instruct-2507)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
@@ -112,6 +120,8 @@ parameters:
     top_p: 0.8
     min_p: 0
     # presence_penalty = 1.5 # 0.0 to 2.0 default turns it off, to reduce repetitions, you can use this
+  qwewn3-Baichuan-M2-32B-think:
+    temperature: 0.6
   qwen3-235b-think:
     temperature: 0.6
     top_k: 20
