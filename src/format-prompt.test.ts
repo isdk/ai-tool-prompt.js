@@ -98,10 +98,10 @@ describe('formatPrompt', () => {
 });
 
 describe('getPromptSettings', () => {
-  it('should get prompt settings extented', () => {
+  it('should get prompt settings extented', async () => {
     const promptTemplate = ConfigFile.loadSync(promptsPath + '/Qwen') as AIPromptSettings
     expect(promptTemplate).toHaveProperty('_id', 'Qwen')
-    const result = getPromptSettings({
+    const result = await getPromptSettings({
       version: 'qwq',
       system: '',
       messages: [
@@ -115,5 +115,20 @@ describe('getPromptSettings', () => {
     expect(result.supports).toHaveProperty('tools', true)
     expect(result.supports).toHaveProperty('thinkMode')
     expect((result.supports as any).thinkMode).toMatchObject(['deep'])
+  })
+
+  it('should get prompt data formatted', async () => {
+    const promptTemplate = ConfigFile.loadSync(promptsPath + '/Gpt-oss') as AIPromptSettings
+    expect(promptTemplate).toHaveProperty('_id', 'Gpt-oss')
+    const result = await getPromptSettings({
+      system: '',
+      messages: [
+        {
+          role: 'user',
+          content: '{user}'
+        }
+      ]
+    }, {prompt: promptTemplate})
+    expect(result.prompt!.system).not.toMatch(/{{.*}}/)
   })
 });

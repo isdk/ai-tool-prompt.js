@@ -1,4 +1,4 @@
-import { defaultsDeep, omit } from 'lodash-es'
+import { defaultsDeep, omit, omitBy } from 'lodash-es'
 import { AIChatMessageParam, defaultsWithConcat, PromptTemplate } from '@isdk/ai-tool'
 
 import { AIPromptSettings, AISupportItem, AISupportObject } from "./prompt-settings"
@@ -12,17 +12,25 @@ export interface PromptTemplateData {
 }
 
 export async function formatPrompt(data: PromptTemplateData, chatTemplate: AIPromptResult) {
-  const args = getPromptSettings(data, chatTemplate)
+  const args = await getPromptSettings(data, chatTemplate)
   const result = await PromptTemplate.format(args)
   return result
 }
 
-export function getPromptSettings(data: PromptTemplateData, chatTemplate: AIPromptResult) {
+export async function getPromptSettings(data: PromptTemplateData, chatTemplate: AIPromptResult) {
+  data = keepJsonSerializable(data)
+
   const version = data.version
   let promptSettings = chatTemplate.prompt
 
   const rootPrompt = promptSettings.prompt
-  if (version) {promptSettings = getVersionPromptSettings(version, promptSettings)}
+  if (version) {
+    promptSettings = getVersionPromptSettings(version, promptSettings)
+  }
+
+  if (promptSettings.prompt) {
+    promptSettings.prompt = await formatObject(promptSettings.prompt, promptSettings.templateFormat)
+  }
 
   const defaultPrompt = defaultsDeep({}, rootPrompt, promptSettings.prompt)
   data = defaultsDeep(data, defaultPrompt)
@@ -36,8 +44,9 @@ export function getPromptSettings(data: PromptTemplateData, chatTemplate: AIProm
 }
 
 export function getVersionPromptSettings(version: string, promptSettings: AIPromptSettings) {
-  if (promptSettings.version && promptSettings.version[version]) {
-    promptSettings = defaultsWithConcat({}, promptSettings.version[version], promptSettings)
+  const versionPrompt = promptSettings.version?.[version]
+  if (versionPrompt) {
+    promptSettings = defaultsWithConcat({}, versionPrompt, promptSettings)
   }
   if (Array.isArray(promptSettings.supports)) {
     promptSettings.supports = normalizeSupportsOption(promptSettings.supports)
@@ -77,4 +86,54 @@ function normalizeSupportsOption(supports: AISupportItem[]|AISupportObject) {
     return result
   }
   return supports
+}
+
+function keepJsonSerializable(data: any) {
+  return omitBy(data, (value) => value == null || (!Array.isArray(value) && isClassInstance(value)))
+}
+
+function isClassInstance(value: any) {
+  return value && typeof value === 'object' && value.constructor && value.constructor !== Object
+}
+
+async function formatObject(obj: any, templateFormat?: string, data?: any) {
+  if (obj) {
+    if (!data) {data = obj}
+   if (Array.isArray(obj)) {
+      for (let i = 0; i < obj.length; i++) {
+        const item = obj[i]
+        if (item != null) {
+          switch (typeof item) {
+            case 'object': {
+              obj[i] = await formatObject(item, templateFormat, data)
+            } break;
+            case 'string': {
+              const v = await PromptTemplate.formatIf({template: item, templateFormat, data})
+              if (v) {
+                obj[i] = v
+              }
+            }
+          }
+        }
+      }
+    } else for (const key in obj) {
+      const value = obj[key]
+      console.log('🚀 ~ file: format-prompt.ts:118 ~ value:', key, value)
+      if (value != null) {
+        switch (typeof value) {
+          case 'object': {
+            obj[key] = await formatObject(value, templateFormat, data)
+          } break;
+          case 'string': {
+            const v = await PromptTemplate.formatIf({template: value, templateFormat, data})
+            console.log('🚀 ~ file: format-prompt.ts:125 ~ v:', v)
+            if (v) {
+              obj[key] = v
+            }
+          } break;
+        }
+      }
+    }
+  }
+  return obj
 }
