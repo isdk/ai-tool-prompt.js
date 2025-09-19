@@ -118,7 +118,6 @@ async function formatObject(obj: any, templateFormat?: string, data?: any) {
       }
     } else for (const key in obj) {
       const value = obj[key]
-      console.log('🚀 ~ file: format-prompt.ts:118 ~ value:', key, value)
       if (value != null) {
         switch (typeof value) {
           case 'object': {
@@ -126,7 +125,6 @@ async function formatObject(obj: any, templateFormat?: string, data?: any) {
           } break;
           case 'string': {
             const v = await PromptTemplate.formatIf({template: value, templateFormat, data})
-            console.log('🚀 ~ file: format-prompt.ts:125 ~ v:', v)
             if (v) {
               obj[key] = v
             }
