@@ -1,7 +1,5 @@
 // @vitest-environment node
-import fastify from 'fastify'
-
-import { ClientTools, ErrorCode, Funcs, NotFoundError, ResClientTools, ResServerTools, ToolFunc, wait } from "@isdk/ai-tool"
+import { ClientTools, ErrorCode, Funcs, HttpClientToolTransport, HttpServerToolTransport, NotFoundError, ResClientTools, ResServerTools, ToolFunc, sleep } from "@isdk/ai-tool"
 import { FuncParams, ServerTools } from '@isdk/ai-tool'
 import { findPort } from '@isdk/ai-tool/test/util'
 
@@ -14,7 +12,7 @@ const dbPath = ':memory:'
 describe('Prompts server api', () => {
   let apiRoot: string // = 'http://localhost:3000/api'
   let promptsFunc: AIPromptsFunc
-  const server = fastify()
+  let server: HttpServerToolTransport
 
   beforeAll(async () => {
     const ServerToolItems: {[name:string]: ServerTools|ToolFunc} = {}
@@ -25,78 +23,25 @@ describe('Prompts server api', () => {
     Object.setPrototypeOf(ClientToolItems, ToolFunc.items)
     ClientTools.items = ClientToolItems
 
-    server.get('/api', async function(request, reply){
-      reply.send(ResServerTools.toJSON())
-    })
-
-    server.all('/api/:toolId/:id?', async function(request, reply){
-      const { toolId, id } = request.params as any;
-      const func = ResServerTools.get(toolId)
-      if (!func) {
-        reply.code(404).send({error: toolId + ' Not Found', data: {what: toolId}})
-      }
-      let params: any
-      const method = request.method
-      if (method === 'GET' || method == 'DELETE') {
-        params = (request.query as any).p
-        if (params) {
-          params = JSON.parse(params)
-        } else {
-          params = {}
-        }
-      } else {
-        params = request.body;
-        if (typeof params === 'string') {params = JSON.parse(params)}
-      }
-      params._req = request.raw
-      params._res = reply.raw
-      if (id !== undefined) {params.id = id}
-
-      // const result = JSON.stringify(await func.run(params))
-      try {
-        let result = await func.run(params)
-        if (!func.isStream(params)) {
-          result = JSON.stringify(result)
-          // console.log('🚀 ~ server.all ~ result:', result)
-          reply.send(result)
-        } else if (result) {
-          reply.send(result)
-        }
-        // reply.send({params: request.params as any, query: request.query, url: request.url})
-      } catch(e) {
-        // console.log('🚀 ~ server.all ~ e:', e)
-        if (e.code !== undefined) {
-          const err: any = {...e, error: e.message}
-          if (err.stack) {delete err.stack}
-          if (typeof err.code === 'number') {
-            reply.code(err.code).send(JSON.stringify(err))
-          } else {
-            reply.code(500).send(JSON.stringify(err))
-          }
-        } else if (e.message) {
-          reply.code(500).send({error: e.message})
-        } else {
-          reply.code(500).send({error: e})
-        }
-      }
-    })
-    await wait(10)
-    const port = await findPort(3000)
-    const result = await server.listen({port})
-    console.log('server listening on ', result)
-    apiRoot = `http://localhost:${port}/api`
-
-    ResServerTools.setApiRoot(apiRoot)
     promptsFunc = new AIPromptsFunc(AIPromptsName, {dbPath})
     await promptsFunc.initData()
     promptsFunc.register()
 
-    ResClientTools.setApiRoot(apiRoot)
-    await ResClientTools.loadFrom()
+    await sleep(10)
+    server = new HttpServerToolTransport()
+    await server.mount(ResServerTools, '/api')
+
+    const port = await findPort(3000)
+    const result = await server.start({port})
+    // console.log('server listening on ', result)
+    apiRoot = `http://localhost:${port}/api`
+
+    const clientTransport = new HttpClientToolTransport(apiRoot);
+    await clientTransport.mount(ResClientTools)
   })
 
   afterAll(async () => {
-    await server.close()
+    await server.stop()
     delete (ClientTools as any).items
     delete (ServerTools as any).items
   })
