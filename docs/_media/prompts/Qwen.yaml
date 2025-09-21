@@ -1,0 +1,148 @@
+_id: Qwen
+extends: ChatML
+supports:
+  - 'tools'
+version:
+  s1:
+    supports:
+      - thinkMode: ['deep']
+    shouldThink:
+      mode: deep
+      thinkTag: "think\n"
+      answerTag: "\nanswer\n"
+  t1:
+    supports:
+      - thinkMode: ['deep']
+    shouldThink:
+      mode: deep
+      thinkTag: ["<think>", "</think>"]
+  qwq:
+    supports:
+      - thinkMode: ['deep']
+    shouldThink:
+      mode: deep
+      thinkTag: ["<think>", "</think>"]
+  qwen3:
+    supports:
+      - thinkMode: ['deep', 'off']
+    shouldThink:
+      thinkTag: ["<think>", "</think>"]
+    prompt:
+      blankThink: "\n<think>\n\n</think>"
+  qwen3-235b-think:
+    supports:
+      - thinkMode: ['deep', 'off']
+    shouldThink:
+      thinkTag: ["<think>", "</think>"]
+    prompt:
+      blankThink: "\n<think>\n\n</think>"
+  qwewn3-Baichuan-M2-32B-think:
+    supports:
+      - thinkMode: ['deep', 'off']
+    shouldThink:
+      mode: deep
+      thinkTag: ["<think>", "</think>"]
+    prompt:
+      blankThink: "\n<think>\n\n</think>"
+  fuseo1:
+    supports:
+      - thinkMode: ['deep']
+    shouldThink:
+      mode: deep
+      thinkTag: ["<think>", "</think>"]
+    prompt:
+      assistant_suffix: "\n<think>"
+  # fuseo1-qwq:
+  #   shouldThink:
+  #     mode: 'deep'
+  #     thinkTag: ["<|box_start|>", "<|box_end|>"]
+  #   prompt:
+  #     assistant_suffix: "\n<|box_start|>"
+prompt:
+  assistant_suffix: "\n"
+template: |-
+  {% if (version == 'qwen3' or (version.startswith('qwen3') and version.endswith('think'))) and shouldThink.mode != 3 %}
+    {% set assistant_suffix = '\n' + blankThink %}
+  {% endif %}
+  {% for message in messages %}
+    {% if loop.first %}
+      {%- if system and messages[0]['role'] != 'system' %}
+        {{- bot_token + 'system\n' -}}
+        {{- system + eot_token + '\n'}}
+      {%- else %}
+        {{- bot_token + message['role'] + '\n' -}}
+        {{- message['content'] + eot_token + '\n'}}
+      {%- endif %}
+      {%- if tools %}
+        {{- "\n# Tools\n\nYou may call one or more functions to assist with the user query.\n\nYou are provided with function signatures within <tools></tools> XML tags:\n<tools>" }}
+        {%- for tool in tools %}
+            {{- "\n" }}
+            {{- tool | tojson }}
+        {%- endfor %}
+        {{- "\n</tools>\n\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\n<tool_call>\n{\"name\": <function-name>, \"arguments\": <args-json-object>}\n</tool_call><|im_end|>\n" }}
+      {%- endif %}
+    {% else %}
+      {{- bot_token + message['role'] + '\n' -}}
+      {{- message['content']}}
+      {%- if message.tool_calls %}
+        {%- for tool_call in message.tool_calls %}
+          {%- if tool_call.function is defined %}
+            {%- set tool_call = tool_call.function %}
+          {%- endif %}
+          {{- '\n<tool_call>\n{"name": "' }}
+          {{- tool_call.name }}
+          {{- '", "arguments": ' }}
+          {{- tool_call.arguments | tojson }}
+          {{- '}\n</tool_call>' }}
+        {%- endfor %}
+      {%- endif %}
+      {%- if not loop.last or messages[-1]['role'] != 'assistant' %}{{ eot_token + '\n'}}{% endif %}
+    {% endif %}
+  {% endfor %}
+  {% if add_generation_prompt and messages[-1]['role'] != 'assistant' %}{{ bot_token }}assistant{{ assistant_suffix }}{% endif %}
+modelPattern:
+  # fuseo1-qwq-deepseekr1 can not output </think>
+  # fuseo1-qwq: !re /^(fuseo1-qwq-deepseekr1)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
+  fuseo1: !re /^(fuseo1-deepseekr1)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
+  t1: !re /^(Sky-T1-32B-Preview)(?:[-_]|$)/i
+  qwq: !re /(?:^|[-_.])(?:code)?(qwq)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
+  s1: !re /(?:^|[-_.])(?:code)?(s1)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
+  qwewn3-Baichuan-M2-32B-think: !re /(?:^|[-_.])(Baichuan-M2-32B)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
+  OpenReasoning-Nemotron: /^(OpenReasoning-Nemotron)(?:[-_]|$)/i
+  qwen3-coder: !re /(?:^|[-_.])(qwen3-coder)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
+  qwen3-235b-instruct: !re /(?:^|[-_.])(?:code)?Qwen3-(235B-A22B|30b-a3b|4b)-Instruct-2507(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
+  qwen3-235b-think: !re /(?:^|[-_.])(?:code)?(Qwen3-235B-A22B-Thinking-2507)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
+  qwen3: !re /(?:^|[-_.])(?:code)?(qwen3)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
+  '@': !re /(?:^|[-_.])(?:code)?(qwen|qwq)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
+parameters:
+  qwen3-235b-instruct:
+    temperature: 0.7
+    top_k: 20
+    top_p: 0.8
+    min_p: 0
+    # presence_penalty = 1.5 # 0.0 to 2.0 default turns it off, to reduce repetitions, you can use this
+  qwewn3-Baichuan-M2-32B-think:
+    temperature: 0.6
+  qwen3-235b-think:
+    temperature: 0.6
+    top_k: 20
+    top_p: 0.95
+    min_p: 0
+    # repeat_penalty: 1.05
+    # presence_penalty = 1.5 # 0.0 to 2.0 default turns it off, to reduce repetitions, you can use this
+  'qwen3-coder':
+    temperature: 0.7
+    top_k: 20
+    top_p: 0.8
+    min_p: 0 # 0.01
+    repeat_penalty: 1.05
+  'qwq':
+    temperature: 0.5
+    top_p: 0.9
+  'qwen3':
+    temperature: 0.5
+    top_p: 0.9
+  'qwen':
+    temperature: 0.01
+    top_p: 0.9
+    stop_words: ['<|im_end|>', '[PAD151645]', '<|endoftext|>']

@@ -8,7 +8,7 @@
 
 > **findPrompt**(`prompts`, `modelFileName`, `options`): `Promise`\<`false` \| \{ `id`: `string`; `prompt`: [`AIPromptSettings`](../interfaces/AIPromptSettings.md); `version`: `string` \| `string`[]; \}\>
 
-Defined in: [packages/ai-tool-prompt/src/prompt.ts:224](https://github.com/isdk/ai-tool-prompt.js/blob/05afa5dec5217dc3ff89bf08e601fc3699c3ca59/src/prompt.ts#L224)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt.ts:224](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt.ts#L224)
 
 Finds a suitable prompt from an array of prompt settings based on the given model name and optional parameters.
 

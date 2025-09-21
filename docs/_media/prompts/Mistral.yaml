@@ -1,0 +1,53 @@
+_id: Mistral
+templateFormat: hf
+type: system
+prompt:
+  bos_token: "<s>"
+  eos_token: "</s>"
+version:
+  "tool": # TODO: merge most part into default template
+    template: |-
+      {{-bos_token-}}
+      {%- set user_messages = messages | selectattr('role', 'equalto', 'user') | list -%}
+      {%- for message in messages -%}
+        {%- if message['role'] == 'user' %}
+          {%- if message == user_messages[-1] %}
+            {%- if tools -%}
+              {{- '[AVAILABLE_TOOLS]'+ tools|string + '[/AVAILABLE_TOOLS]' -}}
+            {%- endif -%}
+            {{- '[INST]' + message['content'] + '[/INST]' -}}
+          {%- else -%}
+            {{- '[INST]' + message['content'] + '[/INST]' }}
+          {%- endif %}
+        {%- elif message['role'] == 'assistant' %}
+          {{- ' ' + message['content'] + ' ' + eos_token}}
+        {%- elif message['role'] == 'tool_results' %}
+          {{- '[TOOL_RESULTS]' + message['content']|string + '[/TOOL_RESULTS]'}}
+        {%- elif message['role'] == 'tool_calls' %}
+          {{-'[TOOL_CALLS]' + message['content']|string + eos_token}}
+        {%- endif %}
+      {%- endfor %}
+template: |-
+  {%- set system_message = messages | selectattr('role', 'equalto', 'system') | map(attribute='content') | join('\n') %}
+  {%- for message in messages %}
+    {%- if message['role'] != 'system' -%}
+      {%- if message['role'] == 'user' -%}
+        {%- if loop.last and system_message %}
+          {{- "[INST]" + system_message + "\n\n" + message["content"].strip() + "[/INST]" }}
+        {%- else %}
+        {{-'[INST]' + message['content'].strip() + '[/INST]'-}}
+        {%- endif %}
+      {%- else -%}
+        {{-'' + message['content'] -}}{% if not loop.last or messages[-1]['role'] != 'assistant' %}{{ eos_token }}{% endif %}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- if add_generation_prompt and messages[-1]['role'] != 'assistant' -%}
+    {{-''-}}
+  {%- endif -%}
+modelPattern:
+  - /^Mistral-/i
+  - /^Mixtral-/i
+  - /^miqu/i
+  - /^Ministral-/i
+  - /(?:^|[-_])(monstral|cydonia)(?:[-_]|$)/i

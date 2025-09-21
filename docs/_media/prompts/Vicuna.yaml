@@ -1,0 +1,27 @@
+_id: Vicuna
+templateFormat: hf
+type: system
+prompt:
+  system: A chat between a curious user and an artificial intelligence assistant.
+    The assistant gives helpful, detailed, and polite answers to the user's
+    questions.
+template: |-
+  {%- for message in messages %}
+    {%- if loop.first and messages[0]['role'] != 'system' -%}
+      {{- system + '\n\n' -}}
+    {% endif %}
+    {%- if message['role'] == 'system' -%}
+      {{- '' + message['content'] + '\n\n' -}}
+    {%- else -%}
+      {%- if message['role'] == 'user' -%}
+        {{-'USER: ' + message['content'] + '\n'-}}
+      {%- else -%}
+        {{-'ASSISTANT: ' + message['content'] -}}{% if not loop.last or messages[-1]['role'] != 'assistant' %}{{  '</s>\n' }}{% endif %}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- if add_generation_prompt and messages[-1]['role'] != 'assistant' -%}
+    {{-'ASSISTANT:'-}}
+  {%- endif -%}
+modelPattern:
+  - !re /^airoboros-.*-1[.]2/i

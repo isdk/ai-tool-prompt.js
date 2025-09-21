@@ -1,0 +1,39 @@
+_id: Gpt-oss
+templateFormat: hf
+type: system
+supports:
+  - 'tools'
+  - thinkMode: ['deep', 'off']
+prompt:
+  # system: You are a helpful assistant
+  bot_token: '<|start|>'
+  eot_token: '<|end|>'
+  model_identity: You are ChatGPT, a large language model trained by OpenAI.
+  ThinkLevel: medium # low, medium, high
+  # currentDate: YYYY-MM-DD
+  system: |-
+    {{model_identity}}
+    Knowledge cutoff: 2024-06
+
+    Reasoning: {{ ThinkLevel }}
+
+    # Valid channels: analysis, commentary, final. Channel must be included for every message.
+template: |-
+  {% for message in messages %}
+    {% if loop.first %}
+      {%- set system_content = message['content'] -%}
+      {%- if system and message['role'] != 'system' %}
+        {%- set system_content = system -%}
+      {%- elif message['role'] == 'system' and not system_content.startswith(model_identity) %}
+        {%- set system_content = system + '\n# Instructions\n\n' + system_content -%}
+      {%- endif %}
+      {{- bot_token + 'system<|message|>' + system_content + eot_token -}}
+    {% else %}
+      {{- bot_token + message['role'] + '<|message|>' -}}
+      {{- message['content']}}
+      {%- if not loop.last or messages[-1]['role'] != 'assistant' %}{{ eot_token}}{% endif %}
+    {% endif %}
+  {% endfor %}
+  {% if add_generation_prompt and messages[-1]['role'] != 'assistant' %}{{ bot_token }}assistant{% endif %}
+modelPattern:
+  - !re /(?:^|[-_.])gpt-oss(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i

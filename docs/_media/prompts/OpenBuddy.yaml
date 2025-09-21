@@ -1,0 +1,93 @@
+_id: OpenBuddy
+templateFormat: hf
+type: system
+version:
+  zen-v21:
+    prompt:
+      system: ''
+      eot_token: '<|eot_id|>'
+      eos_token: '<|end|>'
+    template: |-
+      {%- for message in messages %}
+        {%- if loop.first and system %}
+          {{- '<|start_header_id|>system<|end_header_id|>\n\n' + system + '<|eot_id|>' -}}
+        {% endif %}
+        {{-'<|role|>' + message['role'] + '<|says|>' + message['content'] }}{% if not loop.last or messages[-1]['role'] != 'assistant' %}{{ eos_token + '\n' }}{% endif %}
+      {%- endfor -%}
+      {%- if add_generation_prompt and messages[-1]['role'] != 'assistant' -%}
+        {{-'<|role|>assistant<|says|>'-}}
+      {%- endif -%}
+  2x:
+    prompt:
+      system: |-
+        You(assistant) are a helpful, respectful and honest INTP-T AI Assistant named Buddy. You are talking to a human(user).
+        Always answer as helpfully and logically as possible, while being safe. Your answers should not include any harmful, political, religious, unethical, racist, sexist, toxic, dangerous, or illegal content. Please ensure that your responses are socially unbiased and positive in nature.
+        You cannot access the internet, but you have vast knowledge, cutoff: 2023-12.
+        You are trained by OpenBuddy team, (https://openbuddy.ai, https://github.com/OpenBuddy/OpenBuddy), not related to GPT or OpenAI.
+      eos_token: '<|end|>'
+    template: |-
+      {%- for message in messages %}
+        {%- if loop.first and system and messages[0]['role'] != 'system' %}
+          {{-'<|role|>system<|says|>' + system + eos_token + '\n'}}
+        {% endif %}
+        {{-'<|role|>' + message['role'] + '<|says|>' + message['content'] }}{% if not loop.last or messages[-1]['role'] != 'assistant' %}{{ eos_token + '\n' }}{% endif %}
+      {%- endfor -%}
+      {%- if add_generation_prompt and messages[-1]['role'] != 'assistant' -%}
+        {{-'<|role|>assistant<|says|>'-}}
+      {%- endif -%}
+  "mistral2-v20":
+    prompt:
+      eos_token: '</s>'
+    template: |-
+      {%- for message in messages %}
+        {%- if loop.first system and and messages[0]['role'] != 'system' %}
+          {{- system + '\n' -}}
+        {% endif %}
+        {%- if message['role'] == 'system' -%}
+            {{- '' + message['content'] + '\n' -}}
+        {%- else -%}
+            {%- if message['role'] == 'user' -%}
+                {{-'User: ' + message['content'] + '\n'-}}
+            {%- else -%}
+                {{-'Assistant: ' + message['content'] -}}{% if not loop.last or messages[-1]['role'] != 'assistant' %}{{ eos_token + '\n' }}{% endif %}
+            {%- endif -%}
+        {%- endif -%}
+      {%- endfor -%}
+      {%- if add_generation_prompt and messages[-1]['role'] != 'assistant' -%}
+          {{-'Assistant:'-}}
+      {%- endif -%}
+prompt:
+  system: >-
+    You are a helpful, respectful and honest INTP-T AI Assistant named Buddy. You are talking to a human User.
+    Always answer as helpfully and logically as possible, while being safe. Your answers should not include any harmful, political, religious, unethical, racist, sexist, toxic, dangerous, or illegal content. Please ensure that your responses are socially unbiased and positive in nature.
+    If a question does not make any sense, or is not factually coherent, explain why instead of answering something not correct. If you don't know the answer to a question, please don't share false information.
+    You can speak fluently in many languages, for example: English, Chinese.
+    You cannot access the internet, but you have vast knowledge, cutoff: 2021-09.
+    You are trained by OpenBuddy team, (https://openbuddy.ai, https://github.com/OpenBuddy/OpenBuddy), you are based on LLaMA and Falcon transformers model, not related to GPT or OpenAI.
+template: |-
+  {%- for message in messages %}
+    {% if loop.first and messages[0]['role'] != 'system' %}
+      {{- system + '\n\n' -}}
+    {% endif %}
+      {%- if message['role'] == 'system' -%}
+          {{- '' + message['content'] + '\n' -}}
+      {%- else -%}
+          {%- if message['role'] == 'user' -%}
+              {{-'User: ' + message['content'] + '\n'-}}
+          {%- else -%}
+              {{-'Assistant: ' + message['content'] -}}{% if not loop.last or messages[-1]['role'] != 'assistant' %}{{ '\n' }}{% endif %}
+          {%- endif -%}
+      {%- endif -%}
+  {%- endfor -%}
+  {%- if add_generation_prompt and messages[-1]['role'] != 'assistant' -%}
+      {{-'Assistant:'-}}
+  {%- endif -%}
+modelPattern:
+  "mistral2-v20": !re /^openbuddy-mistral2-.*-v20(?:[.]\d)?-/i
+  "zen-v21": !re /^openbuddy-zen-.*-v21(?:[.]\d)?-/i
+  "2x": !re /^openbuddy-.*-v2\d(?:[.]\d)?-/i
+  "1x": !re /^openbuddy-.*-v1\d(?:[.]\d)?-/i
+  "@": !re /^openbuddy-/i
+
+priority: 10
+#priority: -1 # low priority less than 0 means if there are built-in template in the model, it will be used first.

@@ -33,7 +33,7 @@ npm install @isdk/ai-tool @isdk/ai-tool-prompt
   * the key is the name of the version/feature
   * the value is the prompt to overwrite.
 
-The Current Default System Prompt Templates: [here](./prompts/)
+The Current Default System Prompt Templates: [here](_media/prompts)
 
 The `YAML`(`.yaml`|`.yml`) and `JSON`(`.json`) file format are supported.
 

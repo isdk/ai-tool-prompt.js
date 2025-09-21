@@ -1,0 +1,34 @@
+_id: ChatML
+templateFormat: hf
+type: system
+prompt:
+  # system: You are a helpful assistant
+  bot_token: '<|im_start|>'
+  eot_token: '<|im_end|>'
+template: |-
+  {% for message in messages %}
+    {% if loop.first and system and messages[0]['role'] != 'system' %}
+      {{- bot_token + 'system\n' -}}
+      {{ system + eot_token }}
+    {% endif %}
+    {{- bot_token + message['role'] + '\n' -}}
+    {{- message['content']}}{% if not loop.last or messages[-1]['role'] != 'assistant' %}{{ eot_token }}{% endif %}
+  {% endfor %}
+  {% if add_generation_prompt and messages[-1]['role'] != 'assistant' %}{{ bot_token }}assistant
+  {% endif %}
+modelPattern:
+  NousHermes2: !re /(?:^|[-_.])Nous-Hermes-2-([^-]+)(?:$|[-_.])/i
+  Hermes3: !re /(?:^|[-_.])(Hermes-3)(?:$|[-_.])/i
+  '@': !re /(?:^|[-_.])(?:code)?(yi|MiniCPM|smollm|2B_or_not_2B|Violet_Twilight)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
+parameters:
+  yi:
+    min_p: 0.06
+    repeat_penalty: 1.1
+  minicpm:
+    top_p: 0.7
+    temperature: 0.7
+  violet_twilight:
+    temperature: 1.22
+    top_p: 1
+    top_k: 50
+    top_a: 0

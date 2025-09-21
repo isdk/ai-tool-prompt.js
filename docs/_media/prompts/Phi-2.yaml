@@ -1,0 +1,22 @@
+_id: Phi-2
+templateFormat: hf
+type: system
+version:
+  qa:
+    template: |-
+      {%- for message in messages %}
+        {{- message['role'] + ': ' + message['content'] + '\n' -}}
+        {%- if message['role'] == 'system' or message['role'] == 'user' -%}
+          {{- 'Instruct: ' + message['content'] + '\n' -}}
+        {%- else -%}
+          {{- 'Output: ' + message['content'] -}}{% if not loop.last or messages[-1]['role'] != 'assistant' %}{{ '\n' }}{% endif %}
+        {%- endif -%}
+      {%- endfor -%}
+      {% if add_generation_prompt and messages[-1]['role'] != 'assistant' %}
+        {{- 'Output: ' -}}
+      {% endif %}
+template: |-
+  {%- for message in messages %}
+    {{- message['role'] + ': ' + message['content'] -}}{% if not loop.last or messages[-1]['role'] != 'assistant' %}{{ '\n' }}{% endif %}
+  {%- endfor -%}
+modelPattern: /^phi-2/i

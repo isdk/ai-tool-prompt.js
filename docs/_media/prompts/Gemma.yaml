@@ -1,0 +1,103 @@
+_id: Gemma
+templateFormat: hf
+type: system
+version:
+  medgemma:
+    supports:
+      - thinkMode: ['deep', 'off']
+    shouldThink:
+      thinkTag: thought
+      answerTag: <|回|>
+      defaultThinkPrompt:
+        prompt:
+          deepThinkPrompt: |-
+            SYSTEM INSTRUCTION: think silently if needed. You are a helpful medical assistant.
+            Please answer after the "<|回|>" tag.
+  gemma3:
+    template: |-
+      {%- if messages[0]['role'] == 'system' -%}
+        {%- if messages[0]['content'] is string -%}
+            {%- set first_user_prefix = messages[0]['content'] + '\n\n' -%}
+        {%- else -%}
+            {%- set first_user_prefix = messages[0]['content'][0]['text'] + '\n\n' -%}
+        {%- endif -%}
+        {%- set loop_messages = messages[1:] -%}
+      {%- else -%}
+        {%- set first_user_prefix = "" -%}
+        {%- set loop_messages = messages -%}
+      {%- endif -%}
+
+      {% for message in loop_messages %}
+        {%- if loop.index0 > 0 and (message['role'] == 'user') == (prev_role == 'user') -%}
+          {{ raise_exception("Conversation roles must alternate") }}
+        {%- endif -%}
+        {% set prev_role = message['role'] %}
+        {%- if (message['role'] == 'assistant') -%}
+          {%- set role = "model" -%}
+        {%- else -%}
+          {%- set role = message['role'] -%}
+        {%- endif -%}
+        {{ bot_token + role + '\n' + (first_user_prefix if loop.first else "") }}
+        {%- if message['content'] is string -%}
+          {{ message['content'] | trim }}
+        {%- elif message['content'] is iterable -%}
+          {%- for item in message['content'] -%}
+            {%- if item['type'] == 'image' -%}
+              {{ '<start_of_image>' }}
+            {%- elif item['type'] == 'text' -%}
+              {{ item['text'] | trim }}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- else -%}
+          {{ raise_exception("Invalid content type") }}
+        {%- endif -%}
+        {%- if not loop.last or messages[-1]['role'] != 'assistant' -%}{{ eot_token + '\n'}}{%- endif -%}
+      {% endfor %}
+      {%- if add_generation_prompt and messages[-1]['role'] != 'assistant' %}{{ bot_token + 'model\n'}}{% endif -%}
+prompt:
+  bot_token: '<start_of_turn>'
+  eot_token: '<end_of_turn>'
+template: |-
+  {% for message in messages %}
+    {%- if loop.first and system and messages[0]['role'] != 'system' -%}
+      {{- bot_token + 'user\n' -}}
+      {{ system | trim + '\nIf you fully understand, please answer: "Yes, I understand".' + eot_token + '\n' }}
+      {{- bot_token + 'assistant\n' -}}
+      {{ "Yes, I understand." + eot_token + '\n' }}
+    {% endif %}
+    {%- if (message['role'] == 'assistant') -%}{% set role = 'model' %}{% elif message['role'] == 'system' %}{% set role = 'user' %}{% else %}{% set role = message['role'] %}{%- endif -%}
+    {{- bot_token + role + '\n' -}}{{ message['content'] | trim }}
+    {%- if not loop.last or messages[-1]['role'] != 'assistant' -%}{{ eot_token + '\n'}}{%- endif -%}
+  {% endfor %}
+  {%- if add_generation_prompt and messages[-1]['role'] != 'assistant' %}{{ bot_token + 'model\n'}}{% endif -%}
+parameters:
+  '@':
+    stop_words: ['<eos>']
+    temperature: 1
+    top_k: 64
+    top_p: 0.95
+modelPattern:
+  'medgemma':  !re /(?:^|[-_])(medgemma-27b)(?:[-_]|$)/i
+  'gemma3':  !re /(?:^|[-_])(medgemma|gemma[-_]3)(?:[-_]|$)/i
+  '@': !re /(?:^|[-_])(?:shield|code)?(gemma)(?:[-_]|$)/i
+  # {%- set prev_message = {} -%}
+  # {% for message in messages %}
+  #   {%- if loop.first and system and messages[0]['role'] != 'system' -%}
+  #     {%- set prev_message = {'role': 'user', 'content': system} %}
+  #   {% endif %}
+  #   {%- set out_message = message -%}
+  #   {%- if (message['role'] == 'assistant') -%}{% set role = 'model' %}{% elif message['role'] == 'system' %}{% set role = 'user' %}{% else %}{% set role = message['role'] %}{%- endif -%}
+  #   {%- if prev_message.role is not defined or role != prev_message.role -%}
+  #     {%- if prev_message.content is defined -%}
+  #       {{- bot_token + prev_message.role + '\n' -}}{{ prev_message.content | trim }}{{ eot_token + '\n'}}
+  #     {%- endif -%}
+  #     {%- set prev_message = {'role': role, 'content': message['content']} -%}
+  #   {%- else %}
+  #     {%- set prev_message.content = prev_message.content + '\n' + message['content'] -%}
+  #   {%- endif %}
+  #   {%- if loop.last -%}
+  #     {%- if prev_message.content is defined -%}{{- bot_token + prev_message.role + '\n' -}}{{ prev_message.content | trim }}{%- endif -%}
+  #     {%- if messages[-1]['role'] != 'assistant' -%}{{ eot_token + '\n'}}{%- endif -%}
+  #   {%- endif %}
+  # {%- endfor -%}
+  # {%- if add_generation_prompt and messages[-1]['role'] != 'assistant' %}{{ bot_token + 'model\n'}}{% endif -%}

@@ -1,0 +1,43 @@
+_id: Phi-3
+templateFormat: hf
+type: system
+version:
+  mediphi:
+    prompt:
+      sys_token: "<|system|>"
+  "3.1":
+    prompt:
+      sys_token: "<|system|>"
+  "3.5":
+    prompt:
+      sys_token: "<|system|>"
+prompt:
+  system: You are a helpful AI assistant.
+  eot_token: "<|end|>"
+  sys_token: "<|user|>"
+template: |-
+  {%- for message in messages %}
+    {% if loop.first and messages[0]['role'] != 'system' %}
+      {{- sys_token+'\n' + system + eot_token + '\n' -}}
+    {% endif %}
+    {%- if message['role'] == 'system' %}
+      {{- sys_token + '\n' + message['content'] -}}
+    {%- else -%}
+      {{- '<|' + message['role'] + '|>\n' + message['content'] -}}
+    {%- endif -%}
+    {%- if not loop.last or messages[-1]['role'] != 'assistant' %}{{ eot_token + '\n' }}{% endif %}
+  {%- endfor -%}
+  {%- if add_generation_prompt and messages[-1]['role'] != 'assistant' -%}
+      {{-'<|assistant|>'-}}
+  {%- endif -%}
+modelPattern:
+  mediphi: !re /^(MediPhi)(?:$|[-_.])/i
+  "3.5": !re /^(phi)[-_]3[.]5(?:$|[-_.])/i
+  "3.1": !re /^(phi)[-_]3[.]1(?:$|[-_.])/i
+  "@": !re /^(phi)[-_]3(?:$|[-_.])/i
+parameters:
+  mediphi:
+    stop_words: ['<|end|>']
+    temperature: 0
+  "phi":
+    stop_words: ['<|end|>']

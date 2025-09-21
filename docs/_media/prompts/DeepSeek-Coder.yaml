@@ -1,0 +1,25 @@
+_id: DeepSeekCoder
+templateFormat: hf
+type: system
+prompt:
+  system: You are an AI programming assistant, utilizing the Deepseek Coder model, developed by Deepseek Company, and you only answer questions related to computer science. For politically sensitive questions, security and privacy issues, and other non-computer science questions, you will refuse to answer
+  eot_token: "<|EOT|>"
+template: >-
+  {%- for message in messages %}
+    {% if loop.first and messages[0]['role'] != 'system' %}
+      {{- '' + system + '\n' -}}
+    {% endif %}
+    {%- if message['role'] == 'system' -%}
+      {{- '' + message['content'] + '\n' -}}
+    {%- elif message['role'] == 'user' -%}
+      {{-'### Instruction:\n' + message['content'] + '\n' -}}
+    {%- elif message['role'] == 'assistant' -%}
+      {{-'### Response:\n' + message['content'] -}}{% if not loop.last %}{{ '\n' + eot_token + '\n' }}{% endif %}
+    {%- endif -%}
+  {%- endfor -%}
+
+  {%- if add_generation_prompt and messages[-1]['role'] != 'assistant' -%}
+      {{-'### Response:\n'-}}
+  {%- endif -%}
+modelPattern:
+  - !re /(?:^|[-_])(deepseek-coder)(?:[-_]|$)/i

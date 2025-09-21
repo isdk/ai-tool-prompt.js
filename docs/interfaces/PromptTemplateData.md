@@ -6,7 +6,7 @@
 
 # Interface: PromptTemplateData
 
-Defined in: [packages/ai-tool-prompt/src/format-prompt.ts:5](https://github.com/isdk/ai-tool-prompt.js/blob/05afa5dec5217dc3ff89bf08e601fc3699c3ca59/src/format-prompt.ts#L5)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/format-prompt.ts:7](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/format-prompt.ts#L7)
 
 ## Indexable
 
@@ -18,7 +18,7 @@ Defined in: [packages/ai-tool-prompt/src/format-prompt.ts:5](https://github.com/
 
 > `optional` **add\_generation\_prompt**: `boolean`
 
-Defined in: [packages/ai-tool-prompt/src/format-prompt.ts:6](https://github.com/isdk/ai-tool-prompt.js/blob/05afa5dec5217dc3ff89bf08e601fc3699c3ca59/src/format-prompt.ts#L6)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/format-prompt.ts:8](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/format-prompt.ts#L8)
 
 ***
 
@@ -26,7 +26,7 @@ Defined in: [packages/ai-tool-prompt/src/format-prompt.ts:6](https://github.com/
 
 > `optional` **messages**: `AIChatMessageParam`[]
 
-Defined in: [packages/ai-tool-prompt/src/format-prompt.ts:8](https://github.com/isdk/ai-tool-prompt.js/blob/05afa5dec5217dc3ff89bf08e601fc3699c3ca59/src/format-prompt.ts#L8)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/format-prompt.ts:10](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/format-prompt.ts#L10)
 
 ***
 
@@ -34,4 +34,4 @@ Defined in: [packages/ai-tool-prompt/src/format-prompt.ts:8](https://github.com/
 
 > `optional` **version**: `string`
 
-Defined in: [packages/ai-tool-prompt/src/format-prompt.ts:7](https://github.com/isdk/ai-tool-prompt.js/blob/05afa5dec5217dc3ff89bf08e601fc3699c3ca59/src/format-prompt.ts#L7)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/format-prompt.ts:9](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/format-prompt.ts#L9)

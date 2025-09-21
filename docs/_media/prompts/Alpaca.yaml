@@ -1,0 +1,27 @@
+_id: Alpaca
+templateFormat: hf
+type: system
+prompt:
+  system: Below is an instruction that describes a task. Write a response that appropriately completes the request.
+template: >-
+  {%- for message in messages %}
+    {% if loop.first and messages[0]['role'] != 'system' %}
+      {{- '' + system + '\n\n' -}}
+    {% endif %}
+    {%- if message['role'] == 'system' -%}
+      {{- '' + message['content'] + '\n\n' -}}
+    {%- else -%}
+      {%- if message['role'] == 'user' -%}
+        {{-'### Instruction:\n' + message['content'] + '\n\n'-}}
+      {%- else -%}
+        {{-'### Response:\n' + message['content'] -}}{% if not loop.last or messages[-1]['role'] != 'assistant' %}{{ '\n\n' }}{% endif %}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  {%- if add_generation_prompt and messages[-1]['role'] != 'assistant' -%}
+      {{-'### Response:\n'-}}
+  {%- endif -%}
+modelPattern:
+  - !re /(?:^|[-_])(alpaca|beepo)(?:[-_]|$)/i
+  - !re /^(oni_mitsubishi)(?:[-_]|$)/i

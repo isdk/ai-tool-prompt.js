@@ -1,0 +1,25 @@
+_id: DeepSeekV2
+templateFormat: hf
+type: system
+prompt:
+  bos_token: '<｜begin▁of▁sentence｜>'
+  eos_token: "<｜end▁of▁sentence｜>"
+template: >-
+  {%- for message in messages %}
+    {%- if loop.first and system and messages[0]['role'] != 'system' %}
+      {{- '' + system + '\n\n' -}}
+    {%- endif %}
+    {%- if message['role'] == 'system' -%}
+      {{- '' + message['content'] + '\n\n' -}}
+    {%- elif message['role'] == 'user' -%}
+      {{- 'User: ' + message['content'] + '\n\n' -}}
+    {%- elif message['role'] == 'assistant' -%}
+      {{- 'Assistant: ' + message['content'] -}}{% if not loop.last %}{{ eos_token }}{% endif %}
+    {%- endif -%}
+  {%- endfor -%}
+
+  {%- if add_generation_prompt and messages[-1]['role'] != 'assistant' -%}
+      {{-'Assistant:'-}}
+  {%- endif -%}
+modelPattern:
+  - !re /(?:^|[-_])(deepseek-v2)(?:[-_]|$)/i

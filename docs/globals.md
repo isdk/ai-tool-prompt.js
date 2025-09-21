@@ -15,6 +15,8 @@
 - [AIPromptResult](interfaces/AIPromptResult.md)
 - [AIPromptSettings](interfaces/AIPromptSettings.md)
 - [AIPromptThinkProfile](interfaces/AIPromptThinkProfile.md)
+- [AISupportObject](interfaces/AISupportObject.md)
+- [AISupportObjectItem](interfaces/AISupportObjectItem.md)
 - [PromptTemplateData](interfaces/PromptTemplateData.md)
 - [Signatures](interfaces/Signatures.md)
 
@@ -23,6 +25,7 @@
 - [AIContentType](type-aliases/AIContentType.md)
 - [AIPromptFitResult](type-aliases/AIPromptFitResult.md)
 - [AIPromptType](type-aliases/AIPromptType.md)
+- [AISupportItem](type-aliases/AISupportItem.md)
 
 ## Variables
 
@@ -42,6 +45,7 @@
 - [findPrompt](functions/findPrompt.md)
 - [formatPrompt](functions/formatPrompt.md)
 - [getLLMParameters](functions/getLLMParameters.md)
+- [getPromptSettings](functions/getPromptSettings.md)
 - [getVersionPromptSettings](functions/getVersionPromptSettings.md)
 - [mergeWithConcatArray](functions/mergeWithConcatArray.md)
 - [promptIsFitForLLM](functions/promptIsFitForLLM.md)

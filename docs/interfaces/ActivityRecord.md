@@ -6,7 +6,7 @@
 
 # Interface: ActivityRecord
 
-Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:29](https://github.com/isdk/ai-tool-prompt.js/blob/05afa5dec5217dc3ff89bf08e601fc3699c3ca59/src/prompt-settings.ts#L29)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:29](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L29)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:29](https://github.c
 
 > **时**: `string` \| `Date`
 
-Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:31](https://github.com/isdk/ai-tool-prompt.js/blob/05afa5dec5217dc3ff89bf08e601fc3699c3ca59/src/prompt-settings.ts#L31)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:31](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L31)
 
 ***
 
@@ -22,4 +22,4 @@ Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:31](https://github.c
 
 > **者**: `string`
 
-Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:30](https://github.com/isdk/ai-tool-prompt.js/blob/05afa5dec5217dc3ff89bf08e601fc3699c3ca59/src/prompt-settings.ts#L30)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:30](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L30)

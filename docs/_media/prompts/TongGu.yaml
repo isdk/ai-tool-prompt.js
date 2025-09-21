@@ -1,0 +1,32 @@
+_id: TongGu
+templateFormat: hf
+type: system
+prompt:
+  system: 你是通古，由华南理工大学DLVCLab训练而来的古文大模型。你具备丰富的古文知识，为用户提供有用、准确的回答。
+template: >-
+  {%- for message in messages %}
+    {% if loop.first and messages[0]['role'] != 'system' %}
+      {{- '' + system + '\n' -}}
+    {% endif %}
+    {%- if message['role'] == 'system' -%}
+      {{- '' + message['content'] + '\n' -}}
+    {%- else -%}
+      {%- if message['role'] == 'user' -%}
+        {{-'<用户> ' + message['content'] + '\n'-}}
+      {%- else -%}
+        {{-'<通古> ' + message['content'] -}}{% if not loop.last or messages[-1]['role'] != 'assistant' %}{{ '\n' }}{% endif %}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  {%- if add_generation_prompt and messages[-1]['role'] != 'assistant' -%}
+      {{-'<通古> '-}}
+  {%- endif -%}
+modelPattern:
+  - !re /(?:^|[-_])(TongGu)(?:[-_]|$)/i
+parameters:
+  tonggu:
+    repeat_penalty: 1.05
+    temperature: 0.3
+    top_k: 5
+    top_p: 0.85

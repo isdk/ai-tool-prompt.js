@@ -6,7 +6,7 @@
 
 # Class: AIPrompt
 
-Defined in: [packages/ai-tool-prompt/src/prompt.ts:18](https://github.com/isdk/ai-tool-prompt.js/blob/05afa5dec5217dc3ff89bf08e601fc3699c3ca59/src/prompt.ts#L18)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt.ts:18](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt.ts#L18)
 
 Represents an AIPrompt
 
@@ -16,11 +16,11 @@ Represents an AIPrompt
 
 ## Constructors
 
-### new AIPrompt()
+### Constructor
 
-> **new AIPrompt**(...`args`): [`AIPrompt`](AIPrompt.md)
+> **new AIPrompt**(...`args`): `AIPrompt`
 
-Defined in: node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:80
+Defined in: [property-manager.js/src/abstract.d.ts:80](https://github.com/snowyu/property-manager.js/blob/e9ebf4c62be9b6d84e5868ed098df041a53bb90a/src/abstract.d.ts#L80)
 
 #### Parameters
 
@@ -30,7 +30,7 @@ Defined in: node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-ma
 
 #### Returns
 
-[`AIPrompt`](AIPrompt.md)
+`AIPrompt`
 
 #### Inherited from
 
@@ -42,7 +42,7 @@ Defined in: node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-ma
 
 > `optional` **\_id**: `string`
 
-Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:46](https://github.com/isdk/ai-tool-prompt.js/blob/05afa5dec5217dc3ff89bf08e601fc3699c3ca59/src/prompt-settings.ts#L46)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:59](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L59)
 
 #### Inherited from
 
@@ -54,7 +54,7 @@ Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:46](https://github.c
 
 > **$attributes**: `Properties`
 
-Defined in: node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/advance.d.ts:5
+Defined in: [property-manager.js/src/advance.d.ts:5](https://github.com/snowyu/property-manager.js/blob/e9ebf4c62be9b6d84e5868ed098df041a53bb90a/src/advance.d.ts#L5)
 
 ***
 
@@ -62,11 +62,11 @@ Defined in: node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-ma
 
 > `optional` **创**: [`ActivityRecord`](../interfaces/ActivityRecord.md)
 
-Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:69](https://github.com/isdk/ai-tool-prompt.js/blob/05afa5dec5217dc3ff89bf08e601fc3699c3ca59/src/prompt-settings.ts#L69)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:83](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L83)
 
 #### Inherited from
 
-[`AIPromptSettings`](../interfaces/AIPromptSettings.md).[`创`](../interfaces/AIPromptSettings.md#%E5%88%9B)
+[`AIPromptSettings`](../interfaces/AIPromptSettings.md).[`创`](../interfaces/AIPromptSettings.md#创)
 
 ***
 
@@ -74,11 +74,11 @@ Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:69](https://github.c
 
 > `optional` **签**: `string` \| [`Signatures`](../interfaces/Signatures.md)
 
-Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:70](https://github.com/isdk/ai-tool-prompt.js/blob/05afa5dec5217dc3ff89bf08e601fc3699c3ca59/src/prompt-settings.ts#L70)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:84](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L84)
 
 #### Inherited from
 
-[`AIPromptSettings`](../interfaces/AIPromptSettings.md).[`签`](../interfaces/AIPromptSettings.md#%E7%AD%BE)
+[`AIPromptSettings`](../interfaces/AIPromptSettings.md).[`签`](../interfaces/AIPromptSettings.md#签)
 
 ***
 
@@ -86,7 +86,7 @@ Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:70](https://github.c
 
 > **constructor**: `Function`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:125
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:125
 
 The initial value of Object.prototype.constructor is the standard built-in Object constructor.
 
@@ -96,7 +96,7 @@ The initial value of Object.prototype.constructor is the standard built-in Objec
 
 > `optional` **contentType**: [`AIContentType`](../type-aliases/AIContentType.md)
 
-Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:50](https://github.com/isdk/ai-tool-prompt.js/blob/05afa5dec5217dc3ff89bf08e601fc3699c3ca59/src/prompt-settings.ts#L50)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:64](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L64)
 
 #### Inherited from
 
@@ -108,7 +108,7 @@ Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:50](https://github.c
 
 > **defaultOptions**: `object`
 
-Defined in: node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:74
+Defined in: [property-manager.js/src/abstract.d.ts:74](https://github.com/snowyu/property-manager.js/blob/e9ebf4c62be9b6d84e5868ed098df041a53bb90a/src/abstract.d.ts#L74)
 
 The default options for export and assign
 
@@ -126,7 +126,7 @@ The default options for export and assign
 
 > `optional` **description**: `string`
 
-Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:51](https://github.com/isdk/ai-tool-prompt.js/blob/05afa5dec5217dc3ff89bf08e601fc3699c3ca59/src/prompt-settings.ts#L51)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:65](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L65)
 
 #### Inherited from
 
@@ -138,7 +138,7 @@ Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:51](https://github.c
 
 > `optional` **excludeModels**: `AIModelNameRules`
 
-Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:54](https://github.com/isdk/ai-tool-prompt.js/blob/05afa5dec5217dc3ff89bf08e601fc3699c3ca59/src/prompt-settings.ts#L54)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:68](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L68)
 
 #### Inherited from
 
@@ -150,7 +150,7 @@ Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:54](https://github.c
 
 > `optional` **extends**: `string`
 
-Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:61](https://github.com/isdk/ai-tool-prompt.js/blob/05afa5dec5217dc3ff89bf08e601fc3699c3ca59/src/prompt-settings.ts#L61)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:75](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L75)
 
 #### Inherited from
 
@@ -162,7 +162,7 @@ Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:61](https://github.c
 
 > `optional` **id**: `string`
 
-Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:47](https://github.com/isdk/ai-tool-prompt.js/blob/05afa5dec5217dc3ff89bf08e601fc3699c3ca59/src/prompt-settings.ts#L47)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:60](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L60)
 
 #### Inherited from
 
@@ -174,7 +174,7 @@ Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:47](https://github.c
 
 > `optional` **input**: `Record`\<`string`, `string`\>[]
 
-Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:65](https://github.com/isdk/ai-tool-prompt.js/blob/05afa5dec5217dc3ff89bf08e601fc3699c3ca59/src/prompt-settings.ts#L65)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:79](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L79)
 
 #### Inherited from
 
@@ -184,9 +184,9 @@ Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:65](https://github.c
 
 ### modelPattern?
 
-> `optional` **modelPattern**: `AIModelNameRules` \| \{\}
+> `optional` **modelPattern**: `AIModelNameRules` \| \{\[`ver`: `string`\]: `AIModelNameRules`; \}
 
-Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:52](https://github.com/isdk/ai-tool-prompt.js/blob/05afa5dec5217dc3ff89bf08e601fc3699c3ca59/src/prompt-settings.ts#L52)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:66](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L66)
 
 #### Inherited from
 
@@ -198,7 +198,7 @@ Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:52](https://github.c
 
 > `optional` **modelSize**: `string` \| `number`
 
-Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:53](https://github.com/isdk/ai-tool-prompt.js/blob/05afa5dec5217dc3ff89bf08e601fc3699c3ca59/src/prompt-settings.ts#L53)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:67](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L67)
 
 #### Inherited from
 
@@ -210,7 +210,7 @@ Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:53](https://github.c
 
 > **nonExported1stChar**: `string`
 
-Defined in: node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:78
+Defined in: [property-manager.js/src/abstract.d.ts:78](https://github.com/snowyu/property-manager.js/blob/e9ebf4c62be9b6d84e5868ed098df041a53bb90a/src/abstract.d.ts#L78)
 
 the property with the default prefix '$' will not be exported.
 
@@ -220,7 +220,7 @@ the property with the default prefix '$' will not be exported.
 
 > `optional` **output**: `any`
 
-Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:66](https://github.com/isdk/ai-tool-prompt.js/blob/05afa5dec5217dc3ff89bf08e601fc3699c3ca59/src/prompt-settings.ts#L66)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:80](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L80)
 
 #### Inherited from
 
@@ -232,7 +232,7 @@ Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:66](https://github.c
 
 > `optional` **parameters**: `Record`\<`string`, `any`\>
 
-Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:60](https://github.com/isdk/ai-tool-prompt.js/blob/05afa5dec5217dc3ff89bf08e601fc3699c3ca59/src/prompt-settings.ts#L60)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:74](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L74)
 
 #### Inherited from
 
@@ -244,7 +244,7 @@ Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:60](https://github.c
 
 > `optional` **priority**: `number`
 
-Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:64](https://github.com/isdk/ai-tool-prompt.js/blob/05afa5dec5217dc3ff89bf08e601fc3699c3ca59/src/prompt-settings.ts#L64)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:78](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L78)
 
 #### Inherited from
 
@@ -256,7 +256,7 @@ Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:64](https://github.c
 
 > `optional` **prompt**: `DefaultPrompt`
 
-Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:57](https://github.com/isdk/ai-tool-prompt.js/blob/05afa5dec5217dc3ff89bf08e601fc3699c3ca59/src/prompt-settings.ts#L57)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:71](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L71)
 
 #### Inherited from
 
@@ -268,7 +268,7 @@ Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:57](https://github.c
 
 > `optional` **shouldThink**: [`AIPromptThinkProfile`](../interfaces/AIPromptThinkProfile.md)
 
-Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:68](https://github.com/isdk/ai-tool-prompt.js/blob/05afa5dec5217dc3ff89bf08e601fc3699c3ca59/src/prompt-settings.ts#L68)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:82](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L82)
 
 #### Inherited from
 
@@ -276,11 +276,23 @@ Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:68](https://github.c
 
 ***
 
+### supports?
+
+> `optional` **supports**: [`AISupportObject`](../interfaces/AISupportObject.md) \| [`AISupportItem`](../type-aliases/AISupportItem.md)[]
+
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:62](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L62)
+
+#### Inherited from
+
+[`AIPromptSettings`](../interfaces/AIPromptSettings.md).[`supports`](../interfaces/AIPromptSettings.md#supports)
+
+***
+
 ### tag?
 
 > `optional` **tag**: `string`[]
 
-Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:67](https://github.com/isdk/ai-tool-prompt.js/blob/05afa5dec5217dc3ff89bf08e601fc3699c3ca59/src/prompt-settings.ts#L67)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:81](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L81)
 
 #### Inherited from
 
@@ -292,7 +304,7 @@ Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:67](https://github.c
 
 > **template**: `string`
 
-Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:48](https://github.com/isdk/ai-tool-prompt.js/blob/05afa5dec5217dc3ff89bf08e601fc3699c3ca59/src/prompt-settings.ts#L48)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:61](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L61)
 
 #### Inherited from
 
@@ -304,7 +316,7 @@ Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:48](https://github.c
 
 > `optional` **templateFormat**: `string`
 
-Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:55](https://github.com/isdk/ai-tool-prompt.js/blob/05afa5dec5217dc3ff89bf08e601fc3699c3ca59/src/prompt-settings.ts#L55)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:69](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L69)
 
 #### Inherited from
 
@@ -316,7 +328,7 @@ Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:55](https://github.c
 
 > **type**: [`AIPromptType`](../type-aliases/AIPromptType.md)
 
-Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:49](https://github.com/isdk/ai-tool-prompt.js/blob/05afa5dec5217dc3ff89bf08e601fc3699c3ca59/src/prompt-settings.ts#L49)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:63](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L63)
 
 #### Inherited from
 
@@ -328,7 +340,7 @@ Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:49](https://github.c
 
 > `optional` **version**: `object`
 
-Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:58](https://github.com/isdk/ai-tool-prompt.js/blob/05afa5dec5217dc3ff89bf08e601fc3699c3ca59/src/prompt-settings.ts#L58)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:72](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L72)
 
 #### Index Signature
 
@@ -342,9 +354,9 @@ Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:58](https://github.c
 
 ### assign()
 
-> **assign**(`src`, `options`?): `this`
+> **assign**(`src`, `options?`): `this`
 
-Defined in: node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:106
+Defined in: [property-manager.js/src/abstract.d.ts:106](https://github.com/snowyu/property-manager.js/blob/e9ebf4c62be9b6d84e5868ed098df041a53bb90a/src/abstract.d.ts#L106)
 
 Assign the values from the src object.
 
@@ -370,9 +382,9 @@ this object
 
 ### assignProperty()
 
-> **assignProperty**(`src`, `name`, `value`, `attrs`?, `options`?): `void`
+> **assignProperty**(`src`, `name`, `value`, `attrs?`, `options?`): `void`
 
-Defined in: node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:117
+Defined in: [property-manager.js/src/abstract.d.ts:117](https://github.com/snowyu/property-manager.js/blob/e9ebf4c62be9b6d84e5868ed098df041a53bb90a/src/abstract.d.ts#L117)
 
 Assign a property of src to this object.
 
@@ -414,9 +426,9 @@ the attributes object
 
 ### assignPropertyTo()
 
-> `abstract` **assignPropertyTo**(`dest`, `src`, `name`, `value`, `attrs`?, `options`?): `void`
+> `abstract` **assignPropertyTo**(`dest`, `src`, `name`, `value`, `attrs?`, `options?`): `void`
 
-Defined in: node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:131
+Defined in: [property-manager.js/src/abstract.d.ts:131](https://github.com/snowyu/property-manager.js/blob/e9ebf4c62be9b6d84e5868ed098df041a53bb90a/src/abstract.d.ts#L131)
 
 Assign the property value from the src to destination object.
 
@@ -464,9 +476,9 @@ The attributes object of the property
 
 ### assignTo()
 
-> **assignTo**(`dest`?, `options`?): `any`
+> **assignTo**(`dest?`, `options?`): `any`
 
-Defined in: node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:191
+Defined in: [property-manager.js/src/abstract.d.ts:191](https://github.com/snowyu/property-manager.js/blob/e9ebf4c62be9b6d84e5868ed098df041a53bb90a/src/abstract.d.ts#L191)
 
 Assign this attributes to the dest object
 
@@ -492,9 +504,9 @@ the dest object
 
 ### clone()
 
-> **clone**(`options`?): `any`
+> **clone**(`options?`): `any`
 
-Defined in: node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:155
+Defined in: [property-manager.js/src/abstract.d.ts:155](https://github.com/snowyu/property-manager.js/blob/e9ebf4c62be9b6d84e5868ed098df041a53bb90a/src/abstract.d.ts#L155)
 
 Create a new object with the same values of attributes.
 
@@ -514,9 +526,9 @@ the new object
 
 ### cloneTo()
 
-> **cloneTo**(`dest`, `options`?): `any`
+> **cloneTo**(`dest`, `options?`): `any`
 
-Defined in: node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:148
+Defined in: [property-manager.js/src/abstract.d.ts:148](https://github.com/snowyu/property-manager.js/blob/e9ebf4c62be9b6d84e5868ed098df041a53bb90a/src/abstract.d.ts#L148)
 
 Create and assign the values to the destination object.
 
@@ -544,7 +556,7 @@ the new dest object
 
 > `abstract` **defineProperties**(`aProperties`): `any`
 
-Defined in: node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:89
+Defined in: [property-manager.js/src/abstract.d.ts:89](https://github.com/snowyu/property-manager.js/blob/e9ebf4c62be9b6d84e5868ed098df041a53bb90a/src/abstract.d.ts#L89)
 
 Define the attributes of this object.
 
@@ -564,9 +576,9 @@ the defined attributes of the object
 
 ### exportTo()
 
-> **exportTo**(`dest`, `options`?): `any`
+> **exportTo**(`dest`, `options?`): `any`
 
-Defined in: node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:173
+Defined in: [property-manager.js/src/abstract.d.ts:173](https://github.com/snowyu/property-manager.js/blob/e9ebf4c62be9b6d84e5868ed098df041a53bb90a/src/abstract.d.ts#L173)
 
 Export attributes to the dest json object.
 
@@ -594,7 +606,7 @@ the dest object.
 
 > `abstract` **getProperties**(): `PropDescriptors`
 
-Defined in: node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:98
+Defined in: [property-manager.js/src/abstract.d.ts:98](https://github.com/snowyu/property-manager.js/blob/e9ebf4c62be9b6d84e5868ed098df041a53bb90a/src/abstract.d.ts#L98)
 
 Get the defined attributes.
 
@@ -610,7 +622,7 @@ the descriptors of properties object
 
 > **hasOwnProperty**(`v`): `boolean`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:140
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:140
 
 Determines whether an object has a property with the specified name.
 
@@ -632,7 +644,7 @@ A property name.
 
 > **importFromFile**(`filepath`): `void`
 
-Defined in: [packages/ai-tool-prompt/src/prompt.ts:286](https://github.com/isdk/ai-tool-prompt.js/blob/05afa5dec5217dc3ff89bf08e601fc3699c3ca59/src/prompt.ts#L286)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt.ts:286](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt.ts#L286)
 
 #### Parameters
 
@@ -648,9 +660,9 @@ Defined in: [packages/ai-tool-prompt/src/prompt.ts:286](https://github.com/isdk/
 
 ### initialize()
 
-> **initialize**(`src`?): `this`
+> **initialize**(`src?`): `this`
 
-Defined in: node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:139
+Defined in: [property-manager.js/src/abstract.d.ts:139](https://github.com/snowyu/property-manager.js/blob/e9ebf4c62be9b6d84e5868ed098df041a53bb90a/src/abstract.d.ts#L139)
 
 Initialize object and assign attribute values from src if src exists.
 
@@ -670,9 +682,9 @@ this object.
 
 ### isFitForLLM()
 
-> **isFitForLLM**(`modelName`, `size`?): `undefined` \| `string` \| `string`[]
+> **isFitForLLM**(`modelName`, `size?`): `undefined` \| `string` \| `string`[]
 
-Defined in: [packages/ai-tool-prompt/src/prompt.ts:314](https://github.com/isdk/ai-tool-prompt.js/blob/05afa5dec5217dc3ff89bf08e601fc3699c3ca59/src/prompt.ts#L314)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt.ts:314](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt.ts#L314)
 
 Determines the fit result for the specified LLM model name with respect to this AIPrompt.
 
@@ -705,9 +717,9 @@ The fit result(s) for the given LLM model, representing its compatibility or sui
 
 ### isLocked()
 
-> **isLocked**(`template`?): `boolean` \| `""`
+> **isLocked**(`template?`): `boolean` \| `""`
 
-Defined in: [packages/ai-tool-prompt/src/prompt.ts:297](https://github.com/isdk/ai-tool-prompt.js/blob/05afa5dec5217dc3ff89bf08e601fc3699c3ca59/src/prompt.ts#L297)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt.ts:297](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt.ts#L297)
 
 Checks whether the provided string or the current template (if not provided) is locked.
 
@@ -731,7 +743,7 @@ The template to check for lock status. If not provided, uses the current templat
 
 > **isPrototypeOf**(`v`): `boolean`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:146
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:146
 
 Determines whether an object exists in another object's prototype chain.
 
@@ -751,9 +763,9 @@ Another object whose prototype chain is to be checked.
 
 ### isSame()
 
-> **isSame**(`src`, `options`?): `boolean`
+> **isSame**(`src`, `options?`): `boolean`
 
-Defined in: node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:200
+Defined in: [property-manager.js/src/abstract.d.ts:200](https://github.com/snowyu/property-manager.js/blob/e9ebf4c62be9b6d84e5868ed098df041a53bb90a/src/abstract.d.ts#L200)
 
 Check the src object whether “equals” this object.
 
@@ -777,9 +789,9 @@ The source object
 
 ### mergeTo()
 
-> **mergeTo**(`dest`, `options`?): `any`
+> **mergeTo**(`dest`, `options?`): `any`
 
-Defined in: node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:164
+Defined in: [property-manager.js/src/abstract.d.ts:164](https://github.com/snowyu/property-manager.js/blob/e9ebf4c62be9b6d84e5868ed098df041a53bb90a/src/abstract.d.ts#L164)
 
 Merge this attributes to dest object.
 
@@ -807,7 +819,7 @@ the dest object.
 
 > **propertyIsEnumerable**(`v`): `boolean`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:152
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:152
 
 Determines whether a specified property is enumerable.
 
@@ -829,7 +841,7 @@ A property name.
 
 > **toJSON**(): `any`
 
-Defined in: node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:182
+Defined in: [property-manager.js/src/abstract.d.ts:182](https://github.com/snowyu/property-manager.js/blob/e9ebf4c62be9b6d84e5868ed098df041a53bb90a/src/abstract.d.ts#L182)
 
 #### Returns
 
@@ -841,7 +853,7 @@ Defined in: node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-ma
 
 > **toLocaleString**(): `string`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:131
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:131
 
 Returns a date converted to a string using the current locale.
 
@@ -853,9 +865,9 @@ Returns a date converted to a string using the current locale.
 
 ### toObject()
 
-> **toObject**(`options`?): `any`
+> **toObject**(`options?`): `any`
 
-Defined in: node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:181
+Defined in: [property-manager.js/src/abstract.d.ts:181](https://github.com/snowyu/property-manager.js/blob/e9ebf4c62be9b6d84e5868ed098df041a53bb90a/src/abstract.d.ts#L181)
 
 Convert the attributes to the json object
 
@@ -877,7 +889,7 @@ the json object.
 
 > **toString**(): `string`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:128
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:128
 
 Returns a string representation of an object.
 
@@ -891,7 +903,7 @@ Returns a string representation of an object.
 
 > **valueOf**(): `Object`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:134
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:134
 
 Returns the primitive value of the specified object.
 
@@ -907,16 +919,20 @@ Returns the primitive value of the specified object.
 
 > `static` **assign**\<`T`, `U`\>(`target`, `source`): `T` & `U`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:286
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:286
 
 Copy the values of all of the enumerable own properties from one or more source objects to a
 target object. Returns the target object.
 
 ##### Type Parameters
 
-• **T** *extends* `object`
+###### T
 
-• **U**
+`T` *extends* `object`
+
+###### U
+
+`U`
 
 ##### Parameters
 
@@ -940,18 +956,24 @@ The source object from which to copy properties.
 
 > `static` **assign**\<`T`, `U`, `V`\>(`target`, `source1`, `source2`): `T` & `U` & `V`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:295
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:295
 
 Copy the values of all of the enumerable own properties from one or more source objects to a
 target object. Returns the target object.
 
 ##### Type Parameters
 
-• **T** *extends* `object`
+###### T
 
-• **U**
+`T` *extends* `object`
 
-• **V**
+###### U
+
+`U`
+
+###### V
+
+`V`
 
 ##### Parameters
 
@@ -981,20 +1003,28 @@ The second source object from which to copy properties.
 
 > `static` **assign**\<`T`, `U`, `V`, `W`\>(`target`, `source1`, `source2`, `source3`): `T` & `U` & `V` & `W`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:305
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:305
 
 Copy the values of all of the enumerable own properties from one or more source objects to a
 target object. Returns the target object.
 
 ##### Type Parameters
 
-• **T** *extends* `object`
+###### T
 
-• **U**
+`T` *extends* `object`
 
-• **V**
+###### U
 
-• **W**
+`U`
+
+###### V
+
+`V`
+
+###### W
+
+`W`
 
 ##### Parameters
 
@@ -1030,7 +1060,7 @@ The third source object from which to copy properties.
 
 > `static` **assign**(`target`, ...`sources`): `any`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:313
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:313
 
 Copy the values of all of the enumerable own properties from one or more source objects to a
 target object. Returns the target object.
@@ -1061,7 +1091,7 @@ One or more source objects from which to copy properties
 
 > `static` **create**(`o`): `any`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:188
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:188
 
 Creates an object that has the specified prototype or that has null prototype.
 
@@ -1081,7 +1111,7 @@ Object to use as a prototype. May be null.
 
 > `static` **create**(`o`, `properties`): `any`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:195
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:195
 
 Creates an object that has the specified prototype, and that optionally contains specified properties.
 
@@ -1107,9 +1137,9 @@ JavaScript object that contains one or more property descriptors.
 
 ### defineProperties()
 
-> `static` **defineProperties**(`aTarget`, `aProperties`, `recreate`?): `any`
+> `static` **defineProperties**(`aTarget`, `aProperties`, `recreate?`): `any`
 
-Defined in: node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/advance.d.ts:11
+Defined in: [property-manager.js/src/advance.d.ts:11](https://github.com/snowyu/property-manager.js/blob/e9ebf4c62be9b6d84e5868ed098df041a53bb90a/src/advance.d.ts#L11)
 
 Adds one or more properties to an object, and/or modifies attributes of existing properties.
 
@@ -1137,13 +1167,15 @@ Adds one or more properties to an object, and/or modifies attributes of existing
 
 > `static` **defineProperty**\<`T`\>(`o`, `p`, `attributes`): `T`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:203
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:203
 
 Adds a property to an object, or modifies attributes of an existing property.
 
 #### Type Parameters
 
-• **T**
+##### T
+
+`T`
 
 #### Parameters
 
@@ -1177,13 +1209,15 @@ Descriptor for the property. It can be for a data property or an accessor proper
 
 > `static` **entries**\<`T`\>(`o`): \[`string`, `T`\][]
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2017.object.d.ts:36
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2017.object.d.ts:36
 
 Returns an array of key/values of the enumerable own properties of an object
 
 ##### Type Parameters
 
-• **T**
+###### T
+
+`T`
 
 ##### Parameters
 
@@ -1191,7 +1225,7 @@ Returns an array of key/values of the enumerable own properties of an object
 
 Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
 
-\{\} | `ArrayLike`\<`T`\>
+\{\[`s`: `string`\]: `T`; \} | `ArrayLike`\<`T`\>
 
 ##### Returns
 
@@ -1201,7 +1235,7 @@ Object that contains the properties and methods. This can be an object that you 
 
 > `static` **entries**(`o`): \[`string`, `any`\][]
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2017.object.d.ts:42
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2017.object.d.ts:42
 
 Returns an array of key/values of the enumerable own properties of an object
 
@@ -1223,13 +1257,15 @@ Object that contains the properties and methods. This can be an object that you 
 
 > `static` **freeze**\<`T`\>(`f`): `T`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:222
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:222
 
 Prevents the modification of existing property attributes and values, and prevents the addition of new properties.
 
 ##### Type Parameters
 
-• **T** *extends* `Function`
+###### T
+
+`T` *extends* `Function`
 
 ##### Parameters
 
@@ -1247,15 +1283,19 @@ Object on which to lock the attributes.
 
 > `static` **freeze**\<`T`, `U`\>(`o`): `Readonly`\<`T`\>
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:228
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:228
 
 Prevents the modification of existing property attributes and values, and prevents the addition of new properties.
 
 ##### Type Parameters
 
-• **T** *extends* `object`
+###### T
 
-• **U** *extends* `string` \| `number` \| `bigint` \| `boolean` \| `symbol`
+`T` *extends* `object`
+
+###### U
+
+`U` *extends* `string` \| `number` \| `bigint` \| `boolean` \| `symbol`
 
 ##### Parameters
 
@@ -1273,13 +1313,15 @@ Object on which to lock the attributes.
 
 > `static` **freeze**\<`T`\>(`o`): `Readonly`\<`T`\>
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:234
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:234
 
 Prevents the modification of existing property attributes and values, and prevents the addition of new properties.
 
 ##### Type Parameters
 
-• **T**
+###### T
+
+`T`
 
 ##### Parameters
 
@@ -1301,13 +1343,15 @@ Object on which to lock the attributes.
 
 > `static` **fromEntries**\<`T`\>(`entries`): `object`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2019.object.d.ts:26
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2019.object.d.ts:26
 
 Returns an object created by key-value entries for properties and methods
 
 ##### Type Parameters
 
-• **T** = `any`
+###### T
+
+`T` = `any`
 
 ##### Parameters
 
@@ -1325,7 +1369,7 @@ An iterable object that contains key-value entries for properties and methods.
 
 > `static` **fromEntries**(`entries`): `any`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2019.object.d.ts:32
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2019.object.d.ts:32
 
 Returns an object created by key-value entries for properties and methods
 
@@ -1347,7 +1391,7 @@ An iterable object that contains key-value entries for properties and methods.
 
 > `static` **getOwnPropertyDescriptor**(`o`, `p`): `undefined` \| `PropertyDescriptor`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:175
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:175
 
 Gets the own property descriptor of the specified object.
 An own property descriptor is one that is defined directly on the object and is not inherited from the object's prototype.
@@ -1376,13 +1420,15 @@ Name of the property.
 
 > `static` **getOwnPropertyDescriptors**\<`T`\>(`o`): \{ \[P in string \| number \| symbol\]: TypedPropertyDescriptor\<T\[P\]\> \} & `object`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2017.object.d.ts:48
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2017.object.d.ts:48
 
 Returns an object containing all own property descriptors of an object
 
 #### Type Parameters
 
-• **T**
+##### T
+
+`T`
 
 #### Parameters
 
@@ -1402,7 +1448,7 @@ Object that contains the properties and methods. This can be an object that you 
 
 > `static` **getOwnPropertyNames**(`o`): `string`[]
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:182
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:182
 
 Returns the names of the own properties of an object. The own properties of an object are those that are defined directly
 on that object, and are not inherited from the object's prototype. The properties of an object include both fields (objects) and functions.
@@ -1425,7 +1471,7 @@ Object that contains the own properties.
 
 > `static` **getOwnPropertySymbols**(`o`): `symbol`[]
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:319
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:319
 
 Returns an array of all symbol properties found directly on object o.
 
@@ -1447,7 +1493,7 @@ Object to retrieve the symbols from.
 
 > `static` **getProperties**(): `PropDescriptors`
 
-Defined in: node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/advance.d.ts:10
+Defined in: [property-manager.js/src/advance.d.ts:10](https://github.com/snowyu/property-manager.js/blob/e9ebf4c62be9b6d84e5868ed098df041a53bb90a/src/advance.d.ts#L10)
 
 get all properties descriptor include inherited.
 
@@ -1461,7 +1507,7 @@ get all properties descriptor include inherited.
 
 > `static` **getPrototypeOf**(`o`): `any`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:167
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:167
 
 Returns the prototype of an object.
 
@@ -1483,7 +1529,7 @@ The object that references the prototype.
 
 > `static` **hasOwn**(`o`, `v`): `boolean`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2022.object.d.ts:25
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2022.object.d.ts:25
 
 Determines whether an object has a property with the specified name.
 
@@ -1511,7 +1557,7 @@ A property name.
 
 > `static` **is**(`value1`, `value2`): `boolean`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:332
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:332
 
 Returns true if the values are the same value, false otherwise.
 
@@ -1539,7 +1585,7 @@ The second value.
 
 > `static` **isExtensible**(`o`): `boolean`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:258
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:258
 
 Returns a value that indicates whether new properties can be added to an object.
 
@@ -1561,7 +1607,7 @@ Object to test.
 
 > `static` **isFrozen**(`o`): `boolean`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:252
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:252
 
 Returns true if existing property attributes and values cannot be modified in an object, and new properties cannot be added to the object.
 
@@ -1583,7 +1629,7 @@ Object to test.
 
 > `static` **isSealed**(`o`): `boolean`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:246
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:246
 
 Returns true if existing property attributes cannot be modified in an object and new properties cannot be added to the object.
 
@@ -1607,7 +1653,7 @@ Object to test.
 
 > `static` **keys**(`o`): `string`[]
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:264
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:264
 
 Returns the names of the enumerable string properties and methods of an object.
 
@@ -1627,7 +1673,7 @@ Object that contains the properties and methods. This can be an object that you 
 
 > `static` **keys**(`o`): `string`[]
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:325
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:325
 
 Returns the names of the enumerable string properties and methods of an object.
 
@@ -1647,13 +1693,15 @@ Object that contains the properties and methods. This can be an object that you 
 
 > `static` **preventExtensions**\<`T`\>(`o`): `T`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:240
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:240
 
 Prevents the addition of new properties to an object.
 
 #### Type Parameters
 
-• **T**
+##### T
+
+`T`
 
 #### Parameters
 
@@ -1673,13 +1721,15 @@ Object to make non-extensible.
 
 > `static` **seal**\<`T`\>(`o`): `T`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:216
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es5.d.ts:216
 
 Prevents the modification of attributes of existing properties, and prevents the addition of new properties.
 
 #### Type Parameters
 
-• **T**
+##### T
+
+`T`
 
 #### Parameters
 
@@ -1699,7 +1749,7 @@ Object on which to lock the attributes.
 
 > `static` **setPrototypeOf**(`o`, `proto`): `any`
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:339
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:339
 
 Sets the prototype of a specified object o to object proto or null. Returns the object o.
 
@@ -1729,13 +1779,15 @@ The value of the new prototype or null.
 
 > `static` **values**\<`T`\>(`o`): `T`[]
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2017.object.d.ts:24
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2017.object.d.ts:24
 
 Returns an array of values of the enumerable own properties of an object
 
 ##### Type Parameters
 
-• **T**
+###### T
+
+`T`
 
 ##### Parameters
 
@@ -1743,7 +1795,7 @@ Returns an array of values of the enumerable own properties of an object
 
 Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
 
-\{\} | `ArrayLike`\<`T`\>
+\{\[`s`: `string`\]: `T`; \} | `ArrayLike`\<`T`\>
 
 ##### Returns
 
@@ -1753,7 +1805,7 @@ Object that contains the properties and methods. This can be an object that you 
 
 > `static` **values**(`o`): `any`[]
 
-Defined in: node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2017.object.d.ts:30
+Defined in: @isdk/ai-tools/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2017.object.d.ts:30
 
 Returns an array of values of the enumerable own properties of an object
 

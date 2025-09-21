@@ -6,7 +6,7 @@
 
 # Interface: AIPromptThinkProfile
 
-Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:38](https://github.com/isdk/ai-tool-prompt.js/blob/05afa5dec5217dc3ff89bf08e601fc3699c3ca59/src/prompt-settings.ts#L38)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:38](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L38)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:38](https://github.c
 
 > `optional` **answerTag**: `string` \| \[`string`, `string`\]
 
-Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:41](https://github.com/isdk/ai-tool-prompt.js/blob/05afa5dec5217dc3ff89bf08e601fc3699c3ca59/src/prompt-settings.ts#L41)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:41](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L41)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:41](https://github.c
 
 > **mode**: `"last"` \| `"first"` \| `"deep"`
 
-Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:39](https://github.com/isdk/ai-tool-prompt.js/blob/05afa5dec5217dc3ff89bf08e601fc3699c3ca59/src/prompt-settings.ts#L39)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:39](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L39)
 
 ***
 
@@ -30,4 +30,4 @@ Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:39](https://github.c
 
 > `optional` **thinkTag**: `string` \| \[`string`, `string`\]
 
-Defined in: [packages/ai-tool-prompt/src/prompt-settings.ts:40](https://github.com/isdk/ai-tool-prompt.js/blob/05afa5dec5217dc3ff89bf08e601fc3699c3ca59/src/prompt-settings.ts#L40)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:40](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L40)

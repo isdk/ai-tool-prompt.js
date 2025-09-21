@@ -8,7 +8,7 @@
 
 > **getVersionPromptSettings**(`version`, `promptSettings`): [`AIPromptSettings`](../interfaces/AIPromptSettings.md)
 
-Defined in: [packages/ai-tool-prompt/src/format-prompt.ts:29](https://github.com/isdk/ai-tool-prompt.js/blob/05afa5dec5217dc3ff89bf08e601fc3699c3ca59/src/format-prompt.ts#L29)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/format-prompt.ts:46](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/format-prompt.ts#L46)
 
 ## Parameters
 

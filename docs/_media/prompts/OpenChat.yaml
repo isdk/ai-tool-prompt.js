@@ -1,0 +1,85 @@
+_id: OpenChat
+templateFormat: hf
+type: system
+version:
+  "8192":
+    prompt:
+      human: "Human: "
+      ai: "Assistant: "
+      eot_token: <|end_of_turn|>
+  opencoder:
+    prompt:
+      human: "User:"
+      ai: "Assistant:"
+      eot_token: <|end_of_turn|>
+  "3.1":
+    prompt:
+      system: Assistant is GPT4
+      human: "User: "
+      ai: "Assistant: "
+      eot_token: <|end_of_turn|>
+  "3.2":
+    prompt:
+      human: "GPT4 User: "
+      ai: "GPT4 Assistant: "
+      eot_token: <|end_of_turn|>
+  3.5-gemma:
+    prompt:
+      human: "GPT4 Correct User: "
+      ai: "GPT4 Correct Assistant: "
+      eot_token: <end_of_turn>
+  "3.5":
+    prompt:
+      human: "GPT4 Correct User: "
+      ai: "GPT4 Correct Assistant: "
+      eot_token: <|end_of_turn|>
+  "3.6":
+    prompt:
+      eot_token: <|eot_id|>
+    template: |-
+      {%- for message in messages %}
+        {%- if loop.first and system and messages[0]['role'] != 'system' -%}
+          {{- '<|start_header_id|>system<|end_header_id|>\n\n' + system + eot_token -}}
+        {%- endif %}
+        {%- if message['role'] == 'system' %}
+          {{- '<|start_header_id|>System<|end_header_id|>\n\n' -}}
+        {%- else %}
+          {{- '<|start_header_id|>GPT4 Correct ' + message['role'].title() + '<|end_header_id|>\n\n' -}}
+        {%- endif %}
+        {{- message['content'] | trim }}{% if not loop.last or messages[-1]['role'] != 'assistant' %}{{ eot_token }}{% endif %}
+      {%- endfor %}
+      {%- if add_generation_prompt %}{{ '<|start_header_id|>GPT4 Correct Assistant<|end_header_id|>\n\n' }}{% endif %}
+  math:
+    prompt:
+      human: "Math Correct User: "
+      ai: "Math Correct Assistant: "
+      eot_token: <|end_of_turn|>
+prompt:
+  human: "GPT4 Correct User: "
+  ai: "GPT4 Correct Assistant: "
+  eot_token: <|end_of_turn|>
+template: |-
+  {%- for message in messages %}
+    {%- if loop.first and system and messages[0]['role'] != 'system' -%}
+      {{- system + eot_token -}}
+    {% endif %}
+    {%- if message['role'] == 'system' -%}
+      {{- '' + message['content'] + eot_token -}}
+    {%- else -%}
+      {%- if message['role'] == 'user' -%}
+        {{-human + message['content'] + eot_token-}}
+      {%- else -%}
+        {{-ai + message['content'] + eot_token -}}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- if add_generation_prompt -%}
+      {{-ai-}}
+  {%- endif -%}
+modelPattern:
+  "8192": !re /(?:[-_]|^)OpenChat[-_]8192/i
+  "3.2": !re /^openchat_v3[.]2/i
+  3.5-gemma: !re /^openchat-3[.]5-\d+-gemma/i
+  "3.5": !re /^openchat-3[.]5-/i
+  "3.6": !re /^openchat-3[.]6-/i
+  opencoder: !re /(?:[-_]|^)opencoderplus(?:[-_]|$)/i
