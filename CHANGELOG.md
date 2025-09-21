@@ -2,6 +2,54 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.4.0](https://github.com/isdk/ai-tool-prompt.js/compare/v0.3.7...v0.4.0) (2025-09-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* pass chatTemplate instead of promptSettings to formatPrompt, getPromptSettings
+
+### Features
+
+* add Baichuan-M2-32B model ([5e111b7](https://github.com/isdk/ai-tool-prompt.js/commit/5e111b75afb8a0d97230f50f6d6db8bcd4709737))
+* add blankThink for qwen3 ([204ae57](https://github.com/isdk/ai-tool-prompt.js/commit/204ae57675a1afa0002213884cc31a41352d4c33))
+* add getPromptSettings and normalizeSupportsOption to standard supports option ([dd1a214](https://github.com/isdk/ai-tool-prompt.js/commit/dd1a214cb60856029ca5fbb759bb94ab0d8b28d6))
+* add gpt-oss model ([5f3fc87](https://github.com/isdk/ai-tool-prompt.js/commit/5f3fc87ae05411af3332fbd781d0251487709cc2))
+* add medgemma model ([d6846c0](https://github.com/isdk/ai-tool-prompt.js/commit/d6846c03e00d2a5c39e81506674fedc347e647e5))
+* add OpenReasoning-Nemotron model ([9b1b256](https://github.com/isdk/ai-tool-prompt.js/commit/9b1b2560d482f8381253f287f70ba3c657d2a744))
+* add phi-4-reason model supports ([f9c4bb3](https://github.com/isdk/ai-tool-prompt.js/commit/f9c4bb3b8b6358f9c4460d265a1472ceb1aa1489))
+* add phi3.5 and mediphi supports ([6d5b454](https://github.com/isdk/ai-tool-prompt.js/commit/6d5b4549132b453fcad1928f2eeddc1928e194ca))
+* add qwen3 30b-a3b and 4b 2507 ([5bc8a6e](https://github.com/isdk/ai-tool-prompt.js/commit/5bc8a6ecdda2b7c557c84fd4527e82a2f6e9fb5e))
+* add qwen3 supports ([590fc4c](https://github.com/isdk/ai-tool-prompt.js/commit/590fc4c2ea9f3fc52e2fe85a09c35025ee1efb3e))
+* add qwen3-coder, qwen3-235b-instuct, qwen3-235b-thinking ([55aadad](https://github.com/isdk/ai-tool-prompt.js/commit/55aadad82ae6d63dcd0677a920d0a45109889093))
+* add Sky-T1-32B-Preview ([a9b0e50](https://github.com/isdk/ai-tool-prompt.js/commit/a9b0e501399cce0fa0f7773f57e506e57f56fb81))
+* add sky-t1-mini ([df2f15b](https://github.com/isdk/ai-tool-prompt.js/commit/df2f15b68008fa2b50feb382cc7b45e90a0c6bbc))
+* add smallthinker model ([72ae993](https://github.com/isdk/ai-tool-prompt.js/commit/72ae993100a69807d36952abc2d226965f1b934f))
+* the prompt data can be formated too ([f460d32](https://github.com/isdk/ai-tool-prompt.js/commit/f460d327dfa0b87f5f496ff447c05d9ef9003530))
+
+
+### Bug Fixes
+
+* add switch off thinking for qwen3-235b-think ([3ff36e4](https://github.com/isdk/ai-tool-prompt.js/commit/3ff36e48d3de4b2908d1053a83c4d1f7e3e44dc8))
+* gemma3 roles must alternate should support assistant first too ([46f48ec](https://github.com/isdk/ai-tool-prompt.js/commit/46f48ec9c091cd89d78f8a49ffa6cc9b60847f0e))
+* qwen3 ([7b15fef](https://github.com/isdk/ai-tool-prompt.js/commit/7b15fefbf74ec31b79c90238746f1713ae2f33a4))
+* qwen3 ([1d3f1de](https://github.com/isdk/ai-tool-prompt.js/commit/1d3f1ded5c203d8b275d6b7db88f6df91301d442))
+* Qwen3-235B-A22B-Thinking should off think by default ([e95f1c5](https://github.com/isdk/ai-tool-prompt.js/commit/e95f1c5577eb91334016493efad6c147924b7471))
+* remove external spaces ([d140657](https://github.com/isdk/ai-tool-prompt.js/commit/d14065741b858e6bca3ae2cee6ed2f920cde5e70))
+* should merge prompt data in version ([c3c376e](https://github.com/isdk/ai-tool-prompt.js/commit/c3c376e8c3e02d0a65285cff2422bf458480fdbf))
+* should not set default system prompt in ChatML for some models no system ([03a8ac6](https://github.com/isdk/ai-tool-prompt.js/commit/03a8ac6066d6befb2deedc1ad31a5edae1b1f419))
+* should set default think mode ([5d5e0c3](https://github.com/isdk/ai-tool-prompt.js/commit/5d5e0c391133273cd663e9fd6f05e808b52f2d55))
+
+
+### Refactor
+
+* add default parameters for qwen3-coder ([45e9b1d](https://github.com/isdk/ai-tool-prompt.js/commit/45e9b1de90bb4d098bc56927b0aa75d5151c046d))
+* following the upstream changed ([863bd8c](https://github.com/isdk/ai-tool-prompt.js/commit/863bd8c12b495bbfe300f2223f57f3032497e240))
+* fuseo1 deep-think ([b095a48](https://github.com/isdk/ai-tool-prompt.js/commit/b095a4873458cbc48bcae09ed662b78335508015))
+* minor optimize ([a490d5c](https://github.com/isdk/ai-tool-prompt.js/commit/a490d5c740d8aded652d9ae5aee6974b64144d06))
+* pass chatTemplate instead of promptSettings to formatPrompt, getPromptSettings ([c1fc7a3](https://github.com/isdk/ai-tool-prompt.js/commit/c1fc7a38f5c5f965a1e814a5b704f02158af9c37))
+* use the new supports thinkMode ([3476f6e](https://github.com/isdk/ai-tool-prompt.js/commit/3476f6e37192869694a153c0c4920f7579f4f2cf))
+
 ## [0.3.7](https://github.com/isdk/ai-tool-prompt.js/compare/v0.3.6...v0.3.7) (2025-04-04)
 
 
