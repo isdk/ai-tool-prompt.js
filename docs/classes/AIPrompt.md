@@ -6,7 +6,7 @@
 
 # Class: AIPrompt
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt.ts:18](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt.ts#L18)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt.ts:18](https://github.com/isdk/ai-tool-prompt.js/blob/a2b49ef3337bf83b9b81d4bcb9555a8f6044965e/src/prompt.ts#L18)
 
 Represents an AIPrompt
 
@@ -42,7 +42,7 @@ Defined in: [property-manager.js/src/abstract.d.ts:80](https://github.com/snowyu
 
 > `optional` **\_id**: `string`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:59](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L59)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:59](https://github.com/isdk/ai-tool-prompt.js/blob/a2b49ef3337bf83b9b81d4bcb9555a8f6044965e/src/prompt-settings.ts#L59)
 
 #### Inherited from
 
@@ -62,7 +62,7 @@ Defined in: [property-manager.js/src/advance.d.ts:5](https://github.com/snowyu/p
 
 > `optional` **创**: [`ActivityRecord`](../interfaces/ActivityRecord.md)
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:83](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L83)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:83](https://github.com/isdk/ai-tool-prompt.js/blob/a2b49ef3337bf83b9b81d4bcb9555a8f6044965e/src/prompt-settings.ts#L83)
 
 #### Inherited from
 
@@ -74,7 +74,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:83](h
 
 > `optional` **签**: `string` \| [`Signatures`](../interfaces/Signatures.md)
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:84](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L84)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:84](https://github.com/isdk/ai-tool-prompt.js/blob/a2b49ef3337bf83b9b81d4bcb9555a8f6044965e/src/prompt-settings.ts#L84)
 
 #### Inherited from
 
@@ -96,7 +96,7 @@ The initial value of Object.prototype.constructor is the standard built-in Objec
 
 > `optional` **contentType**: [`AIContentType`](../type-aliases/AIContentType.md)
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:64](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L64)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:64](https://github.com/isdk/ai-tool-prompt.js/blob/a2b49ef3337bf83b9b81d4bcb9555a8f6044965e/src/prompt-settings.ts#L64)
 
 #### Inherited from
 
@@ -126,7 +126,7 @@ The default options for export and assign
 
 > `optional` **description**: `string`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:65](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L65)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:65](https://github.com/isdk/ai-tool-prompt.js/blob/a2b49ef3337bf83b9b81d4bcb9555a8f6044965e/src/prompt-settings.ts#L65)
 
 #### Inherited from
 
@@ -138,7 +138,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:65](h
 
 > `optional` **excludeModels**: `AIModelNameRules`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:68](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L68)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:68](https://github.com/isdk/ai-tool-prompt.js/blob/a2b49ef3337bf83b9b81d4bcb9555a8f6044965e/src/prompt-settings.ts#L68)
 
 #### Inherited from
 
@@ -150,7 +150,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:68](h
 
 > `optional` **extends**: `string`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:75](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L75)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:75](https://github.com/isdk/ai-tool-prompt.js/blob/a2b49ef3337bf83b9b81d4bcb9555a8f6044965e/src/prompt-settings.ts#L75)
 
 #### Inherited from
 
@@ -162,7 +162,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:75](h
 
 > `optional` **id**: `string`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:60](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L60)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:60](https://github.com/isdk/ai-tool-prompt.js/blob/a2b49ef3337bf83b9b81d4bcb9555a8f6044965e/src/prompt-settings.ts#L60)
 
 #### Inherited from
 
@@ -174,7 +174,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:60](h
 
 > `optional` **input**: `Record`\<`string`, `string`\>[]
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:79](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L79)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:79](https://github.com/isdk/ai-tool-prompt.js/blob/a2b49ef3337bf83b9b81d4bcb9555a8f6044965e/src/prompt-settings.ts#L79)
 
 #### Inherited from
 
@@ -186,7 +186,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:79](h
 
 > `optional` **modelPattern**: `AIModelNameRules` \| \{\[`ver`: `string`\]: `AIModelNameRules`; \}
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:66](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L66)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:66](https://github.com/isdk/ai-tool-prompt.js/blob/a2b49ef3337bf83b9b81d4bcb9555a8f6044965e/src/prompt-settings.ts#L66)
 
 #### Inherited from
 
@@ -198,7 +198,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:66](h
 
 > `optional` **modelSize**: `string` \| `number`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:67](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L67)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:67](https://github.com/isdk/ai-tool-prompt.js/blob/a2b49ef3337bf83b9b81d4bcb9555a8f6044965e/src/prompt-settings.ts#L67)
 
 #### Inherited from
 
@@ -220,7 +220,7 @@ the property with the default prefix '$' will not be exported.
 
 > `optional` **output**: `any`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:80](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L80)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:80](https://github.com/isdk/ai-tool-prompt.js/blob/a2b49ef3337bf83b9b81d4bcb9555a8f6044965e/src/prompt-settings.ts#L80)
 
 #### Inherited from
 
@@ -232,7 +232,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:80](h
 
 > `optional` **parameters**: `Record`\<`string`, `any`\>
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:74](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L74)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:74](https://github.com/isdk/ai-tool-prompt.js/blob/a2b49ef3337bf83b9b81d4bcb9555a8f6044965e/src/prompt-settings.ts#L74)
 
 #### Inherited from
 
@@ -244,7 +244,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:74](h
 
 > `optional` **priority**: `number`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:78](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L78)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:78](https://github.com/isdk/ai-tool-prompt.js/blob/a2b49ef3337bf83b9b81d4bcb9555a8f6044965e/src/prompt-settings.ts#L78)
 
 #### Inherited from
 
@@ -256,7 +256,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:78](h
 
 > `optional` **prompt**: `DefaultPrompt`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:71](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L71)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:71](https://github.com/isdk/ai-tool-prompt.js/blob/a2b49ef3337bf83b9b81d4bcb9555a8f6044965e/src/prompt-settings.ts#L71)
 
 #### Inherited from
 
@@ -268,7 +268,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:71](h
 
 > `optional` **shouldThink**: [`AIPromptThinkProfile`](../interfaces/AIPromptThinkProfile.md)
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:82](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L82)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:82](https://github.com/isdk/ai-tool-prompt.js/blob/a2b49ef3337bf83b9b81d4bcb9555a8f6044965e/src/prompt-settings.ts#L82)
 
 #### Inherited from
 
@@ -280,7 +280,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:82](h
 
 > `optional` **supports**: [`AISupportObject`](../interfaces/AISupportObject.md) \| [`AISupportItem`](../type-aliases/AISupportItem.md)[]
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:62](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L62)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:62](https://github.com/isdk/ai-tool-prompt.js/blob/a2b49ef3337bf83b9b81d4bcb9555a8f6044965e/src/prompt-settings.ts#L62)
 
 #### Inherited from
 
@@ -292,7 +292,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:62](h
 
 > `optional` **tag**: `string`[]
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:81](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L81)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:81](https://github.com/isdk/ai-tool-prompt.js/blob/a2b49ef3337bf83b9b81d4bcb9555a8f6044965e/src/prompt-settings.ts#L81)
 
 #### Inherited from
 
@@ -304,7 +304,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:81](h
 
 > **template**: `string`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:61](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L61)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:61](https://github.com/isdk/ai-tool-prompt.js/blob/a2b49ef3337bf83b9b81d4bcb9555a8f6044965e/src/prompt-settings.ts#L61)
 
 #### Inherited from
 
@@ -316,7 +316,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:61](h
 
 > `optional` **templateFormat**: `string`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:69](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L69)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:69](https://github.com/isdk/ai-tool-prompt.js/blob/a2b49ef3337bf83b9b81d4bcb9555a8f6044965e/src/prompt-settings.ts#L69)
 
 #### Inherited from
 
@@ -328,7 +328,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:69](h
 
 > **type**: [`AIPromptType`](../type-aliases/AIPromptType.md)
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:63](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L63)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:63](https://github.com/isdk/ai-tool-prompt.js/blob/a2b49ef3337bf83b9b81d4bcb9555a8f6044965e/src/prompt-settings.ts#L63)
 
 #### Inherited from
 
@@ -340,7 +340,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:63](h
 
 > `optional` **version**: `object`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:72](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt-settings.ts#L72)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:72](https://github.com/isdk/ai-tool-prompt.js/blob/a2b49ef3337bf83b9b81d4bcb9555a8f6044965e/src/prompt-settings.ts#L72)
 
 #### Index Signature
 
@@ -644,7 +644,7 @@ A property name.
 
 > **importFromFile**(`filepath`): `void`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt.ts:286](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt.ts#L286)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt.ts:286](https://github.com/isdk/ai-tool-prompt.js/blob/a2b49ef3337bf83b9b81d4bcb9555a8f6044965e/src/prompt.ts#L286)
 
 #### Parameters
 
@@ -684,7 +684,7 @@ this object.
 
 > **isFitForLLM**(`modelName`, `size?`): `undefined` \| `string` \| `string`[]
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt.ts:314](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt.ts#L314)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt.ts:314](https://github.com/isdk/ai-tool-prompt.js/blob/a2b49ef3337bf83b9b81d4bcb9555a8f6044965e/src/prompt.ts#L314)
 
 Determines the fit result for the specified LLM model name with respect to this AIPrompt.
 
@@ -719,7 +719,7 @@ The fit result(s) for the given LLM model, representing its compatibility or sui
 
 > **isLocked**(`template?`): `boolean` \| `""`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt.ts:297](https://github.com/isdk/ai-tool-prompt.js/blob/1daf0234c6beea84df91d95a5a6b8f901fbeace7/src/prompt.ts#L297)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt.ts:297](https://github.com/isdk/ai-tool-prompt.js/blob/a2b49ef3337bf83b9b81d4bcb9555a8f6044965e/src/prompt.ts#L297)
 
 Checks whether the provided string or the current template (if not provided) is locked.
 
