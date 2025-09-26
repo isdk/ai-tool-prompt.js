@@ -6,7 +6,7 @@
 
 # Interface: AISupportObjectItem
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:44](https://github.com/isdk/ai-tool-prompt.js/blob/a2b49ef3337bf83b9b81d4bcb9555a8f6044965e/src/prompt-settings.ts#L44)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:44](https://github.com/isdk/ai-tool-prompt.js/blob/df57e41588ef4f83536e0145125ade13089c1f4d/src/prompt-settings.ts#L44)
 
 ## Indexable
 
@@ -18,7 +18,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:44](h
 
 > `optional` **\_id**: `string`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:47](https://github.com/isdk/ai-tool-prompt.js/blob/a2b49ef3337bf83b9b81d4bcb9555a8f6044965e/src/prompt-settings.ts#L47)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:47](https://github.com/isdk/ai-tool-prompt.js/blob/df57e41588ef4f83536e0145125ade13089c1f4d/src/prompt-settings.ts#L47)
 
 ***
 
@@ -26,7 +26,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:47](h
 
 > `optional` **id**: `string`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:46](https://github.com/isdk/ai-tool-prompt.js/blob/a2b49ef3337bf83b9b81d4bcb9555a8f6044965e/src/prompt-settings.ts#L46)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:46](https://github.com/isdk/ai-tool-prompt.js/blob/df57e41588ef4f83536e0145125ade13089c1f4d/src/prompt-settings.ts#L46)
 
 ***
 
@@ -34,4 +34,4 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:46](h
 
 > `optional` **name**: `string`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:45](https://github.com/isdk/ai-tool-prompt.js/blob/a2b49ef3337bf83b9b81d4bcb9555a8f6044965e/src/prompt-settings.ts#L45)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:45](https://github.com/isdk/ai-tool-prompt.js/blob/df57e41588ef4f83536e0145125ade13089c1f4d/src/prompt-settings.ts#L45)

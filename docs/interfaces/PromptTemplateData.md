@@ -6,7 +6,7 @@
 
 # Interface: PromptTemplateData
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/format-prompt.ts:7](https://github.com/isdk/ai-tool-prompt.js/blob/a2b49ef3337bf83b9b81d4bcb9555a8f6044965e/src/format-prompt.ts#L7)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/format-prompt.ts:7](https://github.com/isdk/ai-tool-prompt.js/blob/df57e41588ef4f83536e0145125ade13089c1f4d/src/format-prompt.ts#L7)
 
 ## Indexable
 
@@ -18,7 +18,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/format-prompt.ts:7](http
 
 > `optional` **add\_generation\_prompt**: `boolean`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/format-prompt.ts:8](https://github.com/isdk/ai-tool-prompt.js/blob/a2b49ef3337bf83b9b81d4bcb9555a8f6044965e/src/format-prompt.ts#L8)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/format-prompt.ts:8](https://github.com/isdk/ai-tool-prompt.js/blob/df57e41588ef4f83536e0145125ade13089c1f4d/src/format-prompt.ts#L8)
 
 ***
 
@@ -26,7 +26,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/format-prompt.ts:8](http
 
 > `optional` **messages**: `AIChatMessageParam`[]
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/format-prompt.ts:10](https://github.com/isdk/ai-tool-prompt.js/blob/a2b49ef3337bf83b9b81d4bcb9555a8f6044965e/src/format-prompt.ts#L10)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/format-prompt.ts:10](https://github.com/isdk/ai-tool-prompt.js/blob/df57e41588ef4f83536e0145125ade13089c1f4d/src/format-prompt.ts#L10)
 
 ***
 
@@ -34,4 +34,4 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/format-prompt.ts:10](htt
 
 > `optional` **version**: `string`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/format-prompt.ts:9](https://github.com/isdk/ai-tool-prompt.js/blob/a2b49ef3337bf83b9b81d4bcb9555a8f6044965e/src/format-prompt.ts#L9)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/format-prompt.ts:9](https://github.com/isdk/ai-tool-prompt.js/blob/df57e41588ef4f83536e0145125ade13089c1f4d/src/format-prompt.ts#L9)

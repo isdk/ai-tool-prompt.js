@@ -6,7 +6,7 @@
 
 # Interface: AIPromptThinkProfile
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:38](https://github.com/isdk/ai-tool-prompt.js/blob/a2b49ef3337bf83b9b81d4bcb9555a8f6044965e/src/prompt-settings.ts#L38)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:38](https://github.com/isdk/ai-tool-prompt.js/blob/df57e41588ef4f83536e0145125ade13089c1f4d/src/prompt-settings.ts#L38)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:38](h
 
 > `optional` **answerTag**: `string` \| \[`string`, `string`\]
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:41](https://github.com/isdk/ai-tool-prompt.js/blob/a2b49ef3337bf83b9b81d4bcb9555a8f6044965e/src/prompt-settings.ts#L41)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:41](https://github.com/isdk/ai-tool-prompt.js/blob/df57e41588ef4f83536e0145125ade13089c1f4d/src/prompt-settings.ts#L41)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:41](h
 
 > **mode**: `"last"` \| `"first"` \| `"deep"`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:39](https://github.com/isdk/ai-tool-prompt.js/blob/a2b49ef3337bf83b9b81d4bcb9555a8f6044965e/src/prompt-settings.ts#L39)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:39](https://github.com/isdk/ai-tool-prompt.js/blob/df57e41588ef4f83536e0145125ade13089c1f4d/src/prompt-settings.ts#L39)
 
 ***
 
@@ -30,4 +30,4 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:39](h
 
 > `optional` **thinkTag**: `string` \| \[`string`, `string`\]
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:40](https://github.com/isdk/ai-tool-prompt.js/blob/a2b49ef3337bf83b9b81d4bcb9555a8f6044965e/src/prompt-settings.ts#L40)
+Defined in: [@isdk/ai-tools/packages/ai-tool-prompt/src/prompt-settings.ts:40](https://github.com/isdk/ai-tool-prompt.js/blob/df57e41588ef4f83536e0145125ade13089c1f4d/src/prompt-settings.ts#L40)
