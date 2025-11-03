@@ -1,24 +1,31 @@
+# TODO: https://huggingface.co/openai/gpt-oss-120b/resolve/main/chat_template.jinja
 _id: Gpt-oss
 templateFormat: hf
 type: system
 supports:
   - 'tools'
   - thinkMode: ['deep', 'off']
+shouldThink:
+  mode: deep
+  thinkTag: !re /<\|channel\|>analysis<\|message\|>(.*?)<\|end\|>/s
+  answerTag: !re /<\|start\|>assistant<\|channel\|>final<\|message\|>(.*?)$/s
 prompt:
   # system: You are a helpful assistant
   bot_token: '<|start|>'
-  eot_token: '<|end|>'
+  eot_token: '<|return|>'
   model_identity: You are ChatGPT, a large language model trained by OpenAI.
   ThinkLevel: medium # low, medium, high
   # currentDate: YYYY-MM-DD
   system: |-
     {{model_identity}}
     Knowledge cutoff: 2024-06
+    Current date: {{strftime_now("%Y-%m-%d")}}
 
     Reasoning: {{ ThinkLevel }}
 
     # Valid channels: analysis, commentary, final. Channel must be included for every message.
 template: |-
+  {%- set should_generate_prompt = add_generation_prompt and messages[-1]['role'] != 'assistant' -%}
   {% for message in messages %}
     {% if loop.first %}
       {%- set system_content = message['content'] -%}
@@ -27,13 +34,19 @@ template: |-
       {%- elif message['role'] == 'system' and not system_content.startswith(model_identity) %}
         {%- set system_content = system + '\n# Instructions\n\n' + system_content -%}
       {%- endif %}
-      {{- bot_token + 'system<|message|>' + system_content + eot_token -}}
+      {{- bot_token + 'system<|message|>' + system_content + '<|end|>' -}}
     {% else %}
-      {{- bot_token + message['role'] + '<|message|>' -}}
-      {{- message['content']}}
-      {%- if not loop.last or messages[-1]['role'] != 'assistant' %}{{ eot_token}}{% endif %}
+      {%- if message.role == 'assistant' -%}
+        {%- if loop.last and not should_generate_prompt %}
+          {{- "<|start|>assistant<|channel|>final<|message|>" + message.content + "<|return|>" }}
+        {%- else -%}
+          {{- "<|start|>assistant<|channel|>final<|message|>" + message.content + "<|end|>" }}
+        {%- endif -%}
+      {%- elif message.role == 'user' -%}
+        {{- "<|start|>user<|message|>" + message.content + "<|end|>" }}
+      {%- endif -%}
     {% endif %}
   {% endfor %}
-  {% if add_generation_prompt and messages[-1]['role'] != 'assistant' %}{{ bot_token }}assistant{% endif %}
+  {% if should_generate_prompt %}{{ bot_token }}assistant{% endif %}
 modelPattern:
   - !re /(?:^|[-_.])gpt-oss(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
