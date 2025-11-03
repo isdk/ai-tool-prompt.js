@@ -28,12 +28,9 @@ export async function getPromptSettings(data: PromptTemplateData, chatTemplate: 
     promptSettings = getVersionPromptSettings(version, promptSettings)
   }
 
-  if (promptSettings.prompt) {
-    promptSettings.prompt = await formatObject(promptSettings.prompt, promptSettings.templateFormat)
-  }
-
   const defaultPrompt = defaultsDeep({}, rootPrompt, promptSettings.prompt)
   data = defaultsDeep(data, defaultPrompt)
+  data = await formatObject(data, promptSettings.templateFormat)
   if (typeof chatTemplate.version === 'string') {
     data.version = chatTemplate.version
   }

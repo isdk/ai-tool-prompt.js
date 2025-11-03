@@ -121,7 +121,6 @@ describe('getPromptSettings', () => {
     const promptTemplate = ConfigFile.loadSync(promptsPath + '/Gpt-oss') as AIPromptSettings
     expect(promptTemplate).toHaveProperty('_id', 'Gpt-oss')
     const result = await getPromptSettings({
-      system: '',
       messages: [
         {
           role: 'user',
@@ -129,6 +128,7 @@ describe('getPromptSettings', () => {
         }
       ]
     }, {prompt: promptTemplate})
-    expect(result.prompt!.system).not.toMatch(/{{.*}}/)
+    expect(result.data!.system).toContain('You are ChatGPT')
+    expect(result.data!.system).not.toMatch(/{{.*}}/)
   })
 });
