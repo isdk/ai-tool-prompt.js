@@ -102,7 +102,9 @@ async function formatObject(obj: any, templateFormat?: string, data?: any) {
         if (item != null) {
           switch (typeof item) {
             case 'object': {
-              obj[i] = await formatObject(item, templateFormat, data)
+              if (Array.isArray(item) || Object.getPrototypeOf(item) === Object.prototype) {
+                obj[i] = await formatObject(item, templateFormat, data)
+              }
             } break;
             case 'string': {
               const v = await PromptTemplate.formatIf({template: item, templateFormat, data})
@@ -118,7 +120,9 @@ async function formatObject(obj: any, templateFormat?: string, data?: any) {
       if (value != null) {
         switch (typeof value) {
           case 'object': {
-            obj[key] = await formatObject(value, templateFormat, data)
+            if (Array.isArray(value) || Object.getPrototypeOf(value) === Object.prototype) {
+              obj[key] = await formatObject(value, templateFormat, data)
+            }
           } break;
           case 'string': {
             const v = await PromptTemplate.formatIf({template: value, templateFormat, data})
