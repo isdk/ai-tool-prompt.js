@@ -112,7 +112,7 @@ modelPattern:
   qwen3-coder: !re /(?:^|[-_.])(qwen3-coder)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   qwen3-235b-instruct: !re /(?:^|[-_.])(?:code)?Qwen3-(235B-A22B|30b-a3b|4b)-Instruct-2507(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   qwen3-235b-think: !re /(?:^|[-_.])(?:code)?(Qwen3-235B-A22B-Thinking-2507)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
-  qwen3: !re /(?:^|[-_.])(?:code)?(qwen3)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
+  qwen3: !re /(?:^|[-_.])(?:code)?(qwen3|Orchestrator)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   '@': !re /(?:^|[-_.])(?:code)?(qwen|qwq)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
 parameters:
   qwen3-235b-instruct:
