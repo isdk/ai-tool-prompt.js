@@ -35,10 +35,10 @@
   "dependencies": {
     "@isdk/ai-tool": "workspace:^",
     "@isdk/ai-tool-sqlite": "workspace:^",
-    "load-config-file": "2.0.0",
-    "lodash-es": "^4.17.21",
-    "property-manager": "^3.0.3",
-    "yaml": "^2.7.0",
+    "load-config-file": "^2.1.0",
+    "lodash-es": "^4.18.1",
+    "property-manager": "^3.0.4",
+    "yaml": "^2.8.3",
     "yaml-types": "^0.4.0"
   },
   "devDependencies": {
@@ -55,7 +55,7 @@
     "terser": "^5.44.0",
     "tsup": "^8.5.0",
     "tsx": "^4.20.5",
-    "typedoc": "^0.28.13",
+    "typedoc": "^0.28.16",
     "typedoc-plugin-markdown": "^4.8.1",
     "typescript": "~5.7.3",
     "vite": "^7.1.4",
