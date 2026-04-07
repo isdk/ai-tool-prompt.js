@@ -1,5 +1,5 @@
 import { defaultsDeep, omit, omitBy } from 'lodash-es'
-import { AIChatMessageParam, defaultsWithConcat, PromptTemplate } from '@isdk/ai-tool'
+import { AIChatMessageParam, defaultsWithConcat, PromptTemplate, StringTemplateFinalValue } from '@isdk/ai-tool'
 
 import { AIPromptSettings, AISupportItem, AISupportObject } from "./prompt-settings"
 import { AIPromptResult } from './prompt'
@@ -90,7 +90,13 @@ function keepJsonSerializable(data: any) {
 }
 
 function isClassInstance(value: any) {
-  return value && typeof value === 'object' && value.constructor && value.constructor !== Object
+  let result = value && typeof value === 'object' && value.constructor && value.constructor !== Object
+  if (result) {
+    if (value instanceof StringTemplateFinalValue || value instanceof Date || value instanceof Number || value instanceof Boolean || value instanceof String) {
+      result = false
+    }
+  }
+  return result
 }
 
 async function formatObject(obj: any, templateFormat?: string, data?: any) {
