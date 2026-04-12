@@ -1,0 +1,46 @@
+_id: Gemma4
+templateFormat: hf
+type: system
+# version:
+supports:
+  - thinkMode: ['deep', 'off']
+shouldThink:
+  mode: deep
+  thinkTag: ["<|channel>thought\n", "<channel|>"]
+prompt:
+  bot_token: '<|turn>'
+  eot_token: '<turn|>'
+  system: You are a helpful assistant.
+template: |-
+  {% for message in messages %}
+    {%- set role = message['role'] -%}
+    {%- if role in ['system', 'developer'] -%}
+      {%- set role = 'system' -%}
+    {%- elif role == 'assistant' -%}
+      {%- set role = 'model' -%}
+    {%- endif -%}
+
+    {%- if loop.first -%}
+      {%- if role == 'system' -%}
+        {% set system = message['content'] | trim -%}
+      {%- endif -%}
+      {{- bot_token + 'system\n' -}}
+      {%- if shouldThink.mode == 3 -%}<|think|>{%- endif -%}
+      {{- system | trim -}}
+    {%- endif -%}
+    {%- if loop.first and role != 'system' -%}{{ eot_token + '\n'}}{%- endif -%}
+    {%- if role != 'system' -%}
+      {{- bot_token + role + '\n' -}}{{ message['content'] | trim }}
+      {%- if not loop.last or messages[-1]['role'] != 'assistant' -%}{{ eot_token + '\n'}}{%- endif -%}
+    {%- endif -%}
+
+  {% endfor %}
+  {%- if add_generation_prompt and messages[-1]['role'] != 'assistant' %}{{ bot_token + 'model\n'}}{% endif -%}
+parameters:
+  '@':
+    stop_words: ['<eos>']
+    temperature: 1
+    top_k: 64
+    top_p: 0.95
+modelPattern:
+  '@': !re /(?:^|[-_])(?:shield|code)?(gemma)[-_]4(?:[-_]|$)/i
