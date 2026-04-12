@@ -79,7 +79,7 @@ parameters:
 modelPattern:
   'medgemma':  !re /(?:^|[-_])(medgemma-27b)(?:[-_]|$)/i
   'gemma3':  !re /(?:^|[-_])(medgemma|gemma[-_]3)(?:[-_]|$)/i
-  '@': !re /(?:^|[-_])(?:shield|code)?(gemma)(?:[-_]|$)/i
+  '@': !re /(?:^|[-_])(?:shield|code)?(gemma)[-_]2(?:[-_]|$)/i
   # {%- set prev_message = {} -%}
   # {% for message in messages %}
   #   {%- if loop.first and system and messages[0]['role'] != 'system' -%}
