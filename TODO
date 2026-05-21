@@ -1,2 +1,6 @@
 feat:
-  ☐ think 模式 和 non-think 模式需要配置不同的默认值
+  ✔ think 模式 和 non-think 模式需要配置不同的默认值 @done(26-05-21 16:19)
+    在 parameters 中增加了 `thinking` 字段设置 `first` and `deep` 的默认参数值
+    `thinking.coding` 是思维模式下的编程任务的默认值 目前只约定未用。
+  ✔ add extends supports to parameters and version @done(26-05-21 16:36)
+
