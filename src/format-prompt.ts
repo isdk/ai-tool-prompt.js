@@ -3,6 +3,7 @@ import { AIChatMessageParam, defaultsWithConcat, PromptTemplate, StringTemplateF
 
 import { AIPromptSettings, AISupportItem, AISupportObject, AIDefaultPrompt } from "./prompt-settings"
 import { AIPromptResult } from './prompt'
+import { getValueExtends } from './getValueExtends'
 
 export interface PromptTemplateData {
   add_generation_prompt?: boolean
@@ -40,20 +41,8 @@ export async function getPromptSettings(data: PromptTemplateData, chatTemplate: 
   }
 }
 
-function getVersionExtends(version: string, versions?: {[ver: string]: AIDefaultPrompt}, clone?: boolean) {
-  let result = versions?.[version]
-  if (result) {
-    if (clone) { result = cloneDeep(result) }
-    const parent = result.extends
-    if (parent) {
-      result = defaultsWithConcat(result, getVersionExtends(parent, versions))
-    }
-  }
-  return result
-}
-
 export function getVersionPromptSettings(version: string, promptSettings: AIPromptSettings) {
-  const versionPrompt = getVersionExtends(version, promptSettings.version, true)
+  const versionPrompt = getValueExtends(version, promptSettings.version, true)
   if (versionPrompt) {
     promptSettings = defaultsWithConcat(versionPrompt, promptSettings)
   }
