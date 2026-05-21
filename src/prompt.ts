@@ -2,6 +2,7 @@ import { mergeWith } from 'lodash-es'
 import { AdvancePropertyManager } from 'property-manager';
 import { ConfigFile, isModelNameMatched, scaleStrToParamsSize } from '@isdk/ai-tool';
 import { AIPromptSchema, AIPromptSettings, AIPromptType } from './prompt-settings';
+import { getValueExtends } from './getValueExtends';
 
 // 128271: 🔏
 const LockedMagic = 128271
@@ -65,7 +66,7 @@ export function getLLMParameters(prompt: AIPromptSettings, modelName: string) {
     }
     let result: any
     if (m) {
-      result = parameters[m.toLowerCase()]
+      result = getValueExtends(m.toLowerCase(), parameters, true)
     }
     if (!result) {result = parameters['@']}
     return result

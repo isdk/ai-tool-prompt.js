@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'vitest'
 import { promptIsFitSize } from './prompt'
 
 describe('promptIsFitSize', () => {
