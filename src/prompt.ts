@@ -59,14 +59,19 @@ export function getLLMParameters(prompt: AIPromptSettings, modelName: string) {
     } else if (typeof rules === 'object' && !(rules instanceof RegExp)) {
       for (const [_version, rule] of Object.entries(rules)) {
         m = getMatchedStr(isModelNameMatched(modelName, rule))
-        if (m) {break}
+        if (m) {
+          if (parameters[m] === undefined) { m = m.toLowerCase() }
+          if (parameters[m] === undefined) { m = _version }
+          break
+        }
       }
     } else {
       m = getMatchedStr(isModelNameMatched(modelName, rules))
+      if (m && parameters[m] === undefined) { m = m.toLowerCase() }
     }
     let result: any
     if (m) {
-      result = getValueExtends(m.toLowerCase(), parameters, true)
+      result = getValueExtends(m, parameters, true)
     }
     if (!result) {result = parameters['@']}
     return result
