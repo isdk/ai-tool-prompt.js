@@ -1,4 +1,5 @@
 import path from 'path'
+import { describe, expect, it } from 'vitest'
 import { AIPromptSettings } from '../src'
 import { formatPrompt, getPromptSettings } from './format-prompt'
 import { ConfigFile } from '@isdk/ai-tool';
@@ -102,7 +103,7 @@ describe('getPromptSettings', () => {
     const promptTemplate = ConfigFile.loadSync(promptsPath + '/Qwen') as AIPromptSettings
     expect(promptTemplate).toHaveProperty('_id', 'Qwen')
     const result = await getPromptSettings({
-      version: 'qwq',
+      version: 't1',
       system: '',
       messages: [
         {

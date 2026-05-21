@@ -54,7 +54,14 @@ export interface AISupportObject {
 
 export type AISupportItem = string|AISupportObject|AISupportObjectItem
 
-type DefaultPrompt = Record<string, string> | {system?: string, ai?: string, human?: string, bot_token?: string, eot_token?: string, end_of_turn?: string, begin_of_turn?: string, template?: string, messages?: AIChatMessageParam[]}
+export type AIDefaultPrompt = Record<string, string> | {
+  system?: string, ai?: string, human?: string,
+  bot_token?: string, eot_token?: string, end_of_turn?: string, begin_of_turn?: string,
+  template?: string,
+  messages?: AIChatMessageParam[],
+  extends?: string,
+}
+
 export interface AIPromptSettings {
   _id?: string
   id?:string
@@ -68,8 +75,8 @@ export interface AIPromptSettings {
   excludeModels?: AIModelNameRules
   templateFormat?: string
   // the default prompt tempalte data if any
-  prompt?: DefaultPrompt
-  version?: {[ver: string]: DefaultPrompt}
+  prompt?: AIDefaultPrompt
+  version?: {[ver: string]: AIDefaultPrompt}
   // the default LLM parameters
   parameters?: Record<string, any>
   extends?: string
