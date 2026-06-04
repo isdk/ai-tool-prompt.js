@@ -43,4 +43,4 @@ parameters:
     top_k: 64
     top_p: 0.95
 modelPattern:
-  '@': !re /(?:^|[-_])(?:shield|code)?(gemma)[-_]4(?:[-_]|$)/i
+  '@': !re /(?:^|[-_])(?:shield|code)?(gemma|gemopus)[-_]4(?:[-_]|$)/i
