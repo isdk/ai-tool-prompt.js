@@ -5,7 +5,6 @@ type: system
 supports:
   - thinkMode: ['deep', 'off']
 shouldThink:
-  mode: deep
   thinkTag: ["<|channel>thought\n", "<channel|>"]
 prompt:
   bot_token: '<|turn>'
