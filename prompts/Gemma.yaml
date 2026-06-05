@@ -10,9 +10,10 @@ version:
       answerTag: <|回|>
       defaultThinkPrompt:
         prompt:
+          system: You are a helpful medical assistant. think silently if needed.
           deepThinkPrompt: |-
-            SYSTEM INSTRUCTION: think silently if needed. You are a helpful medical assistant.
-            Please answer after the "<|回|>" tag.
+            SYSTEM INSTRUCTION: {{system}}
+            Please output the "{{answer}}" tag after thinking and before answering.
   gemma3:
     template: |-
       {%- if messages[0]['role'] == 'system' -%}
