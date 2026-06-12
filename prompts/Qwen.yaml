@@ -56,7 +56,7 @@ version:
 prompt:
   assistant_suffix: "\n"
 template: |-
-  {% if (version == 'qwen3' or (version.startswith('qwen') and version.endswith('think'))) and shouldThink.mode != 3 %}
+  {% if (version.startswith('qwen3') or (version.startswith('qwen') and version.endswith('think'))) and shouldThink.mode != 3 %}
     {% set assistant_suffix = '\n' + blankThink %}
   {% endif %}
   {% for message in messages %}
