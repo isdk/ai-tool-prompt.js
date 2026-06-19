@@ -29,6 +29,10 @@ version:
     extends: qwen3
   qwen3-235b-think:
     extends: qwen3
+  qwen3-mellum2-think:
+    extends: qwen3
+    prompt:
+      blankThink: "<think>\n\n</think>\n"
   qwen3-xunzi-think:
     extends: qwen3
     prompt:
@@ -106,6 +110,8 @@ modelPattern:
   qwen-OpenReasoning-Nemotron-think: /^(OpenReasoning-Nemotron)(?:[-_]|$)/i
   qwen3-xunzi-think: !re /(?:^|[-_.])(xunzi-qwen3)(?:$|[-_.])/i
   qwen3-coder: !re /(?:^|[-_.])(qwen3-coder)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
+  mellum2-instruct: !re /(?:^|[-_.])(?:code)?(Mellum2(?:[-_].+?)?-Instruct)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
+  qwen3-mellum2-think: !re /(?:^|[-_.])(?:code)?(Mellum2(?:[-_].+?)?-Thinking)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   qwen3-235b-instruct: !re /(?:^|[-_.])(?:code)?Qwen3-(235B-A22B|30b-a3b|4b)-Instruct-2507(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   qwen3-235b-think: !re /(?:^|[-_.])(?:code)?(Qwen3-235B-A22B-Thinking-2507)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   qwen3-qwopus-think: !re /(?:^|[-_.])(qwopus)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
@@ -146,6 +152,10 @@ parameters:
     min_p: 0
     # repeat_penalty: 1.05
     # presence_penalty = 1.5 # 0.0 to 2.0 default turns it off, to reduce repetitions, you can use this
+  qwen3-mellum2-think:
+    extends: qwen3-235b-think
+  mellum2-instruct:
+    extends: qwen3-235b-think
   'qwen3-coder':
     temperature: 0.7
     top_k: 20
