@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { promptIsFitSize } from './prompt'
+import { scaleStrToParamsSize } from '@isdk/ai-tool'
 
 describe('promptIsFitSize', () => {
   it('should return true when size is equal to allowedModelSize', () => {
@@ -23,6 +24,7 @@ describe('promptIsFitSize', () => {
 
   it('should handle > operator correctly', () => {
     expect(promptIsFitSize('>10', 11)).toBe(true)
+    expect(promptIsFitSize('>10b', scaleStrToParamsSize('11B'))).toBe(true)
     expect(promptIsFitSize('>10', 10)).toBe(false)
     expect(promptIsFitSize('>10', 9)).toBe(false)
   })
