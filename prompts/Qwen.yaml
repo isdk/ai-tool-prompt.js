@@ -33,6 +33,10 @@ version:
     extends: qwen3
     prompt:
       blankThink: "<think>\n\n</think>\n"
+  qwen3-mellum2-claude-think:
+    extends: qwen3
+    prompt:
+      blankThink: "<think>\n无\n</think>\n"
   qwen3-xunzi-think:
     extends: qwen3
     prompt:
@@ -111,6 +115,7 @@ modelPattern:
   qwen3-xunzi-think: !re /(?:^|[-_.])(xunzi-qwen3)(?:$|[-_.])/i
   qwen3-coder: !re /(?:^|[-_.])(qwen3-coder)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   mellum2-instruct: !re /(?:^|[-_.])(?:code)?(Mellum2(?:[-_].+?)?-Instruct)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
+  qwen3-mellum2-claude-think: !re /(?:^|[-_.])(?:code)?(Mellum2[-_]claude(?:[-_].+?)?-Thinking)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   qwen3-mellum2-think: !re /(?:^|[-_.])(?:code)?(Mellum2(?:[-_].+?)?-Thinking)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   qwen3-235b-instruct: !re /(?:^|[-_.])(?:code)?Qwen3-(235B-A22B|30b-a3b|4b)-Instruct-2507(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   qwen3-235b-think: !re /(?:^|[-_.])(?:code)?(Qwen3-235B-A22B-Thinking-2507)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
