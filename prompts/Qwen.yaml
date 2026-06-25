@@ -27,6 +27,8 @@ version:
       blankThink: "\n<think>\n\n</think>"
   qwen3-qwopus-think:
     extends: qwen3
+  qwen3-qwythos-think:
+    extends: qwen35
   qwen3-235b-think:
     extends: qwen3
   qwen3-mellum2-think:
@@ -120,6 +122,7 @@ modelPattern:
   qwen3-235b-instruct: !re /(?:^|[-_.])(?:code)?Qwen3-(235B-A22B|30b-a3b|4b)-Instruct-2507(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   qwen3-235b-think: !re /(?:^|[-_.])(?:code)?(Qwen3-235B-A22B-Thinking-2507)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   qwen3-qwopus-think: !re /(?:^|[-_.])(qwopus)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
+  qwen3-qwythos-think: !re /(?:^|[-_.])(Qwythos)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   qwen35: !re /(?:^|[-_.])(?:code)?(qwen3)(?:[.][56])(?:$|[-_.])/i
   qwen3: !re /(?:^|[-_.])(?:code)?(qwen3|Orchestrator)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   '@': !re /(?:^|[-_.])(?:code)?(qwen|qwq)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
@@ -141,6 +144,10 @@ parameters:
         temperature: 0.6
         presence_penalty: 0
   qwen3-qwopus-think:
+    extends: qwen35
+    thinking:
+      repeat_penalty: 1.05
+  qwen3-qwythos-think:
     extends: qwen35
   qwen3-235b-instruct:
     temperature: 0.7
