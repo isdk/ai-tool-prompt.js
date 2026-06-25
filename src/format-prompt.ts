@@ -14,6 +14,7 @@ export interface PromptTemplateData {
 
 export async function formatPrompt(data: PromptTemplateData, chatTemplate: AIPromptResult) {
   const args = await getPromptSettings(data, chatTemplate)
+  args.data.enable_thinking = args.data.shouldThink?.mode >= 2
   const result = await PromptTemplate.format(args)
   return result
 }
