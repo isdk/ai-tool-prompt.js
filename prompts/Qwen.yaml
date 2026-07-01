@@ -123,7 +123,7 @@ modelPattern:
   qwen3-235b-think: !re /(?:^|[-_.])(?:code)?(Qwen3-235B-A22B-Thinking-2507)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   qwen3-qwopus-think: !re /(?:^|[-_.])(qwopus)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   qwen3-qwythos-think: !re /(?:^|[-_.])(Qwythos)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
-  qwen35: !re /(?:^|[-_.])(?:code)?((qwen3)(?:[.][56])|omnicoder)(?:$|[-_.])/i
+  qwen35: !re /(?:^|[-_.])(?:code)?((qwen3)(?:[.][56])|omnicoder|Ornith)(?:$|[-_.])/i
   qwen3: !re /(?:^|[-_.])(?:code)?(qwen3|Orchestrator)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   '@': !re /(?:^|[-_.])(?:code)?(qwen|qwq)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
 parameters:
