@@ -66,7 +66,7 @@ version:
 prompt:
   assistant_suffix: "\n"
 template: |-
-  {% if ((version.startswith('qwen3') and not version.endswith('instruct')) or (version.startswith('qwen') and version.endswith('think'))) and shouldThink.mode != 3 and blankThink is defined %}
+  {% if ((version.startswith('qwen3') and not version.endswith('instruct')) or (version.startswith('qwen35')) or (version.startswith('qwen') and version.endswith('think'))) and shouldThink.mode != 3 and blankThink is defined %}
     {% set assistant_suffix = '\n' + blankThink %}
   {% endif %}
   {% for message in messages %}
@@ -124,7 +124,7 @@ modelPattern:
   qwen3-235b-think: !re /(?:^|[-_.])(?:code)?(Qwen3-235B-A22B-Thinking-2507)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   qwen3-qwopus-think: !re /(?:^|[-_.])(qwopus)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   qwen3-qwythos-think: !re /(?:^|[-_.])(Qwythos)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
-  qwen35: !re /(?:^|[-_.])(?:code)?((qwen3)(?:[.][56])|omnicoder|Ornith|holo)(?:$|[-_.])/i
+  qwen35: !re /(?:^|[-_.])(?:code)?((qwen3)(?:[.][568])|omnicoder|Ornith|holo|Qwen-AgentWorld)(?:$|[-_.])/i
   qwen3: !re /(?:^|[-_.])(?:code)?(qwen3|Orchestrator)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
   '@': !re /(?:^|[-_.])(?:code)?(qwen|qwq)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
 parameters:
