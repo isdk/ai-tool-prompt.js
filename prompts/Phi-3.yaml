@@ -32,7 +32,7 @@ template: |-
   {%- endif -%}
 modelPattern:
   mediphi: !re /^(MediPhi)(?:$|[-_.])/i
-  "3.5": !re /^(phi)[-_]3[.]5(?:$|[-_.])/i
+  "3.5": !re /^(phi[-_]3[.]5|OLMoE)(?:$|[-_.])/i
   "3.1": !re /^(phi)[-_]3[.]1(?:$|[-_.])/i
   "@": !re /^(phi)[-_]3(?:$|[-_.])/i
 parameters:
