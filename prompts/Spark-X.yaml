@@ -1,0 +1,100 @@
+_id: Spark-X
+templateFormat: hf
+type: system
+supports:
+  - thinkMode: ['deep', 'off']
+shouldThink:
+  thinkTag: ["<think>", "</think>"]
+prompt:
+  bot_token: "<｜start▁of▁sentence｜>"
+  eot_token: "<｜end▁of▁sentence｜>"
+  system: "you are a helpful assistant."
+template: |-
+  {%- set enable_thinking = shouldThink.mode == 3 %}
+  {%- macro render_content(content, context_name) %}
+      {%- if content is string %}
+          {{- content }}
+      {%- elif content is none or content is undefined %}
+          {{- '' }}
+      {%- elif content is iterable and content is not mapping %}
+          {%- for block in content %}
+              {%- if block.type == 'text' %}
+                  {{- block.text }}
+              {%- else %}
+                  {{- raise_exception('Unsupported ' ~ context_name ~ ' content block type: ' ~ (block.type | string)) }}
+              {%- endif %}
+          {%- endfor %}
+      {%- endif %}
+  {%- endmacro %}
+
+  {%- set ns = namespace(initial_system='') %}
+  {%- if messages[0].role == "system" %}
+      {%- set ns.initial_system = render_content(messages[0].content, 'system') %}
+  {%- endif %}
+  {{- bot_token + '<|System|>' + '\n' + ns.initial_system or system }}
+  {%- if tools %}
+      {{- '## Tools' + '\n' + 'You have access to the following functions:' + '\n' + '<tools>' }}
+      {%- for tool in tools %}
+          {{- '\n' + tool.function | tojson}}
+      {%- endfor %}
+      {{- '\n' + '</tools>' }}
+  {%- endif %}
+  {{- eot_token}}
+
+  {%- for message in messages %}
+    {%- if message.role == "system" and not loop.first %}
+        {#- For the first system message was consumed by the initial block. -#}
+        {{- bot_token + '<|System|>\n' + render_content(message.content, 'system') }}
+    {%- elif message.role == "user" %}
+        {{- '<｜start▁of▁sentence｜><|User|>' + render_content(message.content, 'user') }}
+    {%- elif message.role == "assistant" %}
+        {%- set assistant_content = render_content(message.content, 'assistant') %}
+        {%- if message.reasoning_content is defined and message.reasoning_content %}
+            {%- set reasoning_content = message.reasoning_content %}
+        {%- else %}
+            {%- set reasoning_content = '' %}
+        {%- endif %}
+        {{- bot_token + '<|Bot|>'}}
+        {%- if reasoning_content %}
+            {{- '<think>' + reasoning_content + '</think>'}}
+        {%- else %}
+            {{- '</think>' }}
+        {%- endif %}
+        {%- if assistant_content %}
+            {{- assistant_content }}
+        {%- endif %}
+        {%- if message.tool_calls is defined and message.tool_calls is not none %}
+            {%- for tool_call in message.tool_calls %}
+                {%- if tool_call.function.arguments is not mapping %}
+                    {{- raise_exception('tool_call.function.arguments must be a dictionary; normalize JSON strings before apply_chat_template') }}
+                {%- endif %}
+                {%- set args = tool_call.function.arguments %}
+                {{- '<tool_call>' + tool_call.function.name }}
+                {%- for k, v in args.items() %}
+                    {{- '<arg_key>' ~ k ~ '</arg_key><arg_value>' ~ (v if v is string else v | tojson) ~ '</arg_value>' }}
+                {%- endfor %}
+                {{- '</tool_call>' }}
+            {%- endfor %}
+        {%- endif %}
+        {%- if not loop.last or messages[-1]['role'] != 'assistant' %}{{ eot_token }}{% endif %}
+    {%- elif message.role == "tool" %}
+        {%- if loop.previtem is undefined or loop.previtem.role != "tool" %}
+            {{- bot_token + '<|Tool|>' }}
+        {%- endif %}
+        {{- '<tool_response>' ~ message.content ~ '</tool_response>' }}
+        {%- if loop.nextitem is undefined or loop.nextitem.role != "tool" %}
+            {{- eot_token }}
+        {%- endif %}
+    {%- endif %}
+  {%- endfor %}
+  {%- if add_generation_prompt and messages[-1]['role'] != 'assistant' %}
+    {{- bot_token + '<|Bot|>' }}
+    {%- if enable_thinking is defined and enable_thinking %}
+        {{- '<think>' }}
+    {%- endif %}
+    {%- if enable_thinking is defined and not enable_thinking %}
+        {{- '</think>' }}
+    {%- endif %}
+  {%- endif %}
+modelPattern:
+  - !re /^(Spark-X)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
