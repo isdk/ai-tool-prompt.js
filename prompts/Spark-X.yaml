@@ -45,8 +45,10 @@ template: |-
     {%- if message.role == "system" and not loop.first %}
         {#- For the first system message was consumed by the initial block. -#}
         {{- bot_token + '<|System|>\n' + render_content(message.content, 'system') }}
+        {{- eot_token}}
     {%- elif message.role == "user" %}
         {{- '<｜start▁of▁sentence｜><|User|>' + render_content(message.content, 'user') }}
+        {{- eot_token}}
     {%- elif message.role == "assistant" %}
         {%- set assistant_content = render_content(message.content, 'assistant') %}
         {%- if message.reasoning_content is defined and message.reasoning_content %}
