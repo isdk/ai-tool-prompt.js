@@ -14,6 +14,7 @@ dist-ssr
 .cache
 .nyc_output/
 docs/
+refs/
 dev.md
 *.db
 .npmrc
