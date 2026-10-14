@@ -19,7 +19,7 @@ template: |-
 modelPattern:
   NousHermes2: !re /(?:^|[-_.])Nous-Hermes-2-([^-]+)(?:$|[-_.])/i
   Hermes3: !re /(?:^|[-_.])(Hermes-3)(?:$|[-_.])/i
-  '@': !re /(?:^|[-_.])(?:code)?(yi|MiniCPM|smollm|2B_or_not_2B|Violet_Twilight)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
+  '@': !re /(?:^|[-_.])(?:code)?(yi|MiniCPM3|smollm|2B_or_not_2B|Violet_Twilight)(?:\d+(?:[.]\d+)?)?(?:$|[-_.])/i
 parameters:
   yi:
     min_p: 0.06
